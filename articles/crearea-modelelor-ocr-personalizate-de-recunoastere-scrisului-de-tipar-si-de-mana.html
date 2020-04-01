@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<!--
+	ZeroFour by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Crearea modelelor OCR personalizate de recunoaștere a scrisului de tipar și de mâna</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="right-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header Wrapper -->
+				<div id="header-wrapper">
+					<div class="container">
+
+						<!-- Header -->
+							<header id="header">
+								<div class="inner">
+
+									<!-- Logo -->
+										<h1><a href="../index.html" id="logo">SmartAItomation</a></h1>
+
+									<!-- Nav -->
+										<nav id="nav">
+											<ul>
+												<li><a href="../index.html">Home</a></li>
+												<li><a href="../pages/blog.html">Blog</a></li>
+												<li><a href="../pages/services.html">Servicii</a></li>
+												<li><a href="../pages/jobs.html">Joburi</a></li>
+												<li><a href="../pages/projects.html">Proiecte</a></li>
+												<li><a href="../pages/contacts.html">Contact</a></li>
+											</ul>
+										</nav>
+								</div>
+							</header>
+
+					</div>
+				</div>
+
+			<!-- Main Wrapper -->
+				<div id="main-wrapper">
+					<div class="wrapper style2">
+						<div class="inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-8 col-12-medium">
+										<div id="content">
+
+											<!-- Content -->
+
+												<article>
+													<header class="major">
+														<h2>Crearea modelelor OCR personalizate de recunoaștere a scrisului de tipar și de mâna</h2>
+														<p>Ce este OCR și unde poate fi utilizat?</p>
+													</header>
+
+													<span class="image featured"><img class="image_post" src="../images/text-recognition.jpg" alt="Recunoastere text"/></span>
+
+                          <h3>Introducere</h3>
+
+                          <p>OCR(Optical character recognition) ne oferă diferite modalități de a întelege conținutul unei imagine, de a găsi
+                            și de a recunoaște textul în ea. Când ne gândim la OCR, ne gândim inevitabil la o
+                            mulțime de documente - cecuri bancare și documente legale, cărți de identitate și indicatoare
+                            stradale.</p>
+
+                          <p>Ceea ce avem de-a face este un algoritm de recunoaștere a caracterelor optice, care folosește
+                            învățarea automata(AI) și mecanismul de atenție pentru a face predicții despre unde este un anumit
+                            cuvânt într-o imagine, dacă există unul deloc. O mulțime de cuvinte mari aruncate în propoziția
+                            precedentă, așa că o vom lua pas cu pas și vom explora starea
+                             tehnologiei OCR și diferitele abordări utilizate pentru aceste sarcini.</p>
+
+                          <h3>OCR - Recunoaștere optică a caracterelor</h3>
+
+                          <p>Recunoașterea optică a caracterelor sau OCR se referă la un set de probleme de
+                            viziune a computerului care ne impun să convertim imagini cu text digital sau scris
+                            de mână în text care poate fi citit automat, într-o formă pe care computerul o poate
+                            prelucra, stoca și edita ca fișier text sau ca parte a unui software de introducere și
+                            manipulare a datelor. Imaginile pot include documente, facturi, formulare legale, cărți
+                            de identitate sau OCR în sălbăticie, cum ar fi citirea indicatoarelor stradale, numerele
+                            containerului sau plăcuțele cu număr de vehicul. </p>
+
+                          <p>Cercetatorii au încercat să rezolve problema OCR cu mai multe tehnici convenționale de
+                            vizionare a computerului, cum ar fi filtre de imagine, detectarea conturului și clasificarea
+                            imaginilor, care au funcționat bine pe seturi de date înguste, bazate pe șabloane, care nu
+                            variau foarte mult în orientarea lor, calitatea imaginii etc., dar pentru a face modelele
+                            noastre robuste la aceste variante pentru ca o afacere să își poată desfășura aplicațiile
+                            de învățare automată la scară, trebuie explorate noi metode.
+                            Există o mulțime de servicii și programe software ocr care efectuează diferit pe diferite
+                            tipuri de sarcini OCR. </p>
+
+                          <h3>Învățare profundă(Deep learning) și OCR</h3>
+
+                          <p>Abordările de învățare profundă s-au îmbunătățit în ultimii ani, reînnoind interesul pentru
+                            problema OCR, unde rețelele neuronale pot fi folosite pentru a combina sarcinile de localizare
+                            a textului într-o imagine, împreună cu înțelegerea textului. Utilizarea arhitecturilor neuronale
+                             profunde convoluționale și a mecanismelor de atenție și a rețelelor recurente a parcurs un drum
+                             lung în această privință.</p>
+
+                          <p>Una dintre aceste abordări de învățare profundă este pe baza atenției.</p>
+
+                          <p>Conducerea generală pentru multe arhitecturi pentru recunoașterea textului din imagini urmează
+                            acest șablon - o rețea convoluțională pentru extragerea caracteristicilor imaginii ca vectori
+                            codificați, urmată de o rețea recurentă care folosește aceste funcții codate pentru a prezice unde
+                            pot fi fiecare literele din textul imaginii și care sunt acestea.</p>
+
+                          <h3>Mecanisme de atenție</h3>
+
+                          <p>S-ar putea să fi auzit de RNN-uri sau LSTM-uri, arhitecturi de rețele neuronale care prezic
+                            litera la fiecare pas, după cum avem nevoie pentru a prezice o secvență de caractere. Această
+                            arhitectură de rețele neuronale destinate să învețe tiparele în date secvențiale modificând
+                            starea lor curentă pe baza intrării curente și a stărilor anterioare în mod iterativ. Dar datorită
+                            limitărilor de memorie și a problemelor precum gradienții dispăruți, am descoperit că RNN-urile și
+                            LSTM-urile nu sunt capabile să înțeleagă cu adevărat influența cuvintelor în context mai lung.</p>
+
+                          <p>Mecanismul de atenție încearcă să remedieze acest lucru. Este o modalitate de a face modelul
+                            tău să învețe dependențe pe distanțe lungi într-o secvență
+                            și a găsit mai multe aplicații în procesarea limbajului natural și traducerea automată.</p>
+                        </article>
+
+										</div>
+									</div>
+									<div class="col-4 col-12-medium">
+										<div id="sidebar">
+
+											<!-- Sidebar -->
+
+												<section>
+													<header class="major">
+														<h2>Subheading</h2>
+													</header>
+													<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
+													Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
+													Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
+													consequat etiam.</p>
+													<footer>
+														<a href="#" class="button icon solid fa-info-circle">Find out more</a>
+													</footer>
+												</section>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper style2">
+						<div class="inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-12 col-12-medium">
+
+										<!-- Article list -->
+											<section class="box article-list">
+												<h2 class="icon fa-file-alt">Postări recente</h2>
+
+                        <!-- Excerpt -->
+                          <article class="box excerpt">
+                            <a href="#" class="image left aricle_h"><img src="../images/creare_bot_messenger.png" alt="Creați un bot pentru Messenger în 10 minute cu Chatfuel" /></a>
+                            <div>
+                              <header>
+                                <span class="date">12/20/2019 - 14:22</span>
+                                <h3><a href="creati-un-bot-pentru-messenger-10-minute-cu-chatfuelpartea-1.html">Creați un bot pentru Messenger în 10 minute cu Chatfuel(partea 1)</a></h3>
+                              </header>
+                              <p>Chatfuel este concentrat pe Facebook Messenger. Nu aveți nevoie de abilități
+                                de programare pentru a începe. Este simplu să creezi diferite blocuri logice și
+                                să le conectezi la declanșatoarele respective. Oferă pluginuri grozave, de ex.
+                                preluarea umană și un AI minimalist.</p>
+                            </div>
+                          </article>
+
+												<!-- Excerpt -->
+													<article class="box excerpt">
+														<a href="#" class="image left aricle_h"><img src="../images/inteligenta_artificiala_in_business.jpg" alt="Inteligența artificială în business" /></a>
+														<div>
+															<header>
+																<span class="date">12/20/2019 - 14:22</span>
+																<h3><a href="cum-se-foloseste-inteligenta-artificiala-business.html">Cum se folosește inteligența artificială în business?</a></h3>
+															</header>
+															<p>Inteligența artificială (AI) permite organizațiilor să lucreze mai rapid
+																și mai inteligent, făcând mai mult cu mult mai puțin. Mii de organizații
+																din întreaga lume folosesc deja AI pentru a crește productivitatea și eficiența
+																cu rezultate uimitoare.</p>
+														</div>
+													</article>
+
+											</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Footer Wrapper -->
+					<div id="footer-wrapper">
+						<footer id="footer" class="container">
+							<div class="row">
+								<div class="col-3 col-6-medium col-12-small">
+									<h2>Hartă site</h2>
+									<!-- Links -->
+										<section>
+											<ul class="divided">
+												<li><a href="../index.html">Acasă</a></li>
+												<li><a href="../pages/blog.html">Blog</a></li>
+												<li><a href="../pages/services.html">Servicii</a></li>
+												<li><a href="../pages/jobs.html">Joburi companie</a></li>
+												<li><a href="../pages/projects.html">Proiecte</a></li>
+												<li><a href="../pages/contacts.html">Contacte site</a></li>
+											</ul>
+										</section>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<h2>Consultație gratuită</h2>
+									Verifică cum poți optimiza procesele in compania ta
+									<form>
+										<label for="footer_email" class="wt">Email:</label>
+										<input type="text" id="footer_email" name="lastname" placeholder="Introduceți email-ul..">
+										<input type="submit" id="footer_submit" value="Trimite">
+									</form>
+								</div>
+								<div class="col-5 col-6-medium col-12-small">
+									<h2>Contacte</h2>
+									<!-- Contact -->
+										<section>
+											<div>
+														<dl class="contact">
+															<dt>Facebook</dt>
+															<dd><a href="https://www.facebook.com/smartAItomation/">facebook.com/smartAItomation/</a></dd>
+															<dt>WWW</dt>
+															<dd><a href="smartaitomation.com">smartaitomation.com</a></dd>
+															<dt>Email</dt>
+															<dd><a href="#">imosnoi@smartaitomation.com</a></dd>
+															<dt>Adresa</dt><dd>
+																 14/3 Gradina Botanica, Chisinau, MD-2032, Republica Moldova,
+															</dd>
+															<dt>Telefon</dt>
+															<dd>(+373-69) 64 46 89</dd>
+														</dl>
+											</div>
+										</section>
+								</div>
+								<div class="col-12">
+									<div id="copyright">
+										<ul class="menu">
+											<li>&copy;2020 Smart Automation SRL</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</footer>
+					</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
