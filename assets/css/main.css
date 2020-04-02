@@ -2482,3 +2482,7 @@ input, select, textarea {
 .ml10 {
 	margin-left: 10px;
 }
+
+.ft {
+	width: 100%;
+}
