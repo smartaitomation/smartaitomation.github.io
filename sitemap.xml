@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://smartaitomation.com/</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/index.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/pages/blog.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/pages/services.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/pages/jobs.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/pages/projects.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/articles/crearea-modelelor-ocr-personalizate-de-recunoastere-scrisului-de-tipar-si-de-mana.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/articles/creati-un-bot-pentru-messenger-10-minute-cu-chatfuelpartea-1.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/articles/cum-se-foloseste-inteligenta-artificiala-business.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/pages/contacts.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/services/extragerea-informatiilor-din-imagini.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/services/extragerea-informatiilor-din-documente.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/services/analiza-si-vizualizarea-datelor-tabelare.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/jobs/dezvoltator-python-smartaitomationcom-moldova.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://smartaitomation.com/projects/transformarea-educatiei-cu-tutori-personalizati-interactivi-cu-ajutorul-ai.html</loc>
+  <lastmod>2020-04-03T08:31:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
