@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gildAI - Privacy Policy & Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .navigation {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section h2 {
+            color: #c44569;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #ff6b9d;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .section ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .section li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(255, 107, 157, 0.2) 0%, rgba(196, 69, 105, 0.2) 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b9d;
+            margin: 1rem 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .effective-date {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                border-radius: 10px;
+            }
+
+            .header {
+                padding: 2rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>gildAI</h1>
+            <p>AI-Powered Makeup Application</p>
+        </div>
+
+       
+
+        <div class="content">
+            <section id="privacy" class="section">
+                <h2>Privacy Policy</h2>
+                <div class="effective-date">
+                    Effective Date: September 15, 2025
+                </div>
+
+                <h3>Introduction</h3>
+                <p>Welcome to gildAI ("we," "us," or "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application gildAI (the "App"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the application.</p>
+
+                <h3>Information We Collect</h3>
+                
+                <div class="highlight">
+                    <strong>Photos and Images</strong>
+                    <ul>
+                        <li><strong>What we collect:</strong> Photos you upload to the app for makeup application</li>
+                        <li><strong>How we collect it:</strong> When you voluntarily upload photos through the app interface</li>
+                        <li><strong>Purpose:</strong> To apply AI-powered makeup effects and generate tutorials</li>
+                        <li><strong>Storage:</strong> All photo processing occurs locally on your device. Photos are not stored on our servers or transmitted to third parties</li>
+                    </ul>
+                </div>
+
+                <strong>Usage Data</strong>
+                <ul>
+                    <li><strong>What we collect:</strong> Information about how you interact with the app (features used, session duration, preferences)</li>
+                    <li><strong>How we collect it:</strong> Automatically through app analytics</li>
+                    <li><strong>Purpose:</strong> To improve app functionality and user experience</li>
+                    <li><strong>Data retention:</strong> Aggregated and anonymized data retained for analytics purposes</li>
+                </ul>
+
+                <strong>Device Information</strong>
+                <ul>
+                    <li><strong>What we collect:</strong> Device type, operating system version, app version</li>
+                    <li><strong>How we collect it:</strong> Automatically when you use the app</li>
+                    <li><strong>Purpose:</strong> To ensure compatibility and optimize performance</li>
+                    <li><strong>Data retention:</strong> Retained for technical support and improvement purposes</li>
+                </ul>
+
+                <strong>Crash and Error Data</strong>
+                <ul>
+                    <li><strong>What we collect:</strong> Technical information when the app crashes or encounters errors</li>
+                    <li><strong>How we collect it:</strong> Automatically through crash reporting systems</li>
+                    <li><strong>Purpose:</strong> To identify and fix technical issues</li>
+                    <li><strong>Data retention:</strong> Retained until technical issues are resolved</li>
+                </ul>
+
+                <h3>How We Use Your Information</h3>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Apply AI makeup effects to your photos</li>
+                    <li>Generate personalized makeup tutorials</li>
+                    <li>Improve app functionality and user experience</li>
+                    <li>Provide customer support</li>
+                    <li>Detect and prevent technical issues</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+
+                <h3>Information Sharing and Disclosure</h3>
+                <p>We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:</p>
+                <ul>
+                    <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our app, provided they agree to maintain confidentiality</li>
+                    <li><strong>Legal Requirements:</strong> We may disclose information if required by law or in response to valid legal requests</li>
+                    <li><strong>Business Transfers:</strong> Information may be transferred in connection with a merger, acquisition, or sale of assets</li>
+                    <li><strong>Safety:</strong> We may disclose information to protect the rights, property, or safety of gildAI, our users, or others</li>
+                </ul>
+
+                <h3>Data Security</h3>
+                <p>We implement appropriate technical and organizational security measures to protect your information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+
+                <h3>Your Privacy Rights</h3>
+                <p>Depending on your location, you may have the following rights:</p>
+                <ul>
+                    <li>Access to your personal information</li>
+                    <li>Correction of inaccurate information</li>
+                    <li>Deletion of your information</li>
+                    <li>Restriction of processing</li>
+                    <li>Data portability</li>
+                    <li>Objection to processing</li>
+                </ul>
+                <p>To exercise these rights, please contact us using the information provided below.</p>
+
+                <h3>Children's Privacy</h3>
+                <p>Our app is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we discover that a child under 13 has provided us with personal information, we will delete such information immediately.</p>
+
+                <h3>International Data Transfers</h3>
+                <p>Your photos may be temporarily processed by our AI partner Replicate, whose servers may be located in countries other than your own. We ensure that appropriate safeguards are in place to protect your information during such transfers, including immediate deletion after processing and secure transmission protocols.</p>
+
+                <h3>Changes to This Privacy Policy</h3>
+                <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy in the app and updating the "Effective Date" at the top of this policy.</p>
+            </section>
+
+
+            <section id="contact" class="contact-info">
+                <h3>Contact Information</h3>
+                <p>If you have questions or concerns about this privacy policy or terms of service, please contact us at:</p>
+                <p><strong>Company:</strong> Smart Automation SRL</p>
+                <p><strong>Email:</strong> <a href="mailto:imosnoi@smartautomation.com">imosnoi@smartautomation.com</a></p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
