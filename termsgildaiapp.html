@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gildAI - Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .effective-date {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 40px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ff6b6b;
+            position: relative;
+        }
+
+        h2:first-of-type {
+            margin-top: 20px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #feca57;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.3rem;
+            margin: 25px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        li::before {
+            content: '✨';
+            position: absolute;
+            left: -25px;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            border-bottom: none;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .contact-section h2::after {
+            display: none;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item strong {
+            color: #e74c3c;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .app-store-section {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .app-store-section h2 {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .pricing-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #feca57;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffecd2, #fcb69f);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #ff6b6b;
+            margin: 20px 0;
+        }
+
+        .warning {
+            background: linear-gradient(120deg, #ffafbd, #ffc3a0);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>gildAI</h1>
+            <p>Terms of Service</p>
+        </div>
+
+        <div class="content">
+            <div class="effective-date">
+                Effective Date: September 15, 2025
+            </div>
+
+            <h2>Acceptance of Terms</h2>
+            <p>By downloading, installing, or using the gildAI mobile application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+
+            <h2>Description of Service</h2>
+            <p>gildAI is a mobile application that uses artificial intelligence to apply makeup effects to user-uploaded photos and provides tutorials for recreating those looks.</p>
+
+            <h2>User Accounts and Registration</h2>
+            <div class="highlight">
+                <ul>
+                    <li>You may use certain features of the App without creating an account</li>
+                    <li>If you create an account, you must provide accurate information</li>
+                    <li>You are responsible for maintaining the security of your account</li>
+                    <li>You must be at least 13 years old to use the App</li>
+                </ul>
+            </div>
+
+            <h2>Acceptable Use</h2>
+            <p>You agree to use the App only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+            <ul>
+                <li>Use the App for any illegal or unauthorized purpose</li>
+                <li>Upload photos that violate others' privacy or rights</li>
+                <li>Upload inappropriate, offensive, or harmful content</li>
+                <li>Attempt to reverse engineer or modify the App</li>
+                <li>Interfere with the App's functionality or security</li>
+                <li>Use the App to harass, abuse, or harm others</li>
+                <li>Violate any applicable laws or regulations</li>
+            </ul>
+
+            <h2>Intellectual Property Rights</h2>
+            <ul>
+                <li>The App and its content are owned by Smart Automation SRL and protected by copyright, trademark, and other intellectual property laws</li>
+                <li>You retain ownership of photos you upload</li>
+                <li>By uploading photos, you grant us a limited license to process them for the App's functionality</li>
+                <li>You may not copy, modify, distribute, or create derivative works of the App</li>
+            </ul>
+
+            <h2>User Content</h2>
+            <ul>
+                <li>You are solely responsible for photos and content you upload</li>
+                <li>You represent that you have the right to upload and use your photos</li>
+                <li>We reserve the right to remove content that violates these Terms</li>
+                <li>You retain ownership of your uploaded photos</li>
+            </ul>
+
+            <h2>Privacy</h2>
+            <p>Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the App.</p>
+
+            <h2>Disclaimers</h2>
+            <div class="warning">
+                <ul>
+                    <li>The App is provided "as is" without warranties of any kind</li>
+                    <li>We do not guarantee the App will be error-free or uninterrupted</li>
+                    <li>Makeup tutorials are for informational purposes only</li>
+                    <li>Results may vary based on individual features and preferences</li>
+                    <li>We are not responsible for any skin reactions or issues from following tutorials</li>
+                </ul>
+            </div>
+
+            <h2>Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, Smart Automation SRL shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or use, arising from your use of the App.</p>
+
+            <h2>Indemnification</h2>
+            <p>You agree to indemnify and hold harmless Smart Automation SRL from any claims, damages, losses, or expenses arising from your use of the App or violation of these Terms.</p>
+
+            <h2>Termination</h2>
+            <ul>
+                <li>You may stop using the App at any time</li>
+                <li>We may terminate your access for violations of these Terms</li>
+                <li>Upon termination, you must stop using the App and delete it from your device</li>
+            </ul>
+
+            <h2>Governing Law</h2>
+            <p>These Terms are governed by the laws of Moldova without regard to conflict of law principles.</p>
+
+            <h2>Changes to Terms</h2>
+            <p>We reserve the right to modify these Terms at any time. Changes will be effective when posted in the App. Continued use of the App after changes constitutes acceptance of the modified Terms.</p>
+
+            <div class="contact-section">
+                <h2>Contact Information</h2>
+                <p>For questions about these Terms, contact us at:</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        imosnoi@smartautomation.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>Support</strong>
+                        imosnoi@smartautomation.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>Company</strong>
+                        Smart Automation SRL
+                    </div>
+                </div>
+            </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Smart Automation SRL. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
