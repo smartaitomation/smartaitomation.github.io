@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilkStyler Support Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .header .tagline {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .nav-tabs {
+            background: #2c3e50;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .nav-tab {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 20px 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-tab:hover, .nav-tab.active {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom-color: #feca57;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .app-info {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .app-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .detail-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .detail-card strong {
+            color: #e74c3c;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .faq-section {
+            margin: 30px 0;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .contact-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .requirements-list {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .requirements-list h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .requirements-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .requirements-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .requirements-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+            
+            .nav-tab {
+                padding: 15px 20px;
+                white-space: nowrap;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #84fab0, #8fd3f4);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #00b894;
+        }
+
+        .warning {
+            background: linear-gradient(120deg, #ffeaa7, #fab1a0);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #e17055;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SilkStyler</h1>
+            <div class="subtitle">Glamorous Virtual Makeover</div>
+            <div class="tagline">Transform your look with AI-powered hairstyles!</div>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('overview')">App Overview</button>
+            <button class="nav-tab" onclick="showTab('features')">Features</button>
+            <button class="nav-tab" onclick="showTab('faq')">FAQ</button>
+            <button class="nav-tab" onclick="showTab('technical')">Technical Info</button>
+            <button class="nav-tab" onclick="showTab('contact')">Contact</button>
+        </div>
+
+        <div class="content">
+            <!-- App Overview Tab -->
+            <div id="overview" class="tab-content active">
+                <div class="app-info">
+                    <h2>App Information</h2>
+                    <div class="app-details">
+                        <div class="detail-card">
+                            <strong>Category</strong>
+                            Lifestyle
+                        </div>
+                        <div class="detail-card">
+                            <strong>Age Rating</strong>
+                            12+ (Mild content references)
+                        </div>
+                        <div class="detail-card">
+                            <strong>Price</strong>
+                            Free with In-App Purchases
+                        </div>
+                        <div class="detail-card">
+                            <strong>Developer</strong>
+                            Smart Automation SRL
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    <h3>App Description</h3>
+                    <p>SilkStyler is the ultimate virtual hairstylist for women, blending advanced AI with a chic interface to let you explore glamorous hairstyles risk-free. Transform your look instantly by changing hair color, adding romantic waves or curls, trying on stylish bangs (fringe), or adjusting hair length. From long flowing waves to sleek bobs or elegant updos, SilkStyler shows you exactly how you'd look – all from the comfort of home.</p>
+                </div>
+
+                <div class="requirements-list">
+                    <h3>Perfect for:</h3>
+                    <ul>
+                        <li>Women wanting to experiment with new hairstyles</li>
+                        <li>Planning a salon visit and trying styles beforehand</li>
+                        <li>Special event preparation</li>
+                        <li>Exploring hair color options without commitment</li>
+                        <li>Social media content creation</li>
+                        <li>Professional hairstylists seeking inspiration</li>
+                    </ul>
+                </div>
+
+                <div class="requirements-list">
+                    <h3>Keywords</h3>
+                    <p>hairstyle, AI, hair color, beauty, makeover, virtual try-on, hair salon, bangs, fringe, curls, waves, bob, updo, style, fashion</p>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div id="features" class="tab-content">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💇‍♀️</div>
+                        <h3>AI-Powered Hairstyle Try-On</h3>
+                        <p>Try on dozens of glamorous hairstyles instantly – from long flowing waves to sleek bobs, elegant updos, trendy bangs, and everything in between.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Hair Color Transformation</h3>
+                        <p>Experiment with different hair colors risk-free. See how you'd look with blonde, brunette, red, or even fantasy colors before making the commitment.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>Length & Style Adjustments</h3>
+                        <p>Adjust hair length, add romantic waves or curls, try on stylish bangs (fringe), or experiment with different textures – all with realistic results.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📸</div>
+                        <h3>Instant Photo Transformation</h3>
+                        <p>Simply upload any selfie or photo, select your desired hairstyle, and let our AI work its magic. Get professional-quality results in seconds.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Precision Editing Tools</h3>
+                        <p>Fine-tune your look with advanced editing tools. Adjust color intensity, modify curl patterns, and perfect every detail to match your vision.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Easy Sharing</h3>
+                        <p>Save your transformations and share them directly to social media or with friends to get feedback on your new hairstyle before visiting the salon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Tab -->
+            <div id="faq" class="tab-content">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-section">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            How does the AI hairstyle try-on work?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our advanced AI technology uses machine learning algorithms trained on thousands of professional hairstyles. When you upload a photo, the AI analyzes facial features, head shape, and hair structure to apply hairstyles with precision. All processing happens locally on your device using Core ML for privacy and speed.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Do I need to create an account to use the app?
+                        </div>
+                        <div class="faq-answer">
+                            <p>No! You can use most features of SilkStyler without creating an account. Basic hairstyle try-on and transformations are available immediately after download. Creating an account is optional and only required for saving your favorite looks and accessing premium features.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Is my photo data safe and private?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! Your privacy is our top priority. All photo processing happens directly on your device using Core ML technology. Photos are never uploaded to our servers or shared with third parties. You have complete control over your images at all times.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            What types of hairstyles are available?
+                        </div>
+                        <div class="faq-answer">
+                            <p>SilkStyler offers a wide variety of hairstyles including long flowing waves, sleek bobs, elegant updos, trendy bangs (fringe), curly styles, straight styles, and more. You can also adjust hair length, color, and texture. Our library is regularly updated with new styles created by professional hairstylists.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Can I try different hair colors?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! SilkStyler lets you experiment with various hair colors including natural shades (blonde, brunette, black, red) and even fantasy colors. This is perfect for trying out a new color before committing to a salon visit.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Can I use the app with any photo quality or lighting?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Our AI is designed to work with various photo qualities and lighting conditions. While better quality photos yield better results, the app can enhance and transform photos taken in different lighting scenarios.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Are there in-app purchases?
+                        </div>
+                        <div class="faq-answer">
+                            <p>The app is free to download with basic features included. We offer optional in-app purchases for premium content: Premium Styles Pack ($2.99), Advanced Color Options ($4.99), and Pro Features ($9.99). No subscription required!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            How accurate are the hairstyle previews?
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our AI provides highly realistic previews of how you would look with different hairstyles. While results are very accurate, actual salon results may vary based on your natural hair texture, thickness, and the skill of your stylist. The app is designed to help you visualize and explore options before making decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            What age restrictions apply to this app?
+                        </div>
+                        <div class="faq-answer">
+                            <p>The app is rated 12+ due to mild/infrequent references to beauty and styling content. The content is suitable for teens and adults interested in hairstyling and beauty.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Info Tab -->
+            <div id="technical" class="tab-content">
+                <h2>Technical Information</h2>
+                
+                <div class="requirements-list">
+                    <h3>System Requirements</h3>
+                    <ul>
+                        <li>iOS 14.0 or later</li>
+                        <li>iPhone 7 or newer for optimal performance</li>
+                        <li>iPad (6th generation) or newer</li>
+                        <li>150 MB available storage space</li>
+                        <li>Camera access for photo capture (optional)</li>
+                        <li>Photo library access for importing images</li>
+                    </ul>
+                </div>
+
+                <div class="highlight">
+                    <h3>Privacy & Security</h3>
+                    <p>• All photo processing happens on-device using Core ML<br>
+                    • No user data is collected or transmitted to servers<br>
+                    • Photos never leave your device<br>
+                    • No tracking or analytics beyond basic app usage<br>
+                    • Full GDPR and CCPA compliance</p>
+                </div>
+
+                <div class="requirements-list">
+                    <h3>Supported Features</h3>
+                    <ul>
+                        <li>Core ML integration for on-device AI processing</li>
+                        <li>ARKit compatibility for real-time preview (future update)</li>
+                        <li>Vision framework for facial feature detection</li>
+                        <li>Photos framework integration</li>
+                        <li>Social sharing capabilities</li>
+                        <li>VoiceOver accessibility support</li>
+                        <li>Dynamic Type support</li>
+                    </ul>
+                </div>
+
+                <div class="warning">
+                    <h3>Review Notes for App Store</h3>
+                    <p>• The app processes photos locally on-device using Core ML<br>
+                    • No user accounts or server communication required for basic functionality<br>
+                    • All AI processing happens offline<br>
+                    • Optional in-app purchases are clearly marked<br>
+                    • Age rating appropriate for beauty/styling content</p>
+                </div>
+            </div>
+
+            <!-- Contact Tab -->
+            <div id="contact" class="tab-content">
+                <h2>Contact & Support</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="icon">📧</div>
+                        <h3>General Support</h3>
+                        <p>imosnoi@smartaitomation.com</p>
+                        <p>Response time: 24-48 hours</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="icon">🏢</div>
+                        <h3>Developer</h3>
+                        <p>Smart Automation SRL</p>
+                        <p>Chisinau, Moldova</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="icon">🌐</div>
+                        <h3>Website</h3>
+                        <p>https</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="icon">⚖️</div>
+                        <h3>Legal</h3>
+                        <p>Terms of Service</p>
+                        <p>Privacy Policy</p>
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    <h3>For App Store Review Team</h3>
+                    <p>If you need assistance during the review process or have questions about the app's functionality, please contact us at imosnoi@smartautomation.com with "App Store Review" in the subject line. We typically respond within 12 hours during business days.</p>
+                </div>
+
+                <div class="requirements-list">
+                    <h3>Common Support Topics</h3>
+                    <ul>
+                        <li>Photo upload and processing issues</li>
+                        <li>Hairstyle selection and navigation</li>
+                        <li>In-app purchase restoration</li>
+                        <li>Performance optimization tips</li>
+                        <li>Feature requests and feedback</li>
+                        <li>Privacy and data handling questions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            
+            // Remove active class from all nav tabs
+            const navTabs = document.querySelectorAll('.nav-tab');
+            navTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add active class to clicked nav tab
+            event.target.classList.add('active');
+        }
+
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = element.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+            
+            // Toggle current item if it wasn't active
+            if (!isActive) {
+                element.classList.add('active');
+                answer.classList.add('active');
+            }
+        }
+
+        // Initialize first FAQ item as open
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstFAQ = document.querySelector('.faq-question');
+            if (firstFAQ) {
+                firstFAQ.classList.add('active');
+                firstFAQ.nextElementSibling.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
+
