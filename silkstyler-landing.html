@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-itunes-app" content="app-id=6756208063">
+    <title>SilkStyler - Virtual Hair Magic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 27px;
+            margin: 0 auto 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 18px 48px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:active {
+            transform: scale(0.95);
+        }
+
+        .redirect-notice {
+            margin-top: 24px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            display: inline-block;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="app-icon">💇‍♀️</div>
+        <h1>SilkStyler</h1>
+        <p>Virtual Hair Magic</p>
+
+        <a href="https://apps.apple.com/ca/app/silkstyler-virtual-hair-magic/id6756208063?pt=&ct=meta_ad&mt=8"
+           class="download-btn"
+           id="downloadBtn">
+            Download Now
+        </a>
+
+        <div class="redirect-notice" id="redirectNotice">
+            Redirecting to App Store<span class="spinner"></span>
+        </div>
+    </div>
+
+    <script>
+        // App Store link with tracking parameters
+        const APP_STORE_URL = 'https://apps.apple.com/ca/app/silkstyler-virtual-hair-magic/id6756208063?pt=&ct=meta_ad&mt=8';
+
+        // Auto-redirect after 2 seconds
+        setTimeout(function() {
+            window.location.href = APP_STORE_URL;
+        }, 2000);
+
+        // Manual button click tracking
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = APP_STORE_URL;
+        });
+
+        // Prevent accidental navigation away
+        window.addEventListener('beforeunload', function(e) {
+            // Allow the redirect to proceed
+            return;
+        });
+    </script>
+</body>
+</html>
