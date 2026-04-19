@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hai Noroc Support Center</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1f2430;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 45%, #e94560 100%);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.96);
+      min-height: 100vh;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, .18);
+    }
+    .header {
+      background: linear-gradient(135deg, #0f3460, #e94560);
+      color: #fff;
+      text-align: center;
+      padding: 42px 24px;
+    }
+    .header h1 { font-size: 2.9rem; margin-bottom: 8px; }
+    .subtitle { font-size: 1.2rem; opacity: .95; margin-bottom: 12px; }
+    .tagline { display: inline-block; padding: 8px 18px; border-radius: 999px; background: rgba(255,255,255,.18); }
+    .nav-tabs { display: flex; justify-content: center; flex-wrap: wrap; background: #111827; }
+    .nav-tab {
+      border: 0; background: transparent; color: #fff; padding: 16px 24px; cursor: pointer;
+      border-bottom: 3px solid transparent; font-weight: 600;
+    }
+    .nav-tab.active, .nav-tab:hover { border-bottom-color: #e94560; background: rgba(255,255,255,.08); }
+    .content { padding: 34px 24px; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .card {
+      background: #fff; border: 1px solid #e8e9ef; border-radius: 14px;
+      padding: 22px; margin-bottom: 18px;
+    }
+    h2 { margin-bottom: 12px; color: #0f3460; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
+    .detail { background: #f6f8fd; border-radius: 12px; padding: 14px; }
+    .detail strong { display: block; color: #e94560; margin-bottom: 4px; }
+    .faq-item { border: 1px solid #e8e9ef; border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q {
+      width: 100%; text-align: left; border: 0; cursor: pointer;
+      background: #0f3460; color: #fff; padding: 14px 16px; font-weight: 600;
+    }
+    .faq-a { display: none; padding: 14px 16px; background: #fff; }
+    .faq-a.active { display: block; }
+    .links a { color: #0f3460; font-weight: 600; text-decoration: none; margin-right: 14px; }
+    .links a:hover { text-decoration: underline; }
+    .footer { text-align: center; padding: 26px 16px; background: #111827; color: #d1d5db; }
+    @media (max-width: 768px) {
+      .header h1 { font-size: 2.15rem; }
+      .content { padding: 20px 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Hai Noroc</h1>
+      <div class="subtitle">Support Center</div>
+      <div class="tagline">Meet friends. Find nearby gatherings. Go out together.</div>
+    </div>
+
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="openTab(event, 'about')">About</button>
+      <button class="nav-tab" onclick="openTab(event, 'faq')">FAQ</button>
+      <button class="nav-tab" onclick="openTab(event, 'contact')">Contact</button>
+    </div>
+
+    <div class="content">
+      <div id="about" class="tab-content active">
+        <div class="card">
+          <h2>App Information</h2>
+          <p>Hai Noroc is a social app that helps people discover nearby gatherings, create plans with friends, and chat in real-time around events.</p>
+          <div class="grid">
+            <div class="detail"><strong>App Name</strong>Hai Noroc</div>
+            <div class="detail"><strong>Category</strong>Social Networking</div>
+            <div class="detail"><strong>Platforms</strong>iOS / Android</div>
+            <div class="detail"><strong>Bundle ID</strong>com.smartautomation.hainoroc</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Core Features</h2>
+          <ul>
+            <li>Create and join local gatherings</li>
+            <li>Map view for nearby events</li>
+            <li>Group and private chat conversations</li>
+            <li>Profiles with photos and interests</li>
+            <li>Moderation and safety tools</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="faq" class="tab-content">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do I need an account to use Hai Noroc?</button>
+          <div class="faq-a">Yes. You need an account to create gatherings, join chats, and interact with other users.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can I control who joins my gathering?</button>
+          <div class="faq-a">Yes. Hosts can manage participants and remove users from gatherings and related chats when needed.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do location features work?</button>
+          <div class="faq-a">Location is used only to show nearby gatherings and improve event discovery. You can revoke location permission anytime in device settings.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How can I report abuse or unsafe behavior?</button>
+          <div class="faq-a">Use in-app reporting tools, or contact support directly. We review reports and take moderation action based on policy.</div>
+        </div>
+      </div>
+
+      <div id="contact" class="tab-content">
+        <div class="card">
+          <h2>Contact</h2>
+          <p>For support requests, privacy questions, or legal notices:</p>
+          <div class="grid">
+            <div class="detail"><strong>Support</strong>support@hai-noroc.app</div>
+            <div class="detail"><strong>Privacy</strong>privacy@hai-noroc.app</div>
+            <div class="detail"><strong>Legal</strong>legal@hai-noroc.app</div>
+          </div>
+        </div>
+
+        <div class="card links">
+          <a href="/termshainorocapp.html">Terms of Service</a>
+          <a href="/privacyhainorocapp.html">Privacy Policy</a>
+          <a href="/hainoroc-landing.html">Landing Page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">© 2026 Hai Noroc. All rights reserved.</div>
+  </div>
+
+  <script>
+    function openTab(event, tabId) {
+      document.querySelectorAll('.tab-content').forEach(function (el) { el.classList.remove('active'); });
+      document.querySelectorAll('.nav-tab').forEach(function (el) { el.classList.remove('active'); });
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+    function toggleFaq(button) {
+      var answer = button.nextElementSibling;
+      answer.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
