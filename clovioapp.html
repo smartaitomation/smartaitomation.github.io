@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clovio - Outfit Planner</title>
+  <meta name="description" content="Clovio turns clothing photos into a practical digital closet with outfit, shop-match, body profile, and try-on tools.">
+  <style>
+    :root { color-scheme: light; --ink:#12191d; --teal:#0b6b72; --blue:#204b8f; --coral:#df5438; --gold:#e9ae35; --paper:#fffaf0; --line:#d9e1df; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#f5f6f2; }
+    header { min-height:88vh; padding:42px 22px; display:grid; place-items:center; background:linear-gradient(145deg,#0b4f55,#f0bc56); }
+    .hero { width:min(980px,100%); display:grid; gap:28px; grid-template-columns:1.1fr .9fr; align-items:center; }
+    h1 { margin:0; font-size:clamp(46px,8vw,96px); line-height:.92; letter-spacing:0; color:white; }
+    .lead { margin:18px 0 0; max-width:620px; font-size:clamp(18px,2.4vw,26px); line-height:1.3; color:rgba(255,255,255,.92); }
+    .phone { aspect-ratio:9/16; border-radius:34px; padding:18px; background:rgba(255,255,255,.94); box-shadow:0 24px 70px rgba(0,0,0,.26); }
+    .screen { height:100%; border-radius:24px; background:var(--paper); padding:22px; display:flex; flex-direction:column; gap:14px; }
+    .bar { height:10px; border-radius:99px; background:var(--line); }
+    .tile { padding:14px; border:1px solid var(--line); border-radius:8px; background:white; }
+    .swatches { display:flex; gap:8px; margin-top:10px; }
+    .swatches span { width:32px; height:32px; border-radius:50%; border:2px solid var(--ink); }
+    main { width:min(1040px,100%); margin:0 auto; padding:46px 22px 70px; }
+    h2 { font-size:34px; margin:0 0 18px; }
+    .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .card { padding:18px; min-height:190px; border:1px solid var(--line); border-radius:8px; background:white; }
+    .card strong { display:block; margin-bottom:8px; font-size:18px; }
+    footer { padding:24px 22px; border-top:1px solid var(--line); background:white; }
+    footer div { width:min(1040px,100%); margin:0 auto; display:flex; gap:16px; flex-wrap:wrap; }
+    a { color:var(--teal); font-weight:700; }
+    @media (max-width:780px) { .hero { grid-template-columns:1fr; } .phone { max-width:360px; margin:auto; } .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <section class="hero">
+      <div>
+        <h1>Clovio</h1>
+        <p class="lead">Know what works before you wear or buy it. Build a digital closet from clothing photos and get practical color combinations from the pieces you own.</p>
+      </div>
+      <div class="phone" aria-label="Clovio app preview">
+        <div class="screen">
+          <div class="bar"></div>
+          <div class="tile"><strong>Closet</strong> Scan clothes, crop the garment visually, and save colors, type, subtype, and notes.</div>
+          <div class="tile"><strong>Outfit</strong> Ask by text or voice for practical combinations.</div>
+          <div class="tile"><strong>Shop Match</strong> Check a shop item against your real closet.</div>
+          <div class="swatches"><span style="background:#18213f"></span><span style="background:#0b6b72"></span><span style="background:#df5438"></span><span style="background:#e9ae35"></span></div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <h2>Practical outfit planning from home</h2>
+    <section class="grid">
+      <article class="card"><strong>Clothing database</strong> Save one or more clothing photos at a time with colors, category, subtype, description, and notes.</article>
+      <article class="card"><strong>Outfit matches</strong> Ask where you are going and get combinations built from your own closet.</article>
+      <article class="card"><strong>Shop feedback</strong> Upload or describe a new item and see what it can combine with before buying.</article>
+      <article class="card"><strong>Body profile</strong> Store estimated fit parameters, correct them manually, and generate try-on previews.</article>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <span>Contact: <a href="mailto:moshnoi2000@gmail.com">moshnoi2000@gmail.com</a></span>
+      <a href="privacyclovioapp.html">Privacy Policy</a>
+      <a href="termsclovioapp.html">Terms of Use</a>
+    </div>
+  </footer>
+</body>
+</html>
