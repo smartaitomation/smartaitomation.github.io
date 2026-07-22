@@ -10,27 +10,26 @@
 <body>
   <header><nav><a class="brand" href="inspectcueapp.html"><span class="mark">✓</span>InspectCue</a><a href="termsinspectcueapp.html">Terms</a></nav></header>
   <main>
-    <p class="eyebrow">Effective July 20, 2026</p>
+    <p class="eyebrow">Effective July 22, 2026</p>
     <h1>Privacy Policy</h1>
-    <p class="lead">InspectCue is designed as a local-first inspection tool. This policy explains what stays on your device, what may leave it, and your choices.</p>
+    <p class="lead">InspectCue is designed as an on-device inspection tool. Inspection content and draft assistance stay on your device.</p>
 
     <h2>At a glance</h2>
     <ul>
       <li>No InspectCue account is required.</li>
       <li>Inspection records, photos, notes, signatures, and report branding are stored locally.</li>
       <li>We do not sell personal information and do not use data for cross-app tracking or advertising.</li>
-      <li>Apple commerce, speech recognition, and optional assisted finding drafts involve the limited data described below. Product analytics and third-party diagnostics are not enabled in this release.</li>
+      <li>Finding assistance and supported speech recognition run on-device. This release includes no product analytics or third-party diagnostic SDK.</li>
     </ul>
 
     <h2>Data handling</h2>
     <table>
       <thead><tr><th>Data</th><th>Purpose and handling</th></tr></thead>
       <tbody>
-        <tr><td>Assets, checklists, notes, findings, photos, signatures, and branding</td><td>Stored on your device to provide inspections and PDF reports. We do not receive this content unless you deliberately include limited observation text in a draft-assistance request.</td></tr>
-        <tr><td>Speech input</td><td>Requested only when you tap record. Apple speech services may process audio or transcription under Apple's terms and device settings. You can type instead.</td></tr>
-        <tr><td>Draft-assistance request</td><td>Only when you request it, up to 4,000 characters of observation text, equipment type, and locale are sent to our HTTPS service and OpenAI to return an editable draft. OpenAI may retain API request and response content for up to 30 days for abuse monitoring under its API data controls; API content is not used to train models by default. Photos, signatures, names, asset IDs, locations, and branding are excluded by design.</td></tr>
-        <tr><td>Product analytics</td><td>Mixpanel is not configured in this release, so InspectCue does not send product-analytics events. If a future version enables analytics, this policy and the App Store privacy label will be updated before release.</td></tr>
-        <tr><td>Diagnostics</td><td>Sentry is not configured in this release, so InspectCue does not send third-party crash or performance reports. If a future version enables diagnostics, screenshot and view-hierarchy attachment will remain disabled and this policy and the App Store privacy label will be updated before release.</td></tr>
+        <tr><td>Assets, checklists, notes, findings, photos, signatures, and branding</td><td>Stored on your device to provide inspections and PDF reports. InspectCue does not transmit or receive this content.</td></tr>
+        <tr><td>Speech input</td><td>Requested only when you tap record and processed on-device. If on-device recognition is not supported for the current device and locale, dictation remains unavailable and you can type instead.</td></tr>
+        <tr><td>Draft assistance</td><td>Typed or on-device-transcribed observation text is structured by code running inside InspectCue. The observation, equipment type, locale, result, photos, signatures, names, asset IDs, locations, and branding are not sent to us or an AI provider.</td></tr>
+        <tr><td>Product analytics and diagnostics</td><td>This release includes no product-analytics or third-party diagnostic SDK and sends no such events to us.</td></tr>
         <tr><td>Purchases</td><td>Apple processes subscription purchases, renewals, restorations, and offer codes. InspectCue receives entitlement and product information, not full payment-card details.</td></tr>
         <tr><td>Support email</td><td>If you contact us, we process the information you choose to provide to answer the request.</td></tr>
       </tbody>
@@ -40,16 +39,16 @@
     <p>Camera and photo access are requested only when you choose evidence capture. Microphone and speech recognition are requested only when you dictate. You can deny these permissions and continue with typed notes and manual findings. Permissions can be changed in iOS Settings.</p>
 
     <h2>Retention and deletion</h2>
-    <p>Local records remain until you delete them or remove the app. Deleting the app may remove locally stored data unless it is included in an Apple device backup. Our draft proxy does not persist request bodies and keeps only a process-local salted network-rate-limit key for the active rate-limit window. OpenAI may retain API request and response content for up to 30 days for abuse monitoring, unless law requires longer retention or shorter approved data-retention controls apply. Apple retains commerce data under its policies. Support email is retained only as reasonably needed for the request, security, and legal obligations.</p>
+    <p>Local records remain until you delete them or remove the app. Deleting the app may remove locally stored data unless it is included in an Apple device backup. Apple retains commerce data under its policies. Support email is retained only as reasonably needed for the request, security, and legal obligations.</p>
 
     <h2>Security and transfers</h2>
-    <p>Network features use HTTPS. No system can guarantee absolute security. Service providers may process data in countries other than yours with their contractual and legal safeguards.</p>
+    <p>Inspection content is not transferred by InspectCue. If you choose Apple commerce or contact support, those external services use their own protected connections and may process data under their terms. No system can guarantee absolute security.</p>
 
     <h2>Children</h2>
     <p>InspectCue is an industrial productivity tool and is not directed to children. We do not knowingly collect children's personal information.</p>
 
     <h2>Your choices and rights</h2>
-    <p>You can avoid optional assistance, deny permissions, delete local app data, and manage Apple subscriptions in your Apple Account. Product analytics and third-party diagnostics are not configured in this release. Depending on where you live, you may have rights to access, correct, delete, restrict, or object to processing. Contact us to exercise applicable rights.</p>
+    <p>You can avoid optional assistance, deny permissions, delete local app data, and manage Apple subscriptions in your Apple Account. Depending on where you live, you may have rights to access, correct, delete, restrict, or object to support information you voluntarily send. Contact us to exercise applicable rights.</p>
 
     <h2>Changes and contact</h2>
     <p>We may update this policy as InspectCue changes. The effective date above identifies the current version. Questions or rights requests: <a href="mailto:moshnoi2000@gmail.com?subject=InspectCue%20Privacy">moshnoi2000@gmail.com</a>. Developer: Ion Mosnoi, Republic of Moldova.</p>
