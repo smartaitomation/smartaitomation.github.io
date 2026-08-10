@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[43966,["/tropic-tray/_next/static/chunks/01xlw8hd842-c.js","/tropic-tray/_next/static/chunks/0d3shmwh5_nmn.js","/tropic-tray/_next/static/chunks/0.i0bv5mpfk7k.js"],"TropicTrayGame"]
+2:I[43966,["/tropic-tray/_next/static/chunks/01xlw8hd842-c.js","/tropic-tray/_next/static/chunks/0d3shmwh5_nmn.js","/tropic-tray/_next/static/chunks/0977dxzk-cy7-.js"],"TropicTrayGame"]
 3:I[97367,["/tropic-tray/_next/static/chunks/01xlw8hd842-c.js","/tropic-tray/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/tropic-tray/_next/static/chunks/0.i0bv5mpfk7k.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"fKkMR-g1Wef_01BDH0VxI"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/tropic-tray/_next/static/chunks/0977dxzk-cy7-.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"r267GdinzlVCtU-a-tRKS"}
 5:null
