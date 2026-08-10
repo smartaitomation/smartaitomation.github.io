@@ -1,0 +1,21 @@
+{
+  "name": "Tropic Tray: Drink Merge",
+  "short_name": "Tropic Tray",
+  "description": "Slide island drinks into five lanes, chain recipes, and serve beach orders.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff4cb",
+  "theme_color": "#063f49",
+  "categories": ["games", "puzzle", "entertainment"],
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Play a new tray", "short_name": "Play", "url": "./", "icons": [{ "src": "./icon-192.png", "sizes": "192x192" }] },
+    { "name": "Game support", "short_name": "Support", "url": "./support/" }
+  ]
+}
