@@ -37,7 +37,8 @@
 
     <section>
       <h2>Product Analytics</h2>
-      <p>When analytics is enabled in a distributed build, CattleCue uses Mixpanel to receive privacy-limited product events such as app launch, selected tab, language change, subscription state, and whether a save or Smart Capture action succeeded. Events include the app name and an app-generated anonymous identifier. They do not include ear tags, herd notes, recognized text, photos, email addresses, or raw cattle records. Mixpanel processes this data under its own privacy and retention practices.</p>
+      <p>When analytics is enabled in a distributed build, CattleCue uses Mixpanel for product analytics. Mixpanel receives privacy-limited product events such as app launch, selected tab, language change, subscription state, and whether a save or Smart Capture action succeeded. The analytics payload can include the app name, an app-generated anonymous identifier, a Mixpanel or device identifier, device model, app and iOS version, coarse city/region/country inferred by the service, session timing, and product interactions. These analytics fields are used only to understand and improve CattleCue, are not used for advertising or cross-app tracking, and are not linked to an account because CattleCue has no account system.</p>
+      <p>Analytics events do not include ear tags, herd notes, recognized text, photos, email addresses, precise location, or raw cattle records. Mixpanel processes analytics data under its own privacy and retention practices.</p>
     </section>
 
     <section>
