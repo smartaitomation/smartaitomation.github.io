@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Support for Substitute Teacher: ClassBrief, the private offline day-plan and teacher handoff app.">
+  <meta name="description" content="Support for Substitute Teacher: ClassBrief, the local day-plan and teacher handoff app.">
   <title>Substitute Teacher: ClassBrief Support</title>
   <style>
     :root { color-scheme:light; --paper:#f5f2e8; --card:#fffdf6; --ink:#21312d; --muted:#60706a; --green:#176b57; --gold:#d79732; --line:#d9d5c8; }
@@ -29,27 +29,26 @@
   <section class="hero">
     <p class="eyebrow">Private classroom-day support</p>
     <h1>Substitute Teacher:<br>ClassBrief</h1>
-    <p>Create a day plan, follow each period, and hand back a useful anonymous return brief—even when school Wi-Fi is unreliable.</p>
+    <p>Create a local day plan, record completed periods, and share the current anonymous return brief as plain text.</p>
   </section>
 
   <h2>How ClassBrief works</h2>
   <div class="grid">
-    <div class="card"><strong>1. Build the day</strong><span class="muted">Choose a schedule structure and review the teacher-owned objective and materials for each period.</span></div>
-    <div class="card"><strong>2. Run each period</strong><span class="muted">Mark a period completed, changed, or skipped and add only class-level anonymous observations.</span></div>
-    <div class="card"><strong>3. Review the brief</strong><span class="muted">Each saved outcome appears once in the live teacher return brief.</span></div>
+    <div class="card"><strong>1. Build the day</strong><span class="muted">Choose a schedule structure and edit each period’s title, time or sequence, and optional objective.</span></div>
+    <div class="card"><strong>2. Record an outcome</strong><span class="muted">For the current period, choose class-level observation labels, add an optional anonymous note, and tap Mark complete.</span></div>
+    <div class="card"><strong>3. Review the brief</strong><span class="muted">The return brief shows the completed-period outcomes currently recorded by the app.</span></div>
     <div class="card"><strong>4. Hand it back</strong><span class="muted">Share the current anonymous return brief as plain text using the destinations you choose in iOS.</span></div>
   </div>
 
   <h2>No student records</h2>
   <div class="notice">
     <strong>ClassBrief is for teacher-owned plans and class-level handoff notes.</strong>
-    Do not enter student names, contact details, grades, disability information, protected traits, accounts, photos, or behavior profiles. The app applies an on-device text check before saving or exporting suspected identifying or protected-record content.
+    Do not enter student names, contact details, grades, disability information, protected traits, accounts, photos, or behavior profiles. The app applies an on-device text check before local persistence or plain-text sharing of suspected identifying or protected-record content.
   </div>
 
   <h2>Troubleshooting</h2>
   <div class="grid">
-    <div class="card"><strong>A change did not save</strong><span class="muted">Keep the draft open and choose Try saving again. ClassBrief does not report a successful save until the local snapshot can be read back.</span></div>
-    <div class="card"><strong>The app says Offline</strong><span class="muted">Core planning, period outcomes, the return brief, and plain-text sharing remain available without a network connection.</span></div>
+    <div class="card"><strong>The app says Offline</strong><span class="muted">ClassBrief’s planning, outcome, and brief screens do not call a developer backend. A destination selected from the iOS share sheet may still require its own network connection.</span></div>
     <div class="card"><strong>Text was blocked</strong><span class="muted">Remove possible identifying or protected student information, then retry. The correctable draft remains visible and is not saved or exported while blocked.</span></div>
     <div class="card"><strong>PDF says unavailable</strong><span class="muted">Use Share plain text instead. The current Release build cannot unlock or generate the Premium PDF.</span></div>
   </div>
