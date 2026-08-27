@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Support for PlotCue, the local-first stage plot, input list, and technical rider builder for iPhone and iPad.">
+  <meta name="theme-color" content="#071127">
+  <title>PlotCue Support</title>
+  <style>
+    :root { color-scheme:light; --navy:#071127; --panel:#101d3d; --cyan:#41d4e8; --violet:#8c6dff; --mist:#edf5fb; --ink:#111a31; --muted:#5f6b82; --line:rgba(17,26,49,.13); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:radial-gradient(circle at 88% 4%,rgba(65,212,232,.18),transparent 25rem),var(--mist); font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:#126b86; text-underline-offset:.18em; }
+    a:hover { color:#4f3cc4; }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--violet); outline-offset:4px; border-radius:5px; }
+    .skip { position:fixed; top:10px; left:10px; z-index:10; padding:9px 13px; color:#fff; background:var(--navy); border-radius:9px; transform:translateY(-150%); }
+    .skip:focus { transform:translateY(0); }
+    nav { display:flex; max-width:960px; margin:auto; padding:18px 24px; align-items:center; justify-content:space-between; gap:18px; }
+    .brand { color:var(--navy); font-weight:850; text-decoration:none; }
+    .nav-links { display:flex; gap:18px; }
+    .nav-links a { color:var(--navy); font-weight:750; text-decoration:none; }
+    .nav-links a[aria-current="page"] { color:#126b86; }
+    header { color:#fff; background:linear-gradient(132deg,var(--navy),var(--panel) 58%,#35266f); }
+    .hero { max-width:920px; margin:auto; padding:70px 24px 76px; }
+    .eyebrow { margin:0 0 12px; color:#92eff7; font-size:.8rem; font-weight:850; letter-spacing:.13em; text-transform:uppercase; }
+    h1 { margin:0 0 18px; font-size:clamp(2.7rem,8vw,5rem); line-height:1.03; letter-spacing:-.045em; }
+    .hero p:last-child { max-width:760px; color:rgba(255,255,255,.84); font-size:clamp(1.06rem,2.5vw,1.3rem); }
+    main { max-width:920px; margin:auto; padding:42px 24px 76px; }
+    h2 { margin:34px 0 10px; color:var(--navy); font-size:1.45rem; line-height:1.2; }
+    .lead { color:var(--muted); font-size:1.14rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:22px 0; }
+    .card, details, .contact { padding:22px; background:rgba(255,255,255,.96); border:1px solid var(--line); border-radius:20px; box-shadow:0 18px 48px rgba(16,29,61,.1); }
+    .card h2 { margin:0 0 9px; }
+    details { margin:12px 0; box-shadow:none; }
+    summary { cursor:pointer; color:var(--navy); font-weight:800; }
+    details p { margin:12px 0 0; color:var(--muted); }
+    .contact { margin-top:30px; }
+    footer { color:rgba(255,255,255,.75); background:var(--navy); }
+    footer div { max-width:920px; margin:auto; padding:28px 24px 34px; }
+    footer a { color:#92eff7; }
+    @media (max-width:680px) { body{font-size:16px} nav{align-items:flex-start;flex-direction:column}.nav-links{width:100%;justify-content:space-between}.grid{grid-template-columns:1fr}.hero{padding-top:54px} }
+    @media (prefers-reduced-motion:reduce) { html{scroll-behavior:auto} }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main-content">Skip to content</a>
+  <nav aria-label="PlotCue navigation">
+    <a class="brand" href="https://smartaitomation.com/plotcueapp.html">PlotCue</a>
+    <div class="nav-links">
+      <a href="https://smartaitomation.com/plotcueapp.html" aria-current="page">Support</a>
+      <a href="https://smartaitomation.com/privacyplotcueapp.html">Privacy</a>
+      <a href="https://smartaitomation.com/termsplotcueapp.html">Terms</a>
+    </div>
+  </nav>
+  <header><div class="hero">
+    <p class="eyebrow">Advance the gig clearly</p>
+    <h1>One stage plan. One source of truth.</h1>
+    <p>PlotCue connects an editable stage layout, explicitly confirmed audio sources, a derived input list, and a technical rider in one local workspace.</p>
+  </div></header>
+  <main id="main-content">
+    <p class="lead">PlotCue is a local-first stage plot builder for iPhone and iPad. It does not require an account, cloud workspace, or subscription.</p>
+
+    <section class="grid" aria-label="PlotCue features">
+      <article class="card"><h2>Arrange the stage</h2><p>Place performers and equipment, keep the audience edge visible, and revise the layout as the show changes.</p></article>
+      <article class="card"><h2>Confirm every input</h2><p>Input rows come only from microphones, DIs, and other audio sources you explicitly add. An instrument icon does not invent a channel or connector.</p></article>
+      <article class="card"><h2>Review the rider</h2><p>Resolve blocking issues and check warnings, channel requests, monitors, equipment, dimensions, and notes before export.</p></article>
+      <article class="card"><h2>Export locally</h2><p>Create a PDF rider or JSON backup locally, then choose whether and where to share it using Apple system controls.</p></article>
+    </section>
+
+    <section aria-labelledby="help-heading">
+      <h2 id="help-heading">Quick help</h2>
+      <details><summary>Why is an instrument missing from the input list?</summary><p>Add the microphone, DI, line, or other audio source that will actually feed the sound system. PlotCue does not infer an input from an instrument or performer alone.</p></details>
+      <details><summary>Why is export blocked?</summary><p>Open Review and resolve blocking issues such as duplicate requested channels, invalid references, invalid geometry, or an unconfirmed draft assumption.</p></details>
+      <details><summary>How does Smart Draft handle my description?</summary><p>On eligible devices, Smart Draft uses Apple’s on-device Foundation Models framework. PlotCue does not send the description to a PlotCue server or cloud-AI provider. Quick Setup and manual building remain available.</p></details>
+      <details><summary>How do I restore PlotCue Pro?</summary><p>Open Settings or the PlotCue Pro screen and choose Restore Purchases. The one-time purchase is associated with the Apple Account that completed it.</p></details>
+      <details><summary>What if PlotCue Pro or its price is unavailable?</summary><p>Keep using the free workflow and retry later. Product availability and localized price come from Apple through StoreKit.</p></details>
+      <details><summary>How do I remove local PlotCue data?</summary><p>In Settings, choose Delete all data and confirm. This deletes stored plots and onboarding choices from the app. Copies previously exported to Files, Mail, Messages, cloud storage, or another app must be deleted from that destination separately.</p></details>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Developer: Ion Mosnoi</p>
+      <p>Email: <a href="mailto:moshnoi2000@gmail.com?subject=PlotCue%20Support">moshnoi2000@gmail.com</a></p>
+      <p>Phone: <a href="tel:+37369644690">+373 69 644 690</a></p>
+      <p><a href="https://smartaitomation.com/privacyplotcueapp.html">Privacy Policy</a> · <a href="https://smartaitomation.com/termsplotcueapp.html">Terms of Use</a></p>
+      <p><small>Last updated August 27, 2026.</small></p>
+    </section>
+  </main>
+  <footer><div><strong>PlotCue</strong> — stage plots, input lists, and technical riders in one local workspace.<br><a href="https://smartaitomation.com/plotcueapp.html">Support</a> · <a href="https://smartaitomation.com/privacyplotcueapp.html">Privacy Policy</a> · <a href="https://smartaitomation.com/termsplotcueapp.html">Terms of Use</a></div></footer>
+</body>
+</html>
