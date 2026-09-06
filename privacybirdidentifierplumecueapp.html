@@ -14,18 +14,18 @@
 </head>
 <body data-app="Bird Identifier: PlumeCue" data-page-key="plumecue_privacy_v001">
   <a class="skip" href="#main">Skip to privacy policy</a>
-  <header><div class="wrap"><span class="tag">Privacy v1</span><h1>Privacy Policy</h1><p class="meta">Bird Identifier: PlumeCue<br>Effective and last updated: September 2, 2026</p></div></header>
+  <header><div class="wrap"><span class="tag">Privacy v1</span><h1>Privacy Policy</h1><p class="meta">Bird Identifier: PlumeCue<br>Effective and last updated: September 6, 2026</p></div></header>
   <main id="main" class="wrap">
     <section class="callout" aria-labelledby="summary-title">
       <h2 id="summary-title">Summary</h2>
-      <p>PlumeCue is a local-first bird identification and field-log app. It has no account, advertising, cross-app tracking, or app analytics. Most product data stays on your device. Only after you choose to continue does PlumeCue send one prepared bird photo or call and your selected U.S. state or District of Columbia through Firebase AI Logic to Google’s Gemini service to build an identification shortlist.</p>
+      <p>PlumeCue is a local-first bird identification and field-log app. It has no account, advertising, cross-app tracking, or app analytics. Most product data stays on your device. Only after you choose to continue does PlumeCue send one prepared bird photo or call and your selected country or U.S. state/DC directly to Google’s Gemini API to build an identification shortlist.</p>
     </section>
 
     <section aria-labelledby="local-title">
       <h2 id="local-title">Information kept on your device</h2>
       <ul>
         <li>Selected or recorded source media, temporary normalized media, and whether you chose to save source media.</li>
-        <li>Field-note details such as date, selected state or DC, photo-or-call source, candidate snapshot, your confirmed or unconfirmed decision, optional notes, sample status, and catalog/provider version.</li>
+        <li>Field-note details such as date, selected country or U.S. state/DC, photo-or-call source, candidate snapshot, your confirmed or unconfirmed decision, optional notes, sample status, and catalog/provider version.</li>
         <li>App preferences, onboarding choice, recent region, media-transfer consent receipt, and the successful-identification usage ledger.</li>
         <li>The bundled field guide, regional catalog, and practice-sample records.</li>
       </ul>
@@ -35,14 +35,14 @@
     <section aria-labelledby="permissions-title">
       <h2 id="permissions-title">Camera, photos, microphone, and optional location</h2>
       <p>PlumeCue asks for camera, photo-library, or microphone access only after you choose the corresponding capture action. You may instead import supported media, use a labeled practice sample, or use the manual Field Guide.</p>
-      <p>If you tap <strong>Use Current Location</strong>, PlumeCue uses the coordinates on your device only to select one supported state or DC. The coordinates are immediately discarded. They are not stored in your field log and are not sent to the AI provider; only the selected state or DC may be sent.</p>
+      <p>If you tap <strong>Use Current Location</strong>, PlumeCue uses the coordinates on your device only to select a supported U.S. state or DC. The coordinates are immediately discarded. They are not stored in your field log and are not sent to the AI provider; only the selected state or DC may be sent.</p>
     </section>
 
     <section aria-labelledby="ai-title">
-      <h2 id="ai-title">Firebase AI Logic and Google Gemini</h2>
-      <p>For a requested identification, PlumeCue removes embedded media metadata, reduces the file to the supported format and size, and displays a consent prompt. If you continue, the app sends the prepared photo or 3–30 second call, the selected state or DC, and the technical request needed to process it through the Firebase AI Logic Swift SDK to Google’s Gemini service. The purpose is limited to returning structured candidate identifiers and clue signals for local validation.</p>
-      <p>PlumeCue does not include your name, field log, optional note text, precise coordinates, contacts, or payment information in that AI request. Firebase App Check and Apple App Attest may also process app/device integrity tokens, IP address, and technical request metadata to authenticate the app and reduce abuse.</p>
-      <p>PlumeCue uses a billing-enabled Gemini service. Under Google’s current paid-service terms, Google says prompts and responses are not used to improve its products, but may be logged for a limited period for abuse prevention, security, and required legal disclosures. PlumeCue does not enable prompt/response logging for product analytics, create retained AI datasets, use grounding, or opt in to data sharing. Google’s processing is governed by the <a href="https://firebase.google.com/terms/">Firebase terms</a> and <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>.</p>
+      <h2 id="ai-title">Direct Google Gemini processing</h2>
+      <p>For a requested identification, PlumeCue removes embedded media metadata, reduces the file to the supported format and size, and displays a consent prompt. If you continue, the app sends the prepared photo or 3–30 second call, the selected country or U.S. state/DC, and the technical request directly from the app to Google’s Gemini API over encrypted HTTPS. The purpose is limited to returning structured candidate identifiers and clue signals for local validation.</p>
+      <p>PlumeCue does not include your name, field log, optional note text, precise coordinates, contacts, or payment information in that AI request. Google may receive the device IP address and technical request metadata needed to provide, secure, and limit the service. PlumeCue uses no Firebase service, custom backend, app account, or Google user sign-in.</p>
+      <p>Google processes submitted media, prompts, responses, and technical service data under the <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. PlumeCue does not use provider responses for advertising or app analytics and does not create a separate server-side copy.</p>
     </section>
 
     <section aria-labelledby="retention-title">
@@ -74,7 +74,7 @@
 
     <section aria-labelledby="security-title">
       <h2 id="security-title">Security and international processing</h2>
-      <p>PlumeCue uses iOS file protection, metadata stripping, least-data request design, App Check/App Attest, and encrypted HTTPS transport. No system can guarantee absolute security. Google, Apple, and their processors may process technical or service data in countries where they operate, subject to their legal and contractual safeguards.</p>
+      <p>PlumeCue uses iOS file protection, metadata stripping, least-data request design, an on-device six-requests-per-minute limit, and encrypted HTTPS transport. No system can guarantee absolute security. Google, Apple, and their processors may process technical or service data in countries where they operate, subject to their legal and contractual safeguards.</p>
     </section>
 
     <section aria-labelledby="contact-title">
