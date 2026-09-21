@@ -23,7 +23,7 @@
     <ul>
       <li>No PictoCue account is required.</li>
       <li>Profile names, boards, photos, labels, titles, completion state, and backups are stored locally.</li>
-      <li>Existing boards and photos stay on your device. If you explicitly choose AI sentence-to-board creation, the sentence you enter and the selected language are sent directly from PictoCue to Replicate and OpenAI.</li>
+      <li>Existing boards and photos stay on your device. If you explicitly choose AI sentence-to-board creation, the sentence you enter and the selected language are sent through our secure gateway for processing by Replicate and OpenAI.</li>
       <li>Privacy-minimized analytics exclude names, photos, labels, titles, board contents, and file names.</li>
       <li>You can turn analytics off in PictoCue Settings.</li>
       <li>We do not sell personal information or use PictoCue data for third-party advertising or cross-app tracking.</li>
@@ -42,9 +42,12 @@
     </table>
 
     <h2>Optional AI picture-board drafts</h2>
-    <p>In app versions that offer sentence-to-board creation, you can choose to send a short routine and your selected language directly from PictoCue to Replicate. The app asks for confirmation before each request. Replicate runs OpenAI’s GPT-4.1 mini to suggest short labels and existing symbols. The AI request does not include your photos, saved boards, profiles, purchase details, or analytics identifier. Do not include names, health information, or other sensitive details. You can decline and create the board manually.</p>
-    <p>PictoCue does not route AI requests through a developer-operated sentence-board server and does not receive or intentionally persist the routine text or generated board content. Replicate and its infrastructure necessarily process request content and connection metadata to provide the result.</p>
+    <p>In app versions that offer sentence-to-board creation, you can choose to send a short routine and your selected language through our secure gateway to Replicate. The app asks for confirmation before each request. Replicate runs OpenAI’s GPT-4.1 mini to suggest short labels and existing symbols. The AI request does not include your photos, saved boards, profiles, purchase details, or analytics identifier. Do not include names, health information, or other sensitive details. You can decline and create the board manually.</p>
+    <p>Our gateway, Replicate, and the model provider process request content and connection metadata to provide and operate the feature. The retention details are described below.</p>
     <p>Provider handling follows the <a href="https://replicate.com/openai/gpt-4.1-mini">Replicate model’s published data terms</a> and <a href="https://replicate.com/privacy">Replicate’s privacy policy</a>. Those terms describe processing by Replicate and the OpenAI model provider; account, billing, security, and operational metadata may be handled separately from routine content. Processing may occur outside your country. Review all AI suggestions before saving or using a board. Your sentence and editable draft are also saved locally so you can resume; saving the board clears that local composer draft.</p>
+
+    <h2 id="ai-gateway-retention">AI gateway and retention</h2>
+    <p>AI requests go through our secure gateway and may be processed by Replicate, OpenAI, or Google Gemini. The gateway records the app, a random installation identifier, country, language, app environment, model, request input and output, status, timing, and cost for up to 90 days for feature operation, failure and abuse investigation, and spending controls. These records are not used for advertising or cross-app tracking. The app asks for consent before transmission, and you can decline and create the board manually.</p>
 
     <h2>Children and family use</h2>
     <p>Adults may use PictoCue to prepare boards for children. Purchase, backup, sharing, and settings decisions are intended for a parent, guardian, teacher, caregiver, or other responsible adult. PictoCue does not require a child account and photos and existing boards are not automatically shared. A responsible adult should approve any AI request and avoid including private information about a child in a routine or support email.</p>

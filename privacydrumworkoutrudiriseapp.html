@@ -34,6 +34,10 @@
   <p>RudiRise uses Mixpanel's European service for product analytics. It sends a random installation identifier, app/version/build information, language, screen and onboarding-step activity, coarse workout progress such as tempo and completed step counts, subscription product identifiers, and purchase or restore outcomes. This information is linked to the random installation identifier so we can understand feature use and improve the app.</p>
   <p>RudiRise disables Mixpanel automatic event collection and IP-based geolocation. It does not send onboarding answers, practice history, free-form content, payment-card details, or advertising identifiers to Mixpanel. RudiRise does not include a third-party crash-reporting or advertising SDK, and analytics are not used for third-party advertising or cross-app tracking.</p>
 
+  <h2 id="optional-ai-guidance">Optional AI guidance</h2>
+  <p>AI guidance is optional and stays off until you explicitly agree in the app. RudiRise sends the selected rudiment, skill level, tempo, practice goal, and device language. It does not send audio or the full practice history.</p>
+  <p>The request goes through our secure gateway and may be processed by OpenAI or Google Gemini. The gateway records the app, a random installation identifier, country, language, app environment, model, request input and output, status, timing, and cost for up to 90 days so we can provide the feature, investigate failures and abuse, and control spending. These records are not used for advertising or cross-app tracking. Do not include sensitive personal information that the feature does not need. You can decline and keep using the app without the AI suggestion.</p>
+
   <h2>Purchases</h2>
   <p>Apple processes subscriptions, purchase history, restoration, and offer-code redemption through StoreKit and the Apple Account. The developer receives entitlement and transaction status needed to unlock Premium but does not receive your full payment-card details.</p>
 
