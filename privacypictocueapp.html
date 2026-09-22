@@ -15,7 +15,7 @@
     </nav>
   </header>
   <main>
-    <p class="eyebrow">Updated September 19, 2026 — includes optional sentence-to-board AI</p>
+    <p class="eyebrow">Updated September 22, 2026 — includes optional sentence-to-board AI illustrations</p>
     <h1>Privacy Policy</h1>
     <p class="lead">PictoCue is a local-first visual schedule app. This policy explains what remains on your device, the limited product analytics the app may send, and the separate services you choose to open.</p>
 
@@ -23,7 +23,7 @@
     <ul>
       <li>No PictoCue account is required.</li>
       <li>Profile names, boards, photos, labels, titles, completion state, and backups are stored locally.</li>
-      <li>Existing boards and photos stay on your device. If you explicitly choose AI sentence-to-board creation, the sentence you enter and the selected language are sent through our secure gateway for processing by Replicate and OpenAI.</li>
+      <li>Existing boards and photos stay on your device. If you explicitly choose AI sentence-to-board creation, the sentence you enter, selected language, selected picture style, and generated step labels are sent through our secure gateway for processing by Replicate, OpenAI, or Google.</li>
       <li>Privacy-minimized analytics exclude names, photos, labels, titles, board contents, and file names.</li>
       <li>You can turn analytics off in PictoCue Settings.</li>
       <li>We do not sell personal information or use PictoCue data for third-party advertising or cross-app tracking.</li>
@@ -42,9 +42,9 @@
     </table>
 
     <h2>Optional AI picture-board drafts</h2>
-    <p>In app versions that offer sentence-to-board creation, you can choose to send a short routine and your selected language through our secure gateway to Replicate. The app asks for confirmation before each request. Replicate runs OpenAI’s GPT-4.1 mini to suggest short labels and existing symbols. The AI request does not include your photos, saved boards, profiles, purchase details, or analytics identifier. Do not include names, health information, or other sensitive details. You can decline and create the board manually.</p>
+    <p>In app versions that offer sentence-to-board creation, you can choose to send a short routine and selected language through our secure gateway to Replicate. After the labels are generated, your selected picture style is sent with those labels to create the illustration grid. The app asks for confirmation before each request. Replicate runs OpenAI’s GPT-4.1 mini to suggest short labels and symbols. OpenAI GPT Image 1.5 Low normally creates one nine-cell illustration grid; if that image service has a temporary outage or rate limit, Google Nano Banana is used as the fallback. PictoCue crops the grid on your device and assigns the used cells to the editable cards. The AI requests do not include your photos, saved boards, profiles, purchase details, or analytics identifier. Do not include names, health information, or other sensitive details. Review every generated image before saving. You can decline and create the board manually.</p>
     <p>Our gateway, Replicate, and the model provider process request content and connection metadata to provide and operate the feature. The retention details are described below.</p>
-    <p>Provider handling follows the <a href="https://replicate.com/openai/gpt-4.1-mini">Replicate model’s published data terms</a> and <a href="https://replicate.com/privacy">Replicate’s privacy policy</a>. Those terms describe processing by Replicate and the OpenAI model provider; account, billing, security, and operational metadata may be handled separately from routine content. Processing may occur outside your country. Review all AI suggestions before saving or using a board. Your sentence and editable draft are also saved locally so you can resume; saving the board clears that local composer draft.</p>
+    <p>Provider handling follows the published terms for the <a href="https://replicate.com/openai/gpt-4.1-mini">text model</a>, the <a href="https://replicate.com/openai/gpt-image-1.5">primary image model</a>, the <a href="https://replicate.com/google/nano-banana">fallback image model</a>, and <a href="https://replicate.com/privacy">Replicate’s privacy policy</a>. Those terms describe processing by Replicate and the applicable OpenAI or Google model provider; account, billing, security, and operational metadata may be handled separately from routine content. Processing may occur outside your country. Review all AI suggestions and images before saving or using a board. Your sentence and editable draft are also saved locally so you can resume; saving the board clears that local composer draft.</p>
 
     <h2 id="ai-gateway-retention">AI gateway and retention</h2>
     <p>AI requests go through our secure gateway and may be processed by Replicate, OpenAI, or Google Gemini. The gateway records the app, a random installation identifier, country, language, app environment, model, request input and output, status, timing, and cost for up to 90 days for feature operation, failure and abuse investigation, and spending controls. These records are not used for advertising or cross-app tracking. The app asks for consent before transmission, and you can decline and create the board manually.</p>
@@ -56,7 +56,7 @@
     <p>Camera and Photo Library access are requested only when you choose to add a photo. You can deny access and continue using starter symbols. Microphone, contacts, location, health, and advertising-tracking permissions are not required for PictoCue's core board workflow.</p>
 
     <h2>Sharing, processors, and international transfers</h2>
-    <p>Replicate and OpenAI process optional AI routine requests as described above. Mixpanel acts as an analytics service provider for the limited event data described above. Apple provides App Store commerce. Your chosen share destination, email provider, and web browser are separate services. Those providers may process information in other countries under their own terms, privacy policies, and applicable safeguards.</p>
+    <p>Replicate, OpenAI, and Google process optional AI routine requests as described above. Mixpanel acts as an analytics service provider for the limited event data described above. Apple provides App Store commerce. Your chosen share destination, email provider, and web browser are separate services. Those providers may process information in other countries under their own terms, privacy policies, and applicable safeguards.</p>
 
     <h2>Retention, deletion, and choices</h2>
     <p>Local content remains until you delete it in PictoCue, reset the app where available, or remove the app. Removing the app may delete local content unless it is included in a device or exported backup. Analytics retention is managed under the developer's Mixpanel settings and applicable legal obligations. You can turn analytics off in PictoCue Settings, limit network access at the device level, and contact us regarding applicable privacy rights. Turning analytics off asks the analytics SDK to stop sending events and clear its local analytics identity state. Manage saved boards and drafts on your device. You can use manual board creation without sending routine text to AI.</p>
