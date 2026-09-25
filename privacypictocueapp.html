@@ -15,7 +15,7 @@
     </nav>
   </header>
   <main>
-    <p class="eyebrow">Updated September 22, 2026 — includes optional sentence-to-board AI illustrations</p>
+    <p class="eyebrow">Updated September 25, 2026 — includes optional illustrated-character preferences</p>
     <h1>Privacy Policy</h1>
     <p class="lead">PictoCue is a local-first visual schedule app. This policy explains what remains on your device, the limited product analytics the app may send, and the separate services you choose to open.</p>
 
@@ -23,7 +23,7 @@
     <ul>
       <li>No PictoCue account is required.</li>
       <li>Profile names, boards, photos, labels, titles, completion state, and backups are stored locally.</li>
-      <li>Existing boards and photos stay on your device. If you explicitly choose AI sentence-to-board creation, the sentence you enter, selected language, selected picture style, and generated step labels are sent through our secure gateway for processing by Replicate, OpenAI, or Google.</li>
+      <li>Existing boards and photos stay on your device. If you explicitly choose AI sentence-to-board creation, the sentence you enter, selected language and picture style, generated step labels, and any optional child appearance choices are sent through our secure gateway for processing by Replicate, OpenAI, or Google.</li>
       <li>Privacy-minimized analytics exclude names, photos, labels, titles, board contents, and file names.</li>
       <li>You can turn analytics off in PictoCue Settings.</li>
       <li>We do not sell personal information or use PictoCue data for third-party advertising or cross-app tracking.</li>
@@ -33,7 +33,7 @@
     <table>
       <thead><tr><th>Data</th><th>Purpose and handling</th></tr></thead>
       <tbody>
-        <tr><td>Profiles, boards, labels, titles, progress, and preferences</td><td>Stored on your device to provide PictoCue. This saved content is not automatically uploaded. Text you separately submit to the optional AI feature is handled as described below.</td></tr>
+        <tr><td>Profiles, boards, labels, titles, progress, and preferences</td><td>Stored on your device to provide PictoCue. This saved content is not automatically uploaded. Routine text and optional illustration preferences you separately submit to the AI feature are handled as described below.</td></tr>
         <tr><td>Camera and Photo Library images</td><td>Selected only when you use the matching control, resized for cards and PDFs, and stored with local app data. PictoCue does not upload these images to the developer, Mixpanel, or an AI service.</td></tr>
         <tr><td>Product analytics</td><td>PictoCue may use Mixpanel to process privacy-minimized interaction events, such as app launch, onboarding completion, enum-style board type, card or board count, export format, premium screen outcome, subscription product identifier, and purchase or restore state. Mixpanel may also process limited app, device, operating-system, and network metadata needed to deliver the analytics service. Analytics is used to understand feature reliability and product use, not to reconstruct a board or identify the person shown in a photo.</td></tr>
         <tr><td>Purchases</td><td>Apple processes subscription purchases, renewals, restorations, and introductory offers. PictoCue receives product and entitlement status, not complete payment-card details.</td></tr>
@@ -42,7 +42,7 @@
     </table>
 
     <h2>Optional AI picture-board drafts</h2>
-    <p>In app versions that offer sentence-to-board creation, you can choose to send a short routine and selected language through our secure gateway to Replicate. After the labels are generated, your selected picture style is sent with those labels to create the illustration grid. The app asks for confirmation before each request. Replicate runs OpenAI’s GPT-4.1 mini to suggest short labels and symbols. OpenAI GPT Image 1.5 Low normally creates one nine-cell illustration grid; if that image service has a temporary outage or rate limit, Google Nano Banana is used as the fallback. PictoCue crops the grid on your device and assigns the used cells to the editable cards. The AI requests do not include your photos, saved boards, profiles, purchase details, or analytics identifier. Do not include names, health information, or other sensitive details. Review every generated image before saving. You can decline and create the board manually.</p>
+    <p>In app versions that offer sentence-to-board creation, you can choose to send a short routine and selected language through our secure gateway to Replicate. After the labels are generated, your selected picture style and, only if you enable personalization, your selected child age, boy/girl choice, hair color and length, and eye color are sent with those labels to create the illustration grid. You may leave every appearance choice blank. The app asks for confirmation before each request. Replicate runs OpenAI’s GPT-4.1 mini to suggest short labels and symbols. OpenAI GPT Image 1.5 Low normally creates one nine-cell illustration grid; if that image service has a temporary outage or rate limit, Google Nano Banana is used as the fallback. PictoCue crops the grid on your device and assigns the used cells to the editable cards. The AI requests do not include your photos, saved boards, profile names, purchase details, or analytics identifier. Do not include names, health information, or other sensitive details. Review every generated image before saving. You can decline and create the board manually.</p>
     <p>Our gateway, Replicate, and the model provider process request content and connection metadata to provide and operate the feature. The retention details are described below.</p>
     <p>Provider handling follows the published terms for the <a href="https://replicate.com/openai/gpt-4.1-mini">text model</a>, the <a href="https://replicate.com/openai/gpt-image-1.5">primary image model</a>, the <a href="https://replicate.com/google/nano-banana">fallback image model</a>, and <a href="https://replicate.com/privacy">Replicate’s privacy policy</a>. Those terms describe processing by Replicate and the applicable OpenAI or Google model provider; account, billing, security, and operational metadata may be handled separately from routine content. Processing may occur outside your country. Review all AI suggestions and images before saving or using a board. Your sentence and editable draft are also saved locally so you can resume; saving the board clears that local composer draft.</p>
 
@@ -50,7 +50,7 @@
     <p>AI requests go through our secure gateway and may be processed by Replicate, OpenAI, or Google Gemini. The gateway records the app, a random installation identifier, country, language, app environment, model, request input and output, status, timing, and cost for up to 90 days for feature operation, failure and abuse investigation, and spending controls. These records are not used for advertising or cross-app tracking. The app asks for consent before transmission, and you can decline and create the board manually.</p>
 
     <h2>Children and family use</h2>
-    <p>Adults may use PictoCue to prepare boards for children. Purchase, backup, sharing, and settings decisions are intended for a parent, guardian, teacher, caregiver, or other responsible adult. PictoCue does not require a child account and photos and existing boards are not automatically shared. A responsible adult should approve any AI request and avoid including private information about a child in a routine or support email.</p>
+    <p>Adults may use PictoCue to prepare boards for children. Purchase, backup, sharing, and settings decisions are intended for a parent, guardian, teacher, caregiver, or other responsible adult. PictoCue does not require a child account and photos and existing boards are not automatically shared. Optional appearance choices create a generic illustrated character; they do not identify or reproduce a child from a photo. A responsible adult should approve any AI request and avoid including private information about a child in a routine or support email.</p>
 
     <h2>Permissions</h2>
     <p>Camera and Photo Library access are requested only when you choose to add a photo. You can deny access and continue using starter symbols. Microphone, contacts, location, health, and advertising-tracking permissions are not required for PictoCue's core board workflow.</p>
