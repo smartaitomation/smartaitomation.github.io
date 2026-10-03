@@ -9,6 +9,9 @@
   const validPixel = /^\d{8,20}$/.test(String(config.pixelId || ''));
   const consentPanel = document.getElementById('consent');
   let consent = 'unset', pixelStarted = false, viewSent = false, handoffStarted = false;
+  let redirectTimer = null;
+  const redirectNotice = document.getElementById('redirect-notice');
+  const redirectSessionKey = 'rudirise_auto_handoff_v1';
   const eventsSent = new Set();
   const destination = new URL('https://apps.apple.com/app/id6798422268');
   // Never accept a destination/pixel/provider from URL parameters (open redirect / account injection).
@@ -104,12 +107,37 @@
   consentPanel.hidden = !validPixel || qaMode || consent !== 'unset';
   startPixel();
 
+  function cancelAutoRedirect() {
+    if (redirectTimer !== null) window.clearTimeout(redirectTimer);
+    redirectTimer = null;
+    if (redirectNotice) redirectNotice.hidden = true;
+    try { sessionStorage.setItem(redirectSessionKey, 'handled'); } catch (_) {}
+  }
+  document.getElementById('stay-on-page').addEventListener('click', cancelAutoRedirect);
+  // Do not trap visitors who return with Back, interfere with the promised PDF,
+  // or mislabel an automatic handoff as an intentional click / install.
+  let previouslyHandled = false;
+  try { previouslyHandled = sessionStorage.getItem(redirectSessionKey) === 'handled'; } catch (_) {}
+  if (offer === 'app' && !qaMode && !previouslyHandled && config.autoRedirectMs === 2000) {
+    redirectNotice.hidden = false;
+    redirectTimer = window.setTimeout(() => {
+      if (handoffStarted) return;
+      handoffStarted = true;
+      cancelAutoRedirect();
+      pixelEvent('AppStoreAutoRedirect', 'automatic');
+      window.location.assign(destination.href);
+    }, 2000);
+  }
+  document.querySelectorAll('a:not(.store-link)').forEach(link => link.addEventListener('click', cancelAutoRedirect));
+  window.addEventListener('pagehide', cancelAutoRedirect);
+
   document.querySelectorAll('.store-link').forEach(link => link.addEventListener('click', event => {
     // Keep normal new-tab/modifier behavior and a true <a> fallback with JS disabled.
     pixelEvent('AppStoreClick', link.dataset.placement || 'unknown');
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
     event.preventDefault();
     if (handoffStarted) return; handoffStarted = true;
+    cancelAutoRedirect();
     // Give a consented Pixel a bounded chance to send; never wait indefinitely or block non-consenting users.
     window.setTimeout(() => { window.location.assign(destination.href); }, pixelStarted && consent === 'granted' ? 250 : 0);
   }));
