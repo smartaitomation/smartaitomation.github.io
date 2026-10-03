@@ -11,6 +11,7 @@
   let consent = 'unset', pixelStarted = false, viewSent = false, handoffStarted = false;
   let redirectTimer = null;
   const redirectNotice = document.getElementById('redirect-notice');
+  const consentStay = document.getElementById('consent-stay');
   const redirectSessionKey = 'rudirise_auto_handoff_v1';
   const eventsSent = new Set();
   const destination = new URL('https://apps.apple.com/app/id6798422268');
@@ -111,21 +112,25 @@
     if (redirectTimer !== null) window.clearTimeout(redirectTimer);
     redirectTimer = null;
     if (redirectNotice) redirectNotice.hidden = true;
+    if (consentStay) consentStay.hidden = true;
     try { sessionStorage.setItem(redirectSessionKey, 'handled'); } catch (_) {}
   }
   document.getElementById('stay-on-page').addEventListener('click', cancelAutoRedirect);
+  if (consentStay) consentStay.addEventListener('click', cancelAutoRedirect);
   // Do not trap visitors who return with Back, interfere with the promised PDF,
   // or mislabel an automatic handoff as an intentional click / install.
   let previouslyHandled = false;
   try { previouslyHandled = sessionStorage.getItem(redirectSessionKey) === 'handled'; } catch (_) {}
   if (offer === 'app' && !qaMode && !previouslyHandled && config.autoRedirectMs === 2000) {
     redirectNotice.hidden = false;
+    if (consentStay) consentStay.hidden = false;
     redirectTimer = window.setTimeout(() => {
       if (handoffStarted) return;
       handoffStarted = true;
       cancelAutoRedirect();
       pixelEvent('AppStoreAutoRedirect', 'automatic');
-      window.location.assign(destination.href);
+      // Same bounded send opportunity as an intentional handoff. Never block navigation on Meta.
+      window.setTimeout(() => { window.location.assign(destination.href); }, pixelStarted && consent === 'granted' ? 250 : 0);
     }, 2000);
   }
   document.querySelectorAll('a:not(.store-link)').forEach(link => link.addEventListener('click', cancelAutoRedirect));
