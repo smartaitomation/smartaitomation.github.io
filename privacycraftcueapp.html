@@ -18,16 +18,17 @@
   <div class="wrap">
     <header>
       <h1>Privacy Policy</h1>
-      <p>Effective date: September 29, 2026</p>
+      <p>Effective date: October 5, 2026</p>
     </header>
     <section>
       <h2>Information Stored in the App</h2>
-      <p>CraftCue stores craft inventory items, project plans, wishlist entries, onboarding answers, selected language, subscription status, and Quick Add usage counters on your device in the current version.</p>
+      <p>CraftCue stores craft inventory items, project plans, wishlist entries, onboarding answers, selected language, supply photos, custom fields and categories, linked project materials, shopping rows, stock-use history, subscription status, and Quick Add usage counters on your device in the current version.</p>
     </section>
     <section>
-      <h2>Quick Add</h2>
-      <p>The original text Quick Add uses local parsing on your device. Optional Quick AI and Fill with AI are different: after you accept the in-app notice, a typed or recorded request and relevant item context are sent through the ShortsBlink gateway to OpenAI, Anthropic Claude, or DeepSeek to prepare editable supply, project, or wishlist fields. Recorded audio is sent to OpenAI GPT Transcribe through the gateway first. You review and correct the draft before saving. Do not include sensitive personal, financial, health, or account information in AI requests.</p>
-      <p>The gateway may retain request text, transcripts, responses, and technical usage records for up to 90 days for operation, troubleshooting, abuse prevention, and spending controls. You can use manual entry and local Quick Add without sending an AI request.</p>
+      <h2>Optional AI and Local Label Reading</h2>
+      <p>Manual entry and local Quick Add run on your device. Supply photos are stored locally and label text is recognized on-device with Apple Vision; choosing or taking a photo does not upload it. After your explicit in-app consent, Create supply with AI sends the text you review to a third-party AI service through the ShortsBlink gateway. Current text recipients are OpenAI, Anthropic Claude, or DeepSeek. Voice recordings are sent to OpenAI transcription through the gateway after consent; temporary local audio is deleted after transcription or cancellation.</p>
+      <p>Material-list drafts may also send up to 100 supply names, IDs, and units to suggest links. Project ideas may send your goal and up to 100 supplies’ names, IDs, categories, quantities, units, fibers, and widths. Photos, storage locations, notes, wishlist data, and custom-field definitions/values are excluded from these new requests. You can edit or cancel every draft before saving and use manual entry instead. Do not include sensitive personal, financial, health, or account information in AI requests.</p>
+      <p>The gateway may retain request text, transcripts, responses, and technical usage records for up to 90 days for operation, troubleshooting, abuse prevention, and spending controls; its response cache lasts up to 24 hours. Consent is requested for each AI creation or recording action; cancel or use manual entry to avoid sending new requests. For questions about previously transmitted data, contact us below.</p>
     </section>
     <section>
       <h2>Subscriptions and Offer Codes</h2>
@@ -35,16 +36,16 @@
     </section>
     <section>
       <h2>Analytics and Diagnostics</h2>
-      <p>CraftCue uses Mixpanel to understand app usage and improve the product. Events include onboarding progress, tab visits, inventory and Quick Add actions, and subscription interactions, together with app version, language, technical device information, product identifiers, and StoreKit error codes. Events are associated with the SDK’s anonymous installation identifier. Inventory notes, project and wishlist text, and onboarding answers are not included in these analytics events. Automatic event tracking and IP-based location enrichment are disabled.</p>
+      <p>CraftCue uses Mixpanel to understand app usage and improve the product. Events include onboarding progress, tab visits, inventory and Quick Add actions, and subscription interactions, together with app version, language, technical device information, product identifiers, and StoreKit error codes. Events are associated with the SDK’s anonymous installation identifier. Inventory notes, project and wishlist text, custom field values and category names are not included in analytics events. Confirmed predefined onboarding choices are recorded as question and answer codes; free-text answers are recorded only as presence or broad buckets, without their text. Automatic event tracking and IP-based location enrichment are disabled.</p>
       <p>CraftCue uses Sentry for crash, performance, session, and technical error diagnostics. Diagnostic events include a persistent installation identifier so reports from the same installation can be associated. The app does not attach your inventory, project, or wishlist content to diagnostic reports. CraftCue does not use these services for advertising or tracking across other companies’ apps and websites.</p>
     </section>
     <section>
       <h2>Device Permissions</h2>
-      <p>Core inventory, project, wishlist, and settings features do not require camera, photo library, microphone, contacts, precise location, or health data access. The optional voice Quick AI action asks for microphone permission when you start recording.</p>
+      <p>Manual inventory, project, wishlist, and settings features do not require camera, microphone, contacts, precise location, or health access. Take photo asks for camera access at that action; Choose photo uses the system picker. Voice AI asks for microphone access when you start recording. Denying access preserves manual entry and other available input routes.</p>
     </section>
     <section>
       <h2>Deleting Your Data</h2>
-      <p>You can delete local app data by removing the app from your device. You can manage subscriptions through your Apple ID App Store subscription settings.</p>
+      <p>You can edit and delete supplies, projects and wishlist rows, clear the wishlist after confirmation, and reset local data in Settings. JSON backups include local photos and custom fields; CSV exports include standard supply metadata. Keep exported files private. Removing the app deletes its local data but does not delete exported backups or previously transmitted provider records. You can manage subscriptions through your Apple ID App Store subscription settings.</p>
     </section>
     <section>
       <h2>Contact</h2>
