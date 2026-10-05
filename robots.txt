@@ -1,3 +1,7 @@
 User-agent: *
 Disallow: /404.HTML
 Disallow: /pages/contacts.html
+
+Sitemap: https://smartaitomation.com/sitemap.xml
+
+Sitemap: https://smartaitomation.com/articles/sitemap.xml

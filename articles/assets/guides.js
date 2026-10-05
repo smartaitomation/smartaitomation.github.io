@@ -1,0 +1,11 @@
+(() => {"use strict";
+const progress=document.querySelector('.progress');
+const updateProgress=()=>{const extent=document.documentElement.scrollHeight-innerHeight;if(progress)progress.style.width=(extent>0?Math.min(100,100*scrollY/extent):0)+'%';};
+addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();
+document.querySelectorAll('[data-print]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.faq details').forEach(d=>d.open=true);window.print();}));
+const checks=[...document.querySelectorAll('.checklist input')],status=document.querySelector('.check-status');
+const report=()=>{if(status&&checks.length)status.textContent=checks.filter(c=>c.checked).length+' of '+checks.length+' steps checked. Changes stay on this page and reset when you reload.';};checks.forEach(c=>c.addEventListener('change',report));
+document.querySelector('[data-reset]')?.addEventListener('click',()=>{checks.forEach(c=>c.checked=false);report();});report();
+const filters=[...document.querySelectorAll('[data-filter]')];filters.forEach(b=>b.addEventListener('click',()=>{filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('.guide-card').forEach(c=>c.hidden=b.dataset.filter!=='all'&&c.dataset.category!==b.dataset.filter);const s=document.querySelector('[data-filter-status]');if(s)s.textContent=document.querySelectorAll('.guide-card:not([hidden])').length+' guides shown';}));
+const toc=document.querySelector('.contents details');if(toc&&matchMedia('(max-width:680px)').matches)toc.open=false;
+})();

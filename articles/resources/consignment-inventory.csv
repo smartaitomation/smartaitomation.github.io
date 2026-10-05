@@ -1,0 +1,3 @@
+Item ID,Description,Consignor,Intake date,Sale price,Owner payout percent,Status,Owner share,Paid amount,Balance due
+C-101,Lamp,Example owner,2026-10-05,80,60,Sold,48,0,48
+C-102,Chair,Example owner,2026-10-05,120,60,Sold,72,50,22

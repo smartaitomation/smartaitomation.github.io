@@ -1,0 +1,10 @@
+Channel,Source,Capture,Connection,Stand,Stage zone
+1,Kick,Mic,XLR,Short boom,Upstage center
+2,Snare,Mic,XLR,Short boom,Upstage center
+3,Rack tom,Mic,XLR,Clip / confirm,Upstage center
+4,Floor tom,Mic,XLR,Clip / confirm,Upstage center
+5,Overhead mono,Mic,XLR,Tall boom,Upstage center
+6,Bass,DI,XLR,None,Stage left
+7,Guitar amp,Mic,XLR,Short boom,Stage right
+8,Lead vocal,Mic,XLR,Tall boom,Downstage center
+9,Backing vocal,Mic,XLR,Tall boom,Stage right
