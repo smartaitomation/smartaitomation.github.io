@@ -92,4 +92,51 @@
     const depth = Math.round(scrollY / travel * 100);
     for (const mark of [50, 90]) if (depth >= mark && !seen.has(mark)) { seen.add(mark); emit('article_scroll_depth', { percent: mark }); }
   }, { passive: true });
+
+  // A section view means its heading reached the viewport. Reading time counts only
+  // while that section and this tab are visible; it is an estimate, not proof of reading.
+  if (isArticle && 'IntersectionObserver' in window) {
+    const sections = [...document.querySelectorAll('article.content > section[id]')]
+      .filter((section) => /^[a-z0-9-]{1,60}$/.test(section.id));
+    const states = new Map(sections.map((section, index) => [section, {
+      order: index + 1, visible: false, viewed: false, seconds: 0, milestones: new Set()
+    }]));
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        const state = states.get(entry.target);
+        if (!state) continue;
+        state.visible = entry.isIntersecting;
+      }
+    }, { rootMargin: '0px 0px -25% 0px', threshold: 0 });
+    sections.forEach((section) => observer.observe(section));
+    setInterval(() => {
+      if (!enabled || document.hidden || !document.hasFocus()) return;
+      for (const [section, state] of states) {
+        if (!state.visible) continue;
+        if (!state.viewed) {
+          state.viewed = true;
+          emit('article_section_view', { section_id: section.id, section_order: state.order });
+        }
+        state.seconds += 1;
+        for (const mark of [10, 30]) {
+          if (state.seconds >= mark && !state.milestones.has(mark)) {
+            state.milestones.add(mark);
+            emit('article_section_engaged', { section_id: section.id, section_order: state.order, seconds: mark });
+          }
+        }
+      }
+    }, 1000);
+    document.addEventListener('click', (event) => {
+      if (!enabled) return;
+      const toc = event.target.closest('.contents a[href^="#"]');
+      if (toc && /^[a-z0-9-]{1,60}$/.test(toc.hash.slice(1))) {
+        emit('article_toc_click', { section_id: toc.hash.slice(1) });
+      }
+      const faq = event.target.closest('.faq details > summary');
+      if (faq && !faq.parentElement.open) {
+        const order = [...faq.closest('.faq').querySelectorAll('details > summary')].indexOf(faq) + 1;
+        emit('article_faq_open', { faq_order: order });
+      }
+    });
+  }
 })();
