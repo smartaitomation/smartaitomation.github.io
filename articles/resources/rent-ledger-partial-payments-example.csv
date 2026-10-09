@@ -1,0 +1,4 @@
+date,property_id,rental_period,entry_type,amount_due,amount_received,currency,payment_status,receipt_or_bank_reference,allocated_period,running_balance,reconciliation_note
+2026-10-01,Example Unit A,2026-10,Rent charge,900,0,USD,due,Example lease term,2026-10,900,Opening charge
+2026-10-03,Example Unit A,2026-10,Received partial payment,0,500,USD,received,Example A31,2026-10,400,Verify bank deposit
+2026-10-08,Example Unit A,2026-10,Received partial payment,0,250,USD,received,Example A42,2026-10,150,900 minus 500 minus 250; verify bank deposit
