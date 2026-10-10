@@ -1,0 +1,5 @@
+item_id,event_date,event_type,event_reference,related_reference,money_in,money_out,currency,stock_location,settlement_status,next_action
+EX-J17,2026-10-01,Sale,EX-S1,EX-J17,100,0,USD,Customer,Sale recorded,Verify split
+EX-J17,2026-10-02,Owner payout,EX-P1,EX-S1,0,60,USD,Customer,Paid,Keep payout proof
+EX-J17,2026-10-10,Customer refund,EX-R1,EX-S1,0,100,USD,Review area,Owner adjustment unresolved,Check agreement
+EX-J17,2026-10-10,Settlement review,EX-C1,EX-P1,0,0,USD,Review area,Pending; no recovery confirmed,Document actual resolution

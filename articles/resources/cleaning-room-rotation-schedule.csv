@@ -1,0 +1,5 @@
+task_id,planned_slot,room,bounded_task,finish_condition,actual_status,actual_slot,carry_forward_decision,next_review
+EX-K1,Week 1,Kitchen,One accessible pantry shelf,Clean dry shelf; contents replaced,done,Week 1,None,Next cycle if needed
+EX-B1,Week 2,Bedroom,Baseboards on one accessible wall,Chosen section cleaned,missed,,Carry to Week 3,Week 3
+EX-L1,Week 3,Living area,One storage basket,Sorted and material-appropriate cleaning,deferred,,Week 3 used by EX-B1,Week 5 review
+EX-E1,Week 4,Entryway,One shoe-storage section,Selected section cleaned,planned,,No change,Week 4

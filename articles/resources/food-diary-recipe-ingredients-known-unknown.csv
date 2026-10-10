@@ -1,0 +1,3 @@
+meal_id,date,meal,component_or_portion,source,evidence_label,supported_detail,unknown_detail,correction_date,next_question
+EX-SOUP,2026-10-10,Homemade soup,Lentils and carrots,Example recipe v1,documented,Ingredients in whole pot,Share in bowl,,Save actual recipe
+EX-CURRY,2026-10-10,Restaurant curry,Chicken and sauce,Example menu and observation,observed,Dish name and one plate eaten,Sauce ingredients and amounts,,Ask provider if needed

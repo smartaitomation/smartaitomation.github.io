@@ -1,0 +1,3 @@
+pair_id,image_label,real_or_generated,light_source,camera_and_lens,position,filter_or_edit,changed_makeup_feature,comparison_limit,next_action
+EX-A,Before,real,Same window,Same phone front lens,Marked seat,None,None,Uncalibrated photo,Keep original
+EX-A,After,real,Same window,Same phone front lens,Marked seat,None,Blush placement,Not exact shade measurement,Compare placement only

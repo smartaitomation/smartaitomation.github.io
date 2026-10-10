@@ -3,6 +3,7 @@
   const measurementId = 'G-TV98TNCDYE';
   const storageKey = 'smartaitomation_article_analytics_consent_v1';
   const pathname = location.pathname;
+  const controlledQA = ['localhost', '127.0.0.1'].includes(location.hostname) || new URLSearchParams(location.search).get('qa') === '1';
   const isArticle = pathname.endsWith('.html') && !pathname.endsWith('/analytics-privacy.html');
   const articleSlug = isArticle ? pathname.split('/').pop().replace(/\.html$/, '') : 'hub';
   const locale = document.documentElement.lang === 'ro' ? 'ro' : 'en';
@@ -19,7 +20,7 @@
   }
 
   function start() {
-    if (enabled) return;
+    if (enabled || controlledQA) return;
     enabled = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
