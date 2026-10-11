@@ -1,0 +1,5 @@
+pet_reference,record_status,product_name_as_labeled,strength_as_labeled,route_as_written,directions_as_written,source_reference,prescriber,last_given_time_actual_or_estimated,question_for_clinic,confirmation_date
+Example pet,Current prescription,COPY FROM ORIGINAL,COPY FROM ORIGINAL,COPY FROM ORIGINAL,COPY FROM ORIGINAL,Original labeled container,Actual prescribing clinic,Not entered,Confirm current instructions,
+Example pet,Supplement,COPY FROM PACKAGE,COPY FROM PACKAGE,COPY FROM PACKAGE,Record actual use separately,Original package,Not prescribed; ask clinic,Not entered,Review with treatment list,
+Example pet,Old prescription status uncertain,COPY FROM SOURCE,COPY FROM SOURCE,COPY FROM SOURCE,Do not assume still current,Older dated clinic sheet,Original clinic,Unknown,Stopped or replaced?,
+,,,,,,,,,,

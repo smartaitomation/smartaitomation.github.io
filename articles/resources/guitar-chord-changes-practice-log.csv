@@ -1,0 +1,6 @@
+block,chord_pair,fingering_reference,pattern,bpm,attempts,clean_changes,clean_definition,failure_location,next_action
+Baseline,G-D,Same chosen shapes,Four beats each; quarter notes,60,8,5,On beat1; intended strings clear,Late index on D,Test slower
+Slower,G-D,Same chosen shapes,Four beats each; quarter notes,52,8,7,On beat1; intended strings clear,Muted string,Repeat same conditions
+Repeat,G-D,Same chosen shapes,Four beats each; quarter notes,52,8,7,On beat1; intended strings clear,D landing,Keep cue fixed
+Later,G-D,Same chosen shapes,Four beats each; quarter notes,52,8,8,On beat1; intended strings clear,None in short block,Retest later
+,,,,,,,,,
