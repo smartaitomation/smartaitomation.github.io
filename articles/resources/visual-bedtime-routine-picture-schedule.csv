@@ -1,0 +1,7 @@
+step,planned_action,picture_to_use,choice_or_help,actual_action,change_to_show_next_time
+1,Brush teeth,Own toothbrush,Caregiver help as needed,,
+2,Put on pajamas,Own pajamas,Available outfit choice,,
+3,Read chosen book,Chosen book,Choose between available books,,
+4,Get into bed,Own bed,Help or communication still available,,
+END,Routine finished,Distinct marker,Not a sleep guarantee,,
+,,,,,

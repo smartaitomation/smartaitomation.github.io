@@ -1,0 +1,6 @@
+ball_id,brand,line,color_code,dye_lot_text,label_source,quantity_and_unit,project,substitution_status,next_check
+Y-01,Fictional maker,Example Knit,017,0042,Original band,1 labeled ball,Cardigan,Original stock,Retain label
+Y-02,Fictional maker,Example Knit,017,0042,Original band,1 labeled ball,Cardigan,Original stock,Check quantity
+Y-03,Fictional maker,Example Knit,017,0047,Original band,1 labeled ball,Cardigan candidate,Not approved,Physical comparison/sample
+Y-04,Unknown,Unknown,Unknown,Unknown,Missing band,Partial ball estimated,Unassigned,Unknown,Find provenance
+,,,,,,,,,

@@ -1,0 +1,5 @@
+local_date,meal_or_session,instruction_source_date,observation,context,uncertainty,question_for_team,follow_up_record
+2026-10-09,Evening session,2026-10-08,Completed; comfortable note,Own current plan,No causal inference,What details should I record?,
+2026-10-10,Midday session,2026-10-08,Paused; pressure noted,Interrupted setting,Cause not established,How should I describe this?,
+2026-10-11,Evening session,2026-10-08,Session exists; note absent,,Comfort not recorded,Which missing fields matter?,
+,,,,,,,
