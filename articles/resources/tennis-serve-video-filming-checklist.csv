@@ -1,0 +1,6 @@
+clip_id,view,permission_confirmed,safe_camera_position,whole_player_visible,toss_and_racket_visible,landing_visible,contact_certainty,decision,question_for_coach
+A,Side,Yes,Outside movement path,Yes,No,Yes,Not checked,Re-film,How should I frame full action?
+B,Rear,Unresolved,Outside movement path,Yes,Yes,Yes,Uncertain,Resolve permission,
+C,Side,Yes,Outside movement path,Yes,Yes,Yes,Ball blurred,Sequence review only,What should I discuss with coach?
+D,Side,Yes,Outside movement path,Yes,Yes,Yes,Visible candidate,Keep original,Review this sequence with coach
+,,,,,,,,,

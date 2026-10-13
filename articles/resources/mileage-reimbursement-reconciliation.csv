@@ -1,0 +1,5 @@
+record_type,claim_id,trip_id,currency,rate_policy,submitted_miles,approved_miles,submitted_amount,approved_amount,received_amount,approved_less_received,payment_match,question,trip_local_date,policy_effective_date,payment_date,review_as_of_date
+Detail,C17,T101,USD,Illustrative 0.60/mile,40,40,24.00,24.00,24.00,0.00,Payroll-confirmed allocation,,2026-10-01,2026-10-01,2026-10-10,2026-10-13
+Detail,C17,T102,USD,Illustrative 0.60/mile,60,50,36.00,30.00,20.00,10.00,Payroll-confirmed allocation,Why 10 miles excluded; remaining payment date?,2026-10-02,2026-10-01,2026-10-10,2026-10-13
+Total,C17,,USD,Illustrative 0.60/mile,100,90,60.00,54.00,44.00,10.00,Claim matched,Do not count total as another trip,,2026-10-01,2026-10-10,2026-10-13
+,,,,,,,,,,,,,,,,
