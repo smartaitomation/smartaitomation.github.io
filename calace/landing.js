@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('quiz-result').textContent=(b.dataset.answer==='no'?'Correct. ':'Look at the lane sign. ')+'STRAIGHT ONLY prohibits the planned right turn. Choose a permitted route. Your response stays on this page.';}));
