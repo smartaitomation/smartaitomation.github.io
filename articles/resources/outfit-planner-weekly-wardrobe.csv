@@ -1,0 +1,7 @@
+day_slot,activity,weather_checked_or_hypothetical,owned_items,readiness,care_instruction_source,unknown_fact,substitute,next_check
+Monday,Office,Hypothetical cool morning,Shirt A; trousers A; shoes A; jacket A,Ready,Actual labels,,,Check forecast before leaving
+Tuesday,Walking commute,Hypothetical rain,Top B; trousers A; shoes B; layer B,Verify shoes/layer suitability,Actual labels,Forecast not verified,,Check actual forecast
+Wednesday,Video meeting,Indoors,Shirt A; trousers B,Shirt A not ready,Actual Shirt A label,Care completion unknown,Clean top C,Confirm substitute ready
+Thursday,Errands,Hypothetical mild,Top C; jeans C; shoes A,Recheck after Wednesday,Actual labels,Top C condition after use,Choose ready alternative,Evening readiness check
+Friday,Dinner,Hypothetical cool evening,Top D; trousers B; jacket A,Verify condition,Actual labels,Venue requirements,,Confirm activity needs
+,,,,,,,,
