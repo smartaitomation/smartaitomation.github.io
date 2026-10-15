@@ -2,6 +2,7 @@ import * as T from './three.module.js';
 import * as C from './cannon-es.js';
 import { ConvexHull } from './ConvexHull.js';
 import { configureMaterials } from './materials.js';
+import { createRecorder } from './recorder.js';
 const $=id=>document.getElementById(id),canvas=$('scene');
 const objects=[{name:'Watermelon',icon:'🍉',skin:'#4b8628',flesh:'#da283a',rim:'#edf2ca',rough:.38},{name:'Orange',icon:'🍊',skin:'#f28b14',flesh:'#ffa526',rim:'#fff1c1',rough:.65},{name:'Kiwi',icon:'🥝',skin:'#795534',flesh:'#a9cf47',rim:'#d4b68b',rough:.95},{name:'Apple',icon:'🍎',skin:'#b52124',flesh:'#fff1cc',rim:'#e55040',rough:.28},{name:'Cake',icon:'🍰',skin:'#f4b6c5',flesh:'#6c3a22',rim:'#fff3db',rough:.85}];
 let renderer;
@@ -42,8 +43,8 @@ function disposeParts(){for(const p of parts){if(p.body)physics.removeBody(p.bod
 function reset(){disposeParts();azimuth=0;elevation=.10;distance=9.3;if(stem){stem.removeFromParent();stem.geometry.dispose();stem.material.dispose();stem=null}for(const m of materials){m.map?.dispose();m.dispose()}const o=objects[selected],[skin,flesh]=textures(o);materials=[new T.MeshStandardMaterial({map:skin,roughness:o.rough,bumpMap:skin,bumpScale:selected===1?.028:.009}),new T.MeshStandardMaterial({map:flesh,roughness:selected===4?.9:.46})];configureMaterials(materials,o,selected);parts=[makePart(initialFaces())];if(selected!==4){stem=new T.Mesh(new T.CylinderGeometry(.035,.055,.24,10),new T.MeshStandardMaterial({color:selected===0?0x627c31:0x5c3b1e,roughness:.9}));stem.position.set(.025,FLOAT_Y+(selected===2?1.24:1.1),0);stem.rotation.z=-.3;stem.castShadow=true;world.add(stem)}cutIndex=0;running=false;released=false;elapsed=0;wait=0;blade.visible=false;$('status').textContent='Ready to cut.';$('pieceCount').textContent='Ready to slice';$('slice').textContent='Slice it ↗'}
 function setN(value){n=Math.max(1,Math.min(40,Number(value)));$('cuts').value=n;$('amount').value=n;$('headline').textContent=n+(n===1?' Cut':' Cuts');document.querySelectorAll('[data-n]').forEach(b=>b.classList.toggle('active',+b.dataset.n===n));reset()}
 let noiseBuffer,master,lastLanding=-Infinity;
-function unlockAudio(){
- if(!$('sound').checked)return;
+function unlockAudio(force=false){
+ if(!force&&!$('sound').checked)return;
  try{if(!ac){ac=new(window.AudioContext||window.webkitAudioContext)();master=ac.createDynamicsCompressor();master.threshold.value=-18;master.ratio.value=5;master.connect(ac.destination);noiseBuffer=ac.createBuffer(1,Math.ceil(ac.sampleRate*.4),ac.sampleRate);const data=noiseBuffer.getChannelData(0);for(let i=0;i<data.length;i++)data[i]=Math.random()*2-1;}if(ac.state==='suspended')ac.resume().catch(()=>{});}catch{}
 }
 function sound(kind='slice',strength=1){
@@ -95,6 +96,8 @@ function updateDrops(dt){for(let i=drops.length-1;i>=0;i--){const d=drops[i];d.l
 
 objects.forEach((o,i)=>{const b=document.createElement('button');b.className='object';b.innerHTML='<b>'+o.icon+'</b>'+o.name;b.setAttribute('aria-pressed',i===0);b.onclick=()=>{selected=i;document.querySelectorAll('.object').forEach((b,j)=>b.setAttribute('aria-pressed',i===j));$('material').textContent=o.name;reset()};$('objects').append(b)});
 $('cuts').oninput=e=>setN(e.target.value);$('minus').onclick=()=>setN(n-1);$('plus').onclick=()=>setN(n+1);$('presets').onclick=e=>{if(e.target.dataset.n)setN(e.target.dataset.n)};$('reset').onclick=reset;$('slice').onclick=()=>{unlockAudio();reset();running=true;elapsed=.2;$('status').textContent='Slicing through the real geometry…';$('slice').textContent='Restart ↗'};
+let captureAudio;
+const videoRecorder=createRecorder({scene,camera,getTitle:()=>$('headline').textContent,getName:()=>objects[selected].name.toLowerCase()+'-'+n+'-cuts',getAudioTrack:()=>{unlockAudio(true);if(!ac)return null;if(!captureAudio){captureAudio=ac.createMediaStreamDestination();master.connect(captureAudio);}return captureAudio.stream.getAudioTracks()[0];},play:()=>$('slice').onclick()});
 $('sound').onchange=()=>{if($('sound').checked){unlockAudio();if(ac)ac.resume().then(()=>sound()).catch(()=>{});}};
 canvas.style.touchAction='none';canvas.onpointerdown=e=>{drag={x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId)};canvas.onpointermove=e=>{if(!drag)return;azimuth-=(e.clientX-drag.x)*.008;elevation=T.MathUtils.clamp(elevation+(e.clientY-drag.y)*.006,.08,1.15);drag={x:e.clientX,y:e.clientY}};canvas.onpointerup=canvas.onpointercancel=()=>drag=null;canvas.addEventListener('wheel',e=>{e.preventDefault();distance=T.MathUtils.clamp(distance+e.deltaY*.005,7.5,13)},{passive:false});
 function resize(){const box=canvas.getBoundingClientRect();renderer.setSize(box.width,box.height,false);camera.aspect=box.width/box.height;camera.fov=40;camera.updateProjectionMatrix()}window.addEventListener('resize',resize);
@@ -106,7 +109,7 @@ function animate(now){
  if(running){elapsed+=step;if(elapsed>Math.max(.035,.16-n*.003)){elapsed=0;cut();}}
  if(wait>0){wait-=step;if(wait<=0)release();}
  if(released){physics.step(1/120,step,6);for(const p of parts){p.mesh.position.copy(p.body.position);p.mesh.quaternion.copy(p.body.quaternion);}if(parts.every(p=>p.body.sleepState===C.Body.SLEEPING))$('status').textContent=n+(n===1?' cut. ':' cuts. ')+parts.length+' pieces.';}
- updateDrops(step);renderer.render(scene,camera);
+ updateDrops(step);renderer.render(scene,camera);videoRecorder.frame(now);
 }
 // Read-only diagnostics for geometry and browser checks.
 window.sliceLab={get state(){return{selected,n,cutIndex,pieces:parts.length,running,released,webgl:renderer.getContext().getParameter(renderer.getContext().VERSION),triangles:renderer.info.render.triangles}},setN,select(i){selected=i;reset()},cut,split,volume,initialFaces};resize();reset();requestAnimationFrame(animate);
