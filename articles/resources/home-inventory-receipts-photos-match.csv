@@ -1,0 +1,5 @@
+item_id,overview_photo_reference,label_photo_reference,serial_as_text,serial_status,receipt_reference,receipt_line_or_quantity,match_status,unresolved_fact,next_check
+CN-001,overview-001,label-001,,Readable; transcription to verify,R-07,Line 2,Tentative,Exact serial not yet verified,Compare directly with label
+CN-002,overview-002,label-002,,Unreadable,R-07,Line 3,Tentative,Serial unreadable,Retake safely if possible
+CN-003,overview-003,,,Not recorded,,,Missing evidence,Receipt/date/paid price unknown,Search actual records
+,,,,,,,,,

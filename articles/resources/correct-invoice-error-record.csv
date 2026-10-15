@@ -1,0 +1,5 @@
+record_reference,original_invoice_reference,state,known_error,original_service_amount,checked_service_amount,currency,correction_document_type_and_reference,payment_state,tax_reporting_state,next_verified_action
+INV-104,INV-104,Issued,Duplicated USD40 line,240,200,USD,,Unknown,Unknown,Preserve original and establish process
+COR-01,INV-104,Internal review,Duplicate confirmed,240,200,USD,,Not established,Not established,Check jurisdiction and adviser guidance
+Follow-up,INV-104,Pending confirmation,,,,USD,,No refund claimed,No return correction claimed,Record completed action only with evidence
+,,,,,,,,,,
