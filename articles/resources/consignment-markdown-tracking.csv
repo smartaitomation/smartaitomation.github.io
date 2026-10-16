@@ -1,0 +1,5 @@
+item,state,original_price_USD,proposed_price_USD,markdown_percent,markdown_base_USD,agreement_reference,approval_reference,effective_date,actual_sale_USD,owner_rate_percent,basis_note
+C-014,proposed,100,80,20,100,EX-01,pending,,,60,final item amount; no other deductions in example
+C-014,approved,100,80,20,100,EX-01,M-01-A verified,example effective date,,60,do not duplicate markdown as sale discount
+C-014,sold,100,80,20,100,EX-01,M-01-A verified,example effective date,80,60,owner48 shop32; payout completion not established
+,,,,,,,,,,,

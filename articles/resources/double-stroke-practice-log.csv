@@ -1,0 +1,5 @@
+attempt,surface,sticks,bpm,click_unit,notes_per_click,sticking,R_pair_observation,L_pair_observation,transition_observation,decision
+A,same pad,same pair,60,quarter,4,RRLL,similar by ear,similar by ear,even by ear,reference
+B,same pad,same pair,66,quarter,4,RRLL,similar by ear,L2 quieter,next R1 early by ear,repeat or reduce
+C,same pad,same pair,60,quarter,4,RRLL,similar by ear,L2 audible again,even by ear,do not label 66 clean
+,,,,,,,,,,
