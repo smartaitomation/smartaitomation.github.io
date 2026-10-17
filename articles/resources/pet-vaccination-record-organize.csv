@@ -1,0 +1,5 @@
+pet_reference,source,issuer,document_date,administration_as_written,next_date_as_written,readability,confirmation_needed,response_reference,reminder_source
+Luna example,DOC-01,clinic,later than treatment,readable,,partial,complete record if missing pages,,
+Luna example,DOC-02,clinic attachment,later email,,unclear,unclear,ask issuer,,
+Luna example,REM-01,owner,,,manual date,not clinical evidence,establish source,,owner only
+,,,,,,,,,

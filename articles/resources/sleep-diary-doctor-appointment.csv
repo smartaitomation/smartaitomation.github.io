@@ -1,0 +1,5 @@
+field,source,dates,coverage,observation,estimate_or_missing,question,clinician_response
+Coverage,diary example,Oct5-11,4of7,3 missing,missing not zero,What period should I record?,
+Timing,manual example,one night,,23:00 bed07:00 wake,onset/awake unknown,How should I record these?,
+Concern,owner note,as observed,,unrefreshed work mornings,not diagnosis,What else helps?,
+,,,,,,,

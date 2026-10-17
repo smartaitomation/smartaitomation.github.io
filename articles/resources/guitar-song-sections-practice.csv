@@ -1,0 +1,4 @@
+join,meter,click_unit,subdivision,count_in,start_cue,end_cue,tempo_bpm,observation,simplification,next_task
+A-B,4/4,quarter,eighths,4 beats,last bar A,end first bar B,60,late B entry,none,repeat join
+B-C,4/4,quarter,eighths,4 beats,last bar B,end first bar C,60,fails in sequence,none,retain approach
+,,,,,,,,,,
