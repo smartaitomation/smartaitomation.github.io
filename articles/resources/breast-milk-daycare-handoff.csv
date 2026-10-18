@@ -1,0 +1,5 @@
+container_id,listed_amount,unit,expression_date,handling_history,provider_label_checked,received_amount,receiver,receipt_time,unresolved
+A01,80,mL,,,pending,80,,,verify history
+A02,90,mL,,,pending,90,,,verify history
+A03,70,mL,,,pending,,,,not received
+,,,,,,,,,
