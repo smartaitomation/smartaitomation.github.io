@@ -1,0 +1,6 @@
+local_date,timezone_or_offset,start_local,end_local,known_duration_minutes,context,observation_source,coverage_limit,later_correction
+2026-10-12,UTC+02,12:00,12:45,45,home,caregiver observed,one nap only,
+2026-10-13,UTC+02,13:10,13:40,30,travel,caregiver observed,one nap only,
+2026-10-14,UTC+02,13:00,,,reported illness,caregiver report,end missing,
+2026-10-15,,,,,no report,none,no entry; not zero sleep,
+,,,,,,,,

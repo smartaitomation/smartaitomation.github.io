@@ -1,0 +1,5 @@
+clip_id,stroke,handedness,view,checkpoint,visibility,observation,context_difference,coach_question,revision_date
+A,two-handed backhand,right-handed,consistent view,left elbow finish relative to net,visible,appears across net direction,record ball/intent,is this checkpoint relevant?,
+B,two-handed backhand,right-handed,consistent view,same,visible,looks different from A,check ball/intent,what should I compare first?,
+C,two-handed backhand,right-handed,consistent view,same,clip ends early,not assessable,,which context is missing?,
+,,,,,,,,,
