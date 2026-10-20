@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SmartAItomation">
+  <rect width="64" height="64" rx="14" fill="#23382e"/>
+  <path fill="#f5f3ec" fill-rule="evenodd" d="M8 49 20 15h10l12 34H32l-2-7H20l-2 7H8Zm14-15h6l-3-11-3 11Z"/>
+  <path fill="#f1a186" d="M46 15h10v34H46z"/>
+</svg>
