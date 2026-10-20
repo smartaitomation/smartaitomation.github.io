@@ -3,12 +3,13 @@
   const pixelId = '251383929491305';
   const key = 'calace_ads_consent_v1';
   const params = new URLSearchParams(location.search);
-  const internal = params.get('qa') === '1' || params.get('utm_source') === 'review';
+  const internal = params.get('qa') === '1' || params.get('traffic') === 'codex_test' || params.get('utm_source') === 'review' || navigator.webdriver === true;
   const safe = new URLSearchParams();
   for (const name of ['utm_source','utm_medium','utm_campaign','utm_content']) {
     const value = params.get(name);
     if (value && /^[A-Za-z0-9_.-]{1,100}$/.test(value)) safe.set(name, value);
   }
+  window.calaceLandingContext = {internal, source: Object.fromEntries(safe)};
   try { history.replaceState(null, '', location.pathname + (safe.size ? '?' + safe : '')); } catch (_) {}
   const panel = document.getElementById('ad-consent');
   let choice = '';
