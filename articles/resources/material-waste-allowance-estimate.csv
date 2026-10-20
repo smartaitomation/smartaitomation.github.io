@@ -1,0 +1,5 @@
+scenario,base_area_m2,addition_percent,added_area_m2,adjusted_area_m2,package_coverage_m2,unrounded_packages,whole_packages,purchased_area_m2,surplus_above_adjusted_m2,assumption_source
+A,12,0,0,12,1.6,7.5,8,12.8,0.8,fictional user-selected scenario
+B,12,5,0.6,12.6,1.6,7.875,8,12.8,0.2,fictional user-selected scenario
+C,12,10,1.2,13.2,1.6,8.25,9,14.4,1.2,fictional user-selected scenario
+,,,,,,,,,,

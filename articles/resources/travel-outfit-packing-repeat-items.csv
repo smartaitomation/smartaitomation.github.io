@@ -1,0 +1,9 @@
+item_id,description,outbound_state,day1,day2,day3_primary,conditional_alternative,readiness_check
+T1,travel top,worn,yes,,,Day3 only if ready,do not assume overnight laundry
+T2,visit shirt,packed,,yes,,,check ready before packing
+T3,backup top,packed,,,yes,,no laundry dependency
+B1,trousers,worn,yes,yes,,,inspect before reuse
+B2,second bottom,packed,,,yes,,check ready
+L1,layer,worn,yes,yes,yes,,check conditions/readiness
+S1,one pair shoes,worn,yes,yes,yes,,check activity suitability
+,,,,,,,
