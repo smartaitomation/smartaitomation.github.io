@@ -2,9 +2,9 @@
 (() => {
   "use strict";
   const offers = {
-    workshop: {name: "Production AI Workshop", price: "$10,000", path: "workshop.html", why: "You want your engineers to learn a repeatable way to build and evaluate AI around one real problem."},
-    core: {name: "AI Core Foundation", price: "$10,000", path: "ai-core.html", why: "You want shared infrastructure and an improvement loop your team can reuse for the next use case."},
-    development: {name: "Embedded AI Development", price: "$20,000/month", path: "development.html", why: "You want hands-on implementation capacity to move an AI product forward."}
+    workshop: {name: "Production AI Workshop", path: "workshop.html", why: "Train your engineers on the AI feature they need to ship."},
+    core: {name: "AI Core Foundation", path: "ai-core.html", why: "Build shared infrastructure your team can reuse across products."},
+    development: {name: "Embedded AI Development", path: "development.html", why: "Put hands-on AI engineering alongside your existing team."}
   };
   const questions = [
     {id:"intent", title:"What would help your team most?", help:"Choose the primary need. You can compare the other options after the result.", options:[
@@ -38,12 +38,11 @@
       ["90days","In 1–3 months"],
       ["later","More than 3 months away"],
       ["exploring","Exploring; no start date yet"]]},
-    {id:"budget", title:"What investment is available?", help:"Prices are in USD. Select a realistic range, including any approval needed.", options:[
-      ["under10","Under $10,000"],
-      ["10to20","$10,000 to under $20,000"],
-      ["20to50","$20,000 to under $50,000"],
-      ["50plus","$50,000 or more"],
-      ["approval","Budget is not approved yet"]]},
+    {id:"budget", title:"Is there a budget for this work?", help:"We discuss the scope before proposing a fee.", options:[
+      ["approved","Yes, we have an approved budget"],
+      ["scoping","We can invest once the scope is clear"],
+      ["approval","We need internal approval"],
+      ["research","We are researching for now"]]},
     {id:"decision", title:"How will the decision be made?", help:"We will use this to frame the next conversation.", options:[
       ["owner","I own or approve the budget"],
       ["shared","I recommend; another person approves"],
@@ -58,23 +57,22 @@
   function evaluate(a) {
     const key = chosenOffer(a);
     const notices = [];
-    if (a.budget === "under10") notices.push("The current offers start at $10,000. Your selected budget is below that starting point. Use the brief for internal planning; no paid engagement is recommended until the budget fits.");
-    else if (key === "development" && a.budget === "10to20") notices.push("Development is $20,000 per month. Your selected monthly budget is below this level. A $10,000 workshop or foundation may fit a narrower need, but it is not a substitute for the same implementation scope.");
-    else if (a.budget === "approval") notices.push("Budget approval is still needed. Use this brief to align the sponsor on scope and investment before booking.");
+    if (a.budget === "approval") notices.push("Use this brief to align the budget approver on the problem and scope.");
+    else if (a.budget === "scoping") notices.push("We will define the scope and proposed fee together.");
+    else if (a.budget === "research") notices.push("Keep the brief for planning and return when the team is ready to invest.");
     if (["none","hiring"].includes(a.team)) notices.push("Name a technical owner before starting. A workshop needs engineers to participate, and a core needs someone to maintain it after handover.");
     if (a.data !== "ready") notices.push(a.data === "restricted" ? "Security or procurement review is a prerequisite. Confirm permitted data access, tools and deployment requirements before setting a start date." : a.data === "missing" ? "Collect representative examples first. Data readiness and labeling effort need to be scoped before an implementation or tailored lab can begin." : "Prepare sanitized examples and approve the access process before the engagement.");
     if (["later","exploring"].includes(a.timing)) notices.push("This is a planning-stage fit. Keep the brief and revisit the scope when your start date becomes clearer.");
     if (a.decision !== "owner") notices.push("Include the budget approver in the scoping discussion so delivery requirements and investment are aligned.");
-    const budgetGap = a.budget === "under10" || key === "development" && a.budget === "10to20";
-    const ready = !budgetGap && a.budget !== "approval" && ["engineers","founder"].includes(a.team) && a.data === "ready" && ["30days","90days"].includes(a.timing) && a.decision === "owner";
-    return {key, offer:offers[key], notices, status:budgetGap ? "Budget gap to resolve" : ready ? "Ready for a scoping conversation" : "Potential fit · prerequisites to discuss"};
+    const ready = ["approved","scoping"].includes(a.budget) && ["engineers","founder"].includes(a.team) && a.data === "ready" && ["30days","90days"].includes(a.timing) && a.decision === "owner";
+    return {key, offer:offers[key], notices, status:ready ? "Ready for a scoping conversation" : "Potential fit · prerequisites to discuss"};
   }
   const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSecnK6s4_qz5O3iUyD67HQ13itEEOFldQw5bR7zOBPWcZv3RA/viewform";
   const label = (id, value) => questions.find(q => q.id === id)?.options.find(o => o[0] === value)?.[1] || "Not answered";
   function brief(a) {
     const r = evaluate(a);
-    return ["Production AI project brief", "Suggested engagement: " + r.offer.name + " — " + r.offer.price, "Readiness: " + r.status,
-      ...questions.map(q => (q.id === "budget" ? "Available investment (" + (r.key === "development" ? "monthly" : "project") + ", USD)" : q.title) + ": " + label(q.id,a[q.id])),
+    return ["Production AI project brief", "Suggested engagement: " + r.offer.name, "Readiness: " + r.status,
+      ...questions.map(q => q.title + ": " + label(q.id,a[q.id])),
       ...(r.notices.length ? ["\nItems to discuss:", ...r.notices.map(n => "- " + n)] : []),
       "\nCompany / website: ", "Use case and desired business outcome: ", "Preferred way to contact me: ",
       "\nSource: https://smartaitomation.com/production-ai/fit.html",
@@ -95,16 +93,13 @@
     return clean;
   }
   function updateAnswer(a, id, value) {
-    const beforeMonthly = chosenOffer(a) === "development";
-    const next = {...a, [id]:value};
-    if (id !== "budget" && beforeMonthly !== (chosenOffer(next) === "development")) delete next.budget;
-    return next;
+    return {...a, [id]:value};
   }
   if (typeof module !== "undefined" && module.exports) module.exports = {questions,evaluate,chosenOffer,brief,formUrl,sanitize,updateAnswer};
   if (typeof document === "undefined") return;
   const host = document.getElementById("quiz");
   if (!host) return;
-  const STORAGE = "smartai_fit_v1";
+  const STORAGE = "smartai_fit_v2";
   let answers = {}, step = 0;
   try { const saved = JSON.parse(sessionStorage.getItem(STORAGE)); answers = sanitize(saved?.answers); step = Number.isInteger(saved?.step) ? Math.max(0, Math.min(questions.length, saved.step)) : 0; } catch {}
   const requested = new URLSearchParams(location.search).get("offer");
@@ -123,8 +118,7 @@
     save();
     if (step >= questions.length) {renderResult(focus); return;}
     const q = questions[step];
-    const monthly = chosenOffer(answers) === "development";
-    const title = q.id === "budget" ? monthly ? "What monthly investment is available?" : "What project investment is available?" : q.title;
+    const title = q.title;
     host.innerHTML = `<div class="quiz-progress"><span>QUESTION ${step+1} OF ${questions.length}</span><span>${Math.round(step/questions.length*100)}% complete</span></div><div class="progress-track" aria-hidden="true"><span style="width:${step/questions.length*100}%"></span></div><form id="question-form" novalidate><fieldset><legend><h2>${esc(title)}</h2></legend><p class="quiz-help" id="question-help">${esc(q.help)}</p><div class="options">${q.options.map(o=>`<label class="option"><input type="radio" name="${q.id}" value="${o[0]}" ${answers[q.id]===o[0]?"checked":""} aria-describedby="question-help"><span>${esc(o[1])}${o[2]?`<small>${esc(o[2])}</small>`:""}</span></label>`).join("")}</div></fieldset><p class="error" id="quiz-error" role="alert"></p><div class="quiz-actions"><button class="link-button" type="button" id="back" ${step===0?"disabled":""}>← Back</button><button class="button" type="submit">${step===questions.length-1?"See my recommendation":"Continue"} →</button></div></form>`;
     host.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
@@ -141,7 +135,7 @@
     const missing = firstMissing();
     if (missing >= 0) {step = missing; render(focus); return;}
     const r = evaluate(answers);
-    host.innerHTML = `<p class="mono">YOUR FIT CHECK IS COMPLETE</p><span class="result-tag">${esc(r.status)}</span><h2>${esc(r.offer.name)}</h2><div class="result-price">${esc(r.offer.price)}</div><p class="quiz-help">${esc(r.offer.why)}</p>${r.notices.length?`<div class="result-notice"><strong>Before committing</strong><ul class="result-reasons">${r.notices.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`:`<p class="quiz-help">Your answers suggest an active project with an owner, approved examples and budget. The next step is a scope discussion; this is not an automatic acceptance or booking.</p>`}<a class="text-link" href="${r.offer.path}">Review scope and deliverables ↗</a><div class="brief"><h3>Your project brief</h3><dl>${questions.map(q=>`<dt>${esc(q.id==="budget"?"Investment ("+(r.key==="development"?"monthly":"project")+", USD)":q.title)}</dt><dd>${esc(label(q.id,answers[q.id]))}</dd>`).join("")}</dl><div class="brief-actions"><button type="button" class="link-button" id="copy">Copy brief</button><button type="button" class="link-button" id="download">Download brief</button><button type="button" class="link-button" id="edit">Edit answers</button></div></div><section class="share-box"><h3>Discuss the fit with Ion.</h3><p>Continue to our existing Google contact form with this brief prefilled. Add your name, email, company and a short description of the use case, then submit there.</p><p class="fine">The form's questions are currently in Romanian; your brief is in English. “Numele” = name, “Adresa de email” = email, “Subiect” = subject, “Mesaj” = message.</p><label class="consent"><input type="checkbox" id="share-consent"><span>I want to share these non-confidential answers with SmartAItomation through Google Forms. I understand that opening the form passes the brief to Google and that I still need to submit it there.</span></label><button class="button" type="button" id="share">Continue to contact form ↗</button><p class="live-status" id="share-status" role="status" aria-live="polite"></p><p class="fine">Prefer email? <a id="email-draft" href="mailto:imosnoi@smartaitomation.com">Open an email draft</a>. You send it yourself. No marketing subscription, purchase or booking is created here. <a href="privacy.html">Privacy details</a>.</p></section><button type="button" class="link-button" id="reset">Start again · clear my answers</button>`;
+    host.innerHTML = `<p class="mono">YOUR FIT CHECK IS COMPLETE</p><span class="result-tag">${esc(r.status)}</span><h2>${esc(r.offer.name)}</h2><p class="quiz-help">${esc(r.offer.why)}</p>${r.notices.length?`<div class="result-notice"><strong>Before committing</strong><ul class="result-reasons">${r.notices.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`:`<p class="quiz-help">Your answers suggest an active project with an owner, approved examples and a route to budget. The next step is a scope discussion; this is not an automatic acceptance or booking.</p>`}<a class="text-link" href="${r.offer.path}">Review scope and deliverables ↗</a><div class="brief"><h3>Your project brief</h3><dl>${questions.map(q=>`<dt>${esc(q.title)}</dt><dd>${esc(label(q.id,answers[q.id]))}</dd>`).join("")}</dl><div class="brief-actions"><button type="button" class="link-button" id="copy">Copy brief</button><button type="button" class="link-button" id="download">Download brief</button><button type="button" class="link-button" id="edit">Edit answers</button></div></div><section class="share-box"><h3>Discuss the fit with Ion.</h3><p>Continue to our existing Google contact form with this brief prefilled. Add your name, email, company and a short description of the use case, then submit there.</p><p class="fine">The form's questions are currently in Romanian; your brief is in English. “Numele” = name, “Adresa de email” = email, “Subiect” = subject, “Mesaj” = message.</p><label class="consent"><input type="checkbox" id="share-consent"><span>I want to share these non-confidential answers with SmartAItomation through Google Forms. I understand that opening the form passes the brief to Google and that I still need to submit it there.</span></label><button class="button" type="button" id="share">Continue to contact form ↗</button><p class="live-status" id="share-status" role="status" aria-live="polite"></p><p class="fine">Prefer email? <a id="email-draft" href="mailto:imosnoi@smartaitomation.com">Open an email draft</a>. You send it yourself. No marketing subscription, purchase or booking is created here. <a href="privacy.html">Privacy details</a>.</p></section><button type="button" class="link-button" id="reset">Start again · clear my answers</button>`;
     const status = text => host.querySelector("#share-status").textContent = text;
     host.querySelector("#copy").addEventListener("click", async () => {
       try {await navigator.clipboard.writeText(brief(answers)); status("Brief copied. It has not been sent.");} catch {status("Clipboard access is unavailable. Use Download brief, or select and copy the visible answers.");}
