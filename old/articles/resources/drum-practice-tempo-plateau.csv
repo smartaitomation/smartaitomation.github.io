@@ -1,0 +1,5 @@
+session,rudiment,sticking,click_unit,subdivision,passage,attempt,bpm,selected_cue,observed_result,decision
+Example 1,Paradiddle,RLRR LRLL,Quarter note,Sixteenth notes,Four bars,1,80,Even spacing,Consistent,pass
+Example 1,Paradiddle,RLRR LRLL,Quarter note,Sixteenth notes,Four bars,2,90,Even spacing,Uneven second diddle,too fast
+Example 1,Paradiddle,RLRR LRLL,Quarter note,Sixteenth notes,Four bars,3,84,Even spacing,Rush in last bar,repeat
+Example 1,Paradiddle,RLRR LRLL,Quarter note,Sixteenth notes,Four bars,4,84,Even spacing,Consistent,pass today

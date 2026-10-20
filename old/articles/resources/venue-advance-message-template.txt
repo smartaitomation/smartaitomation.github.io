@@ -1,0 +1,14 @@
+EDITABLE DRAFT — NOT SENT. Replace every bracketed field and review attachments.
+Subject: [Show / venue / local date] — advance packet [revision]
+
+Hello [production contact],
+Attached is [filename/revision] for [show]. Proposed schedule: load-in [time], soundcheck [time], show [time], all in [local zone/date].
+Confirmed details: [only actual confirmations, with source/date].
+Changes from our master: [agreed changes, or explicitly label proposals].
+We bring [items]. Please confirm who supplies [unresolved items].
+Open decisions: [question / owner / requested response date].
+Please confirm receipt of this revision and the technical decisions above.
+Our appropriate show contact: [contact].
+Thank you.
+
+Before sending: verify recipient, permission, current packet, every placeholder and actual technical decisions. This template is separate from PlotCue and does not send mail or establish venue approval.

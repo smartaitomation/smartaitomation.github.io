@@ -1,0 +1,4 @@
+masa_id,data,preparat_si_marime,sursa_si_baza,modificare_ceruta,servit_observat,consumat_observat,necunoscut,intrebare,stare
+R01,exemplu,Bol Gradina cu pui standard,meniu salvat; baza neconfirmata,sos separat,bol si recipient sos,partial; sos circa jumatate,dressing intern si grame,Sosul din bol este inclus?,neconfirmat
+R01-rest,exemplu ulterior,rest din R01,nota comenzii R01,niciuna,recipient cu rest,de completat la consum,cantitatea ramasa exacta,Ce am consumat acum?,nu dubla portia initiala
+,,,,,,,,,

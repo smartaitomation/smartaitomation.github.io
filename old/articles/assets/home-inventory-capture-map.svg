@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" role="img" aria-labelledby="title desc">
+<title id="title">A practical home-inventory capture map</title>
+<desc id="desc">For each room, take an overview photo, record one item with a close-up and model label, link purchase evidence if available, then save a separate backup.</desc>
+<rect width="920" height="310" rx="24" fill="#edf6f1"/>
+<text x="40" y="50" fill="#173f35" font-family="system-ui,sans-serif" font-size="24" font-weight="700">One room → one item → recoverable proof</text>
+<g font-family="system-ui,sans-serif" fill="#173f35">
+<g transform="translate(35 82)"><rect width="190" height="165" rx="17" fill="#fff" stroke="#8bbcab" stroke-width="2"/><text x="18" y="38" font-size="17" font-weight="700">1. Room overview</text><text x="18" y="74" font-size="15">Show the location</text><text x="18" y="98" font-size="15">and storage areas.</text><path d="M22 126h43l12-22 20 34 18-18 22 18h28" fill="none" stroke="#2d8068" stroke-width="3"/><circle cx="141" cy="105" r="9" fill="#f6c663"/></g>
+<g transform="translate(255 82)"><rect width="190" height="165" rx="17" fill="#fff" stroke="#8bbcab" stroke-width="2"/><text x="18" y="38" font-size="17" font-weight="700">2. Item detail</text><text x="18" y="74" font-size="15">Photo + model or</text><text x="18" y="98" font-size="15">serial label.</text><rect x="22" y="120" width="144" height="20" rx="4" fill="#d5e9df"/><path d="M30 124v12m8-12v12m7-12v12m10-12v12m5-12v12m9-12v12m5-12v12m11-12v12m7-12v12m9-12v12m5-12v12m9-12v12m6-12v12m12-12v12" stroke="#2d8068" stroke-width="2"/></g>
+<g transform="translate(475 82)"><rect width="190" height="165" rx="17" fill="#fff" stroke="#8bbcab" stroke-width="2"/><text x="18" y="38" font-size="17" font-weight="700">3. Source evidence</text><text x="18" y="74" font-size="15">Link receipt or order.</text><text x="18" y="98" font-size="15">Mark unknowns.</text><path d="M40 121h105m-105 14h79" stroke="#2d8068" stroke-width="3" stroke-linecap="round"/></g>
+<g transform="translate(695 82)"><rect width="190" height="165" rx="17" fill="#fff" stroke="#8bbcab" stroke-width="2"/><text x="18" y="38" font-size="17" font-weight="700">4. Separate copy</text><text x="18" y="74" font-size="15">Keep a backup away</text><text x="18" y="98" font-size="15">from the device.</text><path d="M60 119h70v24H60zM78 111h70v24" fill="none" stroke="#2d8068" stroke-width="3"/></g>
+</g>
+<g stroke="#2d8068" stroke-width="3" fill="none"><path d="M228 164h20m-6-6 6 6-6 6M448 164h20m-6-6 6 6-6 6M668 164h20m-6-6 6 6-6 6"/></g>
+<text x="40" y="283" fill="#3f6458" font-family="system-ui,sans-serif" font-size="14">Original workflow illustration. Check your insurer’s document and coverage requirements.</text>
+</svg>

@@ -1,0 +1,7 @@
+surface_or_opening,length_ft,width_or_height_ft,area_sq_ft,measurement_status,scope,deduction_policy,material_or_layout_check,uncertainty
+Floor,12,10,120,Fictional measured example,Flooring only,No wall-opening deduction,Verify actual flooring product,
+Walls gross,44,8,352,Height assumed in example,Four walls only,Gross before openings,Verify panel layout,All wall heights must be checked
+Ceiling,12,10,120,Assumed flat in example,Separate ceiling scope,No deduction assumed,Verify actual shape,Slope not considered
+Door,3,7,21,Fictional opening,Wall opening,Record; do not auto-deduct,Verify layout/estimating method,
+Window,4,3,12,Fictional opening,Wall opening,Record; do not auto-deduct,Verify layout/estimating method,
+,,,,,,,,

@@ -1,0 +1,6 @@
+local_day_or_date,commitment_start,travel_allowance,preparation_allowance,planned_wake,repeat_or_exception,next_occurrence_checked,notification_seen,sound_heard,test_settings_or_uncertainty
+Mon Wed Thu Fri,08:30,00:30,01:00,07:00,Review selected repeat days,,,,Fictional schedule; awake test not run
+One Tuesday,07:45,00:30,01:00,06:15,One-off exception; inspect ordinary alarm,,,,Verify date and duplicate alarm
+Saturday,09:00,00:20,01:00,07:40,Separate Saturday plan,,,,Fictional schedule; awake test not run
+Sunday,,,,,Intentional choice,,,,No commitment-derived wake time
+,,,,,,,,,

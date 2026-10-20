@@ -1,0 +1,6 @@
+night_ending,next_day_group,bedtime_reported,final_wake_reported,bed_to_wake_interval_minutes,actual_sleep_estimate_if_known,estimate_source,morning_note,context,missing_or_uncertain
+Example Monday,Work,23:00,06:30,450,,Not estimated,Use own consistent rating,Early start; alarm,
+Example Tuesday,Work,23:15,06:30,435,,Not estimated,Use own consistent rating,Interrupted night,Awake duration unknown
+Example Saturday,Day off,00:30,08:00,450,,Not estimated,Use own consistent rating,Later plans; no alarm,
+Example Sunday,Day off,00:45,08:15,450,,Not estimated,Use own consistent rating,Nap later,
+,,,,,,,,,

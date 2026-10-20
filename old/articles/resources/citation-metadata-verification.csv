@@ -1,0 +1,7 @@
+work_reference,field,draft_value,candidate_value,evidence_reference,match_state,next_action,checked_date
+fictional example,title,Field evaluation,Laboratory protocol,RECORD-A fictional,mismatch,reject candidate association,2026-10-18
+fictional example,authors,Lee; Morgan,Lee; Patel,RECORD-A fictional,mismatch,locate work actually read,2026-10-18
+fictional example,year/date label,2024; label unknown,2023; label unknown,RECORD-A fictional,unresolved,confirm date types on actual source,2026-10-18
+fictional example,version relationship,work read,relationship unverified,RECORD-A fictional,unresolved,do not infer version relation,2026-10-18
+fictional example,DOI confirmation,not confirmed,withheld candidate identifier,RECORD-A fictional,unverified,leave DOI unverified,2026-10-18
+,,,,,,,

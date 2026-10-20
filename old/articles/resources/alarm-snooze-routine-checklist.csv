@@ -1,0 +1,6 @@
+date,timezone,event,planned_time_or_setting,observed_time,source,unknowns,routine_change,next_question
+fictional day,record local zone,first alert,06:30,06:31,later recollection,delivery time not verified,,
+fictional day,same zone,snooze,9 minutes,06:31,later recollection/settings,later alert unknown,,
+fictional day,same zone,later alert,,,not observed,actual alert time,,
+fictional day,same zone,out of bed,,06:46,later recollection,sleep during interval unknown,,
+,,,,,,,,

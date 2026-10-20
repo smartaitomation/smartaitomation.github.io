@@ -1,0 +1,10 @@
+record_type,line_or_person,line_total_usd,a_food_share,b_food_share,c_food_share,food_subtotal_usd,tax_share_usd,tip_share_usd,total_owed_usd,payment_confirmed
+Item,Meal A,12.00,12.00,0.00,0.00,,,,,
+Item,Meal B,18.00,0.00,18.00,0.00,,,,,
+Item,Meal C,10.00,0.00,0.00,10.00,,,,,
+Item,Shared starter,9.00,3.00,3.00,3.00,,,,,
+Person,A,,,,,15.00,1.50,3.00,19.50,Not established
+Person,B,,,,,21.00,2.10,4.20,27.30,Not established
+Person,C,,,,,13.00,1.30,2.60,16.90,Not established
+Total,Final check,,,,,49.00,4.90,9.80,63.70,Not a payment receipt
+,,,,,,,,,,

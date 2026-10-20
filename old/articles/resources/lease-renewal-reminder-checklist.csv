@@ -1,0 +1,6 @@
+property_reference,jurisdiction,tenancy_type,date_kind,date_value,source_reference,status,question,reviewer_or_recipient,answer_date
+P-01,,,printed document date,2026-11-30,D-01 page 3,effect unchecked,what does this date mean?,,
+P-01,,,internal review,2026-10-26,chosen by preparer,organizational only,who reviews the documents?,,
+P-01,,,option date,,not confirmed,unknown,is there a relevant option?,,
+P-01,,,notice/service deadline,,not confirmed,unknown,which rules and service apply?,,
+,,,,,,,,,

@@ -1,0 +1,4 @@
+event,constraint,confirmed_fact,look_choice,owned_product_or_tool,real_trial_observation,time_allowance_minutes,fallback,next_check
+Example evening event,departure,17:30; verify travel,practiced soft eye,own familiar products,35 minute application,35,simpler tested eye,confirm departure and tools
+Example evening event,lip touch-up,drink planned,familiar lip color,identified product in bag,transfer observed after trial drink,10,less precise tested finish,check actual venue access
+,,,,,,,,

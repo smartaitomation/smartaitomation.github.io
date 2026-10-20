@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" role="img" aria-labelledby="title desc">
+<title id="title">A four-step home-inventory capture map</title>
+<desc id="desc">Take a room overview, record item details, link purchase evidence, and save a separate copy.</desc>
+<rect width="360" height="520" rx="20" fill="#edf6f1"/>
+<text x="24" y="38" fill="#173f35" font-family="system-ui,sans-serif" font-size="19" font-weight="700">Build recoverable proof</text>
+<g font-family="system-ui,sans-serif" fill="#173f35" font-size="16">
+<g transform="translate(24 58)"><rect width="312" height="92" rx="14" fill="#fff" stroke="#8bbcab" stroke-width="2"/><text x="16" y="32" font-weight="700">1. Room overview</text><text x="16" y="59">Show the location and storage areas.</text></g>
+<g transform="translate(24 172)"><rect width="312" height="92" rx="14" fill="#fff" stroke="#8bbcab" stroke-width="2"/><text x="16" y="32" font-weight="700">2. Item detail</text><text x="16" y="59">Photo + model or serial label.</text></g>
+<g transform="translate(24 286)"><rect width="312" height="92" rx="14" fill="#fff" stroke="#8bbcab" stroke-width="2"/><text x="16" y="32" font-weight="700">3. Source evidence</text><text x="16" y="59">Link receipt; mark unknowns.</text></g>
+<g transform="translate(24 400)"><rect width="312" height="92" rx="14" fill="#fff" stroke="#8bbcab" stroke-width="2"/><text x="16" y="32" font-weight="700">4. Separate copy</text><text x="16" y="59">Back up away from the device.</text></g>
+</g>
+<g stroke="#2d8068" stroke-width="3" fill="none"><path d="M180 152v14m-6-6 6 6 6-6M180 266v14m-6-6 6 6 6-6M180 380v14m-6-6 6 6 6-6"/></g>
+</svg>

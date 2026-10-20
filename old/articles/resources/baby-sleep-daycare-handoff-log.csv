@@ -1,0 +1,5 @@
+local_date,event_id,observer_role,observed_sleep_start,observed_wake,certainty,report_time,missing_or_conflicting_fact,next_question
+2026-10-13,Home-1,Parent,08:40,09:05,Observed,09:10,,
+2026-10-13,Care-1,Daycare staff,,12:35,Start not recorded,15:45,Start missing,Was a sleep start recorded?
+2026-10-13,Care-2,Daycare staff,14:10,14:35,Approximate,15:45,,Confirm latest handoff received
+,,,,,,,,

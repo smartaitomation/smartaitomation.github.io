@@ -1,0 +1,6 @@
+show_reference,packet_revision,topic,known_fact,state,open_question,decision_owner,confirmation_source_date,next_action
+Show A / Venue B,r03,Schedule,Load-in proposed 16:00,Proposed,Confirm actual schedule,Venue,,Await actual reply
+Show A / Venue B,r03,Monitors,Venue reports two mixes,Capacity known; adaptation pending,Who shares a mix?,Band and venue,,Record agreed variant
+Show A / Venue B,r03,Patch,Sources listed in packet,To confirm,Does patch match revision?,Engineer,,Compare current packet
+Show A / Venue B,r03,Supply,Band brings named items,Partly confirmed,Who supplies remaining items?,Band and venue,,Record each responsibility
+,,,,,,,,

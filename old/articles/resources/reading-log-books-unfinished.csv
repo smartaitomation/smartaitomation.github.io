@@ -1,0 +1,5 @@
+book_label,edition_or_format,isbn_if_verified,location_type,last_known_location,status,reason,next_decision,return_note,record_local_date
+Fictional Book A,Paperback,,Page,42,Paused,Topic not needed now,Not continuing,Keep own note,2026-10-14
+Fictional Book B,Ebook,,Chapter,3,Paused,Borrowed copy returned,Find same edition if returning,Page number unknown,2026-10-14
+Fictional Book C,Audiobook,,Timestamp,00:28:10,Reading,Short listening sessions,Continue from timestamp,No invented page equivalent,2026-10-14
+,,,,,,,,,

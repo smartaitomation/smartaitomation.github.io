@@ -1,0 +1,8 @@
+plan_reference,part_or_block,seconds,selected_variant,selection_source,pacing_changed,range_changed,actual_completion,observation
+fictional eight-minute budget,setup,60,short,organizational budget,no,no,,
+fictional eight-minute budget,A,90,short,prior teacher selection,no,no,,
+fictional eight-minute budget,B,120,short,prior teacher selection,no,no,,
+fictional eight-minute budget,C,90,short,prior teacher selection,no,no,,
+fictional eight-minute budget,review,60,short,organizational budget,no,no,,
+fictional eight-minute budget,buffer,60,short,organizational budget,no,no,,
+,,,,,,,,

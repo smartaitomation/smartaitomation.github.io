@@ -1,0 +1,6 @@
+container_id,event,local_date,local_time,time_certainty,recorded_boundary,note
+MV-A,Freezer to refrigerator,2026-10-12,20:00,Known,Not fully-thawed clock,Illustrative handling
+MV-A,Fully thawed,2026-10-13,07:00,Known event,2026-10-14 07:00,24h refrigerator boundary
+MV-A,Room temperature or warmed,2026-10-13,09:00,Known event,2026-10-13 11:00,Earlier applicable 2h boundary
+MV-B,Found fully thawed,2026-10-13,07:00,Observation only,Unknown,Last ice observation 23:00; do not guess
+,,,,,,

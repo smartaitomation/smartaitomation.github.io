@@ -1,0 +1,5 @@
+test_id,awake_or_night,surface_and_position,room_equipment,change_from_baseline,replay_observation,source_certainty,next_action
+A,Awake,Right bedside surface uncovered,Fan normal,Baseline,Sentence audible; steady fan,Awake voice confirmed,Retain baseline
+B,Awake,Second stable uncovered surface,Fan normal,Placement only,Sentence softer,Awake voice confirmed,Compare usability
+C,Awake,Baseline surface,Fan normal,Loose object moved,Tapping absent,Cause not proven,Record separate change
+,,,,,,,

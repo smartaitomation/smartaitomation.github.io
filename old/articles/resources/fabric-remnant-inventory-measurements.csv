@@ -1,0 +1,3 @@
+piece_id,unit,outer_length,outer_width,missing_region,continuous_region_checked,grain_known,pattern_scale_checked,placement_status,location
+FAB-01,cm,60,40,corner 20 x 15,40 x 40 only if measured,unknown,not yet,candidate only,Drawer 2
+,,,,,,,,,

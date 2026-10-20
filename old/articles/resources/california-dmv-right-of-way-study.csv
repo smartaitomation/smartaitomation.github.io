@@ -1,0 +1,4 @@
+scenario,control,arrival_facts,intended_movement,conflicts,source_section,missing_fact,changed_condition,reason_to_recheck,checked_date
+A,uncontrolled; no traffic signal or STOP/YIELD,simultaneous,as supplied,check others,DMV intersections,other control,add signal,old rule may not apply,2026-10-17
+B,uncontrolled T,not decisive alone,enter through road,through-road users,DMV T intersections,actual signs,add STOP/YIELD,inspect control,2026-10-17
+,,,,,,,,,
