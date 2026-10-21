@@ -170,8 +170,10 @@
  .offer-site .site-footer{padding-inline:5%;gap:17px}.offer-site .site-footer>div:nth-child(2){gap:0 22px}.offer-site .site-footer>div:nth-child(2)>a{display:inline-flex;align-items:center;min-height:44px;font-size:13px}
  .offer-site .quiz-card .option{padding:14px;font-size:14px;min-height:48px}.offer-site .quiz-actions button{min-height:44px}
 }
+@media(max-width:380px){
+ .offer-site .site-header{padding-inline:4%;gap:6px}.offer-site .site-header .brand{font-size:13px;gap:6px}.offer-site .site-header .header-cta{padding-inline:6px;font-size:11px}.offer-site .site-header .header-cta span{display:none}.offer-site .brand-symbol{width:28px;height:28px}
+}
 @media(max-width:360px){
- .offer-site .site-header{padding-inline:4%;gap:6px}.offer-site .site-header .brand{font-size:13px;gap:6px}.offer-site .site-header .header-cta{padding-inline:9px;font-size:11px}.offer-site .brand-symbol{width:28px;height:28px}
  .offer-site .main-hero h1{font-size:43px}.offer-site .contact-alternatives{gap:0 8px}.offer-site .contact-alternatives .text-link{font-size:11px}
  .delivery-visual{padding-inline:18px}.delivery-path li{gap:12px}.delivery-path strong{font-size:15px}.visual-next{font-size:11px}
  .case-panel{padding:18px 14px}.example-before,.example-after{padding:15px}.example-heading h3{font-size:23px}
