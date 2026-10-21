@@ -1,0 +1,7 @@
+document_id,expense_entry_id,currency,receipt_amount,statement_transaction_id,posted_amount,classification,missing_evidence,next_action
+R01,E01,USD,42,T01,42,matched,,retain proof links
+R02,E02 and E03,USD,20,T02,20,duplicate entry candidate,verify entry history,correct E03 with audit note
+R03,E04,USD,30,,,unmatched timing item,posting/reference,check following statement
+,unverified,USD,,T04,15,unexplained debit,merchant purpose receipt,investigate
+R05,E05,USD,10,,,cash track,cash/payment proof as applicable,retain evidence
+,,,,,,,,

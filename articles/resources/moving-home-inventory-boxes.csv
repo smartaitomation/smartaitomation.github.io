@@ -1,0 +1,7 @@
+item_id,item,container_id,destination_room,packed_state,box_arrival_state,item_arrival_state,discrepancy_or_next_action,observed_at_local,checked_by,reassignment_note
+I01,kettle,B01,Kitchen,confirmed,delivered,checked,,,,
+I02,grinder,B01,Kitchen,confirmed,delivered,unchecked,open box,,,
+I03,lamp,B02,Office,confirmed,delivered,checked,verify adapter separately,,,
+I04,adapter,B02,Office,expected,delivered,not found,check packing evidence,,,
+I05,chair,L01 loose,Office,confirmed,arrived loose,checked,,,,
+,,,,,,,,,,

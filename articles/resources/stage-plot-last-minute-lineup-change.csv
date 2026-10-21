@@ -1,0 +1,8 @@
+show_revision,source,old_requested_channel,new_requested_channel,state,venue_confirmed_patch,equipment_or_question
+R3 fictional,lead vocal,1,1,retained,,verify position
+R3 fictional,guitar DI,2,,removed,,check source-specific equipment
+R3 fictional,bass DI,3,3,retained,,
+R3 fictional,kick mic,4,4,retained,,
+R3 fictional,keyboard left,,2,new confirmed output,,confirm provision
+R3 fictional,keyboard right,,5,new confirmed output,,four-input venue would conflict
+,,,,,,

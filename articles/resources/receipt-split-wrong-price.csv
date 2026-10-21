@@ -1,0 +1,6 @@
+line_id,printed_evidence,initial_quantity,initial_unit_price,verified_quantity,verified_unit_price,verified_line_total,action,state
+D1,two drinks combined USD 12.00,2,12.00,2,6.00,12.00,correct unit price,fictional verified
+P1,one pasta USD 18.00,1,180.00,1,18.00,18.00,correct decimal,fictional verified
+S1,one dessert USD 8.00,1,8.00,1,8.00,8.00,retain one row,fictional verified
+S1 duplicate,no second dessert printed,1,8.00,,,,remove duplicate row,fictional verified
+,,,,,,,,

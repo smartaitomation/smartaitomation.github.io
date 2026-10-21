@@ -1,0 +1,7 @@
+invoice_id,currency,event_id,event_state,receipt_total,signed_invoice_allocation,cumulative_net_paid,remaining_balance,evidence_or_note,event_date,linked_original_event
+INV-104,USD,opening,issued,0,0,0,1200,unchanged billed work,,
+INV-104,USD,P01,verified,300,300,300,900,fictional receipt,,
+INV-104,USD,P02,verified,500,400,700,500,100 allocated to another invoice,,
+INV-104,USD,R01,verified reversal,100,-100,600,600,linked to original payment,,P01
+INV-104,USD,P03,verified,100,100,700,500,fictional receipt,,
+,,,,,,,,,,
