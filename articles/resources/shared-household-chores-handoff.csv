@@ -1,0 +1,7 @@
+task,agreed_scope,current_owner,state,work_observed,remaining_issue,proposed_next_owner,handoff_accepted,updated_at
+counter reset,clear clean return agreed items,Sam,planned,,,,,
+counter reset,same scope,Sam,partial,area cleared,suitable cleaner unavailable,,,
+counter reset,remaining cleaning,Sam,proposed handoff,clearing retained,cleaning remains,Lee,no,
+counter reset,remaining cleaning,Lee,accepted,acceptance recorded,obtain suitable product,Lee,yes,
+counter reset,remaining cleaning,Lee,complete,remaining step done,none recorded,,,
+,,,,,,,,

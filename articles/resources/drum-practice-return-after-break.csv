@@ -1,0 +1,7 @@
+planned_interval,action,planned_playing_minutes,actual_minutes,rudiment_subdivision,tempo_bpm_if_used,observation,next_decision
+0:00-1:00,setup and review,0,,familiar pattern,,,
+1:00-2:00,first play,1,,same pattern,,,
+2:00-3:00,pause assess,0,,,,,
+3:00-5:00,repeat same or lower,2,,same pattern,,,
+5:00-6:00,easy repeat finish,1,,same pattern,,,
+,,,,,,,

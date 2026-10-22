@@ -1,0 +1,5 @@
+item_id,sale_reference,period,currency,sale_amount_in_own_record,sale_amount_on_statement,agreed_owner_rate_percent,expected_owner_share,payout_reference,issue_next_action
+C01,S01,fictional October,USD,100,100,60,60,P01 combined,obtain allocation
+C02,S02,fictional October,USD,70,50,60,42,P01 combined,verify final sale evidence; difference USD 12
+C03,,fictional October,USD,,,60,,,unsold asking price USD 50 excluded
+,,,,,,,,,
