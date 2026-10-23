@@ -1,0 +1,6 @@
+observed_time_local,time_precision,entered_time,observation,context,unobserved_period_or_uncertainty,source_reference
+Monday 08:10,exact owner note,08:12,left-ear scratching twice,after breakfast,cause unknown,fictional note
+Monday about 13:00,estimated,18:00,head shake noticed,,frequency not counted,fictional recollection
+Monday 13:00-18:00,interval,18:00,no observations recorded,owner away,not symptom-free proof,fictional gap
+Monday 18:05,exact owner note,18:06,left-ear scratching,short observation,no diagnosis,fictional note
+,,,,,,

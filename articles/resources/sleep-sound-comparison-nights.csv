@@ -1,0 +1,4 @@
+night,nominal_interval,nominal_hours,known_gap_minutes,known_recording_hours,room_context,labeled_clips,human_reviewed_clips,uncertainties
+A fictional,23:00-07:00,8,0 known,8,fan,12,3,unreviewed labels not verified; actual sleep unknown
+B fictional,00:00-06:00,6,30,5.5,traffic,9,2,one checked clip traffic; other labels uncertain
+,,,,,,,,
