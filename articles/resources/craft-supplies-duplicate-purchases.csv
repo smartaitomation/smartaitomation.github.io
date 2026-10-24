@@ -1,0 +1,6 @@
+record_id,physical_id,search_name,product_color,lot_or_variant,location,reservation,match_decision,verified_remaining_quantity_unit
+R01,S01,cloud wool blue,Cloud Wool color 17,lot A,drawer 1,,retain S01 once,check actual remainder
+R02,S01,blue yarn,same verified label,lot A,drawer 1,,duplicate record of S01,do not count twice
+R03,S02,cloud wool 17,Cloud Wool color 17,lot A,project bag,existing project,separate physical stock,check actual remainder
+R04,S03,cloud wool 17,Cloud Wool color 17,lot B,shelf,,different lot; retain,check actual remainder
+,,,,,,,,

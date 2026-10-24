@@ -1,0 +1,6 @@
+physical_bag_id,expression_date_on_label,record_count,physical_match_state,amount_and_unit_checked,location_check,discrepancy,resolution_evidence
+B01,2026-10-20,1,matched,verify actual value,matched,,
+B02,2026-10-21,2,same physical bag verified,do not double count,matched,duplicate row,retain correction note
+B03,unreadable,1,bag identified,verify actual value,matched,date unresolved,do not guess
+B04,2026-10-22,1,matched,verify actual value,moved,update location only,retain expression date
+,,,,,,,

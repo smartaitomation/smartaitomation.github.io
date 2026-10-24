@@ -1,0 +1,5 @@
+original_action_ids,original_actions,candidate_overview,detail_to_keep,person_feedback,observed_next_action,revision
+1-4,choose clothes;top;bottoms;socks,Get dressed,four-action strip if needed,,,
+5,shoes,Put on shoes,one action,,,
+6-8,bottle;bag;door,Get ready to leave,packing and door cues remain available,,,
+,,,,,,

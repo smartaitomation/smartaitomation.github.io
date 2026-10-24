@@ -1,0 +1,5 @@
+period,vehicle_id,trip_id,unit,entry_method,start_reading,end_reading,checked_distance,purpose,evidence_or_gap
+Oct 1–7 fictional,A,T01,mi,odometer,10000,10012,12,client visit,
+Oct 1–7 fictional,A,T02,mi,odometer,10050,10068,18,supply trip,38 mi between trips unclassified
+Oct 1–7 fictional,B,T03,mi,odometer,50000,50013,13,site visit,
+,,,,,,,,,
