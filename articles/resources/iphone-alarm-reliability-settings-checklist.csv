@@ -1,0 +1,5 @@
+device_model,ios_version,app_version,intended_next_time_and_day,permission_and_focus_state,locked_and_accessory_state,visible_result,audible_result,observed_at,next_action
+Fictional phone,Record actual,Record actual,06:30 Friday; repeat missing,Unchecked,Not tested,Not tested,Not tested,,Review intended day
+Fictional phone,Record actual,Record actual,Corrected awake test,Permission corrected; record actual Focus,Record actual,Banner observed in example,No sound in example,Fictional test,Review sound and retest
+Fictional phone,Record actual,Record actual,Later corrected awake test,Record exact settings,Record exact state,Observed in example,Observed in example,Fictional test,Point-in-time only; no wake guarantee
+,,,,,,,,,

@@ -1,0 +1,5 @@
+project_context,candidate_claim,personal_action,artifact_and_version_reference,other_owner_or_boundary,supported_result,permission_to_share,revised_claim
+Fictional stock workflow,Led launch,Created validation checklist,Checklist v3,Another teammate led rollout,Release context only,Private reference; no internal attachment,Created release validation checklist
+Fictional stock workflow,Fixed every defect,Logged and retested assigned issues,Shared issue log,Multiple implementation owners,No verified personal impact metric,Private reference,Logged and retested assigned issues
+Fictional stock workflow,Trained all users;40% fewer errors,Updated screenshots,Training guide v2,Attendance and error baseline unavailable,No verified metric,Private reference,Updated task screenshots in team training guide
+,,,,,,,

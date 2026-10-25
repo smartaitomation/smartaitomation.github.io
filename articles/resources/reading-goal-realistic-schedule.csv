@@ -1,0 +1,6 @@
+opportunity,format,reserved_minutes,actual_reading_minutes,observation_status,interruption_or_change,next_week_choice
+Monday,Print,15,12,Observed,Stopped for another task,Choose a suitable slot
+Wednesday,Ebook,15,0,Known skipped,No session,Move or omit
+Friday,Audio,20,18,Observed,Two minutes setup,Retain format label
+Sunday,Print,30,20,Observed,Interrupted,Try a shorter opportunity
+,,,,,,

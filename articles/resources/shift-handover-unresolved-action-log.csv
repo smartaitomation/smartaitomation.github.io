@@ -1,0 +1,5 @@
+task_id,stage,observation,next_action,confirmed_owner,checkpoint_with_timezone,handover_acknowledged,task_status,evidence_reference
+H17,Outgoing,D17 missing two napkin boxes,Check supplier reply,Alex pending transfer,Oct 25 15:00 site time,No,Open,Fictional packing list
+H17,Incoming,Shortage unchanged,Review reply and update H17,Sam accepted,Oct 25 16:00 site time,Yes; readback recorded,Open,Fictional conversation
+H17,Checkpoint,No supplier reply,Follow approved reporting route,Sam,Oct 25 17:00 site time,Yes,Open,Fictional update
+,,,,,,,,

@@ -1,0 +1,4 @@
+period,opening_outstanding_usd,new_rent_charge_usd,receipt_refs,cash_received_usd,verified_rent_credit_usd,closing_outstanding_usd,unallocated_cash_usd,allocation_evidence_reference
+September,200,1000,R01,900,900,300,0,Fictional checked allocation
+October,300,1000,R02;R03,1350,1300,0,50,R03:300 applied;50 unresolved
+,,,,,,,,
