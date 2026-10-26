@@ -1,0 +1,7 @@
+step,original_value,original_unit,factor_or_operation,result,result_unit,assumption_or_supplier_check
+Original rectangle,15;8,ft;ft,15*8,120,ft2,No openings or slope
+Area conversion,120,ft2,*0.09290304,11.1483648,m2,Retain source dimensions
+Length cross-check,4.572;2.4384,m;m,multiply,11.1483648,m2,Both lengths converted
+Fictional packs,11.1483648,m2,/2.4,4.645152,packs,Hypothetical coverage only
+Whole-pack illustration,4.645152,packs,round up,5,packs,No waste allowance or purchase approval
+,,,,,,

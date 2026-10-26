@@ -1,0 +1,7 @@
+item_id,change,prior_state,current_state,evidence_reference,observed_date,evidence_gap,current_owned_count
+C01,Moved,Living room,Study,Private current photo,Oct 26,None recorded,1
+T01,Sold,Owned,No longer owned,Private sale reference,Oct 26,Verify sale date,0
+V01,Replaced/disposed,Owned,No longer owned,Private disposal reference,Oct 26,Retain historical copy,0
+V02,Replacement purchase,Not listed,Owned,New receipt/serial,Oct 26,Check distinct identity,1
+L01,New purchase,Not listed,Owned,Receipt,Oct 26,Current photo missing,1
+,,,,,,,

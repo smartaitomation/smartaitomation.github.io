@@ -1,0 +1,9 @@
+day,actual_item_ids,context,observation_state,care_or_availability_note,next_question
+Monday,T01;B01;S01,Work,Observed,Ready,Repeat useful combination?
+Tuesday,B01;J01;S01,Cool walk,Observed,Jacket useful,Context differs
+Wednesday,,,Unknown,,Do not invent zero
+Thursday,T01;B01;S01,Work,Observed,Shirt later needs care,Check care label
+Friday,B01;S01,Casual,Observed,T01 not ready,Availability not dislike
+Saturday,,,Unknown,,Do not invent zero
+Sunday,J01;S01,Evening,Observed,Other top outside sample,Not whole-outfit match
+,,,,,

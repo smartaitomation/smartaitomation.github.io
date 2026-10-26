@@ -1,0 +1,4 @@
+line,estimate_version,proposed_quantity,unit_price_usd,revision_reference,reviewed_quantity,invoice_line_total_usd,agreement_and_delivery_check
+Standard graphics,E07 v1,4,150,A02 removes one,3,450,Fictional agreed/delivered assumption; replace with evidence
+Adaptations,E07 v1,0,100,A02 adds two,2,200,Fictional agreed/delivered assumption; replace with evidence
+,,,,,,,

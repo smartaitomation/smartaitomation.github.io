@@ -1,0 +1,5 @@
+performer_id,position_performer_perspective,priority_sources,proposed_mix_id,proposed_destination,provider,venue_confirmation,open_question
+P01,Center,V1 essential;V2 useful,M1,Wedge A,Unconfirmed,Pending,Agree shared balance with P02
+P02,Right,V1/V2 essential;G1 if needed,M1 shared proposal,Wedge B,Unconfirmed,Pending,Can same balance work for P01/P02?
+P03,Rear,V1/K1 essential;G1 useful,M2,Wedge C,Unconfirmed,Pending,Second independent mix available?
+,,,,,,,
