@@ -1,0 +1,58 @@
+/* Five original AI motion directions. Shared workshop content follows the hero. */
+.ai-design{--lime:var(--accent);--ink:var(--surface);--paper:#f3f1e9;--muted:#b6b8ae}
+.ai-design .site-header{background:var(--surface)}
+.ai-design .hero{height:auto;max-height:none;min-height:800px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;padding:30px var(--gutter) 80px;background:radial-gradient(ellipse at 77% 45%,var(--wash),transparent 65%),var(--surface);gap:0;overflow:hidden}
+.ai-design .hero-copy{max-width:none;padding:0;position:relative;z-index:2}
+.ai-design .hero h1{font-size:clamp(66px,6.2vw,100px);line-height:1.04;letter-spacing:-.065em;max-width:650px}
+.ai-design .hero .eyebrow{max-width:360px;line-height:1.8;color:#bec5b5;font-size:9px;margin-bottom:27px}
+.ai-design .hero-description{max-width:390px;color:#b9beb3;font-size:16px;line-height:1.7}
+.ai-design .hero-note{color:#a8af9f}
+.ai-design .hero-visual{position:relative;inset:auto;width:116%;height:660px;left:-5%;pointer-events:auto;z-index:1}
+.ai-design .hero-visual:before{display:none}
+.ai-design #scene{position:absolute;inset:25px 0 166px;pointer-events:none}
+.ai-design #scene canvas{position:relative;z-index:1;width:100%;height:100%;display:block}
+.scene-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:1;transition:opacity .3s}
+.is-ready .scene-poster{opacity:0}
+.scene-caption{position:absolute;top:0;left:10%;right:10%;display:flex;align-items:center;justify-content:space-between;gap:12px;font:9px ui-monospace,monospace;letter-spacing:.1em;color:var(--accent);z-index:2}
+.scene-caption a{font:10px Manrope,sans-serif;letter-spacing:0;min-height:34px;display:flex;align-items:center;color:#b9c2b6}
+.scene-caption a:hover{text-decoration:underline}
+.sequence-controls{position:absolute;left:12%;right:12%;bottom:0;padding:16px 18px;background:#141917ad;border:1px solid #ffffff20;border-radius:12px;backdrop-filter:blur(12px);z-index:4;color:#ced3c5}
+.sequence-controls[hidden]{display:none}
+.sequence-status{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:12px;min-height:20px}
+.sequence-status output{font:10px ui-monospace,monospace;color:var(--accent)}
+.sequence-steps{display:flex;gap:4px;margin-top:10px}
+.sequence-steps button{flex:1;min-width:0;padding:7px 4px;min-height:35px;color:#a6afa0;border:0;border-bottom:1px solid #ffffff1f;background:transparent;text-align:center;font-size:10px;cursor:pointer}
+.sequence-steps button[aria-pressed=true]{color:var(--accent);border-color:var(--accent)}
+.sequence-range{display:flex;align-items:center;gap:10px}
+.sequence-range input{width:100%;height:30px;min-width:0;accent-color:var(--accent);cursor:ew-resize;background:transparent}
+.sequence-buttons{display:flex;gap:9px;margin-top:1px}
+.sequence-buttons button{flex:1;border:1px solid #ffffff2b;border-radius:5px;padding:9px;min-height:42px;color:#bfc8b6;background:transparent;font-size:10px;cursor:pointer}
+.sequence-buttons button:last-child{color:var(--accent);border-color:color-mix(in srgb,var(--accent),transparent 58%)}
+.sequence-buttons button:hover{background:#ffffff0a}
+.ai-design .hero-bottom{left:var(--gutter);right:var(--gutter);bottom:0;color:#a5af98}
+.ai-design .hero-bottom a{font-size:8px;max-width:360px;letter-spacing:.06em}
+.ai-design .problem{background:color-mix(in srgb,var(--surface),#ffffff 3%)}
+.ai-design .examples{background:var(--surface)}
+.ai-design .case-visual{background:linear-gradient(130deg,var(--wash),var(--surface));border-color:#ffffff25}
+.ai-design .source-card{background:color-mix(in srgb,var(--surface),#ffffff 8%)}
+.ai-design .contact{background:var(--surface)}
+.ai-design .contact-glow{background:var(--accent)}
+.ai-design .experience-orbit i{border-color:color-mix(in srgb,var(--accent),transparent 80%)}
+.ai-design .light-section{background:#f0eee4}
+.ai-design .method-caption .mono,.ai-design .method-step .mono{color:#64734e}
+.ai-design .hero .text-link{color:#d1d6c9}
+.ai-design .status-dot{box-shadow:0 0 14px color-mix(in srgb,var(--accent),transparent 65%)}
+.theme-brain{--accent:#e9bd73;--surface:#14130f;--wash:#79562b32}
+.theme-knowledge{--accent:#c4f77c;--surface:#101811;--wash:#5c802635}
+.theme-agents{--accent:#8ed0ff;--surface:#0b1521;--wash:#326b9c42}
+.theme-learning{--accent:#f7ba6b;--surface:#1b130d;--wash:#a45b2833}
+.theme-architecture{--accent:#f2b67e;--surface:#17120f;--wash:#8c61313b}
+.theme-architecture .hero h1{font-size:clamp(65px,5.8vw,94px)}
+@media(min-width:1700px){.ai-design .hero{min-height:900px}.ai-design .hero-visual{height:740px}.ai-design .hero h1{font-size:115px}}
+@media(max-width:1100px){.ai-design .hero{min-height:730px}.ai-design .hero h1{font-size:70px}.ai-design .hero-visual{height:620px;width:125%;left:-9%}.sequence-controls{left:10%;right:10%}.ai-design .hero-description{font-size:14px;max-width:320px}.scene-caption a{display:none}.scene-caption{font-size:8px;left:15%}}
+@media(max-width:800px){.ai-design .hero{grid-template-columns:1fr;min-height:0;padding:35px var(--gutter) 70px;gap:15px}.ai-design .hero-copy{max-width:650px}.ai-design .hero h1{font-size:clamp(60px,9vw,84px);max-width:none}.ai-design .hero-description{max-width:480px;font-size:15px}.ai-design .hero-visual{height:545px;width:100%;left:0}.ai-design #scene{inset:22px 0 166px}.scene-caption{left:5%;right:5%}.scene-caption a{display:flex}.sequence-controls{left:8%;right:8%}.ai-design .hero .eyebrow{max-width:100%;margin-bottom:21px}.ai-design .hero-bottom a{display:none}}
+@media(max-width:540px){.ai-design .hero{padding:26px var(--gutter) 64px;gap:10px}.ai-design .hero h1{font-size:clamp(54px,14.2vw,70px);line-height:1.03;letter-spacing:-.06em}.ai-design .hero .eyebrow{font-size:7px;max-width:290px;line-height:1.75;margin-bottom:20px}.ai-design .hero-description{font-size:13px;line-height:1.65;max-width:340px;margin-top:20px}.ai-design .hero-actions{margin-top:20px;gap:20px}.ai-design .hero-note{font-size:10px;margin-top:12px}.ai-design .hero-visual{width:calc(100% + 44px);left:-22px;height:460px}.ai-design #scene{inset:18px 0 166px}.scene-caption{left:7%;right:7%;font-size:7px}.scene-caption a{font-size:9px}.sequence-controls{left:6%;right:6%;padding:12px 14px}.sequence-status{font-size:11px}.sequence-steps{margin-top:5px}.sequence-steps button{font-size:9px;min-height:36px}.sequence-buttons button{min-height:44px;font-size:10px}.sequence-range input{height:28px}.ai-design .hero-bottom{padding:6px 0;font-size:8px}.ai-design .hero-bottom #motion-toggle{font-size:9px;min-height:44px}}
+@media(max-width:360px){.ai-design .hero h1{font-size:49px}.ai-design .hero-visual{height:425px;width:calc(100% + 36px);left:-18px}.ai-design #scene{inset:14px 0 166px}.sequence-status{font-size:10px}.scene-caption a{font-size:8px}.ai-design .hero-description{font-size:12px}.ai-design .hero-actions{gap:15px}}
+@media(prefers-reduced-motion:reduce){.scene-poster{transition:none}}
+/* Keep the keyboard skip link visually clipped until focused, including full-page captures. */
+.ai-design .skip:not(:focus){clip-path:inset(50%);width:1px;height:1px;overflow:hidden;padding:0}
