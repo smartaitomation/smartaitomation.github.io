@@ -1,0 +1,6 @@
+handover_ref,owner_ref,item_id,sale_unit,condition,decision,physical_holder,acknowledgement_or_next_step
+H-27,O-27,I01,Coat,Cuff mark,Accepted,Shop,Match actual intake reference
+H-27,O-27,I02,Lamp,Switch not tested,Pending inspection,Shop,Hold acknowledged in fictional H-27; obtain agreed inspection/contact step
+H-27,O-27,I03,Pair of shoes (2 pieces),Sole wear,Accepted,Shop,Match pair to one tag
+H-27,O-27,I04,Bag,Strap damaged,Declined and returned,Owner,Confirm physical return
+,,,,,,,

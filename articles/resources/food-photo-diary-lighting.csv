@@ -1,0 +1,5 @@
+meal_ref,capture_stage,whole_meal_visible,light_or_obstruction,written_context,unknowns,next_action
+M-01,Before A,No,Deep shadow; drink cropped,Lunch,Recipe; quantities; drink detail,Retake if still possible
+M-01,Before B,Yes,Even available light,Bowl salad drink; dressing added afterward,Oil amount; food weight,Keep original; add note
+M-01,After C,Leftovers visible,No major obstruction,Some bowl leftovers,Later servings not observed,Record remembered additions separately
+,,,,,,

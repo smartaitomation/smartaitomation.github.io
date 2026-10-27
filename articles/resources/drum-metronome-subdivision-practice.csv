@@ -1,0 +1,5 @@
+click_bpm,click_unit,strokes_per_click,strokes_per_4_4_bar,intended_gap_seconds,heard_observation,next_action
+60,Quarter note,1,4,1,Not measured,Listen for steady pulse
+60,Quarter note,2,8,0.5,Not measured,Count 1 & 2 & 3 & 4 &
+60,Quarter note,4,16,0.25,Illustrative: possible short &-to-a gap,Speak grid; retry comfortably
+,,,,,,

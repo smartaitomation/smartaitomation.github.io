@@ -1,0 +1,6 @@
+receipt_ref,line,final_amount_usd,classification,purpose_or_next_action,original_total_usd
+MIX-027,Project paper,24.00,Business candidate,Verify project purpose and applicable policy,86.00
+MIX-027,Home groceries,42.00,Personal,Keep outside business total,86.00
+MIX-027,Notebook,20.00,Unresolved,Clarify purpose,86.00
+MIX-027,CHECK,86.00,Reconciled,24 + 42 + 20 = 86; original total is reference not additional expense,86.00
+,,,,,

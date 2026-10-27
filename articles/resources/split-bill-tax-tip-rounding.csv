@@ -1,0 +1,6 @@
+person,items_usd,tax_usd,tip_usd,owed_usd,residual_rule
+A,10.00,0.84,2.00,12.84,A receives one residual tax cent by agreement
+B,10.00,0.83,2.00,12.83,
+C,10.00,0.83,2.00,12.83,
+CHECK,30.00,2.50,6.00,38.50,Compare with actual paid total
+,,,,,
