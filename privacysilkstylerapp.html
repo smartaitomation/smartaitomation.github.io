@@ -24,7 +24,7 @@
   <h2>Photos and hairstyle results</h2>
   <ul>
     <li>You choose whether to take or select a photo. SilkStyler does not upload a photo simply because you opened the picker.</li>
-    <li>When AI try-on is available, SilkStyler asks for your explicit consent before sending the selected photo and hairstyle instructions to our AI processing provider, Replicate, to create the requested result. The transfer uses HTTPS.</li>
+    <li>When AI try-on is available, SilkStyler asks for your explicit consent before sending the selected photo and hairstyle instructions through our ShortsBlink service to our AI processing provider, Replicate, to create the requested result. The transfer uses HTTPS.</li>
     <li>If the AI service is unavailable, SilkStyler shows an unavailable message and lets you continue browsing styles without sending the photo for AI processing.</li>
     <li>Results you choose to keep, along with an optional original image, are stored in the app's local History on your device. You can delete History items in the app. Removing the app also removes its local data, subject to iOS backup behavior.</li>
   </ul>
@@ -38,6 +38,7 @@
 
   <h2>Service providers and transfers</h2>
   <ul>
+    <li><strong>ShortsBlink:</strong> routes the selected photo and generation instructions to the AI provider after consent.</li>
     <li><strong>Replicate:</strong> receives a photo and generation instructions only after consent and only when AI try-on is available.</li>
     <li><strong>Mixpanel:</strong> receives the limited analytics data described above through its EU endpoint.</li>
     <li><strong>Apple:</strong> provides app distribution, subscription transactions, entitlement status, and platform services.</li>
