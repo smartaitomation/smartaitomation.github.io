@@ -1,0 +1,5 @@
+pass,tempo_bpm,click_unit,rhythm,fretting_condition,heard_timing,note_clarity,next_check
+A,Choose comfortable value,Quarter note,One downstroke per click; two bars,Two chords; change at bar 2,Fictional: late first attack after change,Not assessed,Compare B
+B,Same as A,Quarter note,Same as A,Hold first chord,Fictional: attacks seemed aligned,Fictional: buzz,Check clarity separately
+C,Same as A,Quarter note,Same as A,Restore original change,Fictional: late entry again,Not assessed,Rehearse change slowly; recheck
+,,,,,,,

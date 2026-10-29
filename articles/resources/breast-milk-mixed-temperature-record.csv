@@ -1,0 +1,5 @@
+container_id,original_expression_local,event_time_local,origin,destination,observed_state,temperature_evidence,uncertainty
+M-29,2026-10-27 08:00 origin local,2026-10-27 08:15,Expression area,Refrigerator,Placement observed,Not continuously measured,Example only; no safety determination
+M-29,2026-10-27 08:00 origin local,2026-10-27 18:00,Refrigerator,Freezer A,Placement observed,Container temperature not measured,Fully frozen time unknown
+M-29,2026-10-27 08:00 origin local,2026-10-28 09:00,Freezer A,Freezer B,Frozen appearance at endpoints,Transit conditions undocumented,Continuity unknown; no use-by calculation
+,,,,,,,

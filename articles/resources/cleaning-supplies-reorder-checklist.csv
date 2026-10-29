@@ -1,0 +1,5 @@
+task,required_item,stock_observation,compatibility_checked,decision,next_check
+Mirror cleaning,Suitable mirror product,One usable bottle,Yes - fictional example,Do not reorder now,Check before next shopping trip
+Laundry,Suitable detergent,None found,Yes - fictional example,Shopping need,Verify exact product before purchase
+Floor care,Suitable floor method,One bottle; compatibility unknown,No,Unresolved,Read floor and product instructions
+,,,,,

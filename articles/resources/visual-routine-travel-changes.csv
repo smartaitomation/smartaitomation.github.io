@@ -1,0 +1,6 @@
+counterpart_id,usual_step,travel_step,visible_meaning,unknown_or_check,fallback
+A,Breakfast at home,Breakfast before leaving,SAME,Confirm meal,Use familiar cue if still accurate
+B,School bus,Car with caregiver,CHANGED,Confirm transport and caregiver,Update picture and label together
+C,School,Relative home,CHANGED,Confirm destination,Use actual destination cue
+D,Playground,Depends on weather,NOT DECIDED,Check after arrival,Agreed indoor choice if cancelled
+,,,,,
