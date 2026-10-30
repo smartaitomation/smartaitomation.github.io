@@ -1,0 +1,5 @@
+route,currency,quantity_per_line,rate_per_hour,exact_line,rounded_line,line_count,final_amount,declared_rule
+Round each line,USD,0.5,4.67,2.335,2.34,3,7.02,Decimal nearest cent; half upward
+Sum then round,USD,0.5,4.67,2.335,Not separately rounded,3,7.01,Exact sum 7.005; same rule once
+Compare,USD,,,,,,0.01,Illustrative difference; no tax/discount
+,,,,,,,,

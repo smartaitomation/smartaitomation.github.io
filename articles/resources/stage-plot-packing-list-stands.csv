@@ -1,0 +1,5 @@
+source,inputs,required_item,required_quantity,unit,venue_confirmed,band_bring,band_physically_packed,open_check
+Vocal,1,Boom mic stand,1,stand,1,0,0,Venue confirmation reference
+Guitar amp,2,Short mic stand,1,stand,0,1,1,Condition/setup check separate
+Keyboard L/R,3-4,DI capacity,2,DI channels,1,1,Unknown,Check actual band unit and channel compatibility
+,,,,,,,,

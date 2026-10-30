@@ -1,0 +1,4 @@
+application_ref,posting_ref,resume_version,artifact_filename,artifact_state,export_evidence,submission_evidence,limitation
+APP-01,POST-01 dated copy,v03,APP-01-v03.pdf,Submitted,PDF opened and checked,Fictional portal confirmation with attachment reference,No recruiter-read evidence
+APP-01,POST-01 dated copy,v04,Not exported,Later draft,None,None,Does not replace sent v03
+,,,,,,,

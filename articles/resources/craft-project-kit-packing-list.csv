@@ -1,0 +1,6 @@
+resource_id,kit,needed_quantity,unit,physically_packed,location,open_issue
+BTN-1,A,12,pieces,12,Kit A,None for buttons
+BTN-1,B,10,pieces,6,Kit B,Four pieces short; total stock 18
+H1,A,1,tool,1,Kit A,Return after use
+H1,B,1,tool,0,Not packed,Shared-tool conflict for simultaneous use
+,,,,,,

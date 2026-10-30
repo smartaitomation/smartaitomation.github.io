@@ -1,0 +1,6 @@
+entry_ref,local_copy_ref,fictional_title,publication_identifier,format,location_observation,status,next_check
+R1,B01,Field Notes,ISBN-A placeholder,Paperback,Shelf 1,Physical copy checked,Retain
+R2,B02,Field Notes,ISBN-A placeholder,Paperback,Loan box,Second real copy,Retain separately
+R3,B03,Field Notes,ISBN-B placeholder,Hardcover,Shelf 2,Different format,Inspect edition statement
+R4,Unknown,Field Notes,Unverified,Unknown,Unknown,Suspected record duplicate,Compare with B01; preserve unique notes
+,,,,,,,
