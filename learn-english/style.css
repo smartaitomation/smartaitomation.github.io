@@ -6,3 +6,5 @@
 .auto-status{font-size:12px;color:#536d5b;line-height:1.5}.auto-status:empty{display:none}
 
 .loop-button[aria-pressed="true"]{background:#dcebc7;border-color:#9fba8d;color:#244b37}
+
+.sentence-hint{display:flex;flex-wrap:wrap;align-items:center;gap:2px 0;font-size:18px;letter-spacing:0;word-spacing:0}.practice-word{display:inline-flex;flex-wrap:wrap;max-width:100%;align-items:center;white-space:nowrap}.practice-punctuation{white-space:pre-wrap}.practice .sentence-hint input.letter-input{width:1.05em;min-width:1.05em;height:2em;border:0;border-bottom:2px solid #8ca493;border-radius:2px;background:#edf3e8;text-align:center;padding:0;margin:1px 1px;font:inherit;color:var(--ink);outline-offset:1px}.practice .sentence-hint input.letter-input:focus{outline:2px solid #d39a63;background:#fff}.practice .sentence-hint input.letter-input.correct{background:#d9efcb;border-color:#5e9a59}.practice .sentence-hint input.letter-input.incorrect{background:#ffe4df;border-color:#cc6d5f}.given-letter{display:inline-block;padding:0 1px}.practice-punctuation .given-letter{white-space:pre-wrap}
