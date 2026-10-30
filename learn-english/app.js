@@ -3,6 +3,7 @@
   const categories = ['All', 'Friends', 'House M.D.', 'Prison Break', 'Conversation', 'Vocabulary', 'Pronunciation', 'Grammar', 'Listening'];
   const storeKey = 'smartai-english-watched-v1', transcriptKey = 'smartai-english-transcripts-v1';
   let videos = [], selected = 'All', current = null, watched = [], savedTranscripts = {}, sentences = [], index = 0, hintLevel = 1, ytPlayer = null;
+  const automaticCache = new Map(); let transcriptRequest = 0;
   try { watched = JSON.parse(localStorage.getItem(storeKey) || '[]'); if (!Array.isArray(watched)) watched = []; } catch (_) { watched = []; }
   try { savedTranscripts = JSON.parse(localStorage.getItem(transcriptKey) || '{}'); if (!savedTranscripts || Array.isArray(savedTranscripts)) savedTranscripts = {}; } catch (_) { savedTranscripts = {}; }
   const save = () => { try { localStorage.setItem(storeKey, JSON.stringify(watched)); } catch (_) {} };
@@ -59,6 +60,36 @@
     catch (_) { $('#import-status').textContent = 'Practice loaded, but it could not be saved on this device.'; }
     $('#import-panel').hidden = true; $('#exercise').hidden = false; updateSentence();
   }
+  async function loadAutomaticTranscript(videoId, requestId) {
+    const status = $('#auto-status');
+    status.textContent = 'Loading English captions…';
+    try {
+      let entries = automaticCache.get(videoId);
+      if (!entries) {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 20000);
+        let response;
+        try { response = await fetch(`https://api.freetranscriptapi.com/v1/transcript?video_url=${encodeURIComponent(videoId)}&lang=en`, {signal: controller.signal}); }
+        finally { clearTimeout(timeout); }
+        if (response.status === 429) throw new Error('The free caption service is temporarily rate-limited. Try again later.');
+        if (!response.ok) throw new Error('English captions are unavailable for this video.');
+        const data = await response.json();
+        if (!/^en(?:-|$)/i.test(data.language || '')) throw new Error('No English captions were found for this video.');
+        entries = TranscriptUtils.toExercises(data.transcript);
+        if (!entries.length) throw new Error('No usable English captions were found for this video.');
+        automaticCache.set(videoId, entries);
+      }
+      if (requestId !== transcriptRequest || !current || current.id !== videoId) return;
+      sentences = entries; index = 0; hintLevel = 1; $('#import-panel').hidden = true; $('#exercise').hidden = false;
+      status.textContent = `English captions loaded automatically · ${entries.length} practice lines. Captions can contain mistakes.`;
+      updateSentence();
+    } catch (error) {
+      if (requestId !== transcriptRequest || !current || current.id !== videoId) return;
+      status.textContent = error.name === 'AbortError' ? 'Caption loading timed out. Try again later or add a transcript below.' : `${error.message || 'Could not load captions.'} You can add a transcript below.`;
+      if (savedTranscripts[videoId]) { $('#transcript').value = savedTranscripts[videoId]; makeExercise(); status.textContent += ' Your saved transcript is available.'; }
+      else { $('#import-panel').hidden = false; $('#exercise').hidden = true; }
+    }
+  }
   function openVideo(id) {
     current = videos.find(v => v.id === id); if (!current) return;
     $('#player-category').textContent = current.category + ' · ' + current.channel; $('#player-title').textContent = current.title;
@@ -67,9 +98,10 @@
     ytPlayer = null; if (window.YT && YT.Player) { try { ytPlayer = new YT.Player('player'); } catch (_) {} }
     $('#mark').textContent = watched.includes(id) ? '✓  Mark as unwatched' : '✓  Mark as watched';
     $('#transcript').value = savedTranscripts[id] || ''; $('#import-status').textContent = '';
-    $('#import-panel').hidden = false; $('#exercise').hidden = true;
-    if ($('#transcript').value) makeExercise();
+    $('#import-panel').hidden = true; $('#exercise').hidden = true;
+    const requestId = ++transcriptRequest;
     $('#player-dialog').showModal();
+    loadAutomaticTranscript(id, requestId);
   }
   window.onYouTubeIframeAPIReady = () => { if (current && !ytPlayer) { try { ytPlayer = new YT.Player('player'); } catch (_) {} } };
   const api = document.createElement('script'); api.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(api);
@@ -77,12 +109,12 @@
   $('#cards').addEventListener('click', e => { const b = e.target.closest('[data-video]'); if (b) openVideo(b.dataset.video); });
   $('#search').addEventListener('input', render);
   $('#close').addEventListener('click', () => $('#player-dialog').close());
-  $('#player-dialog').addEventListener('close', () => { $('#player').src = ''; current = null; ytPlayer = null; });
+  $('#player-dialog').addEventListener('close', () => { transcriptRequest++; $('#player').src = ''; current = null; ytPlayer = null; });
   $('#mark').addEventListener('click', () => { if (!current) return; watched = watched.includes(current.id) ? watched.filter(id => id !== current.id) : [...watched, current.id]; save(); $('#mark').textContent = watched.includes(current.id) ? '✓  Mark as unwatched' : '✓  Mark as watched'; render(); });
   $('#clear-progress').addEventListener('click', () => { if (!watched.length || confirm('Reset your watched lessons on this device?')) { watched = []; save(); render(); } });
   $('#caption-file').addEventListener('change', async e => { const file = e.target.files[0]; if (!file) return; if (file.size > 2_000_000) { $('#import-status').textContent = 'Please choose a caption file smaller than 2 MB.'; return; } $('#transcript').value = await file.text(); $('#import-status').textContent = 'Caption file loaded. Select Create practice.'; e.target.value = ''; });
   $('#make-exercise').addEventListener('click', makeExercise);
-  $('#edit-transcript').addEventListener('click', () => { $('#import-panel').hidden = false; $('#exercise').hidden = true; });
+  $('#edit-transcript').addEventListener('click', () => { transcriptRequest++; $('#auto-status').textContent = ''; $('#import-panel').hidden = false; $('#exercise').hidden = true; });
   $('#previous').addEventListener('click', () => { if (index > 0) { index--; hintLevel = 1; updateSentence(); } });
   $('#next').addEventListener('click', () => { if (index < sentences.length - 1) { index++; hintLevel = 1; updateSentence(); } });
   $('#more-hint').addEventListener('click', () => { hintLevel++; $('#hint').textContent = mask(sentences[index].text); });
