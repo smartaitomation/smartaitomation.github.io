@@ -21,25 +21,33 @@
         for (const c of token) {
           if (word && isLetter(c)) letterNumber++;
           if (missing.has(offset)) {
-            const input = document.createElement('input'); input.type = 'text'; input.className = 'letter-input'; input.maxLength = 1; input.autocomplete = 'off'; input.setAttribute('autocapitalize', 'none'); input.setAttribute('autocorrect', 'off'); input.setAttribute('spellcheck', 'false'); input.setAttribute('aria-label', `Word ${wordNumber}, letter ${letterNumber}`); input.dataset.position = String(offset); input.value = answers.get(offset) || ''; group.appendChild(input);
+            const input = document.createElement('input'); input.type = 'text'; input.className = 'letter-input'; input.maxLength = 1; input.autocomplete = 'off'; input.setAttribute('autocapitalize', 'none'); input.setAttribute('autocorrect', 'off'); input.setAttribute('spellcheck', 'false'); input.setAttribute('aria-label', `Word ${wordNumber}, letter ${letterNumber}`); input.dataset.position = String(offset); input.value = answers.get(offset) || ''; if (input.value) mark(input); group.appendChild(input);
           } else { const span = document.createElement('span'); span.className = 'given-letter'; span.textContent = c; group.appendChild(span); }
           offset += c.length;
         }
         container.appendChild(group);
       }
     }
+    function mark(field) {
+      const pos = Number(field.dataset.position), val = field.value;
+      const correct = !!val && val.toLowerCase() === sentence[pos].toLowerCase();
+      field.classList.remove('correct', 'incorrect');
+      if (val) field.classList.add(correct ? 'correct' : 'incorrect');
+      field.setAttribute('aria-invalid', val && !correct ? 'true' : 'false');
+      return correct;
+    }
     function inputs() { return Array.from(container.querySelectorAll('.letter-input')); }
     function focusAt(n) { const el = inputs()[n]; if (el) { el.focus(); if (el.select) el.select(); } }
     container.addEventListener('input', event => {
       const el = event.target; if (!el.classList.contains('letter-input') || event.isComposing) return;
       const chars = Array.from(el.value).filter(isLetter); el.value = chars.length ? chars[chars.length - 1] : '';
-      answers.set(Number(el.dataset.position), el.value); el.classList.remove('correct', 'incorrect'); onChange();
+      answers.set(Number(el.dataset.position), el.value); const correct = mark(el); onChange({attempts: el.value ? [correct] : []});
       if (el.value) focusAt(inputs().indexOf(el) + 1);
     });
     container.addEventListener('keydown', event => {
       const el = event.target; if (!el.classList.contains('letter-input') || event.isComposing) return;
       const i = inputs().indexOf(el);
-      if (event.key === 'Backspace' && !el.value && i > 0) { event.preventDefault(); const prev = inputs()[i - 1]; prev.value = ''; answers.set(Number(prev.dataset.position), ''); prev.classList.remove('correct', 'incorrect'); focusAt(i - 1); onChange(); }
+      if (event.key === 'Backspace' && !el.value && i > 0) { event.preventDefault(); const prev = inputs()[i - 1]; prev.value = ''; answers.set(Number(prev.dataset.position), ''); mark(prev); focusAt(i - 1); onChange({attempts:[]}); }
       else if (event.key === 'ArrowLeft' && i > 0) { event.preventDefault(); focusAt(i - 1); }
       else if (event.key === 'ArrowRight' || event.key === ' ') { event.preventDefault(); focusAt(i + 1); }
       else if (event.key === 'Enter') { event.preventDefault(); onCheck(); }
@@ -47,9 +55,9 @@
     container.addEventListener('paste', event => {
       const el = event.target; if (!el.classList.contains('letter-input')) return;
       const text = event.clipboardData?.getData('text') || ''; const chars = Array.from(text).filter(isLetter); if (!chars.length) return;
-      event.preventDefault(); const all = inputs(); const from = all.indexOf(el); let used = 0;
-      for (; used < chars.length && from + used < all.length; used++) { const field = all[from + used]; field.value = chars[used]; answers.set(Number(field.dataset.position), field.value); field.classList.remove('correct', 'incorrect'); }
-      focusAt(Math.min(from + used, all.length - 1)); onChange();
+      event.preventDefault(); const all = inputs(); const from = all.indexOf(el); let used = 0; const attempts = [];
+      for (; used < chars.length && from + used < all.length; used++) { const field = all[from + used]; field.value = chars[used]; answers.set(Number(field.dataset.position), field.value); attempts.push(mark(field)); }
+      focusAt(Math.min(from + used, all.length - 1)); onChange({attempts});
     });
     return {
       setSentence(text) { sentence = text; hints = 1; answers = new Map(); render(); },

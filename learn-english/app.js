@@ -3,7 +3,7 @@
   const categories = ['All', 'Friends', 'House M.D.', 'Prison Break', 'Conversation', 'Vocabulary', 'Pronunciation', 'Grammar', 'Listening'];
   const storeKey = 'smartai-english-watched-v1', transcriptKey = 'smartai-english-transcripts-v1';
   let videos = [], selected = 'All', current = null, watched = [], savedTranscripts = {}, sentences = [], index = 0, hintLevel = 1, ytPlayer = null;
-  const automaticCache = new Map(); let transcriptRequest = 0, playerGeneration = 0, playerReady = false, looping = false, playbackArmed = false, firstAutoplayPending = false;
+  const automaticCache = new Map(); let transcriptRequest = 0, playerGeneration = 0, playerReady = false, looping = false, playbackArmed = false, firstAutoplayPending = false, correctAttempts = 0, totalAttempts = 0, playbackState = -1;
   try { watched = JSON.parse(localStorage.getItem(storeKey) || '[]'); if (!Array.isArray(watched)) watched = []; } catch (_) { watched = []; }
   try { savedTranscripts = JSON.parse(localStorage.getItem(transcriptKey) || '{}'); if (!savedTranscripts || Array.isArray(savedTranscripts)) savedTranscripts = {}; } catch (_) { savedTranscripts = {}; }
   const save = () => { try { localStorage.setItem(storeKey, JSON.stringify(watched)); } catch (_) {} };
@@ -32,14 +32,23 @@
     if (!cues.length) return normalized.split(/(?<=[.!?])\s+|\n+/).map(text => ({text:text.trim(), start:null})).filter(x => /[a-z]/i.test(x.text));
     return TranscriptUtils.toExercises(cues);
   }
-  const sentenceInput = SentenceInput.create($('#hint'), () => { $('#feedback').textContent = ''; }, () => $('#check').click());
+  function updateAccuracy() {
+    const percentage = totalAttempts ? `${Math.round(100 * correctAttempts / totalAttempts)}%` : '—';
+    $('#accuracy').textContent = `Accuracy ${percentage} · ${totalAttempts} ${totalAttempts === 1 ? 'attempt' : 'attempts'}`;
+  }
+  const sentenceInput = SentenceInput.create($('#hint'), event => {
+    const attempts = event?.attempts || [];
+    totalAttempts += attempts.length; correctAttempts += attempts.filter(Boolean).length;
+    updateAccuracy(); $('#feedback').textContent = '';
+  }, () => $('#check').click());
   function updateSentence() {
     const s = sentences[index]; if (!s) return;
-    $('#sentence-count').textContent = `Sentence ${index + 1} of ${sentences.length}`;
+    $('#sentence-count').textContent = `Line ${index + 1} of ${sentences.length}`;
+    $('#line-progress').max = sentences.length; $('#line-progress').value = index + 1;
     sentenceInput.setSentence(s.text); $('#feedback').textContent = '';
     $('#previous').disabled = index === 0; $('#next').disabled = index === sentences.length - 1;
     const timed = Number.isFinite(s.start) && Number.isFinite(s.end) && s.end > s.start;
-    $('#replay').disabled = !timed; $('#loop').disabled = !timed;
+    $('#replay').disabled = !timed; $('#loop').disabled = !timed; $('#toggle-play').disabled = !timed;
     $('#timing-note').textContent = timed ? 'Video is positioned at this caption. Play the sentence to stop at its end.' : 'This line has no complete timestamps. Use the video controls to find and replay it.';
     positionOrAutoplay();
   }
@@ -78,6 +87,7 @@
         onAutoplayBlocked: () => { if (generation === playerGeneration && current) $('#feedback').textContent = 'Autoplay was blocked. Tap Play sentence to start.'; },
         onStateChange: event => {
           if (generation !== playerGeneration || !current || event.target !== ytPlayer) return;
+          playbackState = event.data; $('#toggle-play').textContent = event.data === 1 ? 'Ⅱ Pause' : '▶ Play';
           if (event.data === 1) { playbackArmed = true; disableCaptions(); }
           if (event.data === 0 && playbackArmed) {
             playbackArmed = false;
@@ -132,7 +142,7 @@
     $('#player-category').textContent = current.category + ' · ' + current.channel; $('#player-title').textContent = current.title;
     $('#youtube-link').href = `https://www.youtube.com/watch?v=${current.id}`;
     $('#player').src = `https://www.youtube-nocookie.com/embed/${current.id}?rel=0&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
-    playerGeneration++; ytPlayer = null; playerReady = false; playbackArmed = false; firstAutoplayPending = true; looping = false; $('#loop').setAttribute('aria-pressed', 'false'); $('#loop').textContent = '↻ Loop off';
+    playerGeneration++; ytPlayer = null; playerReady = false; playbackArmed = false; firstAutoplayPending = true; looping = false; playbackState = -1; correctAttempts = 0; totalAttempts = 0; updateAccuracy(); $('#toggle-play').textContent = '▶ Play'; $('#loop').setAttribute('aria-pressed', 'false'); $('#loop').textContent = '↻ Loop off';
     sentences = []; setupPlayer();
     $('#mark').textContent = watched.includes(id) ? '✓  Mark as unwatched' : '✓  Mark as watched';
     $('#transcript').value = savedTranscripts[id] || ''; $('#import-status').textContent = '';
@@ -162,6 +172,23 @@
     $('#feedback').textContent = !total ? 'No missing letters in this line.' : empty ? `Fill in the ${empty} remaining ${empty === 1 ? 'letter' : 'letters'}.` : wrong ? 'Not quite. Check the highlighted letters and listen again.' : 'Correct! Nice listening.';
   });
   $('#loop').addEventListener('click', () => { looping = !looping; $('#loop').setAttribute('aria-pressed', String(looping)); $('#loop').textContent = looping ? '↻ Loop on' : '↻ Loop off'; });
+  $('#toggle-play').addEventListener('click', () => {
+    if (!playerReady || !ytPlayer) { $('#feedback').textContent = 'Player is not ready. Try again.'; return; }
+    try {
+      if (playbackState === 1) ytPlayer.pauseVideo();
+      else if (playbackState === 0) { const segment = bounds(); if (segment) ytPlayer.loadVideoById(segment); }
+      else ytPlayer.playVideo();
+      disableCaptions();
+    } catch (_) { $('#feedback').textContent = 'Use the video player controls to play or pause.'; }
+  });
+  $('#fullscreen').addEventListener('click', async () => {
+    try {
+      const frame = ytPlayer && typeof ytPlayer.getIframe === 'function' ? ytPlayer.getIframe() : $('#player');
+      if (typeof frame.requestFullscreen === 'function') await frame.requestFullscreen();
+      else if (typeof frame.webkitRequestFullscreen === 'function') frame.webkitRequestFullscreen();
+      else throw new Error('Fullscreen unavailable');
+    } catch (_) { $('#feedback').textContent = 'Use the fullscreen control in the YouTube player.'; }
+  });
   $('#replay').addEventListener('click', () => {
     const segment = bounds(); if (!segment) return;
     if (playerReady && ytPlayer && typeof ytPlayer.loadVideoById === 'function') {
