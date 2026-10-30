@@ -22,7 +22,7 @@
           if (word && isLetter(c)) letterNumber++;
           if (missing.has(offset)) {
             const input = document.createElement('input'); input.type = 'text'; input.className = 'letter-input'; input.maxLength = 1; input.autocomplete = 'off'; input.setAttribute('autocapitalize', 'none'); input.setAttribute('autocorrect', 'off'); input.setAttribute('spellcheck', 'false'); input.setAttribute('aria-label', `Word ${wordNumber}, letter ${letterNumber}`); input.dataset.position = String(offset); input.value = answers.get(offset) || ''; if (input.value) mark(input); group.appendChild(input);
-          } else { const span = document.createElement('span'); span.className = 'given-letter'; span.textContent = c; group.appendChild(span); }
+          } else { const span = document.createElement('span'); span.className = 'given-letter'; span.dataset.position = String(offset); span.textContent = c; group.appendChild(span); }
           offset += c.length;
         }
         container.appendChild(group);
@@ -60,7 +60,23 @@
       focusAt(Math.min(from + used, all.length - 1)); onChange({attempts});
     });
     return {
-      setSentence(text) { sentence = text; hints = 1; answers = new Map(); render(); },
+      setSentence(text, savedAnswers) { sentence = text; hints = 1; answers = new Map(Object.entries(savedAnswers || {}).map(([k,v]) => [Number(k),v])); render(); },
+      getAnswers() { return Object.fromEntries(answers); },
+      splitAfterRows(limit) {
+        const nodes = Array.from(container.querySelectorAll('[data-position]'));
+        if (!nodes.length) return null;
+        let row = 1, center = null;
+        const tolerance = Math.max(8, parseFloat(getComputedStyle(container).fontSize) * .8);
+        for (const node of nodes) {
+          const r = node.getBoundingClientRect();
+          if (!r.width && !r.height) continue;
+          const y = (r.top + r.bottom) / 2;
+          if (center === null) center = y;
+          else if (y > center + tolerance) { row++; center = y; }
+          if (row > limit) return Number(node.dataset.position);
+        }
+        return null;
+      },
       moreHint() { hints++; render(); },
       reveal() { for (const pos of hidden) answers.set(pos, sentence[pos]); render(); },
       check() {

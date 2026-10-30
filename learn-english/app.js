@@ -3,7 +3,7 @@
   const categories = ['All', 'Friends', 'House M.D.', 'Prison Break', 'Conversation', 'Vocabulary', 'Pronunciation', 'Grammar', 'Listening'];
   const storeKey = 'smartai-english-watched-v1', transcriptKey = 'smartai-english-transcripts-v1';
   let videos = [], selected = 'All', current = null, watched = [], savedTranscripts = {}, sentences = [], index = 0, hintLevel = 1, ytPlayer = null;
-  const automaticCache = new Map(); let transcriptRequest = 0, playerGeneration = 0, playerReady = false, looping = false, playbackArmed = false, firstAutoplayPending = false, correctAttempts = 0, totalAttempts = 0, playbackState = -1;
+  const automaticCache = new Map(); let transcriptRequest = 0, playerGeneration = 0, playerReady = false, looping = false, playbackArmed = false, firstAutoplayPending = false, correctAttempts = 0, totalAttempts = 0, playbackState = -1, lastPracticeWidth = 0;
   try { watched = JSON.parse(localStorage.getItem(storeKey) || '[]'); if (!Array.isArray(watched)) watched = []; } catch (_) { watched = []; }
   try { savedTranscripts = JSON.parse(localStorage.getItem(transcriptKey) || '{}'); if (!savedTranscripts || Array.isArray(savedTranscripts)) savedTranscripts = {}; } catch (_) { savedTranscripts = {}; }
   const save = () => { try { localStorage.setItem(storeKey, JSON.stringify(watched)); } catch (_) {} };
@@ -41,11 +41,21 @@
     totalAttempts += attempts.length; correctAttempts += attempts.filter(Boolean).length;
     updateAccuracy(); $('#feedback').textContent = '';
   }, () => $('#check').click());
+  function saveCurrentAnswers() { if (sentences[index]) sentences[index].answers = sentenceInput.getAnswers(); }
   function updateSentence() {
-    const s = sentences[index]; if (!s) return;
+    let s = sentences[index]; if (!s) return;
+    sentenceInput.setSentence(s.text, s.answers); $('#feedback').textContent = '';
+    // Measure real letter boxes before painting, and split at a word boundary when a third row appears.
+    for (let attempts = 0; attempts < 50; attempts++) {
+      const at = sentenceInput.splitAfterRows(2);
+      if (!Number.isFinite(at) || at <= 0 || at >= s.text.length) break;
+      s.answers = sentenceInput.getAnswers();
+      const parts = TranscriptUtils.splitEntry(s, at); if (!parts) break;
+      sentences.splice(index, 1, ...parts); s = parts[0]; sentenceInput.setSentence(s.text, s.answers);
+    }
+    lastPracticeWidth = $('#hint').clientWidth;
     $('#sentence-count').textContent = `Line ${index + 1} of ${sentences.length}`;
     $('#line-progress').max = sentences.length; $('#line-progress').value = index + 1;
-    sentenceInput.setSentence(s.text); $('#feedback').textContent = '';
     $('#previous').disabled = index === 0; $('#next').disabled = index === sentences.length - 1;
     const timed = Number.isFinite(s.start) && Number.isFinite(s.end) && s.end > s.start;
     $('#replay').disabled = !timed; $('#loop').disabled = !timed; $('#toggle-play').disabled = !timed;
@@ -127,7 +137,7 @@
         automaticCache.set(videoId, entries);
       }
       if (requestId !== transcriptRequest || !current || current.id !== videoId) return;
-      sentences = entries; index = 0; hintLevel = 1; $('#import-panel').hidden = true; $('#exercise').hidden = false;
+      sentences = entries.map(entry => ({...entry, sources:(entry.sources || []).map(source => ({...source}))})); index = 0; hintLevel = 1; $('#import-panel').hidden = true; $('#exercise').hidden = false;
       status.textContent = `English captions loaded automatically · ${entries.length} practice lines. Captions can contain mistakes.`;
       updateSentence();
     } catch (error) {
@@ -141,7 +151,7 @@
     current = videos.find(v => v.id === id); if (!current) return;
     $('#player-category').textContent = current.category + ' · ' + current.channel; $('#player-title').textContent = current.title;
     $('#youtube-link').href = `https://www.youtube.com/watch?v=${current.id}`;
-    $('#player').src = `https://www.youtube-nocookie.com/embed/${current.id}?rel=0&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
+    $('#player').src = `https://www.youtube-nocookie.com/embed/${current.id}?rel=0&controls=0&disablekb=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
     playerGeneration++; ytPlayer = null; playerReady = false; playbackArmed = false; firstAutoplayPending = true; looping = false; playbackState = -1; correctAttempts = 0; totalAttempts = 0; updateAccuracy(); $('#toggle-play').textContent = '▶ Play'; $('#loop').setAttribute('aria-pressed', 'false'); $('#loop').textContent = '↻ Loop off';
     sentences = []; setupPlayer();
     $('#mark').textContent = watched.includes(id) ? '✓  Mark as unwatched' : '✓  Mark as watched';
@@ -186,7 +196,12 @@
     window.visualViewport.addEventListener('resize', syncPracticeViewport);
     window.visualViewport.addEventListener('scroll', syncPracticeViewport);
   }
-  window.addEventListener('resize', syncPracticeViewport);
+  window.addEventListener('resize', () => {
+    syncPracticeViewport();
+    if (practiceDialog.open && !$('#exercise').hidden && sentences[index] && $('#hint').clientWidth !== lastPracticeWidth) {
+      saveCurrentAnswers(); updateSentence();
+    }
+  });
   window.onYouTubeIframeAPIReady = setupPlayer;
   const api = document.createElement('script'); api.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(api);
   $('#filters').addEventListener('click', e => { const b = e.target.closest('[data-category]'); if (b) { selected = b.dataset.category; render(); } });
@@ -199,8 +214,8 @@
   $('#caption-file').addEventListener('change', async e => { const file = e.target.files[0]; if (!file) return; if (file.size > 2_000_000) { $('#import-status').textContent = 'Please choose a caption file smaller than 2 MB.'; return; } $('#transcript').value = await file.text(); $('#import-status').textContent = 'Caption file loaded. Select Create practice.'; e.target.value = ''; });
   $('#make-exercise').addEventListener('click', makeExercise);
   $('#edit-transcript').addEventListener('click', () => { transcriptRequest++; $('#auto-status').textContent = ''; $('#import-panel').hidden = false; $('#exercise').hidden = true; });
-  $('#previous').addEventListener('click', () => { if (index > 0) { index--; hintLevel = 1; updateSentence(); } });
-  $('#next').addEventListener('click', () => { if (index < sentences.length - 1) { index++; hintLevel = 1; updateSentence(); } });
+  $('#previous').addEventListener('click', () => { if (index > 0) { saveCurrentAnswers(); index--; hintLevel = 1; updateSentence(); } });
+  $('#next').addEventListener('click', () => { if (index < sentences.length - 1) { saveCurrentAnswers(); index++; hintLevel = 1; updateSentence(); } });
   $('#more-hint').addEventListener('click', () => { sentenceInput.moreHint(); $('#feedback').textContent = ''; });
   $('#reveal').addEventListener('click', () => { sentenceInput.reveal(); $('#feedback').textContent = 'Answer revealed.'; });
   $('#check').addEventListener('click', () => {

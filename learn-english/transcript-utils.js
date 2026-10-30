@@ -6,18 +6,46 @@
   }
   function toExercises(cues) {
     if (!Array.isArray(cues)) return [];
-    const out = []; let text = '', start = null, lastEnd = null;
-    function flush() { if (text && /[A-Za-z]/.test(text)) out.push({text: text.trim(), start, end: lastEnd !== null && lastEnd > start ? lastEnd : null}); text = ''; start = null; lastEnd = null; }
+    const out = []; let text = '', start = null, lastEnd = null, sources = [];
+    function flush() { if (text && /[A-Za-z]/.test(text)) out.push({text: text.trim(), start, end: lastEnd !== null && lastEnd > start ? lastEnd : null, sources}); text = ''; start = null; lastEnd = null; sources = []; }
     cues.forEach(cue => {
       const chunk = captionText(cue && cue.text); const time = Number(cue && cue.start); const duration = Number(cue && cue.duration);
       if (!chunk || !Number.isFinite(time) || time < 0 || /^\s*\[[^\]]+\]\s*$/.test(chunk)) return;
       if (text && lastEnd !== null && time - lastEnd > 1.5) flush();
       if (!text) start = time;
-      text += (text ? ' ' : '') + chunk;
+      if (text) text += ' ';
+      const sourceStart = text.length; text += chunk;
+      sources.push({from:sourceStart, to:text.length, start:time, end:time + (Number.isFinite(duration) && duration > 0 ? duration : 0)});
       lastEnd = Math.max(lastEnd === null ? time : lastEnd, time + (Number.isFinite(duration) && duration > 0 ? duration : 0));
       if (/[.!?]["'’”)]*$/.test(chunk) || text.split(/\s+/).length >= 16 || lastEnd - start >= 12) flush();
     });
     flush(); return out;
   }
-  root.TranscriptUtils = { toExercises };
+  function splitEntry(entry, at) {
+    const text = entry.text, breakAt = text.lastIndexOf(' ', at);
+    const cut = breakAt > 0 ? breakAt : at;
+    const leftText = text.slice(0, cut).trimEnd();
+    const rightStart = cut + (text.slice(cut).match(/^\s*/) || [''])[0].length;
+    const rightText = text.slice(rightStart);
+    if (!leftText || !rightText) return null;
+    let boundary = null;
+    if (Number.isFinite(entry.start) && Number.isFinite(entry.end) && entry.end > entry.start) {
+      const spans = entry.sources || [];
+      const source = spans.find(x => cut >= x.from && cut <= x.to);
+      if (source && source.end > source.start) boundary = source.start + (source.end - source.start) * Math.max(0, Math.min(1, (cut - source.from) / (source.to - source.from)));
+      else { const next = spans.find(x => x.from >= rightStart); if (next) boundary = next.start; }
+      if (!Number.isFinite(boundary)) boundary = entry.start + (entry.end - entry.start) * cut / text.length;
+      const margin = Math.min(.01, (entry.end - entry.start) / 4);
+      boundary = Math.max(entry.start + margin, Math.min(entry.end - margin, boundary));
+    }
+    const splitSources = (startIndex, endIndex) => (entry.sources || []).filter(x => x.to > startIndex && x.from < endIndex).map(x => {
+      const lo = Math.max(startIndex,x.from), hi = Math.min(endIndex,x.to), duration = x.end - x.start, length = x.to - x.from;
+      return {from:lo-startIndex, to:hi-startIndex, start:x.start + duration * (lo-x.from)/length, end:x.start + duration * (hi-x.from)/length};
+    });
+    const left = {text:leftText, start:entry.start, end:boundary, sources:splitSources(0,cut), answers:{}};
+    const right = {text:rightText, start:boundary, end:entry.end, sources:splitSources(rightStart,text.length), answers:{}};
+    for (const [key,value] of Object.entries(entry.answers || {})) { const i = Number(key); if (i < cut) left.answers[i] = value; else if (i >= rightStart) right.answers[i-rightStart] = value; }
+    return [left,right];
+  }
+  root.TranscriptUtils = { toExercises, splitEntry };
 })(typeof window !== 'undefined' ? window : globalThis);
