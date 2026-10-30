@@ -6,20 +6,27 @@
   }
   function toExercises(cues) {
     if (!Array.isArray(cues)) return [];
-    const out = []; let text = '', start = null, lastEnd = null, sources = [];
-    function flush() { if (text && /[A-Za-z]/.test(text)) out.push({text: text.trim(), start, end: lastEnd !== null && lastEnd > start ? lastEnd : null, sources}); text = ''; start = null; lastEnd = null; sources = []; }
-    cues.forEach(cue => {
-      const chunk = captionText(cue && cue.text); const time = Number(cue && cue.start); const duration = Number(cue && cue.duration);
-      if (!chunk || !Number.isFinite(time) || time < 0 || /^\s*\[[^\]]+\]\s*$/.test(chunk)) return;
-      if (text && lastEnd !== null && time - lastEnd > 1.5) flush();
-      if (!text) start = time;
-      if (text) text += ' ';
-      const sourceStart = text.length; text += chunk;
-      sources.push({from:sourceStart, to:text.length, start:time, end:time + (Number.isFinite(duration) && duration > 0 ? duration : 0)});
-      lastEnd = Math.max(lastEnd === null ? time : lastEnd, time + (Number.isFinite(duration) && duration > 0 ? duration : 0));
-      if (/[.!?]["'’”)]*$/.test(chunk) || text.split(/\s+/).length >= 16 || lastEnd - start >= 12) flush();
-    });
-    flush(); return out;
+    // A caption gap is only a proxy for a spoken pause; no audio is analysed here.
+    const gap = .3, pad = .12;
+    const clean = cues.map(cue => ({text:captionText(cue && cue.text), start:Number(cue && cue.start), duration:Number(cue && cue.duration)}))
+      .filter(cue => cue.text && Number.isFinite(cue.start) && cue.start >= 0 && Number.isFinite(cue.duration) && cue.duration > 0)
+      .sort((a,b) => a.start - b.start);
+    const out = []; let group = [], end = 0, before = null;
+    function flush(after) {
+      const spoken = group.map(cue => cue.text).join(' ');
+      if (before !== null && after >= gap && /[A-Za-z]/.test(spoken) && !group.some(cue => /^\[[^\]]+\]$/.test(cue.text))) {
+        out.push({text:spoken, start:Math.max(0, group[0].start - Math.min(pad,before / 2)), end:end + Math.min(pad,after / 2), pauseBounded:true});
+      }
+      group = [];
+    }
+    for (const cue of clean) {
+      if (!group.length) { group = [cue]; end = cue.start + cue.duration; before = cue.start >= gap ? cue.start : null; continue; }
+      const separation = cue.start - end;
+      if (separation >= gap) { flush(separation); before = separation; group = [cue]; end = cue.start + cue.duration; }
+      else { group.push(cue); end = Math.max(end, cue.start + cue.duration); }
+    }
+    // The last cue has no following cue from which to infer a pause.
+    return out;
   }
   function splitEntry(entry, at) {
     const text = entry.text, breakAt = text.lastIndexOf(' ', at);

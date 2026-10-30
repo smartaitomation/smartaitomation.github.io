@@ -2,7 +2,7 @@
   const $ = s => document.querySelector(s);
   const categories = ['All', 'Friends', 'House M.D.', 'Prison Break', 'Conversation', 'Vocabulary', 'Pronunciation', 'Grammar', 'Listening'];
   const storeKey = 'smartai-english-watched-v1', transcriptKey = 'smartai-english-transcripts-v1';
-  let videos = [], selected = 'All', current = null, watched = [], savedTranscripts = {}, sentences = [], index = 0, hintLevel = 1, ytPlayer = null;
+  let videos = [], selected = 'All', current = null, watched = [], savedTranscripts = {}, sentences = [], allSentences = [], index = 0, hintLevel = 1, ytPlayer = null;
   const automaticCache = new Map(); let transcriptRequest = 0, playerGeneration = 0, playerReady = false, looping = false, playbackArmed = false, firstAutoplayPending = false, correctAttempts = 0, totalAttempts = 0, playbackState = -1, lastPracticeWidth = 0;
   try { watched = JSON.parse(localStorage.getItem(storeKey) || '[]'); if (!Array.isArray(watched)) watched = []; } catch (_) { watched = []; }
   try { savedTranscripts = JSON.parse(localStorage.getItem(transcriptKey) || '{}'); if (!savedTranscripts || Array.isArray(savedTranscripts)) savedTranscripts = {}; } catch (_) { savedTranscripts = {}; }
@@ -42,11 +42,32 @@
     updateAccuracy(); $('#feedback').textContent = '';
   }, () => $('#check').click());
   function saveCurrentAnswers() { if (sentences[index]) sentences[index].answers = sentenceInput.getAnswers(); }
+  function fitPauseBoundedSentences(preferred) {
+    // Do not split timed speech at an estimated point just to make it fit.
+    sentences = allSentences.filter(s => {
+      if (!s.pauseBounded) return true;
+      sentenceInput.setSentence(s.text, s.answers);
+      return sentenceInput.splitAfterRows(2) === null;
+    });
+    if (!sentences.length) {
+      $('#exercise').hidden = true; $('#import-panel').hidden = false;
+      $('#auto-status').textContent = 'No short caption segments with gaps on both sides were found for this screen. Try another video or add a transcript.';
+      if (playerReady && ytPlayer && typeof ytPlayer.pauseVideo === 'function') ytPlayer.pauseVideo();
+      return false;
+    }
+    const originalIndex = preferred ? allSentences.indexOf(preferred) : 0;
+    index = Math.max(0, sentences.indexOf(preferred));
+    if (preferred && !sentences.includes(preferred)) {
+      const next = sentences.findIndex(s => allSentences.indexOf(s) > originalIndex);
+      index = next < 0 ? sentences.length - 1 : next;
+    }
+    return true;
+  }
   function updateSentence() {
     let s = sentences[index]; if (!s) return;
     sentenceInput.setSentence(s.text, s.answers); $('#feedback').textContent = '';
     // Measure real letter boxes before painting, and split at a word boundary when a third row appears.
-    for (let attempts = 0; attempts < 50; attempts++) {
+    for (let attempts = 0; !s.pauseBounded && attempts < 50; attempts++) {
       const at = sentenceInput.splitAfterRows(2);
       if (!Number.isFinite(at) || at <= 0 || at >= s.text.length) break;
       s.answers = sentenceInput.getAnswers();
@@ -59,7 +80,7 @@
     $('#previous').disabled = index === 0; $('#next').disabled = index === sentences.length - 1;
     const timed = Number.isFinite(s.start) && Number.isFinite(s.end) && s.end > s.start;
     $('#replay').disabled = !timed; $('#loop').disabled = !timed; $('#toggle-play').disabled = !timed;
-    $('#timing-note').textContent = timed ? 'Video is positioned at this caption. Play the sentence to stop at its end.' : 'This line has no complete timestamps. Use the video controls to find and replay it.';
+    $('#timing-note').textContent = timed ? 'Caption gaps suggest a pause on each side; actual speech timing may vary.' : 'This line has no complete timestamps.';
     positionOrAutoplay();
   }
   function bounds() {
@@ -111,11 +132,12 @@
   function makeExercise() {
     const raw = $('#transcript').value.trim(); const parsed = parseTranscript(raw);
     if (!parsed.length) { $('#import-status').textContent = 'Add a transcript or caption file first.'; return; }
-    sentences = parsed; index = 0; hintLevel = 1;
+    allSentences = parsed; sentences = parsed; index = 0; hintLevel = 1;
     savedTranscripts[current.id] = raw;
     try { localStorage.setItem(transcriptKey, JSON.stringify(savedTranscripts)); $('#import-status').textContent = ''; }
     catch (_) { $('#import-status').textContent = 'Practice loaded, but it could not be saved on this device.'; }
-    $('#import-panel').hidden = true; $('#exercise').hidden = false; updateSentence();
+    $('#import-panel').hidden = true; $('#exercise').hidden = false;
+    if (fitPauseBoundedSentences()) updateSentence();
   }
   async function loadAutomaticTranscript(videoId, requestId) {
     const status = $('#auto-status');
@@ -137,9 +159,11 @@
         automaticCache.set(videoId, entries);
       }
       if (requestId !== transcriptRequest || !current || current.id !== videoId) return;
-      sentences = entries.map(entry => ({...entry, sources:(entry.sources || []).map(source => ({...source}))})); index = 0; hintLevel = 1; $('#import-panel').hidden = true; $('#exercise').hidden = false;
-      status.textContent = `English captions loaded automatically · ${entries.length} practice lines. Captions can contain mistakes.`;
-      updateSentence();
+      allSentences = entries.map(entry => ({...entry, sources:(entry.sources || []).map(source => ({...source}))})); index = 0; hintLevel = 1; $('#import-panel').hidden = true; $('#exercise').hidden = false;
+      if (fitPauseBoundedSentences()) {
+        status.textContent = `English captions loaded automatically · ${sentences.length} short clips with caption gaps. Captions can contain mistakes.`;
+        updateSentence();
+      }
     } catch (error) {
       if (requestId !== transcriptRequest || !current || current.id !== videoId) return;
       status.textContent = error.name === 'AbortError' ? 'Caption loading timed out. Try again later or add a transcript below.' : `${error.message || 'Could not load captions.'} You can add a transcript below.`;
@@ -153,7 +177,7 @@
     $('#youtube-link').href = `https://www.youtube.com/watch?v=${current.id}`;
     $('#player').src = `https://www.youtube-nocookie.com/embed/${current.id}?rel=0&controls=0&disablekb=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
     playerGeneration++; ytPlayer = null; playerReady = false; playbackArmed = false; firstAutoplayPending = true; looping = false; playbackState = -1; correctAttempts = 0; totalAttempts = 0; updateAccuracy(); $('#toggle-play').textContent = '▶ Play'; $('#loop').setAttribute('aria-pressed', 'false'); $('#loop').textContent = '↻ Loop off';
-    sentences = []; setupPlayer();
+    sentences = []; allSentences = []; setupPlayer();
     $('#mark').textContent = watched.includes(id) ? '✓  Mark as unwatched' : '✓  Mark as watched';
     $('#transcript').value = savedTranscripts[id] || ''; $('#import-status').textContent = '';
     $('#import-panel').hidden = true; $('#exercise').hidden = true;
@@ -199,7 +223,8 @@
   window.addEventListener('resize', () => {
     syncPracticeViewport();
     if (practiceDialog.open && !$('#exercise').hidden && sentences[index] && $('#hint').clientWidth !== lastPracticeWidth) {
-      saveCurrentAnswers(); updateSentence();
+      saveCurrentAnswers(); const preferred = sentences[index];
+      if (!allSentences.some(s => s.pauseBounded) || fitPauseBoundedSentences(preferred)) updateSentence();
     }
   });
   window.onYouTubeIframeAPIReady = setupPlayer;
