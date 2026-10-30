@@ -37,7 +37,7 @@
       return correct;
     }
     function inputs() { return Array.from(container.querySelectorAll('.letter-input')); }
-    function focusAt(n) { const el = inputs()[n]; if (el) { el.focus(); if (el.select) el.select(); } }
+    function focusAt(n) { const el = inputs()[n]; if (el) { try { el.focus({preventScroll:true}); } catch (_) { el.focus(); } if (el.select) el.select(); } }
     container.addEventListener('input', event => {
       const el = event.target; if (!el.classList.contains('letter-input') || event.isComposing) return;
       const chars = Array.from(el.value).filter(isLetter); el.value = chars.length ? chars[chars.length - 1] : '';

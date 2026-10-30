@@ -149,15 +149,51 @@
     $('#import-panel').hidden = true; $('#exercise').hidden = true;
     const requestId = ++transcriptRequest;
     $('#player-dialog').showModal();
+    syncPracticeViewport();
     loadAutomaticTranscript(id, requestId);
   }
+  // iOS can shrink only the visual viewport when the keyboard appears.
+  const practiceDialog = $('#player-dialog');
+  function syncPracticeViewport() {
+    if (!practiceDialog.open || !window.matchMedia('(max-width: 650px)').matches) return;
+    const viewport = window.visualViewport;
+    if (viewport) {
+      practiceDialog.style.setProperty('--practice-viewport-height', `${viewport.height}px`);
+      practiceDialog.style.setProperty('--practice-viewport-top', `${viewport.offsetTop}px`);
+    }
+    requestAnimationFrame(() => {
+      const active = document.activeElement;
+      if (!practiceDialog.open || !active || !active.classList.contains('letter-input')) return;
+      const field = active.getBoundingClientRect(), player = practiceDialog.querySelector('.video-wrap').getBoundingClientRect(), dialog = practiceDialog.getBoundingClientRect();
+      const sentence = $('#hint').getBoundingClientRect();
+      const bottom = Math.min(dialog.bottom, viewport ? viewport.offsetTop + viewport.height : window.innerHeight) - 8;
+      const top = player.bottom + 6;
+      // Keep the whole line visible when it fits; for longer lines, keep the active letter visible.
+      if (sentence.height <= bottom - (dialog.top + player.height + 6)) {
+        if (sentence.bottom > bottom) practiceDialog.scrollBy({top: sentence.bottom - bottom, behavior:'instant'});
+        else if (sentence.top < top) practiceDialog.scrollBy({top: sentence.top - top, behavior:'instant'});
+      } else if (field.bottom > bottom) practiceDialog.scrollBy({top: field.bottom - bottom, behavior:'instant'});
+      else if (field.top < top) practiceDialog.scrollBy({top: field.top - top, behavior:'instant'});
+    });
+  }
+  practiceDialog.addEventListener('focusin', event => {
+    if (event.target.classList.contains('letter-input')) { practiceDialog.classList.add('keyboard-open'); syncPracticeViewport(); }
+  });
+  practiceDialog.addEventListener('focusout', () => requestAnimationFrame(() => {
+    if (!document.activeElement?.classList.contains('letter-input')) { practiceDialog.classList.remove('keyboard-open'); syncPracticeViewport(); }
+  }));
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', syncPracticeViewport);
+    window.visualViewport.addEventListener('scroll', syncPracticeViewport);
+  }
+  window.addEventListener('resize', syncPracticeViewport);
   window.onYouTubeIframeAPIReady = setupPlayer;
   const api = document.createElement('script'); api.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(api);
   $('#filters').addEventListener('click', e => { const b = e.target.closest('[data-category]'); if (b) { selected = b.dataset.category; render(); } });
   $('#cards').addEventListener('click', e => { const b = e.target.closest('[data-video]'); if (b) openVideo(b.dataset.video); });
   $('#search').addEventListener('input', render);
   $('#close').addEventListener('click', () => $('#player-dialog').close());
-  $('#player-dialog').addEventListener('close', () => { transcriptRequest++; playerGeneration++; playerReady = false; playbackArmed = false; firstAutoplayPending = false; $('#player').src = ''; current = null; ytPlayer = null; });
+  $('#player-dialog').addEventListener('close', () => { practiceDialog.classList.remove('keyboard-open'); practiceDialog.style.removeProperty('--practice-viewport-height'); practiceDialog.style.removeProperty('--practice-viewport-top'); transcriptRequest++; playerGeneration++; playerReady = false; playbackArmed = false; firstAutoplayPending = false; $('#player').src = ''; current = null; ytPlayer = null; });
   $('#mark').addEventListener('click', () => { if (!current) return; watched = watched.includes(current.id) ? watched.filter(id => id !== current.id) : [...watched, current.id]; save(); $('#mark').textContent = watched.includes(current.id) ? '✓  Mark as unwatched' : '✓  Mark as watched'; render(); });
   $('#clear-progress').addEventListener('click', () => { if (!watched.length || confirm('Reset your watched lessons on this device?')) { watched = []; save(); render(); } });
   $('#caption-file').addEventListener('change', async e => { const file = e.target.files[0]; if (!file) return; if (file.size > 2_000_000) { $('#import-status').textContent = 'Please choose a caption file smaller than 2 MB.'; return; } $('#transcript').value = await file.text(); $('#import-status').textContent = 'Caption file loaded. Select Create practice.'; e.target.value = ''; });
