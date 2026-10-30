@@ -47,7 +47,7 @@
     sentences = allSentences.filter(s => {
       if (!s.pauseBounded) return true;
       sentenceInput.setSentence(s.text, s.answers);
-      return sentenceInput.splitAfterRows(2) === null;
+      return sentenceInput.splitAfterRows(3) === null;
     });
     if (!sentences.length) {
       $('#exercise').hidden = true; $('#import-panel').hidden = false;
@@ -66,9 +66,9 @@
   function updateSentence() {
     let s = sentences[index]; if (!s) return;
     sentenceInput.setSentence(s.text, s.answers); $('#feedback').textContent = '';
-    // Measure real letter boxes before painting, and split at a word boundary when a third row appears.
+    // Measure real letter boxes before painting, and split untimed text when a fourth row appears.
     for (let attempts = 0; !s.pauseBounded && attempts < 50; attempts++) {
-      const at = sentenceInput.splitAfterRows(2);
+      const at = sentenceInput.splitAfterRows(3);
       if (!Number.isFinite(at) || at <= 0 || at >= s.text.length) break;
       s.answers = sentenceInput.getAnswers();
       const parts = TranscriptUtils.splitEntry(s, at); if (!parts) break;
