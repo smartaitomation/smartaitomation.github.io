@@ -1,0 +1,9 @@
+Improve the recruiting email writer in ./recruiting-workshop for unsupported_candidate_claim.
+
+Read the expert notes and source facts. Decide whether the problem is the writer, the judge or missing information.
+
+Test one change: clearer prompt, better examples, a different authorized model, narrower scope, fact extraction before writing, a router or a checker subagent. Explain how it addresses an observed error.
+
+Rerun matched development cases with the same data and frozen judge. Save prompt/model versions and exact outputs. Compare per-error results, regressions, cost and latency; inspect examples with a domain expert.
+
+Keep only an observed improvement. Freeze the selected change before held-out testing. Preserve old versions. Paid calls require a budget; no email sending.

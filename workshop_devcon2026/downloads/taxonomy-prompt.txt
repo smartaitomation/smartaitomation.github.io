@@ -1,0 +1,7 @@
+In ./recruiting-workshop, group my manual review notes into an error taxonomy.
+
+Join notes to the exact reviewed email version and its CV/job facts. Group by the mistake and the correction needed—not job title or vague quality. An email may have several errors.
+
+Return a table: error name | definition | example note | affected email IDs | count. Use Good reviews as counterexamples. Keep unclear cases separate; never invent evidence or counts.
+
+Let me rename, merge or split categories. Add counted error filters to the existing Flask/HTML viewer. Keep the original notes and distinguish AI suggestions from manual labels. No separate taxonomy or playground page.

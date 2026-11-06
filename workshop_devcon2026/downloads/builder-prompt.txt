@@ -1,0 +1,16 @@
+Build an email review app in ./recruiting-workshop using Python Flask, HTML/CSS, vanilla JavaScript and SQLite. Run on port 8835.
+
+INPUT: recruiting-emails-flash-lite-20.csv + .json. Keep the source files unchanged; parse multiline fields correctly.
+
+Show a searchable email list with sorting and counted filters. Open each email in three columns:
+1. Candidate CV + job description.
+2. Generated email.
+3. Good/Bad, notes, Skip and Save & next.
+
+Below the review, show previous saved notes across emails in only two columns: Nr | Text. Refresh this list after saving and whenever Next is clicked. Good/Bad requires a note; Skip preserves earlier reviews.
+
+No Advanced section. No separate taxonomy or prompt-playground page.
+
+Save review history with sample ID, exact email version/hash and manual_review provenance. Export CSV/JSON. Use tabs on mobile. Escape source text; keep credentials server-side. Do not send emails or call AI.
+
+Deliver working code, run instructions and a preview URL. Check save/reload, Next and mobile layout.
