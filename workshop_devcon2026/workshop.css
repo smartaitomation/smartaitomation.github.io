@@ -5,3 +5,7 @@
 
 /* Workshop title and duration label. */
 .workshop-mark{display:flex;align-items:baseline;gap:8px}.workshop-mark span{padding-left:0;font-size:20px;letter-spacing:-.5px}@media(max-width:760px){.workshop-mark{float:none;margin:0 0 24px;gap:10px}}
+
+.writer-version{max-width:300px;margin-bottom:20px}.writer-version select{width:100%}
+
+.writing .prompt-editor textarea{min-height:230px}

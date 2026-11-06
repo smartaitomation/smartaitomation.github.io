@@ -1,0 +1,7 @@
+Write an outreach email based on this CV and job description.
+
+CV:
+{{candidate_cv}}
+
+Job description:
+{{target_job_description}}

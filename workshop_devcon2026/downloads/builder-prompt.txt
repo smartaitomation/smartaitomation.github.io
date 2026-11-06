@@ -1,6 +1,6 @@
 Build an email review app in ./recruiting-workshop using Python Flask, HTML/CSS, vanilla JavaScript and SQLite. Run on port 8835.
 
-INPUT: recruiting-emails-flash-lite-20.csv + .json. Keep the source files unchanged; parse multiline fields correctly.
+INPUT: recruiting-emails-flash-lite-diverse-20.csv + .json. Keep the source files unchanged; parse multiline fields correctly.
 
 Show a searchable email list with sorting and counted filters. Open each email in three columns:
 1. Candidate CV + job description.
