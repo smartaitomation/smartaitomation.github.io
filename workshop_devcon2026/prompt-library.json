@@ -48,6 +48,22 @@
     "example": "Rule: Preserve the job’s work arrangement.\nJob: Hybrid, two office days.\nEmail: “Fully remote from anywhere.”\nExpert note: “Keep the two-office-day requirement.”\n{\"status\":\"fail\",\"reason\":\"The email promises fully remote work; the job requires two office days.\"}\n\nEmail: “The role includes two office days.”\n{\"status\":\"pass\",\"reason\":\"The work arrangement matches the job.\"}\n\nFail is the positive class when counting TP, FP and FN. Reject incomplete source inputs before judging; report invalid outputs separately.",
     "revision": "notes-v3"
   },
+  "evals": {
+    "title": "Build the evaluation script.",
+    "summary": "Use your judge prompt, email CSV and human reviews. Measure how often the judge agrees with the expert.",
+    "input": "Email CSV, exported review notes with IDs and email hashes, and one error-specific judge prompt. Add explicit per-rule expert labels before scoring.",
+    "output": "Python script, results.csv with reasons and disagreements, and metrics.json with accuracy, coverage, precision and recall.",
+    "steps": [
+      "Export reviews from the email viewer. Attach the matching CSV and judge prompt.",
+      "Confirm expert pass/fail labels for each error type; notes alone are not reference labels.",
+      "Paste this prompt into Codex or Claude. Build and dry-run the script.",
+      "Run within your model budget. Inspect false positives and false negatives before changing the judge."
+    ],
+    "settings": [],
+    "prompt": "Build a Python eval script for these recruiting emails.\n\nCSV: {{csv_file}}\nHUMAN REVIEWS / NOTES: {{reviews_file}}\nLLM JUDGE PROMPT: {{judge_prompt}}\n\nParse multiline CSV fields. Join reviews by sample_id and verify the exact email version/hash. Use the latest matching manual review; ignore Skip and report missing or conflicting labels.\n\nEvaluate one error type at a time. Require an expert pass/fail label for that rule. Overall Good/Bad and free-text notes are not per-rule labels: if needed, export a label template for human completion; never invent references.\n\nSend the CV, job and email to the supplied judge. Keep current-case labels and notes hidden. Few-shot notes/examples may come only from training families; keep related cases in one train/dev/test split. Tune on dev, freeze before test.\n\nRequire JSON {\"status\":\"pass|fail\",\"reason\":\"...\"}. Save predictions, expert labels, reasons and disagreements to results.csv. Report invalid responses/API failures separately.\n\nReturn metrics.json and a readable summary: judge accuracy = matches / valid labelled predictions, numerator/denominator, coverage, TP/TN/FP/FN, precision and recall per error type. Fail is positive. Undefined metrics are null; no labelled cases means accuracy unavailable. Label this judge agreement, not agent success rate.\n\nAdd CLI options for files, model and spending cap; use environment credentials, a dry run and resumable cached results keyed by input/prompt/model. Never send emails. Deliver code, setup/run commands and a small known-label metrics check. Do not make paid calls while building.",
+    "example": "Example only · not a workshop result\n\n20 labelled emails · one error type\nTP 8 · TN 10 · FP 1 · FN 1\nJudge accuracy: (8 + 10) / 20 = 90%\nPrecision: 8 / 9 = 88.9%\nRecall: 8 / 9 = 88.9%\nCoverage: 20 valid predictions / 20 labelled emails = 100%\n\nFP: judge says fail, expert says pass.\nFN: judge says pass, expert says fail.\n\nMissing labels, API errors and invalid JSON are counted separately, not silently treated as pass. No reviewed labels means no accuracy yet.",
+    "revision": "evals-script-v1"
+  },
   "improve": {
     "title": "Change the writer. Keep the test fixed.",
     "summary": "Use the error evidence to choose a targeted change. Compare matched emails and inspect what got worse as well as better.",

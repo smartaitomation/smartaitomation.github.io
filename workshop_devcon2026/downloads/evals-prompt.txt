@@ -1,0 +1,17 @@
+Build a Python eval script for these recruiting emails.
+
+CSV: {{csv_file}}
+HUMAN REVIEWS / NOTES: {{reviews_file}}
+LLM JUDGE PROMPT: {{judge_prompt}}
+
+Parse multiline CSV fields. Join reviews by sample_id and verify the exact email version/hash. Use the latest matching manual review; ignore Skip and report missing or conflicting labels.
+
+Evaluate one error type at a time. Require an expert pass/fail label for that rule. Overall Good/Bad and free-text notes are not per-rule labels: if needed, export a label template for human completion; never invent references.
+
+Send the CV, job and email to the supplied judge. Keep current-case labels and notes hidden. Few-shot notes/examples may come only from training families; keep related cases in one train/dev/test split. Tune on dev, freeze before test.
+
+Require JSON {"status":"pass|fail","reason":"..."}. Save predictions, expert labels, reasons and disagreements to results.csv. Report invalid responses/API failures separately.
+
+Return metrics.json and a readable summary: judge accuracy = matches / valid labelled predictions, numerator/denominator, coverage, TP/TN/FP/FN, precision and recall per error type. Fail is positive. Undefined metrics are null; no labelled cases means accuracy unavailable. Label this judge agreement, not agent success rate.
+
+Add CLI options for files, model and spending cap; use environment credentials, a dry run and resumable cached results keyed by input/prompt/model. Never send emails. Deliver code, setup/run commands and a small known-label metrics check. Do not make paid calls while building.
