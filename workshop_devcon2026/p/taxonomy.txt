@@ -1,0 +1,6 @@
+Cluster these review notes into error types based on the mistake and correction needed. Merge duplicates; keep different failures separate.
+
+For each type, return: name | description (what counts and what does not) | example notes | source IDs, if supplied. Quote real notes; do not invent evidence. An email can have multiple errors. Separate unclear notes for review. Preserve the original notes.
+
+NOTES:
+{{notes}}

@@ -1,0 +1,13 @@
+Create 20 fictional recruiting-email test cases from these rules and reviewed examples.
+
+RULES:
+{{rules}}
+
+REVIEWED TRAIN EXAMPLES (CV, job, email, notes):
+{{reviewed_examples}}
+
+Vary candidate role, scenario and feature. Include errors, correct emails and close counterexamples for every rule. Use matched pairs that change one claim. Keep the CV and job internally consistent; vary the email to test the rule.
+
+Return CSV + JSON: sample_id, family_id, candidate_name, target_job_name, target_job_description, candidate_cv, email, role, scenario, feature, error_type, expected_status (fail/pass), expected_reason. Use a unique sample_id per row and shared family_id for related variants. Label the selected error_type only. Include no real personal data.
+
+Expected labels are provisional: a domain expert must review them. Keep each family in one train/dev/test split. Do not copy held-out cases or expose expected labels to the judge.

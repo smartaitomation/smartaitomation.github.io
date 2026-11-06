@@ -75,7 +75,8 @@
     "number": 13,
     "title": "Build the data viewer",
     "section": "YOUR TURN / CODEX OR CLAUDE",
-    "source": null
+    "source": null,
+    "prompt_key": "builder"
   },
   {
     "number": 14,
@@ -117,7 +118,8 @@
     "number": 20,
     "title": "Create the error taxonomy",
     "section": "YOUR TURN / CODEX OR CLAUDE",
-    "source": "https://hamel.dev/blog/posts/llm-judge/"
+    "source": "https://hamel.dev/blog/posts/llm-judge/",
+    "prompt_key": "taxonomy"
   },
   {
     "number": 21,
@@ -135,7 +137,8 @@
     "number": 23,
     "title": "Write the judge prompt",
     "section": "YOUR TURN / ONE ERROR",
-    "source": "https://hamel.dev/blog/posts/llm-judge/"
+    "source": "https://hamel.dev/blog/posts/llm-judge/",
+    "prompt_key": "judge"
   },
   {
     "number": 24,
@@ -177,7 +180,8 @@
     "number": 30,
     "title": "Generate cases that test one error",
     "section": "YOUR TURN / SYNTHETIC EXAMPLES",
-    "source": null
+    "source": null,
+    "prompt_key": "synthetic"
   },
   {
     "number": 31,
@@ -217,8 +221,8 @@
   },
   {
     "number": 37,
-    "title": "Make this a team skill",
-    "section": "THANK YOU",
+    "title": "AI Evals Workshop for Devs and PMs",
+    "section": "THANK YOU / NOVEMBER 2026",
     "source": null
   }
 ]

@@ -7,3 +7,6 @@
 
 /* Simple review: two-column notes, no metadata controls. */
 .history{margin-top:24px}.notes-table{max-height:260px;overflow:auto}.notes-table th{padding:8px 10px}.notes-table td{padding:10px;font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;vertical-align:top}.notes-table td:first-child{width:42px;color:var(--muted)}.notes-table p{font-size:12px;margin:12px 0}.prompt-editor textarea{min-height:390px}.prompt-summary{max-width:690px}
+
+/* Prompt access: QR and readable direct URL */
+.prompt-download{display:flex;align-items:center;gap:24px;border-top:1px solid #d9e0e2;border-bottom:1px solid #d9e0e2;padding:18px 0;margin:22px 0 28px}.prompt-download .qr-link{flex:0 0 132px;line-height:0}.prompt-download img{width:132px;height:132px;display:block}.prompt-download>div{min-width:0}.prompt-download strong{display:block;font-size:18px;margin-bottom:8px}.prompt-direct-url{display:block;font-size:clamp(18px,2.1vw,26px);font-weight:650;line-height:1.35;overflow-wrap:anywhere;color:#245644}.prompt-download small{display:block;color:#64747c;margin-top:10px}@media(max-width:650px){.prompt-download{gap:14px;align-items:flex-start}.prompt-download .qr-link{flex-basis:104px}.prompt-download img{width:104px;height:104px}.prompt-download strong{font-size:15px}.prompt-direct-url{font-size:18px}.prompt-download small{font-size:11px}}
