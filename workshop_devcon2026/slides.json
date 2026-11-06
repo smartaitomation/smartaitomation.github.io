@@ -1,0 +1,218 @@
+[
+  {
+    "number": 1,
+    "title": "AI Agent Evaluations",
+    "section": "HANDS-ON WORKSHOP",
+    "source": null
+  },
+  {
+    "number": 2,
+    "title": "A familiar AI-agent architecture",
+    "section": "WHY EVALUATIONS",
+    "source": null
+  },
+  {
+    "number": 3,
+    "title": "AI quality dashboard",
+    "section": "BAD METRICS",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 4,
+    "title": "90% accuracy. What did we test?",
+    "section": "EVAL MISTAKE / 1",
+    "source": null
+  },
+  {
+    "number": 5,
+    "title": "Check every required capability",
+    "section": "EVAL MISTAKE / 2",
+    "source": null
+  },
+  {
+    "number": 6,
+    "title": "Ion Mo\u0219noi",
+    "section": "ABOUT ION",
+    "source": null
+  },
+  {
+    "number": 7,
+    "title": "The recruiting-email assistant",
+    "section": "OUR USE CASE",
+    "source": null
+  },
+  {
+    "number": 8,
+    "title": "Steps of error analysis",
+    "section": "TODAY\u2019S WORKFLOW",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 9,
+    "title": "3-step evals lifecycle",
+    "section": "ANALYZE \u00b7 MEASURE \u00b7 IMPROVE",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 10,
+    "title": "One row, one email",
+    "section": "YOUR INPUT DATA",
+    "source": null
+  },
+  {
+    "number": 11,
+    "title": "Choose the domain expert",
+    "section": "BEFORE REVIEWING",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 12,
+    "title": "Build the data viewer",
+    "section": "YOUR TURN / CODEX OR CLAUDE",
+    "source": null
+  },
+  {
+    "number": 13,
+    "title": "Everything needed to review",
+    "section": "THE VIEWER",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 14,
+    "title": "A review interface in HTML",
+    "section": "EXAMPLE / CV \u00b7 EMAIL \u00b7 REVIEW",
+    "source": null
+  },
+  {
+    "number": 15,
+    "title": "Review a varied sample",
+    "section": "EMAIL FILTERS",
+    "source": null
+  },
+  {
+    "number": 16,
+    "title": "Useful review notes",
+    "section": "HUMAN REVIEW",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 17,
+    "title": "Keep reviewing while you learn",
+    "section": "WHEN TO PAUSE",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 18,
+    "title": "Turn review notes into error types",
+    "section": "TAXONOMY",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 19,
+    "title": "Create the error taxonomy",
+    "section": "YOUR TURN / CODEX OR CLAUDE",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 20,
+    "title": "One evaluator per error type",
+    "section": "MAKE ERRORS MEASURABLE",
+    "source": null
+  },
+  {
+    "number": 21,
+    "title": "Example evaluator: wrong job fact",
+    "section": "ONE SPECIFIC CHECK",
+    "source": null
+  },
+  {
+    "number": 22,
+    "title": "Write the judge prompt",
+    "section": "YOUR TURN / ONE ERROR",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 23,
+    "title": "Teach the decision boundary",
+    "section": "DIVERSE JUDGE EXAMPLES",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 24,
+    "title": "Compare the judge with the expert",
+    "section": "EVALUATE THE EVALUATOR",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 25,
+    "title": "Read the disagreements",
+    "section": "IMPROVE THE JUDGE",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 26,
+    "title": "90%+ alignment is a target",
+    "section": "CALIBRATION",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 27,
+    "title": "Keep the final test independent",
+    "section": "DATASET SPLITS",
+    "source": "https://hamel.dev/blog/posts/llm-judge/"
+  },
+  {
+    "number": 28,
+    "title": "A synthetic case needs context",
+    "section": "DATA GENERATION / FEATURE \u00d7 ROLE \u00d7 SCENARIO",
+    "source": null
+  },
+  {
+    "number": 29,
+    "title": "Generate cases that test one error",
+    "section": "YOUR TURN / SYNTHETIC EXAMPLES",
+    "source": null
+  },
+  {
+    "number": 30,
+    "title": "Prompt editing inside the real task",
+    "section": "INTEGRATED PLAYGROUND",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 31,
+    "title": "Improve the system, one change at a time",
+    "section": "HYPOTHESES TO TEST",
+    "source": null
+  },
+  {
+    "number": 32,
+    "title": "Split a failing responsibility",
+    "section": "A SMALLER TASK CAN BE EASIER",
+    "source": null
+  },
+  {
+    "number": 33,
+    "title": "A fair comparison uses the same cases",
+    "section": "MEASURE THE IMPROVEMENT",
+    "source": null
+  },
+  {
+    "number": 34,
+    "title": "Your turn",
+    "section": "THE LAB",
+    "source": null
+  },
+  {
+    "number": 35,
+    "title": "Recap",
+    "section": "WHAT WE LEARNED",
+    "source": null
+  },
+  {
+    "number": 36,
+    "title": "Make this a team skill",
+    "section": "THANK YOU",
+    "source": null
+  }
+]

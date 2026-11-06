@@ -1,4 +1,4 @@
-Improve the recruiting email writer in ./recruiting-workshop for unsupported_candidate_claim.
+Improve the recruiting email writer for unsupported_candidate_claim.
 
 Read the expert notes and source facts. Decide whether the problem is the writer, the judge or missing information.
 

@@ -1,4 +1,4 @@
-Build an email review app in ./recruiting-workshop using Python Flask, HTML/CSS, vanilla JavaScript and SQLite. Run on port 8835.
+Build an email review app using Python Flask, HTML/CSS, vanilla JavaScript and SQLite. Run on port 8835.
 
 INPUT: recruiting-emails-flash-lite-diverse-20.csv + .json. Keep the source files unchanged; parse multiline fields correctly.
 
