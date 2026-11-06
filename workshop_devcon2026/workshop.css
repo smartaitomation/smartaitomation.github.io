@@ -9,3 +9,5 @@
 .writer-version{max-width:300px;margin-bottom:20px}.writer-version select{width:100%}
 
 .writing .prompt-editor textarea{min-height:230px}
+
+.email-card .review-hint{border:0;margin:4px 0 12px;padding:0;font-size:12px}.review-hint summary{display:list-item;width:fit-content;padding:6px 4px 6px 0;color:var(--muted);font-size:12px}.review-hint summary:hover{color:var(--green)}.review-hint summary:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:3px}.review-hint p{margin:2px 0 10px;padding-left:10px;border-left:2px solid var(--line);line-height:1.5;color:var(--muted);max-width:50ch}.review-hint .hint-open{display:none}.review-hint[open] .hint-open{display:inline}.review-hint[open] .hint-closed{display:none}
