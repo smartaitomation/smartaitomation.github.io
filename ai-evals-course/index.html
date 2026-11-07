@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#244d3f">
   <title>AI Evals for Engineers & PMs · 4 weeks · SmartAItomation</title>
-  <meta name="description" content="A four-week, hands-on AI evaluations course with Ion Moșnoi. Inspect traces, build datasets and judges, and test improvements. Starts November 21, 2026. $500 USD.">
+  <meta name="description" content="Evaluate and improve AI agents in four weeks with Ion Moșnoi. Live labs, 10+ hours of office hours, private Discord access and lifetime course recordings. Starts November 21, 2026. $500 USD.">
   <link rel="canonical" href="https://smartaitomation.com/ai-evals-course/">
   <link rel="icon" href="/images/ai-favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI Evals for Engineers & PMs · 4 weeks, $500">
-  <meta property="og:description" content="Know where your AI fails. Learn how to improve it. A hands-on course with Ion Moșnoi, starting November 21, 2026.">
+  <meta property="og:description" content="How do you know your AI actually works? Learn to evaluate and improve AI products in four weeks, with live labs and expert support.">
   <meta property="og:url" content="https://smartaitomation.com/ai-evals-course/">
   <meta property="og:image" content="https://smartaitomation.com/ai-evals-course/assets/ion-mosnoi.jpg">
-  <link rel="stylesheet" href="course.css?v=2">
+  <link rel="stylesheet" href="course.css?v=3">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Course","name":"AI Evals for Engineers & PMs","description":"A four-week practical course on traces, error analysis, datasets, evaluators and evidence-based AI improvement.","provider":{"@type":"Organization","name":"SmartAItomation","url":"https://smartaitomation.com/"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online","startDate":"2026-11-21","endDate":"2026-12-18","inLanguage":"en","instructor":{"@type":"Person","name":"Ion Moșnoi","url":"https://www.linkedin.com/in/ionmosnoi/"},"offers":{"@type":"Offer","price":"500","priceCurrency":"USD","url":"https://smartaitomation.com/ai-evals-course/#join"}}}</script>
 </head>
 <body>
@@ -28,8 +28,8 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> LIVE ONLINE · NOVEMBER COHORT</p>
         <h1 id="course-title">AI Evals for<br>Engineers &amp; PMs</h1>
-        <p class="hero-promise">Know where your AI fails.<br>Learn how to improve it.</p>
-        <p class="hero-description">Four weeks of practical work with traces, datasets and judges. Build a repeatable way to improve your agents, RAG and AI products.</p>
+        <p class="hero-promise">How do you know your AI actually works?</p>
+        <p class="hero-description">Learn to evaluate and improve LLM applications. Find failure patterns, build evaluations you can trust, and improve accuracy, reliability and cost.</p>
         <div class="hero-facts"><span>4 weeks</span><span>Starts <time datetime="2026-11-21">21 Nov 2026</time></span><span>$500 USD</span></div>
         <div class="hero-author"><img src="assets/ion-mosnoi.jpg" width="46" height="46" alt=""><div><a href="#instructor">Ion Moșnoi</a><span>AI engineer &amp; coach · 11+ years in AI/ML</span></div></div>
         <div class="hero-actions"><button class="button primary" data-open-syllabus>View syllabus <span aria-hidden="true">↗</span></button><a class="text-link" href="#join">Join the November cohort <span aria-hidden="true">↗</span></a></div>
@@ -45,19 +45,31 @@
     <div class="wrap course-layout">
       <div class="course-content">
         <section id="overview" class="section">
-          <p class="eyebrow">THE PROBLEM</p>
-          <h2>Your demo works.<br>What happens on the next 100 requests?</h2>
-          <p class="lead">A helpful-sounding answer can hide a wrong tool call, a missed constraint or a made-up fact. Another prompt change won’t tell you which problem you’ve fixed.</p>
-          <p>Start with real examples. Find the failures that matter. Turn them into tests, then use those tests to choose your next improvement.</p>
-          <div class="example">
-            <div class="example-top"><span class="eyebrow">ONE FAILURE. THREE WAYS TO SEE IT.</span><span class="example-label">Practice example</span></div>
-            <div class="example-tabs" role="tablist" aria-label="Inspect the example">
-              <button id="tab-answer" role="tab" aria-selected="true" aria-controls="panel-answer" tabindex="0">AI answer</button><button id="tab-trace" role="tab" aria-selected="false" aria-controls="panel-trace" tabindex="-1">Trace + review</button><button id="tab-eval" role="tab" aria-selected="false" aria-controls="panel-eval" tabindex="-1">Eval rule</button>
-            </div>
-            <div class="example-panel" id="panel-answer" role="tabpanel" aria-labelledby="tab-answer"><span class="speaker">USER</span><p>“Is 10:00 available? Don’t book it yet.”</p><span class="speaker">AGENT</span><p class="agent-line">“All set! Your viewing is booked for 10:00.”</p><span class="example-bottom">Fluent, friendly—and it did something the user refused.</span></div>
-            <div class="example-panel" id="panel-trace" role="tabpanel" aria-labelledby="tab-trace" hidden><div class="tool-line"><span class="tool-state good">✓</span><code>view_scheduling</code><span>10:00 available</span></div><div class="tool-line"><span class="tool-state bad">×</span><code>create_viewing</code><span>Booking created</span></div><p class="expert-note"><b>Expert review · Bad</b>Check availability, then wait. The user explicitly said not to book.</p></div>
-            <div class="example-panel" id="panel-eval" role="tabpanel" aria-labelledby="tab-eval" hidden><span class="rule-label">ERROR TYPE · ACTION WITHOUT CONSENT</span><p><b>Fail</b> when the agent creates a booking without explicit permission.</p><p>Check the tool event in code. Use a judge when interpreting consent across the conversation.</p><div class="eval-result"><span>FAIL</span> Evidence: “Don’t book it yet” + <code>create_viewing</code></div></div>
+          <p class="eyebrow">BUILD WITH EVIDENCE</p>
+          <h2>Know what to fix.<br>Know whether it helped.</h2>
+          <p class="lead">A promising demo is a starting point. Reliable AI takes a way to spot failures, measure them and make better decisions about what to change.</p>
+          <p>In this four-week course, you’ll build that process: inspect traces, learn from expert reviews, create useful datasets and test your evaluators. Then use the results to improve your agents and RAG applications.</p>
+          <div class="course-questions">
+            <h3>Do you catch yourself asking questions like these?</h3>
+            <ul>
+              <li>Did this prompt change fix the problem—or break something else?</li>
+              <li>How do I evaluate an answer when there’s no single correct wording?</li>
+              <li>Which failures should we spend time fixing first?</li>
+              <li>How do I build a useful dataset before I have much real traffic?</li>
+              <li>Can an LLM judge catch the mistakes our domain experts see?</li>
+              <li>How do I reduce cost without losing the quality users need?</li>
+            </ul>
           </div>
+          <p class="overview-close">Leave with a method you can use on this product—and the next one.</p>
+        </section>
+
+        <section id="included" class="section course-support">
+          <p class="eyebrow">LEARN, PRACTICE, GET FEEDBACK</p>
+          <h2>Support while you build.<br>Materials you can return to.</h2>
+          <div class="support-row"><span class="support-number">01</span><div><h3>Live sessions and practical labs</h3><p>Work through the evaluation process, then apply it to your own use case.</p></div></div>
+          <div class="support-row"><span class="support-number">02</span><div><h3>10+ hours of live office hours</h3><p>Bring questions, review difficult cases and get feedback on your evaluations.</p></div></div>
+          <div class="support-row"><span class="support-number">03</span><div><h3>Private Discord access</h3><p>Ask questions between sessions and learn alongside other engineers and PMs.</p></div></div>
+          <div class="support-row"><span class="support-number">04</span><div><h3>Lifetime access to course recordings</h3><p>Revisit the lessons when you need them, with prompts, templates and evaluation code to keep using.</p></div></div>
         </section>
 
         <section class="section outcomes" id="outcomes">
@@ -72,7 +84,7 @@
           <div class="section-heading"><div><p class="eyebrow">THE FOUR-WEEK SYLLABUS</p><h2>Practice first.<br>Learn what the failure demands.</h2></div><button class="quiet-button" id="expand-syllabus" aria-expanded="false">Expand all <span aria-hidden="true">+</span></button></div>
           <p>One connected project, from a first trace to a tested improvement. Each week combines a guided lab with an exercise you can adapt to your own use case.</p>
           <details class="week" open><summary><span class="week-index">01</span><span class="week-heading"><span class="week-date">21–27 NOVEMBER</span><strong>Build an agent you can inspect</strong><span>Agent foundations · tools · traces</span></span><span class="disclosure" aria-hidden="true">+</span></summary><div class="week-body">
-            <h3>From a working demo to a visible system</h3><ul><li>Define the task, tool contracts, allowed actions and escalation rules.</li><li>Build a small agent loop with tool calls, stop conditions and bounded retries.</li><li>Log messages, retrieval, tool parameters, outputs, cost and latency.</li><li>Build a trace viewer that makes the failure easy to inspect.</li></ul><div class="lab"><span>YOUR LAB</span><p>Run a support agent. Open one trace, locate a mistake and point to the evidence.</p></div>
+            <h3>From a working demo to a visible system</h3><ul><li>Define the task, tool contracts, allowed actions and escalation rules.</li><li>Build a small agent loop with tool calls, stop conditions and bounded retries.</li><li>Log messages, retrieval, tool parameters, outputs, cost and latency.</li><li>Build a trace viewer that makes the failure easy to inspect.</li></ul><div class="lab"><span>YOUR LAB</span><p>Inspect an agent run, identify a failure and point to the evidence.</p></div>
           </div></details>
           <details class="week"><summary><span class="week-index">02</span><span class="week-heading"><span class="week-date">28 NOVEMBER–4 DECEMBER</span><strong>Turn reviews into a test dataset</strong><span>Human review · error taxonomy · synthetic data</span></span><span class="disclosure" aria-hidden="true">+</span></summary><div class="week-body">
             <h3>Useful labels start with useful notes</h3><ul><li>Choose a domain expert. Annotate Good/Bad with a specific reason and evidence.</li><li>Review across roles and conditions; group recurring mistakes into an error taxonomy.</li><li>Create cases from features × roles × scenarios, including clarification and refusal.</li><li>Check synthetic labels, preserve sources and separate train, dev and test cases.</li></ul><div class="lab"><span>YOUR LAB</span><p>Review a batch of traces, define your error types and build a versioned dataset.</p></div>
@@ -100,24 +112,19 @@
           <blockquote>“Start with a failure you can explain.<br>Then build the test that catches it.”</blockquote>
         </section>
 
-        <section class="section practice" id="practice">
-          <p class="eyebrow">SEE HOW WE PRACTICE</p><h2>Open the work.<br>Find what needs to change.</h2>
-          <p>Explore the existing job-posting exercise: requirements beside the AI output, simple Good/Bad reviews and notes you can turn into error types.</p>
-          <a class="workspace-preview" href="/workshop_job_postings/#review" target="_blank" rel="noopener" aria-label="Open the free job-posting practice workspace in a new tab"><div class="preview-bar"><span class="preview-dots" aria-hidden="true">● ● ●</span><span>THE REVIEW WORKSPACE</span><span>↗</span></div><div class="preview-columns"><div><span>REQUIREMENTS</span><b>Backend Engineer</b><p>Python required.<br>Docker is optional.<br>Hybrid in Chișinău.</p></div><div><span>AI OUTPUT</span><b>The job posting</b><p>“You must have<br><mark>Python and Docker</mark><br>experience.”</p></div><div><span>YOUR REVIEW</span><b class="review-bad">Bad</b><p>Keep Docker optional. The brief says nice to have.</p></div></div></a>
-          <a class="text-link" href="/workshop_job_postings/#review" target="_blank" rel="noopener">Try the practice workspace <span aria-hidden="true">↗</span></a>
-        </section>
-
 <section id="resources" class="section resources"><p class="eyebrow">FREE RESOURCES</p><h2>Start with one useful step.</h2><p>Practical tools you can try before the course. Enter your email to download; no marketing subscription.</p>
 <div class="resource-grid">
 <a class="resource-card" href="https://shortsblink.com/ai-evals-course/resources/checklist"><div class="resource-art art-check" aria-hidden="true"><span>01 ANALYZE</span><b>Read the trace.</b><span>02 MEASURE</span><b>Test the judge.</b><span>03 IMPROVE</span><b>Check the change.</b></div><span class="resource-format">PDF · CHECKLIST</span><h3>The AI evals checklist</h3><p>What to inspect, label and measure before the next release.</p><span class="resource-action">Get free resource ↗</span></a>
-<a class="resource-card" href="https://shortsblink.com/ai-evals-course/resources/review-kit"><div class="resource-art art-review" aria-hidden="true"><span>TRACE 004</span><b>“Don’t book it yet.”</b><code>create_booking()</code><span class="art-error">BAD · ACTION WITHOUT CONSENT</span></div><span class="resource-format">CSV + PROMPTS</span><h3>Trace review starter kit</h3><p>12 fictional traces, a review sheet and viewer-building prompts.</p><span class="resource-action">Get free resource ↗</span></a>
+<a class="resource-card" href="https://shortsblink.com/ai-evals-course/resources/review-kit"><div class="resource-art art-review" aria-hidden="true"><span>TRACE REVIEW</span><b>Read.<br>Review.<br>Categorize.</b><small>Evidence → notes → error types</small></div><span class="resource-format">CSV + PROMPTS</span><h3>Trace review starter kit</h3><p>12 fictional traces, a review sheet and viewer-building prompts.</p><span class="resource-action">Get free resource ↗</span></a>
 <a class="resource-card" href="https://shortsblink.com/ai-evals-course/resources/judge-template"><div class="resource-art art-judge" aria-hidden="true"><span>ONE ERROR TYPE</span><b>Pass or fail?</b><div><span class="pass-pill">PASS</span><span class="fail-pill">FAIL</span></div><small>Evidence → decision → expert check</small></div><span class="resource-format">TEMPLATE + WORKSHEET</span><h3>Build and test an LLM judge</h3><p>A judge prompt, contrasting examples and a calibration worksheet.</p><span class="resource-action">Get free resource ↗</span></a>
 </div></section>
         <section id="faq" class="section faqs">
           <p class="eyebrow">A FEW PRACTICAL DETAILS</p><h2>Before you join.</h2>
           <details><summary>When does the course run?<span aria-hidden="true">+</span></summary><p>The four-week cohort runs from 21 November to 18 December 2026. Exact live-session times will be confirmed by email, with the time zone clearly stated. Contact Ion before paying if you need to check availability.</p></details>
-          <details><summary>How much time should I set aside?<span aria-hidden="true">+</span></summary><p>Plan for a weekly guided lab and independent practice between sessions. Allow around 3–5 hours per week as a planning estimate; contact Ion before paying if you need to confirm the live-session times.</p></details>
-          <details><summary>Do I need an existing AI product?<span aria-hidden="true">+</span></summary><p>No. Use the provided practice cases and support-agent project, or adapt the exercises to an authorized, anonymized dataset from your own product.</p></details>
+          <details><summary>How much time should I set aside?<span aria-hidden="true">+</span></summary><p>Allow around 3–5 hours per week for the core sessions and independent practice. You also have 10+ hours of optional live office hours across the course. Exact times will be confirmed by email.</p></details>
+          <details><summary>Can I watch the sessions later?<span aria-hidden="true">+</span></summary><p>Yes. Enrollment includes lifetime access to the course recordings, so you can revisit the material after the four weeks.</p></details>
+          <details><summary>What support is included?<span aria-hidden="true">+</span></summary><p>You’ll have private Discord access for questions and discussion, plus 10+ hours of live office hours across the course for feedback on your work. Office-hour times will be shared with the session schedule.</p></details>
+          <details><summary>Do I need an existing AI product?<span aria-hidden="true">+</span></summary><p>No. Use the supplied course materials, or apply the method to an authorized, anonymized dataset from your own product.</p></details>
           <details><summary>Is this only about LLM judges?<span aria-hidden="true">+</span></summary><p>No. You’ll use code assertions, human reviews and LLM judges where each fits. The course also covers trace analysis, datasets, retrieval evaluation, experiments and release checks.</p></details>
           <details><summary>What is the price, and how do I enroll?<span aria-hidden="true">+</span></summary><p>The course fee is $500 USD per participant for all four weeks. Choose “Enroll” to review the offer on ShortsBlink and pay securely through Stripe. A confirmed payment enrolls one participant; your confirmation arrives by email. Exact live-session times are still to be confirmed, so check with Ion before paying if timing is important.</p></details>
           <details><summary>Can we train our whole team?<span aria-hidden="true">+</span></summary><p>Yes. Join the cohort together or ask about a separate, personalized <a href="/production-ai/workshop.html">two-day team workshop</a> built around your use case.</p></details>
@@ -128,7 +135,7 @@
       <aside class="enrollment-column" aria-label="Cohort and enrollment"><div class="enrollment-card" id="join">
         <div class="card-top"><span class="cohort-label">LIVE ONLINE COHORT</span><span class="price">$500 <small>USD</small></span></div><p class="price-note">Per participant · the full four-week course</p>
         <div class="cohort-dates"><span class="calendar-icon" aria-hidden="true">21<small>NOV</small></span><div><strong>21 Nov – 18 Dec 2026</strong><span>4 weeks · taught in English</span></div></div>
-        <ul class="included"><li>Weekly guided labs</li><li>Traces, datasets and review exercises</li><li>Judge prompts and evaluation code</li><li>A final improvement experiment</li></ul>
+        <ul class="included"><li>Live sessions &amp; practical labs</li><li><b>10+ hours</b> of live office hours</li><li>Private Discord access</li><li>Lifetime course recordings</li><li>Prompts, datasets &amp; evaluation code</li></ul>
         <a class="button primary enroll-email" href="https://shortsblink.com/ai-evals-course">Enroll · $500 USD <span aria-hidden="true">↗</span></a>
         <p class="enrollment-note">One-time payment through Stripe. Exact session times confirmed by email; check with Ion before paying if needed.</p><a class="small-email" href="mailto:imosnoi@smartaitomation.com">imosnoi@smartaitomation.com</a>
         <div class="card-question"><span>Want to check the fit?</span><a href="https://www.linkedin.com/in/ionmosnoi/" target="_blank" rel="noopener">Ask Ion on LinkedIn ↗</a></div>
@@ -137,7 +144,7 @@
   </main>
   <footer class="wrap"><a class="brand" href="/"><img src="/images/ai-favicon.svg" width="28" height="28" alt="">SmartAItomation</a><div><a href="/production-ai/privacy.html">Privacy</a><a href="mailto:imosnoi@smartaitomation.com">Email Ion</a><a href="https://www.linkedin.com/in/ionmosnoi/" target="_blank" rel="noopener">LinkedIn ↗</a></div><small>© 2026 SmartAItomation</small></footer>
   <div class="mobile-enroll"><div><b>$500 <small>USD</small></b><span>4 weeks · starts 21 Nov</span></div><a class="button primary" href="#join">Join the course ↗</a></div>
-<dialog id="syllabus-drawer" aria-labelledby="drawer-title"><div class="drawer-header"><div><p class="eyebrow">FOUR-WEEK LIVE COURSE</p><h2 id="drawer-title">Course syllabus</h2></div><button class="drawer-close" aria-label="Close syllabus">×</button></div><div class="drawer-body"><div class="drawer-facts"><b>21 Nov – 18 Dec 2026</b><span>Live online · English · $500 USD</span></div><p class="drawer-intro">One project. Four steps from “it sounds right” to evidence that it works.</p><div class="drawer-weeks"></div><div class="drawer-ready"><h3>Getting ready</h3><p>Basic Python for engineers. PMs can pair for the coding labs. Use the supplied project or an authorized, anonymized dataset.</p><p>Plan around 3–5 hours a week. Exact live times are confirmed by email; check with Ion before payment if needed.</p></div></div><div class="drawer-footer"><a class="button" href="syllabus.pdf" download>Download PDF ↓</a><a class="button primary" href="https://shortsblink.com/ai-evals-course">Enroll · $500 ↗</a></div></dialog>
-  <script src="course.js?v=2" defer></script>
+<dialog id="syllabus-drawer" aria-labelledby="drawer-title"><div class="drawer-header"><div><p class="eyebrow">FOUR-WEEK LIVE COURSE</p><h2 id="drawer-title">Course syllabus</h2></div><button class="drawer-close" aria-label="Close syllabus">×</button></div><div class="drawer-body"><div class="drawer-facts"><b>21 Nov – 18 Dec 2026</b><span>Live online · English · $500 USD</span></div><p class="drawer-intro">Inspect failures, build trustworthy evaluations and test improvements. Includes private Discord access, 10+ hours of live office hours and lifetime access to course recordings.</p><div class="drawer-weeks"></div><div class="drawer-ready"><h3>Getting ready</h3><p>Basic Python for engineers. PMs can pair for the coding labs. Use the supplied project or an authorized, anonymized dataset.</p><p>Plan around 3–5 hours a week for core sessions and practice, plus optional office hours. Exact live times are confirmed by email; check with Ion before payment if needed.</p></div></div><div class="drawer-footer"><a class="button" href="syllabus.pdf" download>Download PDF ↓</a><a class="button primary" href="https://shortsblink.com/ai-evals-course">Enroll · $500 ↗</a></div></dialog>
+  <script src="course.js?v=3" defer></script>
 </body>
 </html>

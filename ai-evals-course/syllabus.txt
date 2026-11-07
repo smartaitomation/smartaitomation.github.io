@@ -10,7 +10,7 @@ Build an agent you can inspect
 - Build an agent loop with tool calls, stop conditions and bounded retries.
 - Log messages, retrieval, tool parameters, outputs, cost and latency.
 - Build a trace list and viewer.
-Lab: locate a failure in a support-agent trace and explain the evidence.
+Lab: inspect an agent run, identify a failure and explain the evidence.
 
 WEEK 2 · 28 NOVEMBER–4 DECEMBER
 Turn reviews into a test dataset
@@ -40,11 +40,14 @@ Improve the product. Catch regressions.
 Lab: present a before/after experiment, including remaining failures.
 
 FORMAT
-Weekly guided labs and independent practice. Plan around 3–5 hours per week.
+Live sessions, guided labs and independent practice. Plan around 3–5 hours per week for the core sessions and practice.
+Includes 10+ hours of optional live office hours across the course, private Discord access, and lifetime access to course recordings.
+Prompts, datasets and evaluation code are included.
 Engineers should be comfortable running basic Python; PMs can pair for coding labs.
 Bring an authorized, anonymized use case or use the practice materials.
 
 ENROLLMENT
-Email imosnoi@smartaitomation.com to request a place and confirm the schedule.
+Enroll for $500 USD at https://shortsblink.com/ai-evals-course
+Email imosnoi@smartaitomation.com to check the schedule before paying.
 https://smartaitomation.com/ai-evals-course/
 https://www.linkedin.com/in/ionmosnoi/
