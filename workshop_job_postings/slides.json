@@ -1,0 +1,224 @@
+[
+  {
+    "number": 1,
+    "title": "AI Agent Evaluations",
+    "section": "HANDS-ON WORKSHOP",
+    "source": null
+  },
+  {
+    "number": 2,
+    "title": "A familiar AI-agent architecture",
+    "section": "WHY EVALUATIONS",
+    "source": null
+  },
+  {
+    "number": 3,
+    "title": "AI quality dashboard",
+    "section": "BAD METRICS",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 4,
+    "title": "90% accuracy. One capability missing.",
+    "section": "BAD EVAL / A HYPOTHETICAL DATASET",
+    "source": null
+  },
+  {
+    "number": 5,
+    "title": "Measure the missing capability",
+    "section": "LOOK INSIDE THE AVERAGE",
+    "source": null
+  },
+  {
+    "number": 6,
+    "title": "Ion Mo\u0219noi",
+    "section": "ABOUT ION",
+    "source": null
+  },
+  {
+    "number": 7,
+    "title": "The job-posting assistant",
+    "section": "OUR USE CASE",
+    "source": null
+  },
+  {
+    "number": 8,
+    "title": "Steps of error analysis",
+    "section": "TODAY\u2019S WORKFLOW",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 9,
+    "title": "3-step evals lifecycle",
+    "section": "ANALYZE \u00b7 MEASURE \u00b7 IMPROVE",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 10,
+    "title": "Workshop materials",
+    "section": "OPEN THE WORKSPACE",
+    "source": null
+  },
+  {
+    "number": 11,
+    "title": "One row. One input. One output.",
+    "section": "THE CSV",
+    "source": null
+  },
+  {
+    "number": 12,
+    "title": "Choose the domain expert",
+    "section": "BEFORE YOU LABEL",
+    "source": null
+  },
+  {
+    "number": 13,
+    "title": "Build your review workspace",
+    "section": "YOUR TURN / CODEX OR CLAUDE",
+    "source": null,
+    "prompt_key": "builder"
+  },
+  {
+    "number": 14,
+    "title": "Requirements. Posting. Your review.",
+    "section": "THE VIEWER",
+    "source": null
+  },
+  {
+    "number": 15,
+    "title": "Choose a varied review sample",
+    "section": "FILTER THE LIST",
+    "source": null
+  },
+  {
+    "number": 16,
+    "title": "Useful notes say what to change",
+    "section": "HUMAN REVIEW",
+    "source": null
+  },
+  {
+    "number": 17,
+    "title": "Your turn: review a first batch",
+    "section": "HUMAN REVIEW",
+    "source": null
+  },
+  {
+    "number": 18,
+    "title": "Turn notes into an error taxonomy",
+    "section": "CATEGORIZE",
+    "source": null
+  },
+  {
+    "number": 19,
+    "title": "Cluster your review notes",
+    "section": "YOUR TURN / CODEX OR CLAUDE",
+    "source": null,
+    "prompt_key": "taxonomy"
+  },
+  {
+    "number": 20,
+    "title": "One evaluator per error type",
+    "section": "MEASURE",
+    "source": null
+  },
+  {
+    "number": 21,
+    "title": "A concrete pass / fail rule",
+    "section": "OPTIONAL SKILL \u2192 REQUIRED",
+    "source": null
+  },
+  {
+    "number": 22,
+    "title": "Write one judge prompt",
+    "section": "YOUR TURN / JUDGE",
+    "source": null,
+    "prompt_key": "judge"
+  },
+  {
+    "number": 23,
+    "title": "Teach both sides of the boundary",
+    "section": "JUDGE EXAMPLES",
+    "source": null
+  },
+  {
+    "number": 24,
+    "title": "Create the eval script",
+    "section": "YOUR TURN / CODEX OR CLAUDE",
+    "source": null,
+    "prompt_key": "evals"
+  },
+  {
+    "number": 25,
+    "title": "Evaluate the evaluator",
+    "section": "COMPARE WITH THE DOMAIN EXPERT",
+    "source": null
+  },
+  {
+    "number": 26,
+    "title": "Read the disagreements",
+    "section": "IMPROVE THE JUDGE",
+    "source": null
+  },
+  {
+    "number": 27,
+    "title": "90%+ alignment is a target",
+    "section": "CALIBRATE BEFORE TRUSTING",
+    "source": null
+  },
+  {
+    "number": 28,
+    "title": "Keep the test independent",
+    "section": "THIS PRACTICE DATASET",
+    "source": null
+  },
+  {
+    "number": 29,
+    "title": "Generate the cases you are missing",
+    "section": "FEATURE \u00d7 JOB TYPE \u00d7 SCENARIO",
+    "source": null
+  },
+  {
+    "number": 30,
+    "title": "Generate new test inputs",
+    "section": "YOUR TURN / SYNTHETIC DATA",
+    "source": null,
+    "prompt_key": "synthetic"
+  },
+  {
+    "number": 31,
+    "title": "Keep prompts beside the evidence",
+    "section": "INTEGRATED PROMPT WORKSPACE",
+    "source": null
+  },
+  {
+    "number": 32,
+    "title": "Fix the failing responsibility",
+    "section": "IMPROVE THE WRITER",
+    "source": null
+  },
+  {
+    "number": 33,
+    "title": "Propose one targeted change",
+    "section": "YOUR TURN / IMPROVEMENT",
+    "source": null,
+    "prompt_key": "improve"
+  },
+  {
+    "number": 34,
+    "title": "Compare on the same cases",
+    "section": "DID THE CHANGE HELP?",
+    "source": null
+  },
+  {
+    "number": 35,
+    "title": "Recap",
+    "section": "WHAT WE PRACTICED",
+    "source": null
+  },
+  {
+    "number": 36,
+    "title": "AI Evals Workshop for Devs and PMs",
+    "section": "THANK YOU",
+    "source": null
+  }
+]

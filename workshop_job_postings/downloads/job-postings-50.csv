@@ -1,0 +1,1501 @@
+"sample_id","job_title","company","job_requirements","job_posting","department","location","family_id","split","posting_version","posting_sha256"
+"JOB-001","Customer Support Specialist","Harbor Works","Job title: Customer Support Specialist
+Company: Harbor Works
+Department: Support
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 1 year
+Required skills: Written English and ticket triage
+Nice to have (not required): French
+Main responsibility: Resolve account and payment support tickets
+Compensation: EUR 22,000–28,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@harbor-works.example by 19 December 2026","Customer Support Specialist — Harbor Works
+
+Help improve everyday workflows as a Customer Support Specialist at Harbor Works. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Resolve account and payment support tickets.
+
+What you bring
+At least 1 year of relevant experience, with Written English and ticket triage. Nice to have: French. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 22,000–28,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@harbor-works.example by 19 December 2026.","Support","Brașov","F03","train","v1","75b757ef44450d84d177dcf9b9c336978c04fbf752ef49818ad3a51f27418e41"
+"JOB-002","Operations Coordinator","Harbor Works","Job title: Operations Coordinator
+Company: Harbor Works
+Department: Operations
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 1 year
+Required skills: Spreadsheet reporting and vendor coordination
+Nice to have (not required): Inventory software
+Main responsibility: Coordinate deliveries and update supplier records
+Compensation: EUR 26,000–32,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@harbor-works.example by 16 December 2026","Operations Coordinator — Harbor Works
+
+Join Harbor Works as a Operations Coordinator. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Coordinate deliveries and update supplier records.
+
+What you bring
+At least 1 year of relevant experience, with Spreadsheet reporting and vendor coordination. Nice to have: Inventory software. This is optional.
+
+Working with us
+Fully remote, from anywhere. Permanent, 32 hours per week.
+
+Pay and benefits
+EUR 26,000–32,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@harbor-works.example by 16 December 2026.","Operations","Bucharest","F06","dev","v1","25e83d20801109c45c11895f6c2b64ce35a2914d8ce458d70324c0b2175bab9e"
+"JOB-003","Customer Support Specialist","Cedar Systems","Job title: Customer Support Specialist
+Company: Cedar Systems
+Department: Support
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 1 year
+Required skills: Written English and ticket triage
+Nice to have (not required): French
+Main responsibility: Resolve account and payment support tickets
+Compensation: EUR 22,000–28,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@cedar-systems.example by 16 December 2026","Customer Support Specialist — Cedar Systems
+
+Join Cedar Systems as a Customer Support Specialist. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Resolve account and payment support tickets.
+
+What you bring
+At least 1 year of relevant experience, with Written English and ticket triage. Nice to have: French. This is optional.
+
+Working with us
+Hybrid in Bucharest; 2 office days per week. Permanent, 32 hours per week.
+
+Pay and benefits
+EUR 22,000–28,000 gross per month. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@cedar-systems.example by 16 December 2026.","Support","Bucharest","F03","train","v1","05ceb5a119574bfec8ce79dff61895da40ab84568a5bc5d0fb33af33d4a68564"
+"JOB-004","QA Engineer","Harbor Works","Job title: QA Engineer
+Company: Harbor Works
+Department: Engineering
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: API testing and defect reporting
+Nice to have (not required): Playwright
+Main responsibility: Test releases and reproduce reported defects
+Compensation: EUR 32,000–40,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@harbor-works.example by 17 December 2026","QA Engineer — Harbor Works
+
+We are looking for a QA Engineer at Harbor Works. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Test releases and reproduce reported defects.
+
+What you bring
+At least 2 years of relevant experience, with API testing and defect reporting. Nice to have: Playwright. This is optional.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 32,000–40,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to hiring@harbor-works.example by 31 December 2026.","Engineering","Iași","F05","train","v1","dd576f3f77ed1750ba3b69c132d18387bb8e5a6e37a61464eea2c37763610180"
+"JOB-005","Product Manager","Linden Works","Job title: Product Manager
+Company: Linden Works
+Department: Product
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 3 years
+Required skills: Product discovery and prioritisation
+Nice to have (not required): SQL
+Main responsibility: Prioritise improvements to the order-management product
+Compensation: EUR 48,000–60,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@linden-works.example by 16 December 2026","Product Manager — Linden Works
+
+Join Linden Works as a Product Manager. We are a 40-person software business building workflow tools for small companies and the market leader serving over one million paying customers.
+
+The role
+Prioritise improvements to the order-management product.
+
+What you bring
+At least 3 years of relevant experience, with Product discovery and prioritisation. Nice to have: SQL. This is optional.
+
+Working with us
+Hybrid in Bucharest; 2 office days per week. Permanent, 32 hours per week.
+
+Pay and benefits
+EUR 48,000–60,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@linden-works.example by 16 December 2026.","Product","Bucharest","F10","test","v1","1feb1dddbd5cd16ee14cfb11c5a2d9f26213e9349a9f2e2530916692a95126b5"
+"JOB-006","Backend Engineer","Mica Studio","Job title: Backend Engineer
+Company: Mica Studio
+Department: Engineering
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 2 years
+Required skills: Python and PostgreSQL
+Nice to have (not required): Docker
+Main responsibility: Build and maintain the billing API
+Compensation: EUR 45,000–55,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@mica-studio.example by 16 December 2026","Backend Engineer — Mica Studio
+
+Join Mica Studio as a Backend Engineer. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build and maintain the billing API.
+
+What you bring
+At least 2 years of relevant experience, with Python and PostgreSQL. Nice to have: Docker. This is optional.
+
+Working with us
+Fully remote, from anywhere. Permanent, 32 hours per week.
+
+Pay and benefits
+EUR 45,000–55,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@mica-studio.example by 16 December 2026.","Engineering","Bucharest","F01","train","v1","ccdac994f09244fa5dd9469daa02f0e9e0b5f47a318321fe0b24e603da6bf588"
+"JOB-007","Content Editor","Maple Stack","Job title: Content Editor
+Company: Maple Stack
+Department: Content
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: Copy editing and written English
+Nice to have (not required): Technical writing
+Main responsibility: Edit product guides for clarity and consistency
+Compensation: EUR 28,000–35,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@maple-stack.example by 17 December 2026","Content Editor — Maple Stack
+
+We are looking for a Content Editor at Maple Stack. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Edit product guides for clarity and consistency and manage a team of eight direct reports.
+
+What you bring
+At least 2 years of relevant experience, with Copy editing and written English. Nice to have: Technical writing. This is optional.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 28,000–35,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@maple-stack.example by 17 December 2026.","Content","Iași","F07","dev","v1","6180293a6bdeff27b692b0dc63b712bd5582f3be8f178f90dcdfcaadc912f83c"
+"JOB-008","Frontend Engineer","Elm Products","Job title: Frontend Engineer
+Company: Elm Products
+Department: Engineering
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 2 years
+Required skills: TypeScript and accessible HTML
+Nice to have (not required): WebGL
+Main responsibility: Build accessible account-management interfaces
+Compensation: EUR 42,000–52,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@elm-products.example by 16 December 2026","Frontend Engineer — Elm Products
+
+Join Elm Products as a Frontend Engineer. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build accessible account-management interfaces.
+
+What you bring
+At least 2 years of relevant experience, with TypeScript. Nice to have: WebGL. This is optional.
+
+Working with us
+Hybrid in Bucharest; 2 office days per week. Permanent, 32 hours per week.
+
+Pay and benefits
+EUR 42,000–52,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@elm-products.example by 16 December 2026.","Engineering","Bucharest","F09","test","v1","a9300e07bf0e791c08d60ee6d12e90855c94dd74da3537bec7ede901ec60cd01"
+"JOB-009","Customer Support Specialist","Atlas Desk","Job title: Customer Support Specialist
+Company: Atlas Desk
+Department: Support
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 1 year
+Required skills: Written English and ticket triage
+Nice to have (not required): French
+Main responsibility: Resolve account and payment support tickets
+Compensation: EUR 22,000–28,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@atlas-desk.example by 17 December 2026","Customer Support Specialist — Atlas Desk
+
+We are looking for a Customer Support Specialist at Atlas Desk. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Resolve account and payment support tickets.
+
+What you bring
+At least 1 year of relevant experience, with Written English and ticket triage. Nice to have: French. This is optional.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 22,000–28,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment plus a guaranteed 20% annual bonus.
+
+How to apply
+Send your CV to careers@atlas-desk.example by 17 December 2026.","Support","Iași","F03","train","v1","6637c26dea80a525553f2c5785c408122edd94b2864a39aa8db341b9fca6af2b"
+"JOB-010","Product Designer","Atlas Desk","Job title: Product Designer
+Company: Atlas Desk
+Department: Design
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 3 years
+Required skills: Figma and usability research
+Nice to have (not required): Motion design
+Main responsibility: Design and test the customer onboarding flow
+Compensation: EUR 38,000–48,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@atlas-desk.example by 18 December 2026","Product Designer — Atlas Desk
+
+Open role: Product Designer at Atlas Desk. We are a 40-person software business building workflow tools for small companies and the market leader serving over one million paying customers.
+
+The role
+Design and test the customer onboarding flow.
+
+What you bring
+At least 3 years of relevant experience, with Figma and usability research. Nice to have: Motion design. This is optional.
+
+Working with us
+Hybrid in Cluj-Napoca; 1 office days per week. 6-month fixed term, 24 hours per week.
+
+Pay and benefits
+EUR 38,000–48,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@atlas-desk.example by 18 December 2026.","Design","Cluj-Napoca","F02","train","v1","1e5625cc3cad5816bbb2be5da7b37144952fac400b76f07d5d9f6f9734e896df"
+"JOB-011","Product Designer","North Quay","Job title: Product Designer
+Company: North Quay
+Department: Design
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 3 years
+Required skills: Figma and usability research
+Nice to have (not required): Motion design
+Main responsibility: Design and test the customer onboarding flow
+Compensation: EUR 38,000–48,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@north-quay.example by 16 December 2026","Product Designer — North Quay
+
+Join North Quay as a Product Designer. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Design and test the customer onboarding flow.
+
+What you bring
+At least 3 years of relevant experience, with Figma and usability research. Nice to have: Motion design. This is optional.
+
+Working with us
+Hybrid in Bucharest; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 38,000–48,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@north-quay.example by 16 December 2026.","Design","Bucharest","F02","train","v1","36cf7ec48507e40a481b226a8393a13107b870dded04aee93e30470f2080435f"
+"JOB-012","Product Manager","Mica Studio","Job title: Product Manager
+Company: Mica Studio
+Department: Product
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: Product discovery and prioritisation
+Nice to have (not required): SQL
+Main responsibility: Prioritise improvements to the order-management product
+Compensation: EUR 48,000–60,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@mica-studio.example by 17 December 2026","Product Manager — Mica Studio
+
+We are looking for a Product Manager at Mica Studio. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Prioritise improvements to the order-management product.
+
+What you bring
+At least 3 years of relevant experience, with Product discovery and prioritisation. Nice to have: SQL. This is optional.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 48,000–60,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to hiring@mica-studio.example by 31 December 2026.","Product","Iași","F10","test","v1","6a2bbddf1379649c13595313a17f6ce8cafbe55139b39a2445b47b0bb17b3b07"
+"JOB-013","Content Editor","Sora Digital","Job title: Content Editor
+Company: Sora Digital
+Department: Content
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 2 years
+Required skills: Copy editing and written English
+Nice to have (not required): Technical writing
+Main responsibility: Edit product guides for clarity and consistency
+Compensation: EUR 28,000–35,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@sora-digital.example by 16 December 2026","Content Editor — Sora Digital
+
+Join Sora Digital as a Content Editor. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Edit product guides for clarity and consistency.
+
+What you bring
+At least 2 years of relevant experience, with Copy editing and written English. Nice to have: Technical writing. This is optional.
+
+Working with us
+Hybrid in Bucharest; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 28,000–35,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@sora-digital.example by 16 December 2026.","Content","Bucharest","F07","dev","v1","15d2897f0bb3f9f74e35f755589ea712eb1b021f14881959c26fbfe181be057f"
+"JOB-014","QA Engineer","Sora Digital","Job title: QA Engineer
+Company: Sora Digital
+Department: Engineering
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 2 years
+Required skills: API testing and defect reporting
+Nice to have (not required): Playwright
+Main responsibility: Test releases and reproduce reported defects
+Compensation: EUR 32,000–40,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@sora-digital.example by 18 December 2026","QA Engineer — Sora Digital
+
+Open role: QA Engineer at Sora Digital. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Test releases and reproduce reported defects.
+
+What you bring
+At least 2 years of relevant experience, with API testing and defect reporting. Nice to have: Playwright. This is optional.
+
+Working with us
+Hybrid in Cluj-Napoca; 1 office days per week. 6-month fixed term, 24 hours per week.
+
+Pay and benefits
+EUR 32,000–40,000 gross per month. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@sora-digital.example by 18 December 2026.","Engineering","Cluj-Napoca","F05","train","v1","7944347749bdef61a99651c1c49a269a166b041ae0069387319f04c082802e5a"
+"JOB-015","Backend Engineer","Cedar Systems","Job title: Backend Engineer
+Company: Cedar Systems
+Department: Engineering
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 2 years
+Required skills: Python and PostgreSQL
+Nice to have (not required): Docker
+Main responsibility: Build and maintain the billing API
+Compensation: EUR 45,000–55,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@cedar-systems.example by 18 December 2026","Backend Engineer — Cedar Systems
+
+Open role: Backend Engineer at Cedar Systems. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build and maintain the billing API.
+
+What you bring
+At least 2 years of relevant experience, with Python. Nice to have: Docker. This is optional.
+
+Working with us
+Hybrid in Cluj-Napoca; 1 office days per week. 6-month fixed term, 24 hours per week.
+
+Pay and benefits
+EUR 45,000–55,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@cedar-systems.example by 18 December 2026.","Engineering","Cluj-Napoca","F01","train","v1","7dd5104c9333c5b359499bf65df60240c43c0d772cb51b2acd15b0241dd9a0cf"
+"JOB-016","Content Editor","Harbor Works","Job title: Content Editor
+Company: Harbor Works
+Department: Content
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: Copy editing and written English
+Nice to have (not required): Technical writing
+Main responsibility: Edit product guides for clarity and consistency
+Compensation: EUR 28,000–35,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@harbor-works.example by 15 December 2026","Content Editor — Harbor Works
+
+Harbor Works is hiring a Content Editor. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Edit product guides for clarity and consistency.
+
+What you bring
+At least 7 years of relevant experience, with Copy editing and written English. Nice to have: Technical writing. This is optional.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 28,000–35,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@harbor-works.example by 15 December 2026.","Content","Chișinău","F07","dev","v1","8dfdbc554deced4a3086e51691785ba46551a88f5289a8dabd4c7a35055edd8a"
+"JOB-017","Data Analyst","Atlas Desk","Job title: Data Analyst
+Company: Atlas Desk
+Department: Analytics
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 2 years
+Required skills: SQL and dashboard reporting
+Nice to have (not required): Python
+Main responsibility: Explain weekly retention trends to product teams
+Compensation: EUR 34,000–42,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@atlas-desk.example by 16 December 2026","Data Analyst — Atlas Desk
+
+Join Atlas Desk as a Data Analyst. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Explain weekly retention trends to product teams.
+
+What you bring
+At least 2 years of relevant experience, with SQL. Nice to have: Python. This is optional.
+
+Working with us
+Hybrid in Bucharest; 2 office days per week. Permanent, 32 hours per week.
+
+Pay and benefits
+EUR 34,000–42,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@atlas-desk.example by 16 December 2026.","Analytics","Bucharest","F04","train","v1","a82ebff854d42cba9dc4ade50bad7e5cee5642a38e083d062d28c1b6e0d37093"
+"JOB-018","Product Manager","Elm Products","Job title: Product Manager
+Company: Elm Products
+Department: Product
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: Product discovery and prioritisation
+Nice to have (not required): SQL
+Main responsibility: Prioritise improvements to the order-management product
+Compensation: EUR 48,000–60,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@elm-products.example by 15 December 2026","Product Manager — Elm Products
+
+Elm Products is hiring a Product Manager. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Prioritise improvements to the order-management product and manage a team of eight direct reports.
+
+What you bring
+At least 3 years of relevant experience, with Product discovery and prioritisation. Nice to have: SQL. This is optional.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 48,000–60,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@elm-products.example by 15 December 2026.","Product","Chișinău","F10","test","v1","98ab2a87a7199c594f06ce90637cd08640939469308a1144571e7772a6826a72"
+"JOB-019","Backend Engineer","Linden Works","Job title: Backend Engineer
+Company: Linden Works
+Department: Engineering
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: Python and PostgreSQL
+Nice to have (not required): Docker
+Main responsibility: Build and maintain the billing API
+Compensation: EUR 45,000–55,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@linden-works.example by 15 December 2026","Backend Engineer — Linden Works
+
+Linden Works is hiring a Backend Engineer. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build and maintain the billing API.
+
+What you bring
+At least 2 years of relevant experience, with Python and PostgreSQL. Nice to have: Docker. This is optional.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 45,000–55,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment plus a guaranteed 20% annual bonus.
+
+How to apply
+Send your CV to careers@linden-works.example by 15 December 2026.","Engineering","Chișinău","F01","train","v1","4b36b0380f88c3b18e49faa55b6736193f797e383fed7a6ad4d507cef5386099"
+"JOB-020","Account Manager","Elm Products","Job title: Account Manager
+Company: Elm Products
+Department: Sales
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: B2B account management and CRM use
+Nice to have (not required): SaaS experience
+Main responsibility: Support existing customers and coordinate renewals
+Compensation: EUR 36,000–44,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@elm-products.example by 17 December 2026","Account Manager — Elm Products
+
+We are looking for a Account Manager at Elm Products. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Support existing customers and coordinate renewals.
+
+What you bring
+At least 3 years of relevant experience, with B2B account management and CRM use. Nice to have: SaaS experience. This is optional.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 36,000–44,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment plus a guaranteed 20% annual bonus.
+
+How to apply
+Send your CV to careers@elm-products.example by 17 December 2026.","Sales","Iași","F08","dev","v1","e236451efe3d84b5e0794734aec5c5fa3fef21106c8216f548bb2bb99d9f4eb2"
+"JOB-021","QA Engineer","Atlas Desk","Job title: QA Engineer
+Company: Atlas Desk
+Department: Engineering
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: API testing and defect reporting
+Nice to have (not required): Playwright
+Main responsibility: Test releases and reproduce reported defects
+Compensation: EUR 32,000–40,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@atlas-desk.example by 15 December 2026","QA Engineer — Atlas Desk
+
+Atlas Desk is hiring a QA Engineer. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Test releases and reproduce reported defects and manage a team of eight direct reports.
+
+What you bring
+At least 2 years of relevant experience, with API testing and defect reporting. Nice to have: Playwright. This is optional.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 32,000–40,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@atlas-desk.example by 15 December 2026.","Engineering","Chișinău","F05","train","v1","6fc43e73fb414b3846c354b51077a52a491958e7a15f92da6b6dce19141510b8"
+"JOB-022","Content Editor","Linden Works","Job title: Content Editor
+Company: Linden Works
+Department: Content
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: Copy editing and written English
+Nice to have (not required): Technical writing
+Main responsibility: Edit product guides for clarity and consistency
+Compensation: EUR 28,000–35,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@linden-works.example by 19 December 2026","Content Editor — Linden Works
+
+Help improve everyday workflows as a Content Editor at Linden Works. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Edit product guides for clarity and consistency.
+
+What you bring
+At least 2 years of relevant experience, with Copy editing and written English. Nice to have: Technical writing. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 28,000–35,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@linden-works.example by 19 December 2026.","Content","Brașov","F07","dev","v1","0285ab7d139e58e8bd05f6974c8506d9fca3deecfd6f8769579aba992c88d986"
+"JOB-023","Operations Coordinator","Sora Digital","Job title: Operations Coordinator
+Company: Sora Digital
+Department: Operations
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 1 year
+Required skills: Spreadsheet reporting and vendor coordination
+Nice to have (not required): Inventory software
+Main responsibility: Coordinate deliveries and update supplier records
+Compensation: EUR 26,000–32,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@sora-digital.example by 17 December 2026","Operations Coordinator — Sora Digital
+
+We are looking for a Operations Coordinator at Sora Digital. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Coordinate deliveries and update supplier records.
+
+What you bring
+At least 1 year of relevant experience, with Spreadsheet reporting and vendor coordination. You must also have Inventory software.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 26,000–32,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@sora-digital.example by 17 December 2026.","Operations","Iași","F06","dev","v1","b253012a04aef6fbf7477f2414c428229644f951ee57fffadde27506b055e2c7"
+"JOB-024","QA Engineer","Willow Labs","Job title: QA Engineer
+Company: Willow Labs
+Department: Engineering
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 2 years
+Required skills: API testing and defect reporting
+Nice to have (not required): Playwright
+Main responsibility: Test releases and reproduce reported defects
+Compensation: EUR 32,000–40,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@willow-labs.example by 16 December 2026","QA Engineer — Willow Labs
+
+Join Willow Labs as a QA Engineer. We are a 40-person software business building workflow tools for small companies and the market leader serving over one million paying customers.
+
+The role
+Test releases and reproduce reported defects.
+
+What you bring
+At least 2 years of relevant experience, with API testing and defect reporting. Nice to have: Playwright. This is optional.
+
+Working with us
+Hybrid in Bucharest; 2 office days per week. Permanent, 32 hours per week.
+
+Pay and benefits
+EUR 32,000–40,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@willow-labs.example by 16 December 2026.","Engineering","Bucharest","F05","train","v1","d32e64c4270dab7bae0e7ee05777e9da19169f064abb29d554837dd0b24cac05"
+"JOB-025","Frontend Engineer","Mica Studio","Job title: Frontend Engineer
+Company: Mica Studio
+Department: Engineering
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 2 years
+Required skills: TypeScript and accessible HTML
+Nice to have (not required): WebGL
+Main responsibility: Build accessible account-management interfaces
+Compensation: EUR 42,000–52,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@mica-studio.example by 18 December 2026","Frontend Engineer — Mica Studio
+
+Open role: Frontend Engineer at Mica Studio. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build accessible account-management interfaces.
+
+What you bring
+At least 2 years of relevant experience, with TypeScript and accessible HTML. Nice to have: WebGL. This is optional.
+
+Working with us
+Hybrid in Cluj-Napoca; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 42,000–52,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@mica-studio.example by 18 December 2026.","Engineering","Cluj-Napoca","F09","test","v1","0b852fd0392c1d1824db2c2add8ec670e503d4fc3f0ce0eaa0958ccd2071535c"
+"JOB-026","Product Designer","Cedar Systems","Job title: Product Designer
+Company: Cedar Systems
+Department: Design
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: Figma and usability research
+Nice to have (not required): Motion design
+Main responsibility: Design and test the customer onboarding flow
+Compensation: EUR 38,000–48,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@cedar-systems.example by 17 December 2026","Product Designer — Cedar Systems
+
+We are looking for a Product Designer at Cedar Systems. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Design and test the customer onboarding flow and manage a team of eight direct reports.
+
+What you bring
+At least 3 years of relevant experience, with Figma and usability research. Nice to have: Motion design. This is optional.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 38,000–48,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@cedar-systems.example by 17 December 2026.","Design","Iași","F02","train","v1","506d48bacf157c1dfe5bb46e403511aae6e961c65c2e40129a30f7d7dcb493f3"
+"JOB-027","Data Analyst","Willow Labs","Job title: Data Analyst
+Company: Willow Labs
+Department: Analytics
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: SQL and dashboard reporting
+Nice to have (not required): Python
+Main responsibility: Explain weekly retention trends to product teams
+Compensation: EUR 34,000–42,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@willow-labs.example by 17 December 2026","Data Analyst — Willow Labs
+
+We are looking for a Data Analyst at Willow Labs. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Explain weekly retention trends to product teams.
+
+What you bring
+At least 7 years of relevant experience, with SQL and dashboard reporting. Nice to have: Python. This is optional.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 34,000–42,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@willow-labs.example by 17 December 2026.","Analytics","Iași","F04","train","v1","0da1f1baa4c5701b163bae77a6a7635357b809a002ff008652bcae7937827c0d"
+"JOB-028","Operations Coordinator","Elm Products","Job title: Operations Coordinator
+Company: Elm Products
+Department: Operations
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 1 year
+Required skills: Spreadsheet reporting and vendor coordination
+Nice to have (not required): Inventory software
+Main responsibility: Coordinate deliveries and update supplier records
+Compensation: EUR 26,000–32,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@elm-products.example by 19 December 2026","Operations Coordinator — Elm Products
+
+Help improve everyday workflows as a Operations Coordinator at Elm Products. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Coordinate deliveries and update supplier records.
+
+What you bring
+At least 1 year of relevant experience, with Spreadsheet reporting and vendor coordination. Nice to have: Inventory software. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 26,000–32,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@elm-products.example by 19 December 2026.","Operations","Brașov","F06","dev","v1","74261f15e06344dc4a06f58b1cdb73f9a2d64dfc810fdcf9697891bb813a939d"
+"JOB-029","Customer Support Specialist","North Quay","Job title: Customer Support Specialist
+Company: North Quay
+Department: Support
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 1 year
+Required skills: Written English and ticket triage
+Nice to have (not required): French
+Main responsibility: Resolve account and payment support tickets
+Compensation: EUR 22,000–28,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@north-quay.example by 15 December 2026","Customer Support Specialist — North Quay
+
+North Quay is hiring a Customer Support Specialist. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Resolve account and payment support tickets.
+
+What you bring
+At least 1 year of relevant experience, with Written English and ticket triage. Nice to have: French. This is optional.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 22,000–28,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to hiring@north-quay.example by 31 December 2026.","Support","Chișinău","F03","train","v1","7a51a75a958a5f0835c344c90c58c445eaad8fdb2b193a259653ce87e3233a0d"
+"JOB-030","Product Designer","Mica Studio","Job title: Product Designer
+Company: Mica Studio
+Department: Design
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: Figma and usability research
+Nice to have (not required): Motion design
+Main responsibility: Design and test the customer onboarding flow
+Compensation: EUR 38,000–48,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@mica-studio.example by 15 December 2026","Product Designer — Mica Studio
+
+Mica Studio is hiring a Product Designer. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Design and test the customer onboarding flow.
+
+What you bring
+At least 7 years of relevant experience, with Figma and usability research. Nice to have: Motion design. This is optional.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 38,000–48,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@mica-studio.example by 15 December 2026.","Design","Chișinău","F02","train","v1","e16fd51883a08bbf81775d8e742a4b3577db6423604dfbd09ac227dba800fb86"
+"JOB-031","Content Editor","Elm Products","Job title: Content Editor
+Company: Elm Products
+Department: Content
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 2 years
+Required skills: Copy editing and written English
+Nice to have (not required): Technical writing
+Main responsibility: Edit product guides for clarity and consistency
+Compensation: EUR 28,000–35,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@elm-products.example by 18 December 2026","Content Editor — Elm Products
+
+Open role: Content Editor at Elm Products. We are a 40-person software business building workflow tools for small companies and the market leader serving over one million paying customers.
+
+The role
+Edit product guides for clarity and consistency.
+
+What you bring
+At least 2 years of relevant experience, with Copy editing and written English. Nice to have: Technical writing. This is optional.
+
+Working with us
+Hybrid in Cluj-Napoca; 1 office days per week. 6-month fixed term, 24 hours per week.
+
+Pay and benefits
+EUR 28,000–35,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@elm-products.example by 18 December 2026.","Content","Cluj-Napoca","F07","dev","v1","fc0ee4da87e6a6f3e27bf9fb67c04cd8d44a1dedf5c07c7b668becd33157f506"
+"JOB-032","Data Analyst","Harbor Works","Job title: Data Analyst
+Company: Harbor Works
+Department: Analytics
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 2 years
+Required skills: SQL and dashboard reporting
+Nice to have (not required): Python
+Main responsibility: Explain weekly retention trends to product teams
+Compensation: EUR 34,000–42,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@harbor-works.example by 18 December 2026","Data Analyst — Harbor Works
+
+Open role: Data Analyst at Harbor Works. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Explain weekly retention trends to product teams.
+
+What you bring
+At least 2 years of relevant experience, with SQL and dashboard reporting. Nice to have: Python. This is optional.
+
+Working with us
+Hybrid in Cluj-Napoca; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 34,000–42,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@harbor-works.example by 18 December 2026.","Analytics","Cluj-Napoca","F04","train","v1","c8239503a1d2a90e4c65c1d2bf882e7fd80c5bfc149b43975d305ea6bf8fba0a"
+"JOB-033","Product Manager","Cedar Systems","Job title: Product Manager
+Company: Cedar Systems
+Department: Product
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: Product discovery and prioritisation
+Nice to have (not required): SQL
+Main responsibility: Prioritise improvements to the order-management product
+Compensation: EUR 48,000–60,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@cedar-systems.example by 19 December 2026","Product Manager — Cedar Systems
+
+Help improve everyday workflows as a Product Manager at Cedar Systems. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Prioritise improvements to the order-management product.
+
+What you bring
+At least 3 years of relevant experience, with Product discovery and prioritisation. Nice to have: SQL. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 48,000–60,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@cedar-systems.example by 19 December 2026.","Product","Brașov","F10","test","v1","7db0b9f2bc2af91d86527dbb184226fab5fac0cf83862a26c52923c87a2bf986"
+"JOB-034","Operations Coordinator","Willow Labs","Job title: Operations Coordinator
+Company: Willow Labs
+Department: Operations
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 1 year
+Required skills: Spreadsheet reporting and vendor coordination
+Nice to have (not required): Inventory software
+Main responsibility: Coordinate deliveries and update supplier records
+Compensation: EUR 26,000–32,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@willow-labs.example by 15 December 2026","Operations Coordinator — Willow Labs
+
+Willow Labs is hiring a Operations Coordinator. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Coordinate deliveries and update supplier records.
+
+What you bring
+At least 1 year of relevant experience, with Spreadsheet reporting and vendor coordination. Nice to have: Inventory software. This is optional.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 26,000–32,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment plus a guaranteed 20% annual bonus.
+
+How to apply
+Send your CV to careers@willow-labs.example by 15 December 2026.","Operations","Chișinău","F06","dev","v1","1b8fddfdee0c6628d195fe7c0d6082e6c9ec986521ba42833a36b66eb17e4e8b"
+"JOB-035","Frontend Engineer","Maple Stack","Job title: Frontend Engineer
+Company: Maple Stack
+Department: Engineering
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: TypeScript and accessible HTML
+Nice to have (not required): WebGL
+Main responsibility: Build accessible account-management interfaces
+Compensation: EUR 42,000–52,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@maple-stack.example by 15 December 2026","Frontend Engineer — Maple Stack
+
+Maple Stack is hiring a Frontend Engineer. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build accessible account-management interfaces.
+
+What you bring
+At least 2 years of relevant experience, with TypeScript and accessible HTML. You must also have WebGL.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 42,000–52,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@maple-stack.example by 15 December 2026.","Engineering","Chișinău","F09","test","v1","c721fa44e88a313112bea34d0444785035eb8f836030adc44c91ca8c0e8b4ccc"
+"JOB-036","Frontend Engineer","North Quay","Job title: Frontend Engineer
+Company: North Quay
+Department: Engineering
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: TypeScript and accessible HTML
+Nice to have (not required): WebGL
+Main responsibility: Build accessible account-management interfaces
+Compensation: EUR 42,000–52,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@north-quay.example by 19 December 2026","Frontend Engineer — North Quay
+
+Help improve everyday workflows as a Frontend Engineer at North Quay. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build accessible account-management interfaces.
+
+What you bring
+At least 2 years of relevant experience, with TypeScript and accessible HTML. Nice to have: WebGL. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 42,000–52,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@north-quay.example by 19 December 2026.","Engineering","Brașov","F09","test","v1","f4936b12b225aefab8d699ddaeaf668354e60f829c8d3f88a2d550bb4e05b4d1"
+"JOB-037","Account Manager","Mica Studio","Job title: Account Manager
+Company: Mica Studio
+Department: Sales
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: B2B account management and CRM use
+Nice to have (not required): SaaS experience
+Main responsibility: Support existing customers and coordinate renewals
+Compensation: EUR 36,000–44,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@mica-studio.example by 19 December 2026","Account Manager — Mica Studio
+
+Help improve everyday workflows as a Account Manager at Mica Studio. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Support existing customers and coordinate renewals.
+
+What you bring
+At least 3 years of relevant experience, with B2B account management and CRM use. Nice to have: SaaS experience. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 36,000–44,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@mica-studio.example by 19 December 2026.","Sales","Brașov","F08","dev","v1","c0e889e6f36d8d1a494149d96c10e22666ba47dd49ab46c903ebe9ee95d6a0ed"
+"JOB-038","Product Manager","North Quay","Job title: Product Manager
+Company: North Quay
+Department: Product
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 3 years
+Required skills: Product discovery and prioritisation
+Nice to have (not required): SQL
+Main responsibility: Prioritise improvements to the order-management product
+Compensation: EUR 48,000–60,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@north-quay.example by 18 December 2026","Product Manager — North Quay
+
+Open role: Product Manager at North Quay. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Prioritise improvements to the order-management product.
+
+What you bring
+At least 3 years of relevant experience, with Product discovery and prioritisation. Nice to have: SQL. This is optional.
+
+Working with us
+Hybrid in Cluj-Napoca; 1 office days per week. 6-month fixed term, 24 hours per week.
+
+Pay and benefits
+EUR 48,000–60,000 gross per month. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@north-quay.example by 18 December 2026.","Product","Cluj-Napoca","F10","test","v1","477325911cba732a116d22d0847a95fdbfb464c08d5f76b685fbb3b691244a53"
+"JOB-039","Account Manager","Sora Digital","Job title: Account Manager
+Company: Sora Digital
+Department: Sales
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: B2B account management and CRM use
+Nice to have (not required): SaaS experience
+Main responsibility: Support existing customers and coordinate renewals
+Compensation: EUR 36,000–44,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@sora-digital.example by 15 December 2026","Account Manager — Sora Digital
+
+Sora Digital is hiring a Account Manager. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Support existing customers and coordinate renewals.
+
+What you bring
+At least 3 years of relevant experience, with B2B account management and CRM use. Nice to have: SaaS experience. This is optional.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 36,000–44,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to hiring@sora-digital.example by 31 December 2026.","Sales","Chișinău","F08","dev","v1","03fb127a26bdf77cbc363063056aeed9de4c983fcceedbef18573c3282e8272b"
+"JOB-040","Backend Engineer","Atlas Desk","Job title: Backend Engineer
+Company: Atlas Desk
+Department: Engineering
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: Python and PostgreSQL
+Nice to have (not required): Docker
+Main responsibility: Build and maintain the billing API
+Compensation: EUR 45,000–55,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@atlas-desk.example by 19 December 2026","Backend Engineer — Atlas Desk
+
+Help improve everyday workflows as a Backend Engineer at Atlas Desk. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build and maintain the billing API.
+
+What you bring
+At least 2 years of relevant experience, with Python and PostgreSQL. Nice to have: Docker. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 45,000–55,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@atlas-desk.example by 19 December 2026.","Engineering","Brașov","F01","train","v1","2787fd2f677abb7d4a481c967e576ded552b13bf8a4308f2420a955b2c1ebc62"
+"JOB-041","Customer Support Specialist","Willow Labs","Job title: Customer Support Specialist
+Company: Willow Labs
+Department: Support
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 1 year
+Required skills: Written English and ticket triage
+Nice to have (not required): French
+Main responsibility: Resolve account and payment support tickets
+Compensation: EUR 22,000–28,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@willow-labs.example by 18 December 2026","Customer Support Specialist — Willow Labs
+
+Open role: Customer Support Specialist at Willow Labs. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Resolve account and payment support tickets.
+
+What you bring
+At least 1 year of relevant experience, with Written English and ticket triage. Nice to have: French. This is optional.
+
+Working with us
+Fully remote, from anywhere. 6-month fixed term, 24 hours per week.
+
+Pay and benefits
+EUR 22,000–28,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@willow-labs.example by 18 December 2026.","Support","Cluj-Napoca","F03","train","v1","89dbaa9447d05389038447111c18a45243b9569a4f34f318c178a0d4b4efa1dc"
+"JOB-042","Data Analyst","Cedar Systems","Job title: Data Analyst
+Company: Cedar Systems
+Department: Analytics
+Work arrangement: Hybrid in Chișinău; 1 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: SQL and dashboard reporting
+Nice to have (not required): Python
+Main responsibility: Explain weekly retention trends to product teams
+Compensation: EUR 34,000–42,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@cedar-systems.example by 15 December 2026","Data Analyst — Cedar Systems
+
+Cedar Systems is hiring a Data Analyst. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Explain weekly retention trends to product teams.
+
+What you bring
+At least 2 years of relevant experience, with SQL and dashboard reporting. You must also have Python.
+
+Working with us
+Hybrid in Chișinău; 1 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 34,000–42,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@cedar-systems.example by 15 December 2026.","Analytics","Chișinău","F04","train","v1","2591b3e67560b7bc15162799cac0474b2ce5234d9e26e3f5cfa4da2722ce6bff"
+"JOB-043","Data Analyst","Sora Digital","Job title: Data Analyst
+Company: Sora Digital
+Department: Analytics
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: SQL and dashboard reporting
+Nice to have (not required): Python
+Main responsibility: Explain weekly retention trends to product teams
+Compensation: EUR 34,000–42,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@sora-digital.example by 19 December 2026","Data Analyst — Sora Digital
+
+Help improve everyday workflows as a Data Analyst at Sora Digital. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Explain weekly retention trends to product teams.
+
+What you bring
+At least 2 years of relevant experience, with SQL and dashboard reporting. Nice to have: Python. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 34,000–42,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@sora-digital.example by 19 December 2026.","Analytics","Brașov","F04","train","v1","2d10e1a6fb2c0714e2aa8ed70eea00999f50393f967dc09b82cb7457172ac413"
+"JOB-044","Account Manager","Linden Works","Job title: Account Manager
+Company: Linden Works
+Department: Sales
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 3 years
+Required skills: B2B account management and CRM use
+Nice to have (not required): SaaS experience
+Main responsibility: Support existing customers and coordinate renewals
+Compensation: EUR 36,000–44,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@linden-works.example by 18 December 2026","Account Manager — Linden Works
+
+Open role: Account Manager at Linden Works. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Support existing customers and coordinate renewals.
+
+What you bring
+At least 3 years of relevant experience, with B2B account management and CRM use. Nice to have: SaaS experience. This is optional.
+
+Working with us
+Fully remote, from anywhere. 6-month fixed term, 24 hours per week.
+
+Pay and benefits
+EUR 36,000–44,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@linden-works.example by 18 December 2026.","Sales","Cluj-Napoca","F08","dev","v1","a1b90c0b1113e5b0535cfaf2d1f2cd69941853c979992d2e411b69f6bb87824d"
+"JOB-045","Product Designer","Willow Labs","Job title: Product Designer
+Company: Willow Labs
+Department: Design
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 3 years
+Required skills: Figma and usability research
+Nice to have (not required): Motion design
+Main responsibility: Design and test the customer onboarding flow
+Compensation: EUR 38,000–48,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@willow-labs.example by 19 December 2026","Product Designer — Willow Labs
+
+Help improve everyday workflows as a Product Designer at Willow Labs. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Design and test the customer onboarding flow.
+
+What you bring
+At least 3 years of relevant experience, with Figma and usability research. Nice to have: Motion design. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 38,000–48,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@willow-labs.example by 19 December 2026.","Design","Brașov","F02","train","v1","0b5982597522c4ed73fe2b2b74f03e883919390ee6698d9b43b5ae9323b3219f"
+"JOB-046","Backend Engineer","North Quay","Job title: Backend Engineer
+Company: North Quay
+Department: Engineering
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: Python and PostgreSQL
+Nice to have (not required): Docker
+Main responsibility: Build and maintain the billing API
+Compensation: EUR 45,000–55,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@north-quay.example by 17 December 2026","Backend Engineer — North Quay
+
+We are looking for a Backend Engineer at North Quay. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build and maintain the billing API.
+
+What you bring
+At least 2 years of relevant experience, with Python and PostgreSQL. You must also have Docker.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 45,000–55,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@north-quay.example by 17 December 2026.","Engineering","Iași","F01","train","v1","8d2a8fb9ff757a7aa7543f898dd698b5d2b517133a364d6386c676b7a628eec2"
+"JOB-047","Operations Coordinator","Maple Stack","Job title: Operations Coordinator
+Company: Maple Stack
+Department: Operations
+Work arrangement: Hybrid in Cluj-Napoca; 1 office days per week
+Contract: 6-month fixed term, 24 hours per week
+Minimum relevant experience: 1 year
+Required skills: Spreadsheet reporting and vendor coordination
+Nice to have (not required): Inventory software
+Main responsibility: Coordinate deliveries and update supplier records
+Compensation: EUR 26,000–32,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@maple-stack.example by 18 December 2026","Operations Coordinator — Maple Stack
+
+Open role: Operations Coordinator at Maple Stack. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Coordinate deliveries and update supplier records.
+
+What you bring
+At least 1 year of relevant experience, with Spreadsheet reporting. Nice to have: Inventory software. This is optional.
+
+Working with us
+Hybrid in Cluj-Napoca; 1 office days per week. 6-month fixed term, 24 hours per week.
+
+Pay and benefits
+EUR 26,000–32,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@maple-stack.example by 18 December 2026.","Operations","Cluj-Napoca","F06","dev","v1","654a1091b7daabc44de225d40733851379e8b9548498bb19c48795ae8ea07b1f"
+"JOB-048","QA Engineer","Maple Stack","Job title: QA Engineer
+Company: Maple Stack
+Department: Engineering
+Work arrangement: Hybrid in Brașov; 2 office days per week
+Contract: Permanent, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: API testing and defect reporting
+Nice to have (not required): Playwright
+Main responsibility: Test releases and reproduce reported defects
+Compensation: EUR 32,000–40,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@maple-stack.example by 19 December 2026","QA Engineer — Maple Stack
+
+Help improve everyday workflows as a QA Engineer at Maple Stack. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Test releases and reproduce reported defects.
+
+What you bring
+At least 2 years of relevant experience, with API testing and defect reporting. Nice to have: Playwright. This is optional.
+
+Working with us
+Hybrid in Brașov; 2 office days per week. Permanent, 40 hours per week.
+
+Pay and benefits
+EUR 32,000–40,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@maple-stack.example by 19 December 2026.","Engineering","Brașov","F05","train","v1","da1dc8007b4cc88065ac048d384c182739abcd3af2b238bd8e7f7353c9309ce1"
+"JOB-049","Frontend Engineer","Linden Works","Job title: Frontend Engineer
+Company: Linden Works
+Department: Engineering
+Work arrangement: Hybrid in Iași; 3 office days per week
+Contract: 12-month fixed term, 40 hours per week
+Minimum relevant experience: 2 years
+Required skills: TypeScript and accessible HTML
+Nice to have (not required): WebGL
+Main responsibility: Build accessible account-management interfaces
+Compensation: EUR 42,000–52,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@linden-works.example by 17 December 2026","Frontend Engineer — Linden Works
+
+We are looking for a Frontend Engineer at Linden Works. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Build accessible account-management interfaces.
+
+What you bring
+At least 7 years of relevant experience, with TypeScript and accessible HTML. Nice to have: WebGL. This is optional.
+
+Working with us
+Hybrid in Iași; 3 office days per week. 12-month fixed term, 40 hours per week.
+
+Pay and benefits
+EUR 42,000–52,000 gross per year. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@linden-works.example by 17 December 2026.","Engineering","Iași","F09","test","v1","1dd8237858262f3fc7967feb9407d22f54f322a1f86672b6ec4f1cdf3d04066c"
+"JOB-050","Account Manager","Maple Stack","Job title: Account Manager
+Company: Maple Stack
+Department: Sales
+Work arrangement: Hybrid in Bucharest; 2 office days per week
+Contract: Permanent, 32 hours per week
+Minimum relevant experience: 3 years
+Required skills: B2B account management and CRM use
+Nice to have (not required): SaaS experience
+Main responsibility: Support existing customers and coordinate renewals
+Compensation: EUR 36,000–44,000 gross per year
+Approved benefits: 25 paid days off per year; equipment provided
+Company description: A 40-person software business building workflow tools for small companies
+Apply: Send a CV to careers@maple-stack.example by 16 December 2026","Account Manager — Maple Stack
+
+Join Maple Stack as a Account Manager. We are a 40-person software business building workflow tools for small companies.
+
+The role
+Support existing customers and coordinate renewals.
+
+What you bring
+At least 3 years of relevant experience, with B2B account management and CRM use. Nice to have: SaaS experience. This is optional.
+
+Working with us
+Hybrid in Bucharest; 2 office days per week. Permanent, 32 hours per week.
+
+Pay and benefits
+EUR 36,000–44,000 gross per month. Benefits include 25 paid days off per year and company-provided equipment.
+
+How to apply
+Send your CV to careers@maple-stack.example by 16 December 2026.","Sales","Bucharest","F08","dev","v1","103faad6e1b6afd8593687342f641e8ff934fd5339aa2f23ed1f0d9780f6bda9"

@@ -1,0 +1,4 @@
+Cluster these review notes into error types. For each: name, description, what counts, what does not, example notes and source sample IDs. Merge duplicates. Keep distinct failures separate and unclear notes for human review. Do not invent evidence.
+
+NOTES:
+{{notes}}

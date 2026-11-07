@@ -1,0 +1,4 @@
+Use the reviewed failures below to propose one minimal change to the job-posting writer. State which error it targets and a possible regression. Options: clarify the prompt, add a verified example, extract facts first, narrow scope, change model, route uncertainty, or add a checker. Preserve supported facts and required/optional meaning. Return the revised prompt and a same-input comparison plan. Do not optimise on test cases.
+
+CURRENT PROMPT: {{prompt}}
+REVIEWED FAILURES: {{notes_and_examples}}

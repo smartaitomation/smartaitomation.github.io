@@ -1,0 +1,3 @@
+Write a job posting based on these job requirements.
+
+{{job_requirements}}
