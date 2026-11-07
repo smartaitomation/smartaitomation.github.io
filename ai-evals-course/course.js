@@ -46,3 +46,14 @@
   }
   // Dates are fixed in the page; no rolling "starts in two weeks" countdown.
 })();
+
+(() => {
+ const drawer=document.getElementById('syllabus-drawer');
+ const target=drawer.querySelector('.drawer-weeks');
+ document.querySelectorAll('#syllabus .week').forEach(week=>{const copy=week.cloneNode(true); copy.open=true; target.append(copy);});
+ let trigger;
+ document.querySelectorAll('[data-open-syllabus]').forEach(button=>button.addEventListener('click',()=>{trigger=button;drawer.showModal();document.body.classList.add('drawer-open');drawer.querySelector('.drawer-body').scrollTop=0;drawer.querySelector('.drawer-close').focus();}));
+ drawer.querySelector('.drawer-close').addEventListener('click',()=>drawer.close());
+ drawer.addEventListener('click',event=>{if(event.target===drawer){const r=drawer.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right)drawer.close();}});
+ drawer.addEventListener('close',()=>{document.body.classList.remove('drawer-open');trigger?.focus();});
+})();
