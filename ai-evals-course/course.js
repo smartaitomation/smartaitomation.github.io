@@ -1,10 +1,11 @@
 (() => {
+ const t=window.courseI18n?.t||((text)=>text);
   const weeks = [...document.querySelectorAll('details.week')];
   const expand = document.getElementById('expand-syllabus');
   function updateExpansion() {
     const allOpen = weeks.every(week => week.open);
     expand.setAttribute('aria-expanded', String(allOpen));
-    expand.innerHTML = allOpen ? 'Collapse all <span aria-hidden="true">−</span>' : 'Expand all <span aria-hidden="true">+</span>';
+    expand.innerHTML = allOpen ? t('Collapse all')+' <span aria-hidden="true">−</span>' : t('Expand all')+' <span aria-hidden="true">+</span>';
   }
   expand.addEventListener('click', () => {
     const open = !weeks.every(week => week.open);
@@ -39,9 +40,10 @@
 })();
 
 (() => {
+ const ro=window.courseI18n?.ro;
  const picker=document.getElementById('cohort-select');
  const options={'2026-11-21':{price:'€500',date:'21 Nov'},'2026-12-19':{price:'€1,000',date:'19 Dec'}};
  const requested=new URLSearchParams(location.search).get('cohort');if(options[requested])picker.value=requested;
- function select(){const c=options[picker.value];document.querySelector('[data-course-price]').innerHTML=c.price+' <small>EUR</small>';document.querySelector('[data-mobile-price]').innerHTML=c.price+' <small>EUR</small>';document.querySelector('[data-mobile-date]').textContent='4 weeks · starts '+c.date;const a=document.querySelector('[data-checkout]');a.href='https://shortsblink.com/ai-evals-course?cohort='+picker.value;a.textContent='Enroll · '+c.price+' EUR ↗';}
+ function select(){const c=options[picker.value];const price=ro?new Intl.NumberFormat('ro-RO').format(Number(c.price.replace(/[^0-9]/g,''))):c.price;document.querySelector('[data-course-price]').innerHTML=price+' <small>EUR</small>';document.querySelector('[data-mobile-price]').innerHTML=price+' <small>EUR</small>';document.querySelector('[data-mobile-date]').textContent=(ro?'4 săptămâni · începe pe ':'4 weeks · starts ')+(ro?c.date.replace('Nov','nov.').replace('Dec','dec.'):c.date);const a=document.querySelector('[data-checkout]');a.href='https://shortsblink.com/ai-evals-course?cohort='+picker.value;a.textContent=(ro?'Înscriere · ':'Enroll · ')+price+' EUR ↗';}
  picker.addEventListener('change',select);select();
 })();

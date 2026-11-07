@@ -1,0 +1,21 @@
+Subiect: Solicitare buget de formare: cursul AI Evals — {{cohort}}
+
+Bună, {{manager_name}},
+
+Aș dori aprobarea pentru a participa la cursul SmartAItomation de patru săptămâni despre evaluări AI, în grupa {{cohort}}. Taxa este de {{price_eur}} EUR per participant; voi confirma factura finală și eventualele taxe aplicabile înainte de plată.
+
+Echipa noastră lucrează la {{product_or_workflow}}. Avem nevoie de o metodă mai fiabilă de a identifica erorile, de a verifica dacă modificările ajută și de a detecta regresiile înainte de lansare.
+
+Pe durata cursului îmi propun să construiesc:
+- Un set de date ușor de analizat și o taxonomie clară a erorilor importante pentru noi.
+- Verificări în cod și evaluatori LLM, validați față de deciziile experților în domeniu.
+- O comparație repetabilă a calității, costului și latenței pentru o îmbunătățire.
+
+Voi împărtăși metoda și materialele reutilizabile cu echipa, folosind doar date pe care avem dreptul să le prelucrăm. Este nevoie de aproximativ 3–5 ore pe săptămână, plus consultații opționale. Lecțiile sunt sâmbăta, 10:00–12:00 Europe/Chișinău (UTC+2); consultațiile se programează separat. Cursul este predat în engleză.
+
+Detalii: https://smartaitomation.com/ai-evals-course/ro/
+
+Poți aproba bugetul de formare și putem alege un caz de utilizare ale cărui rezultate să le aduc în echipă?
+
+Mulțumesc,
+{{your_name}}
