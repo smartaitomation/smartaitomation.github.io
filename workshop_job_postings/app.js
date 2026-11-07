@@ -14,42 +14,56 @@ function filtered(){const q=filters.q.toLowerCase();return rows.filter(r=>(!q||[
 function head(title,desc,actions=''){return `<div class="head"><div><h2>${title}</h2><p class="muted">${desc}</p></div><div class="actions">${actions}</div></div>`}
 function exportState(){download('job-posting-workshop-reviews.json',JSON.stringify({workshop:NS,exported_at:new Date().toISOString(),...db},null,2))}
 function navigate(){$('#main')._disposeIntro?.();const [tab='intro',id]=(location.hash.slice(1)||'intro').split('/');$$('#nav a').forEach(a=>{const active=a.hash.split('/')[0]==='#'+tab;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});if(tab==='intro')intro();else if(tab==='review')id?viewer(id):queue();else if(tab==='prompts')promptPage(id||'builder');else if(tab==='taxonomy')taxonomy();else if(tab==='judge')judge();else if(tab==='playground')playground(id);else if(tab==='materials')materials();else location.hash='intro'}
-function intro(){
+function intro(exampleKind='subtle'){
+ $('#main')._disposeIntro?.();
  const reviewed=rows.filter(r=>review(r)).length;
  const mistake=(text,title,reason)=>`<button type="button" class="mistake-mark" disabled data-error-title="${esc(title)}" data-error-reason="${esc(reason)}">${esc(text)}</button>`;
+ const subtle=exampleKind==='subtle';
+ const salary=subtle?'€45,000–€50,000 gross/year, depending on experience':'€50,000 gross/year';
+ const goodSalary=subtle?'Salary range: €45,000–€50,000 gross per year, depending on experience.':'Salary: €50,000 gross per year.';
+ const goodReason=subtle?'It uses the approved public facts, keeps the salary conditional, and leaves internal staffing notes and unapproved plans out of the ad.':'The draft keeps the facts intact: Docker stays optional, the hybrid arrangement is clear, and the salary is annual.';
+ const internalNotes=subtle?`<div class="internal-brief"><b>Internal context · not for publication</b><p>This is a replacement after a performance-related departure. Keep the reason private.</p><p>A four-day week is being discussed. It is not approved; do not mention it in the ad.</p><p>€50,000 is the upper end of the range, not a promised starting salary.</p></div>`:'';
+ const badDraft=subtle?`
+    <p>We’re hiring a Backend Engineer with Python and PostgreSQL skills. Docker is a plus.</p>
+    <p>Hybrid in Chișinău, with two office days and 32 working hours per week.</p>
+    <p>You’ll replace a colleague who left after ${mistake('performance issues','Internal context exposed','This may be accurate, but the brief explicitly keeps the staffing reason private. Use it as context; do not publish it in the candidate-facing ad.')}.</p>
+    <p>A ${mistake('four-day week','Unapproved plan mentioned','The wording preserves the uncertainty, but the brief says not to mention this unapproved plan. Even a qualified mention can create an expectation. Leave it out.')} is being discussed.</p>
+    <p>${mistake('Starting salary','A ceiling became a promise','€50,000 is a real figure in the input, but it is the upper end of a conditional range. Presenting it as the starting salary promises every candidate the maximum. Publish the approved range and condition instead.')}: €50,000 gross per year.</p>`:`
+    <p>We’re hiring a Backend Engineer. Python, PostgreSQL and ${mistake('Docker are required','Optional became mandatory','The input lists Docker as nice to have. Keep it optional; do not exclude candidates who lack it.')}.</p>
+    <p>This role is ${mistake('fully remote from anywhere','Work arrangement changed','The input says hybrid in Chișinău, with two office days per week. The posting promises a different arrangement.')} at 32 hours per week.</p>
+    <p>Salary: €50,000 gross ${mistake('per month','Salary period changed','The source salary is €50,000 gross per year, not per month. The amount is the same, but the pay period changes the offer.')}.</p>`;
  $('#main').innerHTML=`
  <div class="hero intro-hero">
   <span class="eyebrow">AI EVALS WORKSHOP · NOVEMBER 2026</span>
   <h1>From job requirements<br>to a job posting.</h1>
-  <p>A hiring manager provides the facts. The AI agent turns them into a clear job ad for candidates. Your task: check that it describes the same job.</p>
+  <p>A hiring manager provides the requirements and internal context. The AI agent writes a public job ad. Check the facts, the promises and what should stay private.</p>
  </div>
  <div class="intro-io" aria-label="Agent input and output">
-  <div><span class="eyebrow">INPUT</span><h3>Job requirements</h3><p>Role, required and optional skills, location, hours and pay.</p></div>
+  <div><span class="eyebrow">INPUT</span><h3>Job requirements</h3><p>Approved job facts, internal notes and publication rules.</p></div>
   <span class="io-arrow" aria-hidden="true">→</span>
-  <div><span class="eyebrow">AI AGENT</span><h3>Write the posting</h3><p>Organize the facts into a readable job ad.</p></div>
+  <div><span class="eyebrow">AI AGENT</span><h3>Write the posting</h3><p>Select what belongs in the ad and preserve its meaning.</p></div>
   <span class="io-arrow" aria-hidden="true">→</span>
   <div><span class="eyebrow">OUTPUT</span><h3>A job-posting draft</h3><p>Ready for human review before publication.</p></div>
  </div>
  <section class="intro-exercise" aria-labelledby="example-title">
-  <div class="example-heading"><div><h2 id="example-title">Same input. Good and bad outputs.</h2><p class="muted">Read both drafts. What changed from the requirements?</p></div><button id="revealMistakes" class="primary" aria-expanded="false" aria-controls="badPosting goodExplanation exampleFeedback">Show mistakes</button></div>
+  <div class="example-heading"><div><h2 id="example-title">Same input. Good and bad outputs.</h2><p class="muted">${subtle?'A detail can be true and still not belong in a public posting.':'Read both drafts. What changed from the requirements?'}</p></div><button id="revealMistakes" class="primary" aria-expanded="false" aria-controls="badPosting goodExplanation exampleFeedback">Show mistakes</button></div>
+  <div class="tabs example-modes" aria-label="Example type"><button data-example-kind="subtle" aria-pressed="${subtle}" class="${subtle?'active':''}">Subtle mistakes</button><button data-example-kind="facts" aria-pressed="${!subtle}" class="${!subtle?'active':''}">Changed facts</button></div>
   <div class="intro-examples">
    <article class="example-card input-example"><div class="example-kicker">INPUT · HIRING MANAGER</div><h3>Backend Engineer</h3>
-    <dl><div><dt>Company</dt><dd>Linden Works</dd></div><div><dt>Required</dt><dd>Python and PostgreSQL</dd></div><div><dt>Nice to have</dt><dd>Docker — optional</dd></div><div><dt>Location</dt><dd>Hybrid in Chișinău · 2 office days/week</dd></div><div><dt>Hours</dt><dd>32 hours/week</dd></div><div><dt>Salary</dt><dd>€50,000 gross/year</dd></div></dl>
+    <dl><div><dt>Company</dt><dd>Linden Works</dd></div><div><dt>Required</dt><dd>Python and PostgreSQL</dd></div><div><dt>Nice to have</dt><dd>Docker — optional</dd></div><div><dt>Location</dt><dd>Hybrid in Chișinău · 2 office days/week</dd></div><div><dt>Hours</dt><dd>32 hours/week</dd></div><div><dt>Salary</dt><dd>${salary}</dd></div></dl>${internalNotes}
    </article>
    <article class="example-card good-example"><div class="example-kicker">OUTPUT · GOOD EXAMPLE</div><h3>Join Linden Works</h3>
     <p>We’re hiring a Backend Engineer with Python and PostgreSQL skills. Docker is a plus, not a requirement.</p>
     <p>This is a hybrid role in Chișinău, with two office days a week. You’ll work 32 hours per week.</p>
-    <p>Salary: €50,000 gross per year.</p>
-    <div id="goodExplanation" class="good-explanation" hidden><b>Why it’s good</b><p>The draft keeps the facts intact: Docker stays optional, the hybrid arrangement is clear, and the salary is annual.</p></div>
+    <p>${goodSalary}</p>
+    <div id="goodExplanation" class="good-explanation" hidden><b>Why it’s good</b><p>${goodReason}</p></div>
    </article>
    <article id="badPosting" class="example-card bad-example"><div class="example-kicker">OUTPUT · BAD EXAMPLE</div><h3>Join Linden Works</h3>
-    <p>We’re hiring a Backend Engineer. Python, PostgreSQL and ${mistake('Docker are required','Optional became mandatory','The input lists Docker as nice to have. Keep it optional; do not exclude candidates who lack it.')}.</p>
-    <p>This role is ${mistake('fully remote from anywhere','Work arrangement changed','The input says hybrid in Chișinău, with two office days per week. The posting promises a different arrangement.')} at 32 hours per week.</p>
-    <p>Salary: €50,000 gross ${mistake('per month','Salary period changed','The source salary is €50,000 gross per year, not per month. The amount is the same, but the pay period changes the offer.')}.</p>
+    ${badDraft}
     <div id="exampleFeedback" class="bad-explanation" hidden><b>3 mistakes revealed</b><p>Hover, tap or focus a red phrase to see why it’s wrong.</p></div>
    </article>
   </div>
-  <p class="example-caption">Fictional teaching example. The wording can change; the job facts must stay the same.</p>
+  <p class="example-caption">Fictional teaching example. Check factual accuracy, publication boundaries and implied promises.</p>
  </section>
  <div class="actions intro-start"><a class="btn primary" href="#review">Review the 50 examples →</a><a class="btn" href="presentation.html">Open presentation</a></div>
  <h2 class="intro-next-title">Then turn mistakes into improvements.</h2>
@@ -57,6 +71,7 @@ function intro(){
  <div class="two-col" style="margin-top:24px"><div class="card"><h3>What’s in the CSV?</h3><p><b>sample_id · job_title · company · job_requirements · job_posting</b></p><p>Version, hash, family and split fields keep reviews attached to the right output.</p><div class="actions"><a href="downloads/job-postings-50.csv" class="btn" download>Download CSV ↓</a><a href="downloads/job-postings-50.json" class="btn" download>JSON ↓</a><a href="#prompts/builder">Viewer prompt →</a></div></div><div class="card"><h3>${reviewed} / 50 reviewed</h3><p>Fictional practice data with designed mistakes and correct comparisons. Labels become references after human review.</p><p>Your work stays in this browser. Export reviews before changing device.</p><button id="export">Export my work</button></div></div>
  <div id="introErrorTip" class="intro-error-tooltip" role="tooltip" hidden></div>`;
  $('#export').onclick=exportState;
+ $$('[data-example-kind]').forEach(button=>button.onclick=()=>intro(button.dataset.exampleKind));
  const reveal=$('#revealMistakes'),card=$('#badPosting'),tip=$('#introErrorTip'),marks=$$('.mistake-mark');
  let active=null;
  const hideTip=()=>{tip.hidden=true;if(active)active.removeAttribute('aria-describedby');active=null};
