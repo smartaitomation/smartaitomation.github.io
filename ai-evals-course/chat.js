@@ -1,7 +1,7 @@
 (() => {
   const t=window.courseI18n?.t||((text)=>text);
   const root=document.createElement('div');root.className='course-chat';
-  root.innerHTML=`<button class="chat-launcher" aria-controls="course-chat-panel" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5a9.5 9.5 0 1 1 19 0Z" stroke="currentColor" stroke-width="1.7"/><path d="M7 9h9M7 13h6" stroke="currentColor" stroke-width="1.7"/></svg><span>Ask a question</span></button>
+  root.innerHTML=`<button class="chat-launcher" aria-label="Ask a question" aria-controls="course-chat-panel" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5a9.5 9.5 0 1 1 19 0Z" stroke="currentColor" stroke-width="1.7"/><path d="M7 9h9M7 13h6" stroke="currentColor" stroke-width="1.7"/></svg><span>Ask a question</span></button>
   <section id="course-chat-panel" class="chat-panel" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
    <header class="chat-heading"><span class="chat-avatar" aria-hidden="true">AI</span><div class="chat-heading-copy"><strong id="chat-title">Let’s talk AI evals</strong><small>A person will get back to you.</small></div><button class="chat-close" aria-label="Close chat">×</button></header>
    <div class="chat-content">
