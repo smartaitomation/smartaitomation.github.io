@@ -2,9 +2,24 @@
   const root=document.createElement('div');root.className='course-chat';
   root.innerHTML=`<button class="chat-launcher" aria-controls="course-chat-panel" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5a9.5 9.5 0 1 1 19 0Z" stroke="currentColor" stroke-width="1.7"/><path d="M7 9h9M7 13h6" stroke="currentColor" stroke-width="1.7"/></svg><span>Ask a question</span></button>
   <section id="course-chat-panel" class="chat-panel" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
-   <header class="chat-heading"><div><strong id="chat-title">Questions about the course?</strong><small>A person will get back to you.</small></div><button class="chat-close" aria-label="Close chat">×</button></header>
+   <header class="chat-heading"><span class="chat-avatar" aria-hidden="true">AI</span><div class="chat-heading-copy"><strong id="chat-title">Let’s talk AI evals</strong><small>A person will get back to you.</small></div><button class="chat-close" aria-label="Close chat">×</button></header>
    <div class="chat-content">
-    <div class="chat-question-step"><p class="chat-bubble">Hi! What would you like to know?</p><div class="chat-options"><button>Is this course right for me?</button><button>What will I learn?</button><button>Can my team join?</button><button>What if I miss a live session?</button></div><form class="chat-question-form"><label for="chat-question">Or write your question</label><textarea id="chat-question" maxlength="2000" rows="2" required placeholder="Your question…"></textarea><button class="chat-primary">Continue →</button></form></div>
+    <div class="chat-question-step">
+     <p class="chat-sender">SmartAItomation</p>
+     <p class="chat-bubble">Hi! What would you like to know about the course?</p>
+     <p class="chat-options-label" id="chat-options-label">Choose a topic, or write below</p>
+     <div class="chat-options" role="group" aria-labelledby="chat-options-label">
+      <button type="button" data-question="Is this course right for me?">Is it for me?</button>
+      <button type="button" data-question="What will I learn?">What I’ll learn</button>
+      <button type="button" data-question="Can my team join?">Joining as a team</button>
+      <button type="button" data-question="What if I miss a live session?">Miss a session?</button>
+     </div>
+     <form class="chat-question-form">
+      <label class="chat-sr-only" for="chat-question">Your question</label>
+      <textarea id="chat-question" maxlength="2000" rows="1" required placeholder="Write a question…"></textarea>
+      <button class="chat-send" type="submit" aria-label="Send question">Send<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 14 0m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+     </form>
+    </div>
     <div class="chat-contact-step" hidden><div class="chat-selected"><p></p><button class="chat-edit" type="button">Edit question</button></div><p class="chat-intro">How can we reach you?</p><form class="chat-contact-form"><label for="chat-name">Name<input id="chat-name" name="name" autocomplete="name" maxlength="100" required></label><label for="chat-phone">Phone<input id="chat-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" placeholder="+373 …" required></label><label for="chat-email">Email<input id="chat-email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@company.com" required></label><label class="chat-trap" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label><label class="chat-consent"><input name="consent" type="checkbox" required><span>Contact me by email or phone about this question. <a href="https://shortsblink.com/ai-evals-course/privacy" target="_blank" rel="noopener">Privacy</a></span></label><p class="chat-error" role="alert" hidden></p><button class="chat-primary chat-submit">Send my question →</button></form><p class="chat-footnote">Your details go to our team. No newsletter signup.</p></div>
     <div class="chat-success" hidden role="status"><span class="chat-check" aria-hidden="true">✓</span><h3>Thanks — your question is saved.</h3><p>A person from our team will contact you by email or phone.</p><button class="chat-another">Ask another question</button></div>
    </div>
@@ -25,10 +40,13 @@
   function timer(){clearTimeout(clock);if(document.hidden||dismissed())return;started=Date.now();clock=setTimeout(()=>{remaining=0;if(document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){remaining=1500;timer();return;}show();},remaining);}
   document.addEventListener('visibilitychange',()=>{if(document.hidden){remaining=Math.max(0,remaining-(Date.now()-started));clearTimeout(clock);}else timer();});timer();
   function contact(value){question=value.trim();if(!question)return;$('.chat-selected p').textContent=question;$('.chat-question-step').hidden=true;$('.chat-contact-step').hidden=false;$('.chat-success').hidden=true;$('.chat-content').scrollTop=0;requestId=crypto.randomUUID().replaceAll('-','');$('#chat-name').focus();}
-  $('.chat-options').addEventListener('click',e=>{if(e.target.tagName==='BUTTON'){contact(e.target.textContent);}});
+  $('.chat-options').addEventListener('click',e=>{const button=e.target.closest('button[data-question]');if(button)contact(button.dataset.question);});
+  const input=$('#chat-question');
+  function sizeInput(){input.style.height='auto';input.style.height=Math.min(input.scrollHeight,112)+'px';}
+  input.addEventListener('input',sizeInput);
   $('.chat-question-form').onsubmit=e=>{e.preventDefault();contact($('#chat-question').value);};
-  $('.chat-edit').onclick=()=>{$('.chat-contact-step').hidden=true;$('.chat-question-step').hidden=false;$('#chat-question').value=question;$('#chat-question').focus();};
-  $('.chat-another').onclick=()=>{question='';submitted=false;$('.chat-question-step').hidden=false;$('.chat-success').hidden=true;$('#chat-question').value='';$('.chat-contact-form').reset();};
+  $('.chat-edit').onclick=()=>{$('.chat-contact-step').hidden=true;$('.chat-question-step').hidden=false;$('#chat-question').value=question;sizeInput();$('#chat-question').focus();};
+  $('.chat-another').onclick=()=>{question='';submitted=false;$('.chat-question-step').hidden=false;$('.chat-success').hidden=true;$('#chat-question').value='';sizeInput();$('.chat-contact-form').reset();};
   $('.chat-contact-form').onsubmit=async e=>{
     e.preventDefault();if(submitted)return;
     const form=e.currentTarget,b=$('.chat-submit'),error=$('.chat-error');error.hidden=true;
