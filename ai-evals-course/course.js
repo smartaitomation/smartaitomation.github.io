@@ -37,3 +37,11 @@
  drawer.addEventListener('click',event=>{if(event.target===drawer){const r=drawer.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right)drawer.close();}});
  drawer.addEventListener('close',()=>{document.body.classList.remove('drawer-open');trigger?.focus();});
 })();
+
+(() => {
+ const picker=document.getElementById('cohort-select');
+ const options={'2026-11-21':{price:'€500',date:'21 Nov'},'2026-12-19':{price:'€1,000',date:'19 Dec'}};
+ const requested=new URLSearchParams(location.search).get('cohort');if(options[requested])picker.value=requested;
+ function select(){const c=options[picker.value];document.querySelector('[data-course-price]').innerHTML=c.price+' <small>EUR</small>';document.querySelector('[data-mobile-price]').innerHTML=c.price+' <small>EUR</small>';document.querySelector('[data-mobile-date]').textContent='4 weeks · starts '+c.date;const a=document.querySelector('[data-checkout]');a.href='https://shortsblink.com/ai-evals-course?cohort='+picker.value;a.textContent='Enroll · '+c.price+' EUR ↗';}
+ picker.addEventListener('change',select);select();
+})();

@@ -1,0 +1,21 @@
+Subject: Training request: AI Evals course — {{cohort}}
+
+Hi {{manager_name}},
+
+I would like approval to join SmartAItomation’s four-week AI Evals course for {{cohort}}. The enrollment fee is €{{price_eur}} per participant; I will confirm the final invoice and any applicable tax before payment.
+
+Our team is working on {{product_or_workflow}}. We currently need a more reliable way to identify failures, check whether changes help and catch regressions before release.
+
+During the course I plan to build:
+- A reviewable dataset and a clear taxonomy of the failures that matter to us.
+- Focused code checks and LLM judges, validated against domain-expert decisions.
+- A repeatable comparison of quality, cost and latency for one improvement.
+
+I will share the resulting method and reusable materials with the team, using only data we are authorized to process. The core commitment is around 3–5 hours a week, plus optional office hours. I will confirm session times before booking.
+
+Course details: https://smartaitomation.com/ai-evals-course/
+
+Can you approve the training budget and agree on one use case for me to bring back to the team?
+
+Thanks,
+{{your_name}}

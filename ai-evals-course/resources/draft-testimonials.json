@@ -1,0 +1,32 @@
+{
+  "status": "Draft copy for review only; no student evidence",
+  "items": [
+    {
+      "id": "draft-1",
+      "label": "Draft placeholder — not a student review",
+      "intended_perspective": "Engineer perspective to request from a future participant",
+      "quote": "The most useful part was learning to turn a vague complaint into a check we could rerun after a change.",
+      "author": null,
+      "verified": false,
+      "permission_to_publish_as_testimonial": false
+    },
+    {
+      "id": "draft-2",
+      "label": "Draft placeholder — not a student review",
+      "intended_perspective": "Product manager perspective to request from a future participant",
+      "quote": "Reviewing examples together gave us a clearer way to explain what a good answer should do and where it was failing.",
+      "author": null,
+      "verified": false,
+      "permission_to_publish_as_testimonial": false
+    },
+    {
+      "id": "draft-3",
+      "label": "Draft placeholder — not a student review",
+      "intended_perspective": "Engineering lead perspective to request from a future participant",
+      "quote": "I wanted a process our team could keep using, from reviewing traces to comparing changes on the same cases.",
+      "author": null,
+      "verified": false,
+      "permission_to_publish_as_testimonial": false
+    }
+  ]
+}

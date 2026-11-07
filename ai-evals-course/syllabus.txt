@@ -1,53 +1,50 @@
 AI EVALS FOR ENGINEERS & PMs
 SmartAItomation · Ion Moșnoi
 
-4 weeks · 21 November–18 December 2026 · $500 USD per participant
-Live online, in English. Exact session times confirmed by email; contact Ion before payment if you need to check availability.
+NOVEMBER: 21 November–18 December 2026 · EUR 500 per participant
+DECEMBER: 19 December 2026–15 January 2027 · EUR 1,000 per participant
+4 weeks each · Live online · English
+Exact live-session and office-hour times confirmed by email. Contact Ion before paying if timing affects your attendance.
 
-WEEK 1 · 21–27 NOVEMBER
-Build an agent you can inspect
+WEEK 1 · Build an agent you can inspect
 - Define the task, tool contracts, allowed actions and escalation rules.
-- Build an agent loop with tool calls, stop conditions and bounded retries.
+- Build a small agent loop with tool calls, stop conditions and bounded retries.
 - Log messages, retrieval, tool parameters, outputs, cost and latency.
-- Build a trace list and viewer.
-Lab: inspect an agent run, identify a failure and explain the evidence.
+- Build a trace viewer that makes the failure easy to inspect.
+Lab: Inspect an agent run, identify a failure and point to the evidence.
 
-WEEK 2 · 28 NOVEMBER–4 DECEMBER
-Turn reviews into a test dataset
-- Choose a domain expert and write specific Good/Bad review notes.
-- Review across roles and conditions; cluster recurring mistakes.
-- Create an error taxonomy with definitions and examples.
-- Generate cases from features × roles × scenarios.
-- Verify synthetic labels and source evidence; separate train/dev/test.
-Lab: build a reviewed, versioned dataset and an error taxonomy.
+WEEK 2 · Turn reviews into a test dataset
+- Choose a domain expert. Annotate Good/Bad with a specific reason and evidence.
+- Review across roles and conditions; group recurring mistakes into an error taxonomy.
+- Create cases from features x roles x scenarios, including clarification and refusal.
+- Check synthetic labels, preserve sources and separate train, dev and test cases.
+Lab: Review a batch of traces, define your error types and build a versioned dataset.
 
-WEEK 3 · 5–11 DECEMBER
-Build evaluators you can trust
-- One pass/fail evaluator per error type.
-- Code for objective checks; LLM judges when interpretation is needed.
-- Judge prompts with rules, contrasting examples and evidence-based reasons.
-- Expert comparison, false positives, false negatives, precision and recall.
-- Improve the judge on dev; preserve a held-out test set.
-Lab: calibrate a judge and explain disagreements with human reviews.
+WEEK 3 · Build evaluators you can trust
+- Write one pass/fail evaluator per failure mode; use code for objective checks.
+- Give a judge a clear rule, contrasting examples and an evidence-based reason.
+- Compare with expert labels: inspect false positives, false negatives, precision and recall.
+- Improve the judge on dev cases. Keep test cases untouched and report results by category.
+Lab: Calibrate a judge against human reviews. Explain the disagreements instead of hiding them in an average.
 
-WEEK 4 · 12–18 DECEMBER
-Improve the product. Catch regressions.
-- Diagnose data, retrieval, prompt, model and tool-flow failures.
-- Try chunking, query rewriting, examples, routing and scope changes.
-- Compare the same cases against a baseline.
-- Report quality by category alongside cost and latency.
-- Run evals in CI and turn production failures into regression cases.
-Lab: present a before/after experiment, including remaining failures.
+WEEK 4 · Improve the product. Catch regressions.
+- Diagnose failures by data, retrieval, prompt, model or tool flow.
+- Try focused fixes: better chunks, query rewriting, examples, routing or smaller task scopes.
+- Compare against a baseline on the same cases, including quality, cost and latency.
+- Red-team prompt injection, unsafe tool calls and missing permissions; add human approval where needed.
+- Run evals in CI. Monitor quality, drift, cost and latency, then bring production failures back into the dataset.
+Lab: Present a before/after experiment: what changed, which errors improved and what still fails.
 
-FORMAT
-Live sessions, guided labs and independent practice. Plan around 3–5 hours per week for the core sessions and practice.
-Includes 10+ hours of optional live office hours across the course, private Discord access, and lifetime access to course recordings.
-Prompts, datasets and evaluation code are included.
-Engineers should be comfortable running basic Python; PMs can pair for coding labs.
-Bring an authorized, anonymized use case or use the practice materials.
-
-ENROLLMENT
-Enroll for $500 USD at https://shortsblink.com/ai-evals-course
-Email imosnoi@smartaitomation.com to check the schedule before paying.
-https://smartaitomation.com/ai-evals-course/
-https://www.linkedin.com/in/ionmosnoi/
+INCLUDED
+Live sessions and 10+ hours of office hours. Lifetime recordings, materials and Discord membership. Future live editions at no extra course fee. 200+ page reader, six assignments with solutions and walkthrough videos, prompts, datasets and code.
+CERTIFICATE
+Submit at least four assignments, including the final improvement report, for instructor review.
+WORKLOAD
+Around 3–5 hours weekly for core sessions and practice, plus optional office hours. Basic Python for engineers; PMs can pair.
+TEAM PRICING
+20% off when 2–20 participants enroll together.
+REFUNDS
+Full refund before your cohort or within 7 days after its start. Full terms: https://shortsblink.com/ai-evals-course/terms
+ENROLL
+https://shortsblink.com/ai-evals-course
+Contact: imosnoi@smartaitomation.com
