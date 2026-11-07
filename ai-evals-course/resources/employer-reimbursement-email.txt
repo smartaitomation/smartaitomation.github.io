@@ -11,7 +11,7 @@ During the course I plan to build:
 - Focused code checks and LLM judges, validated against domain-expert decisions.
 - A repeatable comparison of quality, cost and latency for one improvement.
 
-I will share the resulting method and reusable materials with the team, using only data we are authorized to process. The core commitment is around 3–5 hours a week, plus optional office hours. I will confirm session times before booking.
+I will share the resulting method and reusable materials with the team, using only data we are authorized to process. The core commitment is around 3–5 hours a week, plus optional office hours. Lectures are on Saturdays, 10:00–12:00 Europe/Chișinău (UTC+2); office-hour times will be arranged separately.
 
 Course details: https://smartaitomation.com/ai-evals-course/
 
