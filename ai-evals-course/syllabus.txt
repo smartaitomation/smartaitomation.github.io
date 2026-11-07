@@ -1,0 +1,50 @@
+AI EVALS FOR ENGINEERS & PMs
+SmartAItomation · Ion Moșnoi
+
+4 weeks · 21 November–18 December 2026 · $500 USD per participant
+Live online, in English. Exact session times confirmed before enrollment.
+
+WEEK 1 · 21–27 NOVEMBER
+Build an agent you can inspect
+- Define the task, tool contracts, allowed actions and escalation rules.
+- Build an agent loop with tool calls, stop conditions and bounded retries.
+- Log messages, retrieval, tool parameters, outputs, cost and latency.
+- Build a trace list and viewer.
+Lab: locate a failure in a support-agent trace and explain the evidence.
+
+WEEK 2 · 28 NOVEMBER–4 DECEMBER
+Turn reviews into a test dataset
+- Choose a domain expert and write specific Good/Bad review notes.
+- Review across roles and conditions; cluster recurring mistakes.
+- Create an error taxonomy with definitions and examples.
+- Generate cases from features × roles × scenarios.
+- Verify synthetic labels and source evidence; separate train/dev/test.
+Lab: build a reviewed, versioned dataset and an error taxonomy.
+
+WEEK 3 · 5–11 DECEMBER
+Build evaluators you can trust
+- One pass/fail evaluator per error type.
+- Code for objective checks; LLM judges when interpretation is needed.
+- Judge prompts with rules, contrasting examples and evidence-based reasons.
+- Expert comparison, false positives, false negatives, precision and recall.
+- Improve the judge on dev; preserve a held-out test set.
+Lab: calibrate a judge and explain disagreements with human reviews.
+
+WEEK 4 · 12–18 DECEMBER
+Improve the product. Catch regressions.
+- Diagnose data, retrieval, prompt, model and tool-flow failures.
+- Try chunking, query rewriting, examples, routing and scope changes.
+- Compare the same cases against a baseline.
+- Report quality by category alongside cost and latency.
+- Run evals in CI and turn production failures into regression cases.
+Lab: present a before/after experiment, including remaining failures.
+
+FORMAT
+Weekly guided labs and independent practice. Plan around 3–5 hours per week.
+Engineers should be comfortable running basic Python; PMs can pair for coding labs.
+Bring an authorized, anonymized use case or use the practice materials.
+
+ENROLLMENT
+Email imosnoi@smartaitomation.com to request a place and confirm the schedule.
+https://smartaitomation.com/ai-evals-course/
+https://www.linkedin.com/in/ionmosnoi/
