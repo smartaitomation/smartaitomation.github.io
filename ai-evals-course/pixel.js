@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const pixel = '251383929491305', key = 'smartai_course_ads_v1';
+  const pixel = '1155902766952836', key = 'smartai_course_ads_v1';
   const onCheckout = location.hostname === 'shortsblink.com' || location.hostname === 'dev.shortsblink.com' || location.hostname === 'localhost';
   const params = new URLSearchParams(location.search), internalKey = 'smartai_course_internal_v1';
   const marked = ['codex_test','owner_test'].includes(params.get('traffic')) || params.get('qa') === '1' || ['codex_test','owner_test','qa'].includes(params.get('utm_source'));
