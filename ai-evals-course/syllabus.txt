@@ -16,31 +16,35 @@ Scope and permissions. Define allowed actions, when to ask for clarification and
 
 Make behavior visible. Record messages, model calls, tool inputs and outputs. Learn why a plausible final answer can hide a failed action.
 
-Lab. Build a working agent and inspect its first complete trace.
+Lab: Build a working agent and inspect its first complete trace.
 
-Module 2 — Error analysis (Week 2)
+Module 2 — Error analysis & evaluations (Week 2)
 
-Turn real failures into an error taxonomy and clear evaluation rules.
+Turn expert reviews into an error taxonomy, synthetic test cases and calibrated LLM judges.
 
-L2: Review with a domain expert. Build a trace viewer. Review varied examples, label Good or Bad, and note the exact step, evidence and expected behavior.
+L2: Review and categorize failures. Inspect traces with a domain expert. Label Good or Bad, cite the failing step and expected behavior, then cluster notes by error type. Check frequency and impact; averages can hide a broken feature.
 
-Find patterns. Cluster review notes into error types. Check category counts and prioritize failures by frequency and impact; an overall average can hide a broken feature.
+Create evaluation data. Combine features, roles and scenarios, including ambiguity and missing information. Review expected outcomes and evidence. Version datasets, check category coverage, and separate train, dev and held-out test cases.
 
-One evaluator per failure mode. Write pass/fail criteria. Use code for objective checks and an LLM judge only when interpretation is needed.
+One evaluator per failure mode. Define pass/fail rules. Use code for objective checks and LLM judges for interpretation, with clear criteria and diverse examples.
 
-Lab. Review traces, create an error taxonomy and write the rules your evals will check.
+Calibrate against the expert. Inspect judge disagreements, false positives and false negatives. Improve the rubric on dev cases; report precision and recall by error type on untouched test cases.
 
-Module 3 — Evaluation data & judges (Week 3)
+Lab: Review traces, create a small synthetic dataset and calibrate one judge. Extend the taxonomy and evaluators in independent practice.
 
-Build a useful test set and check whether the judge can be trusted.
+Module 3 — RAG that works (Week 3)
 
-L3: Create synthetic evaluation data. Combine features, roles and scenarios. Include ambiguous requests, missing information and multi-step tasks. Review questions, expected behavior and source evidence with an expert.
+Build retrieval-augmented generation, expose its failures and measure each fix.
 
-Separate development from testing. Version datasets, check category coverage and keep train, dev and test cases separate. Hold test cases aside while tuning prompts.
+L3: Start with a naive RAG pipeline. Load documents, chunk, embed, store in a vector database, retrieve and generate. Run ten questions and collect weak answers as the starting point for improvements.
 
-Calibrate the judge. Write judge prompts with clear rules and diverse examples. Compare judgments with expert labels, inspect false positives and false negatives, and report precision and recall by error type.
+Chunking, embeddings and representation. Compare fixed, recursive, semantic and structure-aware chunking. Tune size and overlap; choose embeddings and useful metadata. Diagnose tables and scanned pages. Lab: re-chunk three ways and compare.
 
-Lab. Create a versioned dataset and improve a judge using its disagreements with the expert.
+Measure retrieval separately. Create a 20-question golden set with relevant sources. Measure hit rate, recall@k and mean reciprocal rank (MRR). Score hybrid keyword/vector search, reranking and metadata filters against the same baseline; keep evidence-backed improvements.
+
+Ground answers in evidence. Require citations, abstain when sources lack the answer and handle conflicting documents. Assess faithfulness, correctness and completeness separately from retrieval. Connect RAG to the agent as a tool; test citations and refusal.
+
+Lab: Live: baseline, a guided comparison and grounded answers. Independent practice: three chunking variants, a 20-question set and three scored retrieval interventions.
 
 Module 4 — Improve your agent (Week 4)
 
@@ -52,9 +56,9 @@ Measure fixes and regressions. Compare versions on the same cases. Track failure
 
 Keep checking in production. Test prompt injection, permissions and unsafe actions. Automate regression checks in CI and monitor new failures and drift.
 
-Lab. Run a before/after experiment and explain what improved, what regressed and what to try next.
+Lab: Run a before/after experiment and explain what improved, what regressed and what to try next.
 
-How the course works
+Participation and support
 
 Who it is for. Engineers and PMs building AI products. Basic Python is useful for engineers; PMs can pair for coding labs. Use the supplied project or authorized, anonymized company data.
 
