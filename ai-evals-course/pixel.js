@@ -2,17 +2,30 @@
   'use strict';
   const pixel = '251383929491305', key = 'smartai_course_ads_v1';
   const onCheckout = location.hostname === 'shortsblink.com' || location.hostname === 'dev.shortsblink.com' || location.hostname === 'localhost';
-  const internal = new URLSearchParams(location.search).get('traffic') === 'codex_test' || location.hostname === 'dev.shortsblink.com' || location.hostname === 'localhost';
+  const params = new URLSearchParams(location.search), internalKey = 'smartai_course_internal_v1';
+  const marked = ['codex_test','owner_test'].includes(params.get('traffic')) || params.get('qa') === '1' || ['codex_test','owner_test','qa'].includes(params.get('utm_source'));
+  let internal = marked || navigator.webdriver === true || location.hostname === 'dev.shortsblink.com' || location.hostname === 'localhost';
+  try {
+    if (marked) localStorage.setItem(internalKey, String(Date.now() + 180 * 86400000));
+    internal = internal || Number(localStorage.getItem(internalKey) || 0) > Date.now();
+  } catch (_) {}
   const ro = document.documentElement.lang.toLowerCase().startsWith('ro');
   const purchase = window.smartaiCoursePurchase || null;
   let choice = null, clickId = '';
   try { choice = localStorage.getItem(key); } catch (_) {}
   if (onCheckout && location.hash.startsWith('#course-ad-consent=')) {
     const params = new URLSearchParams(location.hash.slice(1));
-    if (params.get('course-ad-consent') === 'allow' && /^https:\/\/(www\.)?smartaitomation\.com\//.test(document.referrer)) {
-      choice = 'allow';
-      clickId = params.get('fbclid') || '';
-      try { localStorage.setItem(key, choice); } catch (_) {}
+    if (/^https:\/\/(www\.)?smartaitomation\.com\//.test(document.referrer)) {
+      const handedChoice = params.get('course-ad-consent');
+      if (['allow','deny'].includes(handedChoice)) {
+        choice = handedChoice;
+        clickId = choice === 'allow' ? params.get('fbclid') || '' : '';
+        try { localStorage.setItem(key, choice); } catch (_) {}
+      }
+      if (params.get('course-internal') === '1') {
+        internal = true;
+        try { localStorage.setItem(internalKey, String(Date.now() + 180 * 86400000)); } catch (_) {}
+      }
     }
     history.replaceState(null, '', location.pathname + location.search);
   }
@@ -59,6 +72,6 @@
   for (const [label,value] of [[ro?'Refuză':'Decline','deny'],[ro?'Acceptă':'Accept','allow']]) { const b=document.createElement('button'); b.type='button'; b.textContent=label; b.style.cssText='padding:9px 16px;margin-right:8px;border:1px solid #244d3f;border-radius:5px;background:'+(value==='allow'?'#244d3f;color:white':'white;color:#244d3f')+';cursor:pointer'; b.addEventListener('click',()=>save(value)); banner.appendChild(b); }
   document.body.appendChild(banner); banner.hidden = internal || choice === 'allow' || choice === 'deny';
   const control=document.createElement('button');control.type='button';control.textContent=ro?'Preferințe publicitate':'Advertising preferences';control.style.cssText='border:0;background:none;text-decoration:underline;cursor:pointer;font:inherit;color:inherit';control.addEventListener('click',()=>{banner.hidden=false});const footer=document.querySelector('footer');if(footer)footer.appendChild(control);
-  if (!onCheckout) document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const url=new URL(a.href);if(url.origin!=='https://shortsblink.com'||url.pathname!=='/ai-evals-course')return;if(choice==='allow'){const params=new URLSearchParams({'course-ad-consent':'allow'});if(clickId)params.set('fbclid',clickId);url.hash=params.toString();a.href=url.href;}},true);
+  if (!onCheckout) document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(!a)return;const url=new URL(a.href);if(url.origin!=='https://shortsblink.com'||url.pathname!=='/ai-evals-course')return;if(['allow','deny'].includes(choice)||internal){const params=new URLSearchParams({'course-ad-consent':choice||'unset'});if(choice==='allow'&&clickId&&!internal)params.set('fbclid',clickId);if(internal)params.set('course-internal','1');url.hash=params.toString();a.href=url.href;}},true);
   start();
 })();
