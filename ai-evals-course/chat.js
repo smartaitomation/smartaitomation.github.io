@@ -32,15 +32,27 @@
   const testing=['codex_test','owner_test'].includes(new URLSearchParams(location.search).get('traffic'));
   const endpoint=location.hostname==='127.0.0.1'?'http://127.0.0.1:8842/ai-evals-course/chat':'https://shortsblink.com/ai-evals-course/chat';
   let question='',requestId='',submitted=false,remaining=20000,clock=null,started=0,replyTimer=null;
-  const dismissed=()=>{try{return sessionStorage.getItem('course-chat-seen')==='1';}catch{return false;}};
-  function remember(){try{sessionStorage.setItem('course-chat-seen','1');}catch{}}
+  const seenKey='course-chat-seen';let seen=false;
+  function remember(){
+    seen=true;
+    try{localStorage.setItem(seenKey,'1');}catch{}
+    try{sessionStorage.setItem(seenKey,'1');}catch{}
+  }
+  function dismissed(){
+    if(seen)return true;
+    try{seen=localStorage.getItem(seenKey)==='1';}catch{}
+    if(!seen){try{seen=sessionStorage.getItem(seenKey)==='1';}catch{}}
+    if(seen)remember(); // Retain the previous session-only preference across visits.
+    return seen;
+  }
+  window.addEventListener('storage',event=>{if(event.key===seenKey&&event.newValue==='1'){seen=true;clearTimeout(clock);}});
   function fit(){const v=window.visualViewport;root.style.setProperty('--chat-height',Math.max(240,(v?.height||innerHeight)-28)+'px');root.style.setProperty('--chat-bottom',Math.max(0,innerHeight-((v?.offsetTop||0)+(v?.height||innerHeight)))+'px');}
   function show(manual=false){panel.hidden=false;launcher.hidden=true;launcher.setAttribute('aria-expanded','true');remember();clearTimeout(clock);fit();if(manual)panel.querySelector('button').focus();}
   function hide(){panel.hidden=true;launcher.hidden=false;launcher.setAttribute('aria-expanded','false');remember();launcher.focus();}
   launcher.onclick=()=>panel.hidden?show(true):hide();$('.chat-close').onclick=hide;
   root.addEventListener('keydown',e=>{if(e.key==='Escape'&&!panel.hidden)hide();});
   window.visualViewport?.addEventListener('resize',fit);window.visualViewport?.addEventListener('scroll',fit);window.addEventListener('resize',fit);
-  function timer(){clearTimeout(clock);if(document.hidden||dismissed())return;started=Date.now();clock=setTimeout(()=>{remaining=0;if(document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){remaining=1500;timer();return;}show();},remaining);}
+  function timer(){clearTimeout(clock);if(document.hidden||dismissed())return;started=Date.now();clock=setTimeout(()=>{if(dismissed())return;remaining=0;if(document.querySelector('dialog[open]')||['INPUT','TEXTAREA','SELECT'].includes(document.activeElement?.tagName)){remaining=1500;timer();return;}show();},remaining);}
   document.addEventListener('visibilitychange',()=>{if(document.hidden){remaining=Math.max(0,remaining-(Date.now()-started));clearTimeout(clock);}else timer();});timer();
   function contact(value){
     question=value.trim();if(!question)return;
