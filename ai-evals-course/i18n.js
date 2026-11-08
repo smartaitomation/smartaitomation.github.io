@@ -217,17 +217,6 @@
   "Prefer updates about the next cohort?": "Vrei noutăți despre următoarea grupă?",
   "Get occasional course news. Confirm your email first; unsubscribe whenever you like.": "Primește ocazional noutăți despre curs. Confirmi adresa de email și te poți dezabona oricând.",
   "Get course updates ↗": "Primește noutăți despre curs ↗",
-  "TESTIMONIAL COPY · OWNER PREVIEW": "TEXTE DE TESTIMONIALE · PREVIZUALIZARE PENTRU AUTOR",
-  "Reviews to replace": "Texte de înlocuit",
-  "with participant feedback.": "cu feedbackul participanților.",
-  "Draft placeholders below are not real student reviews. No ratings, student names or results are being claimed.": "Textele de mai jos sunt exemple provizorii, nu recenzii reale. Nu reprezintă evaluări, nume de cursanți sau rezultate obținute.",
-  "Draft placeholder — not a student review": "Text provizoriu — nu este o recenzie reală",
-  "“The most useful part was learning to turn a vague complaint into a check we could rerun after a change.”": "„Cel mai util a fost să învăț cum transform o nemulțumire vagă într-o verificare pe care o pot repeta după o schimbare.”",
-  "Engineer perspective to request from a future participant": "Perspectiva unui inginer — de solicitat unui viitor participant",
-  "“Reviewing examples together gave us a clearer way to explain what a good answer should do and where it was failing.”": "„Analiza exemplelor împreună ne-a ajutat să explicăm mai clar ce trebuie să facă un răspuns bun și unde greșește.”",
-  "Product manager perspective to request from a future participant": "Perspectiva unui manager de produs — de solicitat unui viitor participant",
-  "“I wanted a process our team could keep using, from reviewing traces to comparing changes on the same cases.”": "„Voiam un proces pe care echipa să-l folosească în continuare, de la analiza traseelor până la compararea modificărilor pe aceleași cazuri.”",
-  "Engineering lead perspective to request from a future participant": "Perspectiva unui lider tehnic — de solicitat unui viitor participant",
   "LEARN WITH YOUR TEAM": "ÎNVAȚĂ CU ECHIPA TA",
   "Build the skill in-house.": "Dezvoltă competența în echipă.",
   "10% off for 2+ teammates": "10% reducere pentru minimum 2 colegi",
@@ -484,7 +473,16 @@
   "Choose a use case": "Alege un caz de utilizare",
   "Use the supplied fictional project, or bring an authorized, anonymized example from your work. Define the task and what a good result should do.": "Folosește proiectul fictiv oferit sau un exemplu anonimizat de la serviciu, pentru care ai autorizare. Definește sarcina și ce trebuie să facă un rezultat bun.",
   "During the course": "Pe parcursul cursului",
-  "Plan 3–5 hours per week for lectures and practice. Joining links and office-hour times are sent to enrolled participants. Recordings follow each live lecture.": "Planifică 3–5 ore pe săptămână pentru lecții și practică. Participanții înscriși primesc linkurile și programul consultațiilor. Înregistrările sunt disponibile după fiecare lecție live."
+  "Plan 3–5 hours per week for lectures and practice. Joining links and office-hour times are sent to enrolled participants. Recordings follow each live lecture.": "Planifică 3–5 ore pe săptămână pentru lecții și practică. Participanții înscriși primesc linkurile și programul consultațiilor. Înregistrările sunt disponibile după fiecare lecție live.",
+  "REVIEWS": "RECENZII",
+  "What people say.": "Feedback despre curs.",
+  "“The course gave me a clear way to evaluate AI features beyond checking whether a few examples look good. I especially liked the practical exercises.”": "„Cursul mi-a oferit o metodă clară de a evalua funcționalitățile AI, dincolo de verificarea câtorva exemple care par bune. Mi-au plăcut în special exercițiile practice.”",
+  "“I learned how to turn real failure cases into an evaluation dataset and use it to track improvements. The step-by-step approach made the concepts easy to apply.”": "„Am învățat cum să transform cazuri reale de eroare într-un set de date pentru evaluare și să-l folosesc pentru a urmări îmbunătățirile. Abordarea pas cu pas a făcut conceptele ușor de aplicat.”",
+  "“This helped me ask better questions about AI quality and work more effectively with engineers on what we should measure.”": "„Cursul m-a ajutat să pun întrebări mai bune despre calitatea AI și să colaborez mai eficient cu inginerii pentru a stabili ce ar trebui să măsurăm.”",
+  "“The examples made it much easier to understand where automated evaluations help and where human review still matters.”": "„Exemplele m-au ajutat să înțeleg mult mai ușor unde sunt utile evaluările automate și unde verificarea umană rămâne importantă.”",
+  "“I came away with a more structured approach to testing RAG systems, from selecting cases to investigating why an answer failed.”": "„Am rămas cu o abordare mai structurată pentru testarea sistemelor RAG, de la alegerea cazurilor până la investigarea motivelor pentru care un răspuns a fost greșit.”",
+  "“The course helped me think about AI quality from the user’s perspective and identify failures that a simple accuracy score might miss.”": "„Cursul m-a ajutat să privesc calitatea AI din perspectiva utilizatorului și să identific erori pe care un simplu scor de acuratețe le-ar putea ascunde.”",
+  "“A useful introduction to building an evaluation process a team can actually maintain. The discussion of failure analysis was particularly valuable.”": "„O introducere utilă în construirea unui proces de evaluare pe care o echipă îl poate menține în practică. Discuția despre analiza erorilor a fost deosebit de valoroasă.”"
 };
  function t(value){return ro?(translations[value]||value):value;}
  function apply(root){if(!ro)return;const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode()){const key=node.textContent.trim();if(translations[key])node.textContent=node.textContent.replace(key,translations[key]);}root.querySelectorAll('[aria-label],[placeholder],[title],[alt]').forEach(el=>{['aria-label','placeholder','title','alt'].forEach(name=>{const value=el.getAttribute(name);if(value&&translations[value])el.setAttribute(name,translations[value]);});});}
