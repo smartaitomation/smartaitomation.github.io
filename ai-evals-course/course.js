@@ -1,18 +1,4 @@
 (() => {
- const t=window.courseI18n?.t||((text)=>text);
-  const weeks = [...document.querySelectorAll('details.week')];
-  const expand = document.getElementById('expand-syllabus');
-  function updateExpansion() {
-    const allOpen = weeks.every(week => week.open);
-    expand.setAttribute('aria-expanded', String(allOpen));
-    expand.innerHTML = allOpen ? t('Collapse all')+' <span aria-hidden="true">−</span>' : t('Expand all')+' <span aria-hidden="true">+</span>';
-  }
-  expand.addEventListener('click', () => {
-    const open = !weeks.every(week => week.open);
-    weeks.forEach(week => { week.open = open; });
-    updateExpansion();
-  });
-  weeks.forEach(week => week.addEventListener('toggle', updateExpansion));
   const navLinks = [...document.querySelectorAll('.section-links a')];
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
@@ -30,8 +16,8 @@
 
 (() => {
  const drawer=document.getElementById('syllabus-drawer');
- const target=drawer.querySelector('.drawer-weeks');
- document.querySelectorAll('#syllabus .week').forEach(week=>{const copy=week.cloneNode(true); copy.open=true; target.append(copy);});
+ const target=drawer.querySelector('.drawer-document');
+ target.append(document.querySelector('#syllabus .syllabus-paper').cloneNode(true));
  let trigger;
  document.querySelectorAll('[data-open-syllabus]').forEach(button=>button.addEventListener('click',()=>{trigger=button;drawer.showModal();document.body.classList.add('drawer-open');drawer.querySelector('.drawer-body').scrollTop=0;drawer.querySelector('.drawer-close').focus();}));
  drawer.querySelector('.drawer-close').addEventListener('click',()=>drawer.close());
