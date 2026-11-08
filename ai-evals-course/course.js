@@ -15,17 +15,6 @@
 })();
 
 (() => {
- const drawer=document.getElementById('syllabus-drawer');
- const target=drawer.querySelector('.drawer-document');
- target.append(document.querySelector('#syllabus .syllabus-paper').cloneNode(true));
- let trigger;
- document.querySelectorAll('[data-open-syllabus]').forEach(button=>button.addEventListener('click',()=>{trigger=button;drawer.showModal();document.body.classList.add('drawer-open');drawer.querySelector('.drawer-body').scrollTop=0;drawer.querySelector('.drawer-close').focus();}));
- drawer.querySelector('.drawer-close').addEventListener('click',()=>drawer.close());
- drawer.addEventListener('click',event=>{if(event.target===drawer){const r=drawer.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right)drawer.close();}});
- drawer.addEventListener('close',()=>{document.body.classList.remove('drawer-open');trigger?.focus();});
-})();
-
-(() => {
  const ro=window.courseI18n?.ro;
  const picker=document.getElementById('cohort-select');
  const options={'2026-11-21':{price:'€500',date:'21 Nov'},'2026-12-19':{price:'€1,000',date:'19 Dec'}};
