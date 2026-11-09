@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#234d3f">
+  <title>AI Evals pentru Devs și PMs · Workshop de 2 ore · SmartAItomation</title>
+  <meta name="description" content="Învață AI evals pe un caz simplu: din cerințe de rol în anunț de angajare. Workshop practic de 2 ore pentru developeri și product managers. 200 EUR / participant.">
+  <link rel="canonical" href="https://smartaitomation.com/ai-evals-workshop/">
+  <link rel="icon" href="/images/ai-favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI evals, pe un caz simplu. Workshop pentru Devs și PMs">
+  <meta property="og:description" content="2 ore de practică: analizezi anunțuri generate de AI, construiești un evaluator și verifici o îmbunătățire. 200 EUR / participant.">
+  <meta property="og:url" content="https://smartaitomation.com/ai-evals-workshop/">
+  <meta property="og:image" content="https://smartaitomation.com/ai-evals-course/assets/ion-mosnoi.jpg">
+  <link rel="stylesheet" href="workshop.css?v=1">
+  <script src="workshop.js?v=1" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Sari la conținut</a>
+  <header class="site-header wrap">
+    <a class="brand" href="/" aria-label="SmartAItomation, pagina principală"><img src="/images/ai-favicon.svg" width="32" height="32" alt="">SmartAItomation</a>
+    <nav aria-label="Navigare"><a href="#program">Program</a><a href="#trainer">Trainer</a><a class="header-contact" href="#participa">Participă <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> WORKSHOP PRACTIC · DEVS &amp; PMS</p>
+        <h1>AI evals,<br>pe un caz <em>simplu.</em></h1>
+        <p class="hero-lead">Din cerințele unui rol<br>într-un anunț de angajare.</p>
+        <p class="description">Înveți să găsești greșelile AI, să le măsori și să verifici dacă o schimbare chiar îmbunătățește rezultatul.</p>
+        <div class="facts" aria-label="Detalii workshop"><div><strong>2 ore</strong><span>exerciții ghidate</span></div><div><strong>200 EUR</strong><span>per participant</span></div></div>
+        <a class="button primary" href="mailto:imosnoi@smartaitomation.com?subject=Participare%20workshop%20AI%20Evals%20-%202%20ore">Vreau să particip · email <span aria-hidden="true">↗</span></a>
+        <a class="text-link agenda-link" href="#program">Vezi ce facem în cele 2 ore <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="demo" aria-labelledby="demo-title">
+        <div class="demo-heading"><span class="eyebrow">UN EXEMPLU DIN WORKSHOP</span><span class="window-dots" aria-hidden="true">● ● ●</span></div>
+        <h2 id="demo-title">Sună bine.<br>Dar respectă cerințele?</h2>
+        <div class="source"><p class="small-label">INPUT · CERINȚELE ROLULUI</p><ul><li>Python obligatoriu. Docker opțional.</li><li>Hibrid: 2 zile pe săptămână la birou.</li><li><span class="internal-label">Notă internă</span> Înlocuim un coleg. Nu publica această informație.</li></ul></div>
+        <div class="output-head"><p class="small-label">OUTPUT · ANUNȚUL GENERAT</p><div class="view-switch" role="group" aria-label="Alege versiunea anunțului"><button type="button" id="draft-tab" aria-pressed="true" aria-controls="draft-output">Inițial</button><button type="button" id="fixed-tab" aria-pressed="false" aria-controls="fixed-output">Corectat</button></div></div>
+        <div class="output" id="draft-output"><p class="job-title">Python Developer</p><p>Căutăm un developer cu experiență în <span data-error="optional" tabindex="-1">Python și Docker, ambele obligatorii</span>. Rolul este <span data-error="hybrid" tabindex="-1">complet remote</span>.</p><p>Te vei alătura echipei <span data-error="internal" tabindex="-1">pentru a înlocui un coleg</span>.</p></div>
+        <div class="output" id="fixed-output" hidden><p class="job-title">Python Developer</p><p>Căutăm un developer cu experiență în Python. Cunoștințele de Docker sunt un avantaj, dar nu sunt obligatorii.</p><p>Vei lucra în regim hibrid, cu 2 zile pe săptămână la birou.</p><p class="fixed-note">Păstrează condițiile rolului. Omite nota internă.</p></div>
+        <div class="demo-controls"><button class="reveal" id="reveal-errors" type="button" aria-expanded="false" aria-controls="error-notes">Arată cele 3 greșeli <span aria-hidden="true">↗</span></button><span id="version-note">Un text fluent poate fi greșit.</span></div>
+        <ol class="error-notes" id="error-notes" hidden><li><b>Cerință schimbată.</b> Docker era opțional.</li><li><b>Condiție inventată.</b> Hibrid nu înseamnă complet remote.</li><li><b>Informație care nu se publică.</b> Nota internă a ajuns în anunț.</li></ol>
+        <p class="demo-foot">Exemplu de exercițiu, cu date fictive.</p>
+      </div>
+    </section>
+
+    <section class="why-band"><div class="wrap why-inner"><p class="eyebrow">DE CE AI EVALS?</p><h2>„Pare bun” nu este<br>o metodă de testare.</h2><p>AI evals sunt verificări repetabile pentru comportamentul pe care îl aștepți. Pornești de la o greșeală concretă, o transformi într-un test și verifici dacă schimbarea o rezolvă fără să strice alte cazuri.</p></div></section>
+
+    <section class="wrap section audience" id="pentru-cine">
+      <div><p class="eyebrow">PENTRU CINE</p><h2>Devs și PMs.<br>Aceeași definiție<br>pentru „bun”.</h2></div>
+      <div class="audience-content"><article><span class="role-index">01</span><div><h3>Developeri</h3><p>Construiești funcționalități AI și vrei să testezi schimbările, să găsești regresii și să automatizezi verificările.</p></div></article><article><span class="role-index">02</span><div><h3>Product managers</h3><p>Vrei să definești un rezultat bun, să dai feedback util și să decizi împreună cu echipa ce merită îmbunătățit.</p></div></article><p class="prerequisite">Nu ai nevoie de experiență în machine learning sau recrutare. Folosim un caz ușor de înțeles și exemple pregătite, pe care developerii și PMs le pot analiza împreună.</p></div>
+    </section>
+
+    <section class="wrap section program" id="program">
+      <div class="section-top"><div><p class="eyebrow">PROGRAM · 120 DE MINUTE</p><h2>Observi. Măsori. Îmbunătățești.</h2></div><p>Lucrezi pe un set pregătit de 50 de exemple. În sesiune analizăm un eșantion și construim un evaluator pentru un tip de eroare.</p></div>
+      <ol class="agenda">
+        <li><span class="step">01</span><div><h3>Înțelegi cazul și ce trebuie evaluat</h3><p>Cerințe → anunț → review. Vezi de ce un scor mediu poate ascunde greșeli importante.</p></div><span class="minutes">25 min</span></li>
+        <li><span class="step">02</span><div><h3>Analizezi și adnotezi exemple</h3><p>Marchezi Bun / Rău și scrii ce trebuie corectat. Compari feedbackul vag cu o notă pe care o poți transforma într-un test.</p></div><span class="minutes">25 min</span></li>
+        <li><span class="step">03</span><div><h3>Grupezi erorile</h3><p>Transformi notele într-o taxonomie: cerințe inventate, omisiuni, schimbarea condițiilor, informații interne publicate.</p></div><span class="minutes">15 min</span></li>
+        <li><span class="step">04</span><div><h3>Construiești și verifici un LLM judge</h3><p>Un evaluator pentru o eroare: pass / fail + motiv. Compari verdictul AI cu reviewul uman și corectezi criteriile când nu sunt de acord.</p></div><span class="minutes">25 min</span></li>
+        <li><span class="step">05</span><div><h3>Îmbunătățești rezultatul AI</h3><p>Testezi o schimbare pe aceleași cazuri. Verifici ce s-a corectat și dacă au apărut alte greșeli.</p></div><span class="minutes">20 min</span></li>
+        <li><span class="step">06</span><div><h3>Extinzi testele și alegi pasul următor</h3><p>Creezi idei de cazuri sintetice: tip de rol × scenariu, de la part-time la cerințe ambigue. Discutăm cum aplici metoda în produsul tău.</p></div><span class="minutes">10 min</span></li>
+      </ol>
+    </section>
+
+    <section class="takeaways wrap section"><div><p class="eyebrow">CE IEI CU TINE</p><h2>Un test pe care<br>îl poți explica.<br>O metodă de repetat.</h2></div><div><ul class="learn-list"><li>Feedback concret, legat de cerințe și de rezultatul AI.</li><li>O listă de erori și criterii clare pentru fiecare.</li><li>Un evaluator pe care îl verifici față de reviewul uman.</li><li>O comparație înainte / după și un mod de a căuta regresii.</li></ul></div></section>
+
+    <section class="trainer wrap section" id="trainer"><img src="/ai-evals-course/assets/ion-mosnoi.jpg" alt="Ion Moșnoi" width="260" height="260" loading="lazy"><div><p class="eyebrow">TRAINER</p><h2>Ion Moșnoi</h2><p class="experience">11+ ani în AI / ML</p><p>Ajut echipe de la startupuri la companii enterprise să identifice erorile aplicațiilor AI și să construiască evaluări care ghidează îmbunătățirile.</p><p>Lucrez practic cu echipele, inclusiv prin workshopuri personalizate de două zile, pe cazurile lor de utilizare.</p><a class="text-link" href="https://www.linkedin.com/in/ionmosnoi/" target="_blank" rel="noopener">Vezi experiența pe LinkedIn <span aria-hidden="true">↗</span></a></div></section>
+
+    <section class="join wrap" id="participa"><div><p class="eyebrow">WORKSHOP AI EVALS · DEVS &amp; PMS</p><h2>Începe cu un caz simplu.<br>Aplică metoda mai departe.</h2><p>Ai nevoie de un laptop și să fii familiar cu un asistent AI. Pornim de la exemple pregătite și lucrăm împreună.</p></div><div class="join-action"><p class="price">200 <span>EUR</span></p><p class="price-note">per participant · 2 ore</p><a class="button light" href="mailto:imosnoi@smartaitomation.com?subject=Participare%20workshop%20AI%20Evals%20-%202%20ore">Înscriere prin email <span aria-hidden="true">↗</span></a><p class="booking-note">Scrie-mi pentru data sesiunii și detaliile participării.</p></div></section>
+  </main>
+  <footer class="wrap"><a class="brand" href="/">SmartAItomation</a><div><a href="mailto:imosnoi@smartaitomation.com">imosnoi@smartaitomation.com</a><a href="https://www.linkedin.com/in/ionmosnoi/" target="_blank" rel="noopener">LinkedIn ↗</a></div></footer>
+</body>
+</html>
