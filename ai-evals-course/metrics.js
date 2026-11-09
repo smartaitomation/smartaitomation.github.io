@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  // Fixed codes only. Never send form values, link URLs, questions or email addresses.
+  // Fixed event codes and bounded campaign tags. No form values, full URLs or click IDs.
   const root = location.hostname === '127.0.0.1' ? 'http://127.0.0.1:8842' : 'https://shortsblink.com';
   const endpoint = root + '/ai-evals-course/metrics';
   const params = new URLSearchParams(location.search);
@@ -10,12 +10,14 @@
   const previewKeys=['orientation','module_1','module_2','module_3','module_4','lab_1','lab_2','lab_3','lab_4'];
   const faqKeys=['when','time','lifetime','recordings','engineer','not_for','no_data','outcome','tools','security','certificate','company','self_study','affiliation'];
   let session='';try {session=sessionStorage.getItem('smartai_course_session_v2')||'';} catch (_) {}
+  let visitor='';try {const saved=JSON.parse(localStorage.getItem('smartai_course_visitor_v3')||'null');if(saved?.expires>Date.now())visitor=saved.token;else localStorage.removeItem('smartai_course_visitor_v3');} catch (_) {}
+  function saveVisitor(data){if(typeof data.visitor==='string'){visitor=data.visitor;try{localStorage.setItem('smartai_course_visitor_v3',JSON.stringify({token:visitor,expires:data.visitor_expires}));}catch(_){}}}
   function saveSession(value){if(typeof value==='string'){session=value;try{sessionStorage.setItem('smartai_course_session_v2',value);}catch(_){}}}
   const lang = document.documentElement.lang === 'ro' ? 'ro' : 'en';
   const device = innerWidth <= 600 ? 'mobile' : innerWidth <= 1024 ? 'tablet' : 'desktop';
   function source() {
     const utm = (params.get('utm_source') || '').toLowerCase();
-    const known = {ig:'instagram',instagram:'instagram',fb:'facebook',facebook:'facebook',linkedin:'linkedin',google:'google'};
+    const known = {ig:'instagram',instagram:'instagram',fb:'facebook',facebook:'facebook',linkedin:'linkedin',google:'google',meta:'meta',msg:'messenger',an:'audience_network',tiktok:'tiktok',email:'email',newsletter:'email'};
     if (known[utm]) return known[utm];
     let host=''; try { host=new URL(document.referrer).hostname; } catch (_) {}
     for (const site of ['instagram','facebook','linkedin','google']) if (host===site+'.com'||host.endsWith('.'+site+'.com')) return site;
@@ -46,9 +48,15 @@
   }
   window.courseMetrics={context:()=>token||undefined};
   record('page_view','course');
-  const query=new URLSearchParams({lang,device,source:source(),v:'2'});if(internal)query.set('traffic','codex_test');
-  fetch(endpoint+'/token?'+query,{credentials:'omit',headers:session?{'X-Course-Session':session}:{},signal:AbortSignal.timeout(15000)})
-    .then(r=>r.ok?r.json():null).then(data=>{if(data?.token){token=data.token;saveSession(data.session);void flush();}}).catch(()=>{});
+  const query=new URLSearchParams({lang,device,source:source(),v:'3'});if(internal)query.set('traffic','codex_test');
+  for(const key of ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id','campaign_id','adset_id','ad_id','campaign_name','adset_name','ad_name','placement']){
+    const value=params.get(key);if(value&&value.length<=100&&/^[\p{L}\p{N}_ .|+\-]+$/u.test(value))query.set(key,value);
+  }
+  // Presence is enough for an unknown-ad hint; never forward individual click identifiers.
+  if(params.has('fbclid'))query.set('click_hint','meta');else if(params.has('gclid'))query.set('click_hint','google');else if(params.has('ttclid'))query.set('click_hint','tiktok');
+  const headers={};if(session)headers['X-Course-Session']=session;if(visitor)headers['X-Course-Visitor']=visitor;
+  fetch(endpoint+'/token?'+query,{credentials:'omit',headers,signal:AbortSignal.timeout(15000)})
+    .then(r=>r.ok?r.json():null).then(data=>{if(data?.token){token=data.token;saveSession(data.session);saveVisitor(data);void flush();}}).catch(()=>{});
   function depth() {
     if (document.hidden) return;
     const h=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight);
