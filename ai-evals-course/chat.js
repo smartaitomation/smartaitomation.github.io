@@ -77,7 +77,7 @@
   $('.chat-contact-form').onsubmit=async e=>{
     e.preventDefault();if(submitted)return;
     const form=e.currentTarget,b=$('.chat-submit'),error=$('.chat-error');error.hidden=true;
-    const formData=new FormData(form),data=Object.fromEntries(formData);data.contact_methods=formData.getAll('contact_methods');data.question=question;data.request_id=requestId;data.consent=form.elements.consent.checked;
+    const formData=new FormData(form),data=Object.fromEntries(formData);data.contact_methods=formData.getAll('contact_methods');data.question=question;data.request_id=requestId;data.consent=form.elements.consent.checked;data.analytics_token=window.courseMetrics?.context();
     if(!data.contact_methods.length){error.textContent=t('Please choose at least one contact method.');error.hidden=false;$('.chat-methods input').focus();return;}
     if(!/^[+0-9() .-]+$/.test(data.phone)||data.phone.replace(/\D/g,'').length<7||data.phone.replace(/\D/g,'').length>15){error.textContent=t('Please include a valid phone number and country code.');error.hidden=false;$('#chat-phone').focus();return;}
     b.disabled=true;b.textContent=t('Sending…');
