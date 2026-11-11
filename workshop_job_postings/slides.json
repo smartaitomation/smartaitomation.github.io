@@ -19,204 +19,216 @@
   },
   {
     "number": 4,
+    "title": "Repeated success is a harder test",
+    "section": "WHY EVALS / TAU-BENCH \u00b7 JUNE 2024",
+    "source": "https://arxiv.org/html/2406.12045v1"
+  },
+  {
+    "number": 5,
+    "title": "Task completion needs evidence",
+    "section": "WHY EVALS / THEAGENTCOMPANY \u00b7 DECEMBER 2024",
+    "source": "https://arxiv.org/html/2412.14161v1"
+  },
+  {
+    "number": 6,
+    "title": "Looking at data reveals what to fix",
+    "section": "WHY EVALS / PRACTITIONER CASE \u00b7 MARCH 2025",
+    "source": "https://hamel.dev/blog/posts/field-guide/"
+  },
+  {
+    "number": 7,
     "title": "90% accuracy. One capability missing.",
     "section": "BAD EVAL / A HYPOTHETICAL DATASET",
     "source": null
   },
   {
-    "number": 5,
+    "number": 8,
     "title": "Measure the missing capability",
     "section": "LOOK INSIDE THE AVERAGE",
     "source": null
   },
   {
-    "number": 6,
+    "number": 9,
     "title": "Ion Mo\u0219noi",
     "section": "ABOUT ION",
     "source": null
   },
   {
-    "number": 7,
+    "number": 10,
     "title": "The job-posting assistant",
     "section": "OUR USE CASE",
     "source": null
   },
   {
-    "number": 8,
+    "number": 11,
     "title": "Steps of error analysis",
     "section": "TODAY\u2019S WORKFLOW",
     "source": "https://hamel.dev/blog/posts/field-guide/"
   },
   {
-    "number": 9,
-    "title": "3-step evals lifecycle",
-    "section": "ANALYZE \u00b7 MEASURE \u00b7 IMPROVE",
-    "source": "https://hamel.dev/blog/posts/field-guide/"
-  },
-  {
-    "number": 10,
+    "number": 12,
     "title": "Workshop materials",
     "section": "OPEN THE WORKSPACE",
     "source": null
   },
   {
-    "number": 11,
+    "number": 13,
     "title": "One row. One input. One output.",
     "section": "THE CSV",
     "source": null
   },
   {
-    "number": 12,
+    "number": 14,
     "title": "Choose the domain expert",
     "section": "BEFORE YOU LABEL",
     "source": null
   },
   {
-    "number": 13,
+    "number": 15,
     "title": "Build your review workspace",
     "section": "YOUR TURN / CODEX OR CLAUDE",
     "source": null,
     "prompt_key": "builder"
   },
   {
-    "number": 14,
+    "number": 16,
     "title": "Requirements. Posting. Your review.",
     "section": "THE VIEWER",
     "source": null
   },
   {
-    "number": 15,
+    "number": 17,
     "title": "Choose a varied review sample",
     "section": "FILTER THE LIST",
     "source": null
   },
   {
-    "number": 16,
+    "number": 18,
     "title": "Useful notes say what to change",
     "section": "HUMAN REVIEW",
     "source": null
   },
   {
-    "number": 17,
+    "number": 19,
     "title": "Your turn: review a first batch",
     "section": "HUMAN REVIEW",
     "source": null
   },
   {
-    "number": 18,
+    "number": 20,
     "title": "Turn notes into an error taxonomy",
     "section": "CATEGORIZE",
     "source": null
   },
   {
-    "number": 19,
+    "number": 21,
     "title": "Cluster your review notes",
     "section": "YOUR TURN / CODEX OR CLAUDE",
     "source": null,
     "prompt_key": "taxonomy"
   },
   {
-    "number": 20,
+    "number": 22,
     "title": "One evaluator per error type",
     "section": "MEASURE",
     "source": null
   },
   {
-    "number": 21,
+    "number": 23,
     "title": "A concrete pass / fail rule",
     "section": "OPTIONAL SKILL \u2192 REQUIRED",
     "source": null
   },
   {
-    "number": 22,
+    "number": 24,
     "title": "Write one judge prompt",
     "section": "YOUR TURN / JUDGE",
     "source": null,
     "prompt_key": "judge"
   },
   {
-    "number": 23,
+    "number": 25,
     "title": "Teach both sides of the boundary",
     "section": "JUDGE EXAMPLES",
     "source": null
   },
   {
-    "number": 24,
+    "number": 26,
     "title": "Create the eval script",
     "section": "YOUR TURN / CODEX OR CLAUDE",
     "source": null,
     "prompt_key": "evals"
   },
   {
-    "number": 25,
+    "number": 27,
     "title": "Evaluate the evaluator",
     "section": "COMPARE WITH THE DOMAIN EXPERT",
     "source": null
   },
   {
-    "number": 26,
+    "number": 28,
     "title": "Read the disagreements",
     "section": "IMPROVE THE JUDGE",
     "source": null
   },
   {
-    "number": 27,
+    "number": 29,
     "title": "90%+ alignment is a target",
     "section": "CALIBRATE BEFORE TRUSTING",
     "source": null
   },
   {
-    "number": 28,
+    "number": 30,
     "title": "Keep the test independent",
     "section": "THIS PRACTICE DATASET",
     "source": null
   },
   {
-    "number": 29,
+    "number": 31,
     "title": "Generate the cases you are missing",
     "section": "FEATURE \u00d7 JOB TYPE \u00d7 SCENARIO",
     "source": null
   },
   {
-    "number": 30,
+    "number": 32,
     "title": "Generate new test inputs",
     "section": "YOUR TURN / SYNTHETIC DATA",
     "source": null,
     "prompt_key": "synthetic"
   },
   {
-    "number": 31,
+    "number": 33,
     "title": "Keep prompts beside the evidence",
     "section": "INTEGRATED PROMPT WORKSPACE",
     "source": null
   },
   {
-    "number": 32,
+    "number": 34,
     "title": "Fix the failing responsibility",
     "section": "IMPROVE THE WRITER",
     "source": null
   },
   {
-    "number": 33,
+    "number": 35,
     "title": "Propose one targeted change",
     "section": "YOUR TURN / IMPROVEMENT",
     "source": null,
     "prompt_key": "improve"
   },
   {
-    "number": 34,
+    "number": 36,
     "title": "Compare on the same cases",
     "section": "DID THE CHANGE HELP?",
     "source": null
   },
   {
-    "number": 35,
+    "number": 37,
     "title": "Recap",
     "section": "WHAT WE PRACTICED",
     "source": null
   },
   {
-    "number": 36,
+    "number": 38,
     "title": "AI Evals Workshop for Devs and PMs",
     "section": "THANK YOU",
     "source": null
