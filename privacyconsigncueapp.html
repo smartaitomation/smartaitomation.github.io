@@ -16,7 +16,11 @@
 
   <h2>Data Stored On Your Device</h2>
   <p>ConsignCue is a local-first app. Consignor names, contact notes, payout rates, item intake records, sale status, daily totals, drawer counts, onboarding answers, language choice, and subscription state used by the app are stored on your device.</p>
-  <p>ConsignCue does not require an account and does not upload your shop records to Smart Automation SRL servers as part of the core workflow.</p>
+  <p>In versions that offer accounts, new users can skip sign-in during onboarding. Signing in is required to create a consignor or record a sale. Shop records remain on your device and are not synchronized through your account.</p>
+
+  <h2>Accounts and Sign-In</h2>
+  <p>You can sign in with an email verification code, Google, or Apple. For email sign-in, we send your email address to Resend to deliver a short-lived verification code. For Google or Apple sign-in, the relevant provider shares an account identifier and may share your email address with us. The sign-in service runs on ShortsBlink and stores account and session records so you can authenticate. After you sign in, your completed onboarding answers, a randomly generated app-installation ID, app and iOS version, device model, account creation date, last sign-in date, and sign-in count are stored for account support and visible to authorized administrators. The installation ID is not a hardware identifier. Authentication request limits use protected technical identifiers to help prevent abuse.</p>
+  <p>You can delete your account in Settings. Account deletion removes the authentication account, sessions, onboarding answers and installation information, and revokes Apple authorization where applicable. It does not remove shop records stored locally on your device. Signing in does not back up or synchronize your inventory.</p>
 
   <h2>Optional Quick AI</h2>
   <p>If you choose Quick AI or Fill with AI and accept the in-app notice, your typed or recorded request and relevant consignor or item context are sent through the ShortsBlink gateway to OpenAI, Anthropic Claude, or DeepSeek to prepare editable fields. Recorded audio is sent to OpenAI GPT Transcribe through the gateway first. You review and correct the draft before saving. Manual entry remains available without an AI request.</p>
@@ -29,13 +33,13 @@
   <p>Purchases and subscriptions are processed by Apple through StoreKit. We do not receive or store your payment card details.</p>
 
   <h2>Analytics And Diagnostics</h2>
-  <p>ConsignCue uses Mixpanel to understand whether core screens and subscription flows work as intended. Mixpanel receives a random app-scoped identifier and limited product-interaction data such as app launch, onboarding step number, selected tab, language, app version and build, subscription product identifier, and purchase or restore outcome.</p>
-  <p>Analytics events do not include consignor names, phone numbers, notes, item titles, SKUs, categories, prices, sales amounts, drawer values, onboarding answers, photos, or other shop records.</p>
+  <p>ConsignCue uses Mixpanel to understand whether core screens and subscription flows work as intended. Mixpanel receives a random app-scoped identifier and limited product-interaction data such as app launch, onboarding step number and selected predefined answer categories, selected tab, language, app version and build, subscription product identifier, and purchase or restore outcome.</p>
+  <p>Analytics events do not include consignor names, phone numbers, notes, item titles, SKUs, categories, prices, sales amounts, drawer values, free-text answers, photos, or other shop records.</p>
   <p>Analytics are sent to Mixpanel's European Union endpoint. Automatic event collection and IP-based geolocation are disabled. The data is linked only to the random app-scoped identifier for analytics and is not used for advertising or tracking across other companies' apps or websites.</p>
   <p>Sentry crash reporting is not configured in this version. If diagnostics are enabled in a future version, this policy and the App Store privacy answers will be updated before that version is distributed.</p>
 
   <h2>Your Choices</h2>
-  <p>You may contact us to ask a privacy question or request deletion of analytics data associated with this app. ConsignCue does not maintain a user account; ordinary shop records remain on your device unless you choose to include information in an optional Quick AI request or support message.</p>
+  <p>You may contact us to ask a privacy question or request deletion of analytics data associated with this app. You can delete your sign-in account in Settings; ordinary shop records remain on your device unless you choose to include information in an optional Quick AI request or support message.</p>
 
   <h2>Contact</h2>
   <p>Ion Mosnoi · <a href="mailto:moshnoi2000@gmail.com">moshnoi2000@gmail.com</a> · <a href="tel:+37369644690">+37369644690</a></p>
